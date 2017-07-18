@@ -1,0 +1,78 @@
+/*关于我们页面*/
+.aboutUs{background:#fff}
+.about_center{position:relative;overflow:hidden;padding:16px 20px}
+.abc_left{width:146px;border:2px solid #efefef;border-bottom:none}
+.abc_left li{text-align:center;line-height:36px;font-size:14px;background:#fafafa;cursor:pointer;}
+.abc_left h3{color:#333;font-size:14px;border-bottom:2px solid #efefef}
+.abc_left h3 a{color:#333}
+.abc_left .abul_ul h4{border-bottom:1px solid #efefef;font-weight:100;background:#fff}
+.abul_ul a{color:#333;background:url(../images/all-right.png) no-repeat left center;padding-left:10px}
+.abc_left .abul_ul .specl_other{color:#c6a34d;background:url(../images/all-right_y.png) no-repeat left center}
+.abul_ul a:hover{color:#c6a34d;background:url(../images/all-right_y.png) no-repeat left center}
+/*右边*/
+.abc_right{width:720px;border:1px solid #f1f1f1;padding:24px}
+.abcr_center{color:#666;font-size:14px;line-height:30px}
+.abcr_center h2{font-size:14px;color:#333;border-bottom:1px solid #efefef;height:30px}
+.abcr_center h3{margin-top:20px;font-size:14px;color:#666;margin-bottom:14px}
+.abcr_center p{color:#666;font-size:14px;line-height:30px}
+.abcr_center a{color:#666}
+.abcr_center a:hover{text-decoration:underline;color:#8e4f1b}
+/*右边新加nav*/
+.newesthing_cort-nav{border:1px solid #f4f4f4;background:#fafafa;height:33px}
+.newesthing_cort-nav li{float:left;border:1px solid #f4f4f4;padding:0 22px;font-size:14px;color:#666;height:33px;line-height:33px;border-top:none;border-bottom:none;border-left:none;cursor:pointer}
+.newesthing_cort-nav .newesthing_cort-check{border-top:2px solid #d6b870;background:#fff;margin-top:-1px}
+/*网站地图*/
+.center-map{border-bottom:1px dashed #f0f0f0;padding:15px 0 20px 0}
+.center-map h4{font-family:Arial, Helvetica, sans-serif;font-size:14px;color:#666}
+.center-map p{margin-left:-26px}
+.center-map a{display:inline-block;margin-left:26px;font-size:14px;color:#666}
+.center-map a:hover{color:#8e4f1b;text-decoration:underline}
+/*定位*/
+.abc_leftfix{position:fixed;top:0;margin-top:10px;z-index:2;}
+
+/*常见问题 新加*/
+.about_center-top{overflow:hidden;padding-top:12px}
+.ttop_left{background:#f2f2f2;color:#888;font-size:14px;text-align:center;font-weight:bold;width:123px;height:38px;line-height:38px}
+.ttop_right li{float:left;font-size:0}
+.ttop_right li span,.ttop_right li a,.ttop_right li i{display:inline-block;vertical-align:middle}
+.tdnav-left{background:url(../images/q1.jpg) no-repeat;width:16px;height:38px}
+.tdnav-center{background:#f2f2f2;width:114px;height:38px;line-height:38px;color:#888;font-size:14px;text-align:center;cursor:pointer}
+.tdnav-right{background:url(../images/q2.jpg) no-repeat;width:12px;height:38px}
+.ttop_spli .tdnav-left{background:url(../images/q_left.jpg) no-repeat;}
+.ttop_spli .tdnav-center{background:#d6b870;color:#fff;font-weight:bold}
+.sptdnav-left{background:url(../images/q_right.jpg) no-repeat;}
+.sptdnav-right{background:url(../images/q2_right.jpg) no-repeat;}
+.about_center-cort{overflow:hidden;margin-top:24px}
+/*左边*/
+.ques_left{border:2px solid #efefef;width:150px}
+.ques_left h3{color:#333;font-size:14px;background:#fafafa;border-bottom:2px solid #efefef;text-align:center;line-height:36px}
+.ques_left h3 span{background:url(../images/jt.png) no-repeat left center;padding-left:16px}
+.ques_ul li{height:38px;line-height:38px;padding:0 13px;width:auto;text-align:center}
+.ques_ul a{background:url(../images/right_b.png) no-repeat left center;padding-left:14px;color:#666;font-size:12px}
+.ques_ul h4{font-weight:100;border-bottom:1px solid #efefef}
+.ques_ul .spclick{background:#d6b870;}
+.ques_ul .spclick h4{border:none}
+.ques_ul .spclick a{color:#fff;background:url(../images/right_w.png) no-repeat left center}
+/*右边*/
+.ques_right{width:730px;margin-left:38px;padding-bottom:70px}
+.buy_question{font-size:13px;color:#666;line-height:28px;display:none}
+.buy_question strong{font-size:14px}
+.have-margin{margin:30px 0}
+
+.common_question h3{font-size:16px;margin-bottom:8px;color:#333}
+.com-question li{margin-bottom:30px}
+.com-question h4{font-size:14px;color:#4a4a4a;font-weight:bold;line-height:22px;margin-bottom:6px;cursor:pointer}
+.com-question div{font-size:12px;color:#666;line-height:22px;display:none}
+
+
+/*新导航*/
+.question_allnav{width:743px;margin:10px 0 0 178px}
+.question_allnav-top{overflow:hidden;border:1px solid #dbdbdb;width:720px;font-family:"微软雅黑";margin:0 auto}
+.question_allnav-top li{float:left;width:120px;height:30px;line-height:30px;background:url(../images/wline.jpg) no-repeat right center;text-align:center;font-size:14px;color:#666;cursor:pointer}
+.question_allnav-top .wbs_nobk{background:none}
+.question_allnav-top .questionnav-click{background:#d6aa70;color:#fff}
+.question_allnav-bottom{width:720px;overflow:hidden;margin:0 auto;margin-top:4px}
+.question_allnav-bottom li{float:left;width:120px;text-align:center;height:7px}
+.question_allnav-bottom span{display:block;width:16px;height:7px;margin:0 auto;display:none}
+.question_bottom{border-bottom:1px solid #dbdbdb;width:743px}
+.question_allnav-bottom .bs_show span{display:block;background:url(../images/sjx.png) no-repeat center center}

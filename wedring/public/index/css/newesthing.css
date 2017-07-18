@@ -1,0 +1,46 @@
+/*最新动态样式*/
+.newesthing{background:#fff}
+/*中间内容*/
+.newesthing_cort{padding:0 40px 40px 40px}
+/*切换的导航*/
+.newesthing_cort-nav{border:1px solid #f4f4f4;background:#fafafa;height:33px}
+.newesthing_cort-nav li{float:left;border:1px solid #f4f4f4;padding:0 42px;font-size:14px;color:#666;height:33px;line-height:33px;border-top:none;border-bottom:none;border-left:none;cursor:pointer}
+.newesthing_cort-nav .newesthing_cort-check{border-top:2px solid #d6b870;background:#fff;margin-top:-1px}
+/*页数*/
+.newesthing_cort-parge{height:40px;line-height:40px;border-bottom:1px solid #f4f4f4;margin-top:20px}
+.newesthing_cort-parge p span{color:#888;font-size:12px}
+.newesthing_cort-parge p i{color:#ff3b4b}
+.talktop_left{font-size:14px;color:#666;font-weight:bold}
+.talktop_left span,.talktop_left em{font-weight:100}
+.talktop_left i{color:#8e4f1b;font-weight:bold;padding:0 8px}
+.talktop_left .next_page{display:inline-block;width:58px;height:23px;text-align:center;line-height:23px;border:1px solid #dbdbdb;font-size:12px;cursor:pointer}
+/*各种活动*/
+.newesthing_cort-activities{overflow:hidden;margin-bottom:24px}
+/*标题*/
+.newesthing_cort-activities-top{overflow:hidden;margin-bottom:6px}
+.newesthing_cort-activities-tittle{font-size:0;margin-top:18px}
+.newesthing_cort-activities-tittle p{line-height:16px}
+.newesthing_cort-activities-tittle strong,.newesthing_cort-activities-tittle em{font-size:16px;color:#666}
+.newesthing_cort-activities-tittle span{font-size:12px;color:#888}
+.newesthing_cort-activities-tittle i{font-size:12px;color:#ff3b4b}
+.line-padd{padding:0 6px}
+.atittle-right{margin-top:38px}
+/*图片*/
+.newesthing_cort-activities-img a{display:block}
+/*文字*/
+.newesthing_cort-activities-word{margin-top:8px}
+.newesthing_cort-activities-word p{font-size:12px;color:#888;line-height:24px;text-align:justify}
+/*分页*/
+.newesthing_cort{overflow:hidden}
+.paging_all{position:relative;left:50%;float:left;-moz-user-select: none; /*火狐*/-webkit-user-select: none;  /*webkit浏览器*/-ms-user-select: none;   /*IE10*/-khtml-user-select: none; /*早期浏览器*/user-select: none;}
+.paging{height:40px}
+.paging li{float:left;border:1px solid #ccc;border-right-width:0px; width:36px;height:38px;line-height:38px;text-align:center;font-family:"Arial";font-size:14px;color:#cd505a;background:#fff;cursor:pointer}
+.paging .pli{float:left;border:1px solid #ccc;padding:0 13px;border-right-width:0px;width:auto;height:38px;line-height:38px;text-align:center;font-family:"Arial";font-size:14px;color:#cd505a;background:#fff;cursor:pointer}
+.paging .pli2{float:left;border:1px solid #ccc;padding:0 13px;width:auto;height:38px;line-height:38px;text-align:center;font-family:"Arial";font-size:14px;color:#cd505a;background:#fff;cursor:pointer}
+
+.paging .pag_gray{background:#efefef;color:#666}
+.paging .mouseover{background:#efefef;text-decoration:underline;}
+.pag_p{line-height:40px;font-size:14px;color:#666;padding-left:8px}
+.pag_txt{width:34px;margin-right:6px}
+.pag_bt{width:48px;background:#efefef;border:1px solid #ccc;height:18px;cursor:pointer}
+.paging_all-cort{position:relative;right:50%}

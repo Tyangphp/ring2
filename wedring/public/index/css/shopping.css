@@ -1,0 +1,296 @@
+/*购物车页面*/
+
+*{margin:0;padding:0}
+li,ul{list-style:none;}
+a{text-decoration:none}
+input{outline:none;}
+img{border:0 none;vertical-align:middle;}
+em,i{font-style:normal}
+
+
+
+.fl{float:left;display:inline;}
+.fr{float:right;display:inline;}
+/*清除浮动*/
+.fix:after{content:" ";display:block;visibility:hidden;clear:both;height:0;line-height:0;}
+.fix{*zoom:1;}
+/*980宽度*/
+.cmain{width:980px;margin:0 auto;position:relative}
+
+/*宽度自适应*/
+.cort{width:100%;min-width:980px}
+
+.all-thing{background:#fef3f1;overflow:hidden}
+.tcmain{width:940px;margin:0 auto;position:relative;background:#fff;padding:0 20px}
+/*头部*/
+.shop_top{height:83px;}
+.shopt_left{padding-top:26px}
+.shopt_left a{display:inline-block}
+.shopt_left span{vertical-align:middle;font-size:14px;color:#888;padding-left:16px}
+.shopt_right{font-size:0;padding-top:50px}
+.shopt_right span{font-size:12px;color:#666}
+.shopt_right a{font-size:12px;padding-left:12px}
+.shopt_right .my_dr{color:#666}
+.shopt_right .tc_dr{color:#888}
+.shopt_right .help_dr{color:#333}
+/*导航条*/
+.shop_nav{background:url(../images/shoop_nav.jpg) no-repeat;width:940px;height:38px;}
+/*特殊导航条*/
+.shop_spnav{background:url(../images/shoop_othernav.jpg) no-repeat;width:940px;height:38px;}
+/*购物车页面*/
+
+/*内容*/
+.shop_cort{padding-top:46px;overflow:hidden;padding-bottom:40px}
+.shop_cort-left{width:722px}
+.shop_cort h3{font-size:14px;color:#666;border-bottom:1px solid #dbdbdb;padding-bottom:12px}
+.shop_tabble td{font-size:14px;text-align:center}
+.nav_tr td{height:40px;line-height:40px;color:#333;font-weight:bold}
+.shop_tabble .sp_td{text-align:left}
+.nav_tr .sp_td{padding-left:42px}
+.cz_td{width:126px}
+.sc_td{width:76px}
+.kz_td{width:110px}
+.gm_td{width:160px;font-family:"Arial";}
+
+.cp_tr td{background:#fff9f8;padding:8px 0;color:#666;margin-bottom:10px}
+.cp_tr .sp_td{padding-left:8px;width:206px}
+.cp_tr .gm_td{color:#ff4c4c;font-weight:bold}
+.close_td{width:36px;position:relative}
+.sicon{background:url(../images/small_tb.png) no-repeat;}
+.s_close{display:inline-block;position:absolute;width:20px;height:22px;background-position:0 -87px;right:12px;top:12px;cursor:pointer}
+.kb_tr td{background:#fff;height:16px}
+
+/*结算*/
+.shop_js{border:4px solid #fef3f1;margin-top:25px;height:82px;line-height:82px;color:#666;font-size:12px;width:714px}
+.shop_js a{padding-left:20px}
+.shop_js a:hover{text-decoration:underline}
+.jx_shop{color:#666}
+.qk_shop{color:#888;padding-right:102px}
+.shop_js span{padding-right:26px}
+.shop_js i{color:#ff4c4c;padding:0 8px}
+.fw_bold{font-weight:bold;font-family:"Arial";}
+.shop_js .end_bt{display:inline-block;width:150px;height:36px;background:#d6b870;line-height:36px;text-align:center;color:#fff;font-size:14px;padding:0;cursor:pointer}
+.end_bt em{background:url(../images/all-right_w.png) no-repeat left center;padding-left:14px}
+.shop_js .end_bt:hover{background:#caa752}
+
+/*同步推荐*/
+.shop_tj{margin-top:62px}
+.shop_tj-top{border-bottom:1px solid #dbdbdb;padding-bottom:12px;font-size:0;color:#666}
+.shop_tj-top span{font-size:14px;font-weight:bold}
+.shop_tj-top i{font-size:12px;padding-left:16px}
+.shop_tj-ul{overflow:hidden;margin-top:10px;margin-left:-44px;margin-bottom:40px}
+.shop_tj-ul a{display:block}
+.shop_tj-ul li{float:left;text-align:center;width:108px;overflow:hidden;margin-left:44px}
+.shop_ul-bot{margin-top:16px;font-size:12px}
+.shop_ul-bot p{font-family:"微软雅黑";color:#666;height:20px}
+.shop_ul-bot span{color:#888}
+.join_cart{width:103px;height:23px;line-height:24px;text-align:center;border:1px solid #d6b870;background:#fff;font-size:14px;color:#c6a34d;font-weight:bold;margin-top:8px;cursor:pointer}
+.join_cart span{background:url(../images/all-right_y.png) no-repeat left center;color:#c6a34d;padding-left:14px}
+.join_carthover{background:#caa752;border:1px solid #caa752}
+.join_carthover span{background:url(../images/all-right_w.png) no-repeat left center;color:#fff;padding-left:14px}
+
+/*same右边*/
+.shop_cort-right{border:1px solid #e6e6e6;width:198px;margin-top:26px}
+.shop_right-nr{padding:25px 14px}
+.shop_right-nr h3{font-size:20px;font-family:"微软雅黑";color:#333;font-weight:500;padding-bottom:8px}
+.line_bottom{border-bottom:1px solid #dbdbdb;padding:20px 0}
+.shop_right-zx p{background:url(../images/small_tb.png) no-repeat;color:#333;font-size:14px;padding-left:36px}
+.shop_right-zx .shop_lx{background-position:0 -1px;height:22px;margin-bottom:8px;line-height:22px}
+.shop_right-zx .shop_tel{background-position:0 -24px;height:18px;line-height:18px}
+.shop_right-zf h4{font-size:14px;color:#666}
+.shop_right-zf p{font-size:12px;color:#888;margin:12px 0}
+.shop_right-ul{overflow:hidden}
+.shop_right-ul li{float:left;background:url(../images/zfgn.jpg) no-repeat;width:54px;height:32px}
+.shop_right-ul .shop_cor-yl{margin-right:4px}
+.shop_right-ul .shop_cor-cft{background-position:-54px 0;margin-right:4px}
+.shop_right-ul .shop_cor-zf{background-position:-108px 0}
+.shop_right-ps{padding-top:20px}
+.shop_right-ps h4{font-size:14px;color:#666;margin-bottom:8px}
+.shop_right-ps p{background:url(../images/small_tb.png) no-repeat;color:#888;font-size:12px;padding-left:36px}
+.shop_right-ps .shop_kd{height:22px;background-position:0 -44px;margin-bottom:6px;line-height:22px}
+.shop_right-ps .shop_bj{height:20px;background-position:0 -67px;line-height:20px}
+
+/*底部*/
+.shop_foot{text-align:center;margin-top:36px}
+.shop_foot p{font-size:12px;font-family:"微软雅黑";color:#888;line-height:24px}
+.shop_foot-img{margin-top:16px;padding-bottom:30px}
+
+
+/*真爱协议页面*/
+.shop_nav-love{background-position:0 -38px}
+.shop_agree{width:882px;margin:0 auto;margin-top:35px;padding-bottom:50px}
+.shop_agree-top,.shop_agree-bottom{background:url(../images/zs_border.png) no-repeat;height:50px}
+.shop_agree-cort{background:url(../images/zs_repeat.png) repeat-y;width:882px}
+.shop_agree-bottom{background-position:0 -50px}
+.shopagree_cort-top{font-size:0;text-align:center}
+.shopagree_cort-top i{background:url(../images/line1.jpg) no-repeat;width:50px;vertical-align:middle;height:1px;display:inline-block}
+.shopagree_cort-top span{font-size:30px;color:#fe929b;vertical-align:middle;padding:0 20px}
+.shop_agree-cort p{font-size:14px;color:#666;line-height:30px;text-align:center}
+.shopagree_cort-center{margin:24px 0}
+.shopagree_cort-input{margin-left:52px}
+.it_1,.it_2,.it_3{padding:7px 0;border:1px solid #e5e5e5;vertical-align:middle}
+.it_1{width:118px}
+.it_2{width:198px}
+.it_3{width:138px}
+.shopagree_cort-input label{color:#333;font-size:14px;vertical-align:middle;margin-left:16px}
+.shopagree_cort-input i{color:#ff0116}
+.shopagree_cort-spcenter{margin-top:24px}
+.shopagree_cort-spcenter p{font-size:14px;color:#888}
+.shopagree_cort-spinput{margin-left:74px;margin-bottom:32px}
+.shopagree_cort-check{text-align:center;font-size:0;padding-bottom:32px}
+.shopagree_cort-check label{padding-left:4px}
+.shopagree_cort-check a{vertical-align:middle;color:#8e4f1b;font-size:12px}
+.shopagree_cort-check input{vertical-align:middle}
+.shopagree_button{width:210px;margin:0 auto}
+.shopagree_button .bt1{background:#d6b870;width:210px;height:36px;line-height:36px;text-align:center;font-size:14px;color:#fff;cursor:pointer;font-weight:bold}
+.shopagree_button .bt1 span{background:url(../images/all-right_w.png) no-repeat left center;padding-left:14px}
+
+/*填写订单页面*/
+.shop_nav-dd{background-position: 0 -76px}
+/*特殊*/
+.shop_nav-spdd{background-position: 0 -38px}
+.shop_cort-adress{margin-top:8px}
+.shop_adress-top{font-size:0;padding-left:26px;height:auto;line-height:30px}
+.shop_adress-top input{vertical-align:middle;margin-right:8px;}
+.shop_adress-top label{font-size:12px;color:#333;vertical-align:middle}
+.shop_adress-top span{font-size:12px;color:#888;vertical-align:middle;padding-left:20px;padding-right:40px}
+.shop_adress-top i{font-size:12px;color:#e5e5e5;vertical-align:middle;padding:0 5px}
+.shop_adress-top a{font-size:12px;color:#8e4f1b;vertical-align:middle}
+.check_bk{background:#fef3f1}
+.shop_adress-top .adress_color{color:#888}
+/*新加地址*/
+.shop_adress-add{margin-left:40px;margin-top:16px;font-size:0}
+.shop_adress-add h4{font-size:14px;color:#666}
+.shop_adress-Toadd{margin-top:16px}
+.shop_adress-Toadd i{color:#e60012;padding-right:4px}
+.shop_adress-Toadd label,.shop_adress-Toadd input,.shop_adress-Toadd select,.shop_adress-Toadd span,.shop_adress-Toadd i{vertical-align:middle}
+.shop_adress-Toadd label{width:70px;text-align:right;display:inline-block;font-size:12px;color:#333}
+.shop_adress-Toadd input{padding:4px 0;border:1px solid #ccc;font-size:12px;color:#888;padding-left:10px}
+.shop_adress-Toadd select{height:24px;width:100px}
+.shop_adress-Toadd span{font-size:12px;color:#333;padding:0 6px}
+.shop_adress-Toadd .adt_1{width:360px;}
+.shop_adress-Toadd .oth_color{font-size:12px;color:#888}
+.shop_adress-sp{margin:22px 0 22px 68px}
+.shop_adress-sp label,.shop_adress-sp input{font-size:12px;color:#666;vertical-align:middle}
+.shop_adress-save .bt1{background:#d6b870;width:180px;height:30px;line-height:30px;text-align:center;color:#fff;font-size:14px;font-weight:bold;cursor:pointer}
+/*确认订单信息*/
+.shop_adress-qr{margin-top:56px}
+.shop_adressqr-top{border-bottom:1px solid #dbdbdb;padding-bottom:12px;font-size:12px;color:#666}
+.shop_adressqr-top span{font-size:14px;font-weight:bold}
+.shop_adressqr-top a{color:#8e4f1b}
+/*订单*/
+.shop_adressqr-of{margin-top:20px;border:1px solid #e6e6e6;}
+.shop_adressqr-of td{text-align:center;font-size:14px}
+.shop_adress-shoop{width:188px}
+.shop_adress-cz{width:140px}
+.shop_adress-sc{width:132px}
+.shop_adress-kz{width:136px}
+.shop_adress-pirce{width:124px}
+.shop_adressqr-first td{height:28px;border-bottom:1px solid #e6e6e6;color:#333;background:#fafafa}
+.shop_adressqr-sec td{padding:20px 0;color:#666}
+.shop_adressqr-sec span{font-weight:bold}
+.shop_adressqr-of .shop_adress-back{text-align:left;height:29px;background:#fafafa;border-bottom:1px solid #e6e6e6}
+.shop_adress-back span{color:#666;font-size:12px;padding-left:36px}
+/*总计*/
+.shop_adress-zj{margin:12px 0;background:#fef3f1;height:40px;line-height:40px;padding-left:22px;font-size:0}
+.shop_adress-zj span{font-size:14px;color:#666;padding-right:10px}
+.shop_adress-zj i{font-size:14px;color:#ff4c4c;padding:0 4px}
+.shop_adress-zj .fw_bold{margin-right:22px;padding:0}
+/*提交订单等*/
+.shop_adress-last{overflow:hidden}
+.shop_adress-ddbz{width:336px}
+.shop_adress-details{margin-bottom:12px}
+.shop_adress-ddbz p{background:url(../images/small_tb.png) no-repeat -6px -130px;padding-left:22px;font-size:14px;color:#666;font-weight:bold;margin-bottom:10px;cursor:pointer}
+.shop_adress-ddbz .clickshow{background-position:-6px -109px}
+.shop_adress-text{width:322px;outline:none;overflow:auto;resize:none;color:#888;font-size:12px;height:80px;padding-top:6px;line-height:18px;border:1px solid #ccc;}
+.shop_adress-tickets{border:1px solid #ccc;width:312px;padding:9px 0 20px 10px;background:#fef3f1;display:none}
+.shop_adress-tickets-choose{font-size:0;margin-bottom:20px}
+.shop_adress-tickets-choose label,.shop_adress-tickets-choose input{vertical-align:middle}
+.shop_adress-tickets-choose input{margin-right:6px}
+.shop_adress-tickets-choose label{font-weight:bold;color:#333;font-size:14px;margin-right:6px}
+.shop_adress-tickets-write{font-size:0}
+.tickets-write{margin-bottom:10px}
+.shop_adress-tickets-write i,.shop_adress-tickets-write select,.shop_adress-tickets-write input,.shop_adress-tickets-write span{vertical-align:middle;font-size:12px}
+.shop_adress-tickets-write i{color:#e60012}
+.shop_adress-tickets-write span{color:#333;margin:0 4px}
+.shop_adress-tickets-write select{height:24px;width:60px}
+.shop_adress-tickets-write input{padding:3px 0;width:180px}
+.tickets-write-save{height:28px;line-height:28px;width:103px;text-align:center;font-size:12px;color:#333;background:url(../images/line_rp.jpg) repeat-x;border:1px solid #ccc;cursor:pointer;margin-left:74px}
+.shop_adress-tjdd{margin-top:10px}
+.shop_adress-tjdd .bt1{width:160px;height:36px;line-height:36px;text-align:center;background:#ff5858;color:#fff;font-weight:bold;cursor:pointer}
+.shop_adress-tjdd p{color:#666;font-size:14px;line-height:36px;margin-right:10px}
+.shop_adress-tjdd i{color:#ff4c4c;font-size:16px}
+
+/*提交订单完页面*/
+.shop_nav-end{background-position:0 -114px}
+/*特殊*/
+.shop_nav-spend{background-position: 0 -76px}
+.shop_of-for{padding:30px 20px 60px 20px}
+.shop_ofor-top{text-align:center;margin-bottom:32px}
+.shop_ofor-top h3{font-family:"微软雅黑";font-size:18px;color:#666;font-weight:100;margin-top:20px}
+.shop_ofor-top h4{font-size:14px;color:#333;font-weight:100;margin:12px 0 18px 0}
+.shop_ofor-font{font-size:0}
+.shop_ofor-font span,.shop_ofor-font i,.shop_ofor-font a{font-size:12px}
+.shop_ofor-font span{color:#666}
+.shop_ofor-font i{color:#e60012}
+.shop_ofor-font a{color:#8e4f1b;padding-left:20px}
+.shop_ofor-font a:hover{text-decoration:underline}
+.shop_ofor-line{border-bottom:1px solid #dbdbdb}
+/*支付方式的导航*/
+.shop_ofor-nav{height:55px;width:450px;margin:0 auto}
+.shop_ofor-nav li{float:left;cursor:pointer;font-weight:bold;font-size:14px;color:#666;width:150px;text-align:center;height:56px;line-height:56px}
+.shop_ofor-nav .shop_ofor-nav-click{background:url(../images/line_hx.png) no-repeat center bottom;color:#c6a34d}
+.shop_ofor-allpay{background:#fef3f1;padding-bottom:30px}
+/*提示*/
+.shop_ofor-ts{text-align:center;font-size:14px;color:#666;height:60px;line-height:60px}
+/*银行*/
+.shop_ofor-bank{overflow:hidden;font-size:0;margin-bottom:50px}
+.shop_ofor-bank li{float:left;margin-top:20px;margin-left:30px}
+.shop_ofor-bank input{vertical-align:middle;margin-right:10px}
+.shop_ofor-bank img{vertical-align:middle}
+.shop_ofor-button{width:160px;margin:0 auto;margin-bottom:10px}
+.shop_ofor-button .bt3{background:#ff5858;width:160px;height:36px;line-height:36px;text-align:center;color:#fff;font-size:14px;cursor:pointer;font-weight:bold}
+.shop_ofor-button .bt3 span{background:url(../images/all-right_w.png) no-repeat left center;padding-left:14px}
+.shop_ofor-button .bt1_hover{background:#eb3535}
+/*分期付款*/
+.shop_ofor-pirce{font-size:0;padding:46px 0 30px 30px}
+.shop_ofor-pirce span,.shop_ofor-pirce input{vertical-align:middle}
+.shop_ofor-pirce span{font-size:14px;color:#666}
+.shop_ofor-pirce input{padding:8px 0;border:1px solid #ccc;width:196px;margin:0 6px}
+.shop_ofor-post{display:none}
+.shop_ofor-post h4{color:#666;font-size:14px;padding-left:28px}
+/*线下支付*/
+.shop_ofor-xxzf{padding:32px 27px}
+.shop_ofor-xxzf-tittle p{font-size:12px;color:#666;line-height:24px}
+.shop_ofor-xxzf-tittle{margin-bottom:30px}
+.shop_ofor-xxzf_all{overflow:hidden}
+.shop_ofor-xxzf_all h3{font-size:14px;color:#666;margin-bottom:10px}
+.shop_ofor-xxzf_cort{margin-bottom:26px}
+.shop_ofor-xxzf-table{border:1px solid #d9d9d9;border-bottom:none}
+.shop_ofor-xxzf-table td{border-bottom:1px solid #d9d9d9;padding:10px 0;font-size:12px;color:#333;text-align:center}
+.ofor-xxzf-tdfirst{background:#f2f2f2;width:109px;border-right:1px solid #d9d9d9}
+.shop_ofor-xxzf-table .ofor-xxzf-tdsec{background:#fff;width:268px;text-align:left;padding-left:20px}
+.shop_ofor-xxzf_border{border:1px solid #d9d9d9;width:376px;background:#fff;padding:7px 0 7px 22px}
+.shop_ofor-xxzf_border p{font-size:12px;color:#666;font-family:Arial, Helvetica, sans-serif;line-height:18px}
+.ofor-xxzf-intent{text-indent:5.2em}
+/*支付方式底部的帮助*/
+.shop_ofor-help{border-top:1px solid #dbdbdb;margin-top:30px}
+.shop_ofor-help h3{color:#666;font-size:14px;margin-top:30px;margin-bottom:6px}
+.shop_ofor-help p{color:#666;font-size:12px;line-height:20px}
+
+/*支付完成页面*/
+.thebk_white{background:#fff;margin-bottom:30px}
+.shop_pay-end{text-align:center;padding:48px 0 100px 0}
+.shop_pay-end h2{font-family:"微软雅黑";color:#fe929b;font-size:30px;font-weight:100;margin-top:10px;padding-bottom:20px}
+.shop_pay-cort{padding-bottom:20px}
+.shop_pay-cort p{font-size:14px;color:#666;line-height:22px}
+.shop_pay-cort a{color:#8e4f1b;text-decoration:underline;padding:0 6px}
+
+/*新加*/
+.shopagree_button .bt1 span,.shop_adress-save .bt1 span{background:url(../images/all-right_w.png) no-repeat left center;padding-left:14px}
+.shopagree_button .bt1_hover,.shop_adress-save .bt1_hover{background:#caa752}
+.shop_adress-tjdd .bt1 span{background:url(../images/all-right_w.png) no-repeat left center;padding-left:14px}
+.shop_adress-tjdd .bt1_hover{background:#eb3535}
+
+/*选中变颜色*/
+.clickit_bk{background:#faffbd}

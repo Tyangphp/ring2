@@ -1,0 +1,3691 @@
+[ 2017-05-15T05:08:39+08:00 ] ::1 ::1 GET /
+[ log ] www.thinkphp.com/ [运行时间：0.048000s][吞吐率：20.83req/s] [内存消耗：1,245.90kb] [文件加载：25]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T05:23:38+08:00 ] ::1 ::1 GET /index/index/add
+[ log ] www.thinkphp.com/index/index/add [运行时间：0.070000s][吞吐率：14.29req/s] [内存消耗：1,562.05kb] [文件加载：31]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->add[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]Use of undefined constant birthday - assumed 'birthday'[C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\library\think\Model.php:1476]
+
+---------------------------------------------------------------
+[ 2017-05-15T05:24:26+08:00 ] ::1 ::1 GET /index/index/add
+[ log ] www.thinkphp.com/index/index/add [运行时间：0.098000s][吞吐率：10.20req/s] [内存消耗：2,410.83kb] [文件加载：36]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->add[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=;host=127.0.0.1;charset=utf8
+[ error ] [3D000]SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected[C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\library\think\db\connector\Mysql.php:60]
+
+---------------------------------------------------------------
+[ 2017-05-15T05:26:07+08:00 ] ::1 ::1 GET /index/index/add
+[ log ] www.thinkphp.com/index/index/add [运行时间：0.098000s][吞吐率：10.20req/s] [内存消耗：2,422.84kb] [文件加载：36]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->add[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ error ] [42S02]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'tp.student' doesn't exist[C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\library\think\db\connector\Mysql.php:60]
+
+---------------------------------------------------------------
+[ 2017-05-15T05:26:26+08:00 ] ::1 ::1 GET /index/index/add
+[ log ] www.thinkphp.com/index/index/add [运行时间：0.093000s][吞吐率：10.75req/s] [内存消耗：2,472.37kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->add[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_student` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_student` WHERE  `sno` = 109 LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [8]Use of undefined constant stu - assumed 'stu'[C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php:9]
+
+---------------------------------------------------------------
+[ 2017-05-15T05:26:40+08:00 ] ::1 ::1 GET /index/index/add
+[ log ] www.thinkphp.com/index/index/add [运行时间：0.072000s][吞吐率：13.89req/s] [内存消耗：2,421.85kb] [文件加载：34]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->add[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_student` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_student` WHERE  `sno` = 109 LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-05-15T05:29:50+08:00 ] ::1 ::1 GET /index/index/add
+[ log ] www.thinkphp.com/index/index/add [运行时间：0.092000s][吞吐率：10.87req/s] [内存消耗：2,436.34kb] [文件加载：39]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->add[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_student` [ RunTime:0.001000s ]
+[ error ] [10501]SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: '1980年08月13日' for column 'birthday' at row 1[C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\library\think\db\Connection.php:405]
+
+---------------------------------------------------------------
+[ 2017-05-15T05:30:36+08:00 ] ::1 ::1 GET /index/index/add
+[ log ] www.thinkphp.com/index/index/add [运行时间：0.084000s][吞吐率：11.90req/s] [内存消耗：2,383.19kb] [文件加载：34]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->add[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_student` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] INSERT INTO `think_student` (`sno` , `name` , `birthday` , `class` , `sex`) VALUES (114 , '刘月半' , '1980-08-13' , '95301' , '男') [ RunTime:0.003000s ]
+
+---------------------------------------------------------------
+[ 2017-05-15T05:31:22+08:00 ] ::1 ::1 GET /index/index/add
+[ log ] www.thinkphp.com/index/index/add [运行时间：0.092000s][吞吐率：10.87req/s] [内存消耗：2,383.19kb] [文件加载：34]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->add[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_student` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `think_student` (`sno` , `name` , `birthday` , `class` , `sex`) VALUES (115 , '刘哈哈' , '1985/08/13' , '95301' , '男') [ RunTime:0.017000s ]
+
+---------------------------------------------------------------
+[ 2017-05-15T05:35:08+08:00 ] ::1 ::1 GET /index/index/add
+[ log ] www.thinkphp.com/index/index/add [运行时间：0.060000s][吞吐率：16.67req/s] [内存消耗：2,421.84kb] [文件加载：34]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->add[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_student` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_student` WHERE  `sno` = 110 LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-05-15T05:36:00+08:00 ] ::1 ::1 GET /index/index/add
+[ log ] www.thinkphp.com/index/index/add [运行时间：0.061000s][吞吐率：16.39req/s] [内存消耗：2,422.41kb] [文件加载：34]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->add[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_student` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_student` WHERE  `sno` = 110 LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-05-15T05:36:50+08:00 ] ::1 ::1 GET /index/index/add
+[ log ] www.thinkphp.com/index/index/add [运行时间：0.067000s][吞吐率：14.93req/s] [内存消耗：2,472.89kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->add[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_student` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_student` WHERE  `sno` = 110 LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [2]array_flip() expects parameter 1 to be array, string given[C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\library\think\Model.php:568]
+
+---------------------------------------------------------------
+[ 2017-05-15T05:37:16+08:00 ] ::1 ::1 GET /index/index/add
+[ log ] www.thinkphp.com/index/index/add [运行时间：0.053000s][吞吐率：18.87req/s] [内存消耗：2,423.04kb] [文件加载：34]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->add[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_student` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_student` WHERE  `sno` = 110 LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-05-15T08:02:34+08:00 ] ::1 ::1 GET /index/user/add
+[ log ] www.thinkphp.com/index/user/add [运行时间：0.092000s][吞吐率：10.87req/s] [内存消耗：2,432.05kb] [文件加载：37]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->add[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] INSERT INTO `think_user` (`nickname` , `name` , `password`) VALUES ('贱坤' , '李坤' , '123') [ RunTime:0.001000s ]
+[ error ] [0]致命错误: Class 'app\index\Profile' not found[C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\User.php:14]
+
+---------------------------------------------------------------
+[ 2017-05-15T08:02:54+08:00 ] ::1 ::1 GET /index/user/add
+[ log ] www.thinkphp.com/index/user/add [运行时间：0.064000s][吞吐率：15.62req/s] [内存消耗：2,465.63kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->add[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `think_user` (`nickname` , `name` , `password`) VALUES ('贱坤' , '李坤' , '123') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_profile` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `think_profile` (`truename` , `birthday` , `user_id`) VALUES ('李贱坤' , '1993-6-19' , 8) [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-05-15T08:04:28+08:00 ] ::1 ::1 GET /index/user/add
+[ log ] www.thinkphp.com/index/user/add [运行时间：0.080000s][吞吐率：12.50req/s] [内存消耗：2,465.60kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->add[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `think_user` (`nickname` , `name` , `password`) VALUES ('老凯子' , '李文凯' , '123') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_profile` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `think_profile` (`truename` , `birthday` , `user_id`) VALUES ('凯凯' , '1987-8-19' , 9) [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-05-15T09:21:09+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.thinkphp.com/index/index/index [运行时间：0.149000s][吞吐率：6.71req/s] [内存消耗：2,473.78kb] [文件加载：34]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_student` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_student` [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-05-15T09:21:30+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.thinkphp.com/index/index/index [运行时间：0.078000s][吞吐率：12.82req/s] [内存消耗：2,475.77kb] [文件加载：37]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_student` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_student` [ RunTime:0.002000s ]
+[ error ] [0]致命错误: Call to a member function toArray() on array[C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php:24]
+
+---------------------------------------------------------------
+[ 2017-05-15T09:22:14+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.thinkphp.com/index/index/index [运行时间：0.074000s][吞吐率：13.51req/s] [内存消耗：2,424.10kb] [文件加载：34]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_student` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_student` WHERE  `sno` = 111 LIMIT 1 [ RunTime:0.003000s ]
+
+---------------------------------------------------------------
+[ 2017-05-15T09:23:14+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.thinkphp.com/index/index/index [运行时间：0.065000s][吞吐率：15.38req/s] [内存消耗：2,424.77kb] [文件加载：34]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_student` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_student` WHERE  `sno` = 111 LIMIT 1 [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-05-15T09:23:31+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.thinkphp.com/index/index/index [运行时间：0.060000s][吞吐率：16.67req/s] [内存消耗：2,424.80kb] [文件加载：34]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_student` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_student` WHERE  `sno` = 111 LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-05-15T09:24:34+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.thinkphp.com/index/index/index [运行时间：0.072000s][吞吐率：13.89req/s] [内存消耗：2,424.80kb] [文件加载：34]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_student` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_student` WHERE  `sno` = 111 LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-05-15T11:10:02+08:00 ] ::1 ::1 GET /index/index/addBook
+[ log ] www.thinkphp.com/index/index/addBook [运行时间：0.064000s][吞吐率：15.62req/s] [内存消耗：2,474.86kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'addBook',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->addBook[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [0]致命错误: Class 'app\index\model\Book' not found[C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php:35]
+
+---------------------------------------------------------------
+[ 2017-05-15T11:11:35+08:00 ] ::1 ::1 GET /index/index/addBook
+[ log ] www.thinkphp.com/index/index/addBook [运行时间：0.066000s][吞吐率：15.15req/s] [内存消耗：2,475.25kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'addBook',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->addBook[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [0]致命错误: Class 'app\index\model\Book' not found[C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php:35]
+
+---------------------------------------------------------------
+[ 2017-05-15T11:13:20+08:00 ] ::1 ::1 GET /index/index/addBook
+[ log ] www.thinkphp.com/index/index/addBook [运行时间：0.060000s][吞吐率：16.67req/s] [内存消耗：2,495.22kb] [文件加载：42]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'addBook',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->addBook[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_book` [ RunTime:0.002000s ]
+[ error ] [10501]SQLSTATE[HY000]: General error: 1364 Field 'create_time' doesn't have a default value[C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\library\think\db\Connection.php:405]
+
+---------------------------------------------------------------
+[ 2017-05-15T11:13:21+08:00 ] ::1 ::1 GET /index/index/addBook
+[ log ] www.thinkphp.com/index/index/addBook [运行时间：0.063000s][吞吐率：15.87req/s] [内存消耗：2,495.22kb] [文件加载：42]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'addBook',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->addBook[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_book` [ RunTime:0.002000s ]
+[ error ] [10501]SQLSTATE[HY000]: General error: 1364 Field 'create_time' doesn't have a default value[C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\library\think\db\Connection.php:405]
+
+---------------------------------------------------------------
+[ 2017-05-15T11:14:32+08:00 ] ::1 ::1 GET /index/index/addBook
+[ log ] www.thinkphp.com/index/index/addBook [运行时间：0.063000s][吞吐率：15.87req/s] [内存消耗：2,495.21kb] [文件加载：42]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'addBook',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->addBook[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_book` [ RunTime:0.005000s ]
+[ error ] [10501]SQLSTATE[HY000]: General error: 1364 Field 'status' doesn't have a default value[C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\library\think\db\Connection.php:405]
+
+---------------------------------------------------------------
+[ 2017-05-15T11:15:07+08:00 ] ::1 ::1 GET /index/index/addBook
+[ log ] www.thinkphp.com/index/index/addBook [运行时间：0.055000s][吞吐率：18.18req/s] [内存消耗：2,442.22kb] [文件加载：37]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'addBook',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->addBook[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_book` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `think_book` (`title` , `publish_time` , `user_id`) VALUES ('ThinkPHP5快速入门' , '2016-05-06' , 1) [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-05-15T11:16:13+08:00 ] ::1 ::1 GET /index/index/read
+[ log ] www.thinkphp.com/index/index/read [运行时间：0.062000s][吞吐率：16.13req/s] [内存消耗：2,481.26kb] [文件加载：37]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'read',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->read[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_book` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_book` WHERE  `user_id` = 1 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-05-15T11:27:28+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.thinkphp.com/index/index/index [运行时间：0.053000s][吞吐率：18.87req/s] [内存消耗：1,661.58kb] [文件加载：34]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]致命错误: Class 'app\index\controller\UserModel' not found[C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php:13]
+
+---------------------------------------------------------------
+[ 2017-05-15T11:27:46+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.thinkphp.com/index/index/index [运行时间：0.071000s][吞吐率：14.08req/s] [内存消耗：2,830.63kb] [文件加载：43]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` [ RunTime:0.001000s ]
+[ error ] [0]模板文件不存在:C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html[C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\library\think\view\driver\Think.php:80]
+
+---------------------------------------------------------------
+[ 2017-05-15T11:30:51+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.thinkphp.com/index/index/index [运行时间：0.098000s][吞吐率：10.20req/s] [内存消耗：2,959.91kb] [文件加载：43]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'list',
+  1 => 'count',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-05-15T11:30:59+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.thinkphp.com/index/index/index [运行时间：0.070000s][吞吐率：14.29req/s] [内存消耗：2,787.43kb] [文件加载：41]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'list',
+  1 => 'count',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-05-15T11:32:00+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.thinkphp.com/index/index/index [运行时间：0.057000s][吞吐率：17.54req/s] [内存消耗：3,004.38kb] [文件加载：45]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'list',
+  1 => 'count',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` [ RunTime:0.000000s ]
+[ error ] [0]类的属性不存在:app\index\model\User->email[C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\library\think\Model.php:429]
+
+---------------------------------------------------------------
+[ 2017-05-15T11:33:05+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.thinkphp.com/index/index/index [运行时间：0.063000s][吞吐率：15.87req/s] [内存消耗：2,829.83kb] [文件加载：43]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'list',
+  1 => 'count',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` [ RunTime:0.002000s ]
+[ error ] [0]类的属性不存在:app\index\model\User->birthday[C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\library\think\Model.php:429]
+
+---------------------------------------------------------------
+[ 2017-05-15T11:33:40+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.thinkphp.com/index/index/index [运行时间：0.055000s][吞吐率：18.18req/s] [内存消耗：2,790.31kb] [文件加载：41]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'list',
+  1 => 'count',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-05-15T11:37:12+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.thinkphp.com/index/index/index [运行时间：0.078000s][吞吐率：12.82req/s] [内存消耗：3,018.18kb] [文件加载：47]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'list',
+  1 => 'count',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` [ RunTime:0.001000s ]
+[ error ] [8]未定义变量: list11[C:\wamp64\www\1702\high\27\thinkphp5\runtime\temp\9a8a2453b9f37f45ada003603285631f.php:42]
+
+---------------------------------------------------------------
+[ 2017-05-15T11:37:35+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.thinkphp.com/index/index/index [运行时间：0.078000s][吞吐率：12.82req/s] [内存消耗：2,965.88kb] [文件加载：43]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'list',
+  1 => 'count',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-05-15T12:01:51+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.thinkphp.com/index/index/index [运行时间：0.060000s][吞吐率：16.67req/s] [内存消耗：2,965.98kb] [文件加载：43]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'list',
+  1 => 'count',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-05-15T12:02:02+08:00 ] ::1 ::1 GET /index/index/index?id=100
+[ log ] www.thinkphp.com/index/index/index?id=100 [运行时间：0.063000s][吞吐率：15.87req/s] [内存消耗：2,790.27kb] [文件加载：41]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+  'id' => '100',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'list',
+  1 => 'count',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-05-15T12:02:15+08:00 ] ::1 ::1 GET /index/index/index/id/100
+[ log ] www.thinkphp.com/index/index/index/id/100 [运行时间：0.059000s][吞吐率：16.95req/s] [内存消耗：2,790.65kb] [文件加载：41]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+  'id' => '100',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'list',
+  1 => 'count',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-05-15T12:02:31+08:00 ] ::1 ::1 GET /index/index/index%EF%BC%9Fid=100
+[ log ] www.thinkphp.com/index/index/index%EF%BC%9Fid=100 [运行时间：0.052000s][吞吐率：19.23req/s] [内存消耗：1,656.64kb] [文件加载：34]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index？id=100',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T12:02:40+08:00 ] ::1 ::1 GET /index/index/index?id=100
+[ log ] www.thinkphp.com/index/index/index?id=100 [运行时间：0.065000s][吞吐率：15.38req/s] [内存消耗：2,790.27kb] [文件加载：41]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+  'id' => '100',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'list',
+  1 => 'count',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-05-15T12:03:05+08:00 ] ::1 ::1 GET /index/index/index?id=100
+[ log ] www.thinkphp.com/index/index/index?id=100 [运行时间：0.067000s][吞吐率：14.93req/s] [内存消耗：2,966.97kb] [文件加载：43]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+  'id' => '100',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'list',
+  1 => 'count',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-05-15T12:05:11+08:00 ] ::1 ::1 GET /index/index/index?id=100
+[ log ] www.thinkphp.com/index/index/index?id=100 [运行时间：0.068000s][吞吐率：14.71req/s] [内存消耗：3,017.13kb] [文件加载：46]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+  'id' => '100',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'list',
+  1 => 'count',
+  2 => 'pwd',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` [ RunTime:0.001000s ]
+[ error ] [0]致命错误: Call to undefined function mdr()[C:\wamp64\www\1702\high\27\thinkphp5\runtime\temp\9a8a2453b9f37f45ada003603285631f.php:49]
+
+---------------------------------------------------------------
+[ 2017-05-15T12:05:32+08:00 ] ::1 ::1 GET /index/index/index?id=100
+[ log ] www.thinkphp.com/index/index/index?id=100 [运行时间：0.059000s][吞吐率：16.95req/s] [内存消耗：2,968.13kb] [文件加载：43]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+  'id' => '100',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'list',
+  1 => 'count',
+  2 => 'pwd',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-05-15T12:15:42+08:00 ] ::1 ::1 GET /index/index/index?id=100
+[ log ] www.thinkphp.com/index/index/index?id=100 [运行时间：0.070000s][吞吐率：14.29req/s] [内存消耗：2,791.94kb] [文件加载：41]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+  'id' => '100',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'list',
+  1 => 'count',
+  2 => 'pwd',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-05-15T14:08:24+08:00 ] ::1 ::1 GET /index/user/add
+[ log ] www.thinkphp.com/index/user/add [运行时间：0.066000s][吞吐率：15.15req/s] [内存消耗：1,296.85kb] [文件加载：28]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->add[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]语法解析错误: syntax error, unexpected 'funciton' (T_STRING), expecting variable (T_VARIABLE)[C:\wamp64\www\1702\high\27\thinkphp5\application\index\model\User.php:6]
+
+---------------------------------------------------------------
+[ 2017-05-15T14:08:49+08:00 ] ::1 ::1 GET /index/user/add
+[ log ] www.thinkphp.com/index/user/add [运行时间：0.082000s][吞吐率：12.20req/s] [内存消耗：2,466.92kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->add[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `think_user` (`nickname` , `name` , `password`) VALUES ('燕人张' , '张飞' , '123') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_profile` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] INSERT INTO `think_profile` (`truename` , `user_id`) VALUES ('张翼德' , 3) [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-05-15T14:10:30+08:00 ] ::1 ::1 GET /index/user/add
+[ log ] www.thinkphp.com/index/user/add [运行时间：0.121000s][吞吐率：8.26req/s] [内存消耗：2,553.28kb] [文件加载：42]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->add[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_profile` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_profile` WHERE  `user_id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [8]Trying to get property of non-object[C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\User.php:22]
+
+---------------------------------------------------------------
+[ 2017-05-15T14:11:15+08:00 ] ::1 ::1 GET /index/user/add
+[ log ] www.thinkphp.com/index/user/add [运行时间：0.077000s][吞吐率：12.99req/s] [内存消耗：2,421.79kb] [文件加载：34]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->add[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.003000s ]
+
+---------------------------------------------------------------
+[ 2017-05-15T14:11:57+08:00 ] ::1 ::1 GET /index/user/add
+[ log ] www.thinkphp.com/index/user/add [运行时间：0.084000s][吞吐率：11.90req/s] [内存消耗：2,552.95kb] [文件加载：42]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->add[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.006000s ]
+[ error ] [8]Undefined property: think\model\relation\HasOne::$truename[C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\User.php:23]
+
+---------------------------------------------------------------
+[ 2017-05-15T14:12:21+08:00 ] ::1 ::1 GET /index/user/add
+[ log ] www.thinkphp.com/index/user/add [运行时间：0.065000s][吞吐率：15.38req/s] [内存消耗：2,421.79kb] [文件加载：34]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->add[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-05-15T14:13:59+08:00 ] ::1 ::1 GET /index/user/add
+[ log ] www.thinkphp.com/index/user/add [运行时间：0.077000s][吞吐率：12.99req/s] [内存消耗：2,553.27kb] [文件加载：42]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->add[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_profile` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_profile` WHERE  `user_id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [8]Trying to get property of non-object[C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\User.php:23]
+
+---------------------------------------------------------------
+[ 2017-05-15T14:16:20+08:00 ] ::1 ::1 GET /index/user/add
+[ log ] www.thinkphp.com/index/user/add [运行时间：0.071000s][吞吐率：14.08req/s] [内存消耗：2,503.73kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->add[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_profile` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_profile` WHERE  `user_id` = 3 LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-05-15T14:27:32+08:00 ] ::1 ::1 GET /index/user/add
+[ log ] www.thinkphp.com/index/user/add [运行时间：0.088000s][吞吐率：11.36req/s] [内存消耗：2,465.52kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->add[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] DELETE FROM `think_user`    WHERE  `id` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_profile` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_profile` WHERE  `user_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] DELETE FROM `think_profile`    WHERE  `id` = 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-05-15T14:36:29+08:00 ] ::1 ::1 GET /index/user/add
+[ log ] www.thinkphp.com/index/user/add [运行时间：0.142000s][吞吐率：7.04req/s] [内存消耗：2,463.43kb] [文件加载：36]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->add[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.017000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.016000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.013000s ]
+[ error ] [0]类的属性不存在:app\index\model\User->books[C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\library\think\Model.php:429]
+
+---------------------------------------------------------------
+[ 2017-05-15T14:36:57+08:00 ] ::1 ::1 GET /index/user/add
+[ log ] www.thinkphp.com/index/user/add [运行时间：0.094000s][吞吐率：10.64req/s] [内存消耗：2,510.38kb] [文件加载：39]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->add[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [0]致命错误: Class 'app\index\model\Book' not found[C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\library\think\model\relation\HasMany.php:37]
+
+---------------------------------------------------------------
+[ 2017-05-15T14:37:16+08:00 ] ::1 ::1 GET /index/user/add
+[ log ] www.thinkphp.com/index/user/add [运行时间：0.073000s][吞吐率：13.70req/s] [内存消耗：2,510.38kb] [文件加载：39]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->add[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [0]致命错误: Class 'app\index\model\Book' not found[C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\library\think\model\relation\HasMany.php:37]
+
+---------------------------------------------------------------
+[ 2017-05-15T14:37:59+08:00 ] ::1 ::1 GET /index/user/add
+[ log ] www.thinkphp.com/index/user/add [运行时间：0.075000s][吞吐率：13.33req/s] [内存消耗：2,511.04kb] [文件加载：40]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->add[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.001000s ]
+[ error ] [0]致命错误: Call to undefined method app\index\model\Book::db()[C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\library\think\model\relation\HasMany.php:37]
+
+---------------------------------------------------------------
+[ 2017-05-15T14:38:34+08:00 ] ::1 ::1 GET /index/user/add
+[ log ] www.thinkphp.com/index/user/add [运行时间：0.060000s][吞吐率：16.67req/s] [内存消耗：2,492.57kb] [文件加载：37]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->add[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=tp;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_user` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `think_book` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `think_book` WHERE  `user_id` = 2 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-05-15T14:48:05+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.thinkphp.com/index/index/index [运行时间：0.078000s][吞吐率：12.82req/s] [内存消耗：1,781.04kb] [文件加载：34]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T14:53:03+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.thinkphp.com/index/index/index [运行时间：0.060000s][吞吐率：16.67req/s] [内存消耗：1,651.96kb] [文件加载：34]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]模板文件不存在:test.html[C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\library\think\view\driver\Think.php:80]
+
+---------------------------------------------------------------
+[ 2017-05-15T14:53:54+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.thinkphp.com/index/index/index [运行时间：0.046000s][吞吐率：21.74req/s] [内存消耗：1,781.51kb] [文件加载：34]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\test.html [ array (
+  0 => 'content',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T15:05:18+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.thinkphp.com/index/index/index [运行时间：0.088000s][吞吐率：11.36req/s] [内存消耗：1,781.40kb] [文件加载：34]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T15:10:06+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.thinkphp.com/index/index/index [运行时间：0.060000s][吞吐率：16.67req/s] [内存消耗：1,782.95kb] [文件加载：34]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+  1 => 'arr',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T15:11:25+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.thinkphp.com/index/index/index [运行时间：0.054000s][吞吐率：18.52req/s] [内存消耗：1,832.52kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+  1 => 'arr',
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]Use of undefined constant name - assumed 'name'[C:\wamp64\www\1702\high\27\thinkphp5\runtime\temp\9a8a2453b9f37f45ada003603285631f.php:11]
+
+---------------------------------------------------------------
+[ 2017-05-15T15:11:36+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.thinkphp.com/index/index/index [运行时间：0.055000s][吞吐率：18.18req/s] [内存消耗：1,783.05kb] [文件加载：34]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+  1 => 'arr',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T15:14:39+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.thinkphp.com/index/index/index [运行时间：0.064000s][吞吐率：15.62req/s] [内存消耗：1,657.98kb] [文件加载：34]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]致命错误: Class 'Dog' not found[C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php:14]
+
+---------------------------------------------------------------
+[ 2017-05-15T15:14:57+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.thinkphp.com/index/index/index [运行时间：0.051000s][吞吐率：19.61req/s] [内存消耗：1,658.30kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]致命错误: Class 'app\index\controller\Dog' not found[C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php:14]
+
+---------------------------------------------------------------
+[ 2017-05-15T15:15:30+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.thinkphp.com/index/index/index [运行时间：0.060000s][吞吐率：16.67req/s] [内存消耗：1,832.77kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+  1 => 'jb',
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]致命错误: Cannot use object of type app\index\controller\Dog as array[C:\wamp64\www\1702\high\27\thinkphp5\runtime\temp\9a8a2453b9f37f45ada003603285631f.php:13]
+
+---------------------------------------------------------------
+[ 2017-05-15T15:15:53+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.thinkphp.com/index/index/index [运行时间：0.054000s][吞吐率：18.52req/s] [内存消耗：1,783.29kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+  1 => 'jb',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T15:16:17+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.thinkphp.com/index/index/index [运行时间：0.055000s][吞吐率：18.18req/s] [内存消耗：1,783.71kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+  1 => 'jb',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T15:16:27+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.thinkphp.com/index/index/index [运行时间：0.061000s][吞吐率：16.39req/s] [内存消耗：1,832.86kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+  1 => 'jb',
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]致命错误: Cannot use object of type app\index\controller\Dog as array[C:\wamp64\www\1702\high\27\thinkphp5\runtime\temp\9a8a2453b9f37f45ada003603285631f.php:14]
+
+---------------------------------------------------------------
+[ 2017-05-15T15:16:55+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.thinkphp.com/index/index/index [运行时间：0.066000s][吞吐率：15.15req/s] [内存消耗：1,832.80kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+  1 => 'jb',
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]致命错误: Cannot use object of type app\index\controller\Dog as array[C:\wamp64\www\1702\high\27\thinkphp5\runtime\temp\9a8a2453b9f37f45ada003603285631f.php:14]
+
+---------------------------------------------------------------
+[ 2017-05-15T15:17:16+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.thinkphp.com/index/index/index [运行时间：0.103000s][吞吐率：9.71req/s] [内存消耗：1,783.74kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+  1 => 'jb',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T15:17:46+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.thinkphp.com/index/index/index [运行时间：0.057000s][吞吐率：17.54req/s] [内存消耗：1,833.58kb] [文件加载：39]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+  1 => 'jb',
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]Use of undefined constant name - assumed 'name'[C:\wamp64\www\1702\high\27\thinkphp5\runtime\temp\9a8a2453b9f37f45ada003603285631f.php:15]
+
+---------------------------------------------------------------
+[ 2017-05-15T15:17:55+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.thinkphp.com/index/index/index [运行时间：0.068000s][吞吐率：14.71req/s] [内存消耗：1,832.78kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+  1 => 'jb',
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]致命错误: Cannot use object of type app\index\controller\Dog as array[C:\wamp64\www\1702\high\27\thinkphp5\runtime\temp\9a8a2453b9f37f45ada003603285631f.php:15]
+
+---------------------------------------------------------------
+[ 2017-05-15T15:18:58+08:00 ] ::1 ::1 GET /index/index/index?pae=10
+[ log ] www.thinkphp.com/index/index/index?pae=10 [运行时间：0.127000s][吞吐率：7.87req/s] [内存消耗：1,783.86kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+  'pae' => '10',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+  1 => 'jb',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T15:19:06+08:00 ] ::1 ::1 GET /index/index/index?pae=10
+[ log ] www.thinkphp.com/index/index/index?pae=10 [运行时间：0.058000s][吞吐率：17.24req/s] [内存消耗：1,610.85kb] [文件加载：33]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+  'pae' => '10',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+  1 => 'jb',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T15:19:10+08:00 ] ::1 ::1 GET /index/index/index?page=10
+[ log ] www.thinkphp.com/index/index/index?page=10 [运行时间：0.054000s][吞吐率：18.52req/s] [内存消耗：1,610.46kb] [文件加载：33]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+  'page' => '10',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+  1 => 'jb',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T15:20:10+08:00 ] ::1 ::1 GET /index/index/index?page=10
+[ log ] www.thinkphp.com/index/index/index?page=10 [运行时间：0.056000s][吞吐率：17.86req/s] [内存消耗：1,784.43kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+  'page' => '10',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+  1 => 'jb',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T15:21:47+08:00 ] ::1 ::1 GET /index/index/index?page=10
+[ log ] www.thinkphp.com/index/index/index?page=10 [运行时间：0.047000s][吞吐率：21.28req/s] [内存消耗：1,784.89kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+  'page' => '10',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+  1 => 'pwd',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T15:23:54+08:00 ] ::1 ::1 GET /index/index/index?page=10
+[ log ] www.thinkphp.com/index/index/index?page=10 [运行时间：0.057000s][吞吐率：17.54req/s] [内存消耗：1,784.95kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+  'page' => '10',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+  1 => 'pwd',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T15:24:55+08:00 ] ::1 ::1 GET /index/index/index?page=10
+[ log ] www.thinkphp.com/index/index/index?page=10 [运行时间：0.053000s][吞吐率：18.87req/s] [内存消耗：1,785.39kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+  'page' => '10',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+  1 => 'pwd',
+  2 => 'a',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T15:27:04+08:00 ] ::1 ::1 GET /index/index/index?page=10
+[ log ] www.thinkphp.com/index/index/index?page=10 [运行时间：0.061000s][吞吐率：16.39req/s] [内存消耗：1,834.52kb] [文件加载：37]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+  'page' => '10',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+  1 => 'pwd',
+  2 => 'a',
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]语法解析错误: syntax error, unexpected '?'[C:\wamp64\www\1702\high\27\thinkphp5\runtime\temp\9a8a2453b9f37f45ada003603285631f.php:20]
+
+---------------------------------------------------------------
+[ 2017-05-15T15:27:22+08:00 ] ::1 ::1 GET /index/index/index?page=10
+[ log ] www.thinkphp.com/index/index/index?page=10 [运行时间：0.046000s][吞吐率：21.74req/s] [内存消耗：1,785.39kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+  'page' => '10',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+  1 => 'pwd',
+  2 => 'a',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T15:28:12+08:00 ] ::1 ::1 GET /index/index/index?page=10
+[ log ] www.thinkphp.com/index/index/index?page=10 [运行时间：0.044000s][吞吐率：22.73req/s] [内存消耗：1,611.79kb] [文件加载：33]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+  'page' => '10',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+  1 => 'pwd',
+  2 => 'a',
+  3 => 'b',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T15:28:23+08:00 ] ::1 ::1 GET /index/index/index?page=10
+[ log ] www.thinkphp.com/index/index/index?page=10 [运行时间：0.054000s][吞吐率：18.52req/s] [内存消耗：1,611.79kb] [文件加载：33]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+  'page' => '10',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+  1 => 'pwd',
+  2 => 'a',
+  3 => 'b',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T15:28:34+08:00 ] ::1 ::1 GET /index/index/index?page=10
+[ log ] www.thinkphp.com/index/index/index?page=10 [运行时间：0.051000s][吞吐率：19.61req/s] [内存消耗：1,611.79kb] [文件加载：33]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+  'page' => '10',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+  1 => 'pwd',
+  2 => 'a',
+  3 => 'b',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T15:28:54+08:00 ] ::1 ::1 GET /index/index/index?page=10
+[ log ] www.thinkphp.com/index/index/index?page=10 [运行时间：0.050000s][吞吐率：20.00req/s] [内存消耗：1,611.79kb] [文件加载：33]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+  'page' => '10',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+  1 => 'pwd',
+  2 => 'a',
+  3 => 'b',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T15:32:00+08:00 ] ::1 ::1 GET /index/index/index?page=10
+[ log ] www.thinkphp.com/index/index/index?page=10 [运行时间：0.055000s][吞吐率：18.18req/s] [内存消耗：1,785.90kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+  'page' => '10',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+  1 => 'pwd',
+  2 => 'a',
+  3 => 'b',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T15:37:23+08:00 ] ::1 ::1 GET /index/index/index?page=10
+[ log ] www.thinkphp.com/index/index/index?page=10 [运行时间：0.074000s][吞吐率：13.51req/s] [内存消耗：1,786.76kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+  'page' => '10',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+  1 => 'pwd',
+  2 => 'a',
+  3 => 'b',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T15:38:26+08:00 ] ::1 ::1 GET /index/index/index?page=10
+[ log ] www.thinkphp.com/index/index/index?page=10 [运行时间：0.061000s][吞吐率：16.39req/s] [内存消耗：1,786.76kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+  'page' => '10',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+  1 => 'pwd',
+  2 => 'a',
+  3 => 'b',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T15:40:12+08:00 ] ::1 ::1 GET /index/index/index?page=10
+[ log ] www.thinkphp.com/index/index/index?page=10 [运行时间：0.047000s][吞吐率：21.28req/s] [内存消耗：1,786.84kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+  'page' => '10',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+  1 => 'pwd',
+  2 => 'a',
+  3 => 'b',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T15:40:16+08:00 ] ::1 ::1 GET /index/index/index?page=10
+[ log ] www.thinkphp.com/index/index/index?page=10 [运行时间：0.044000s][吞吐率：22.73req/s] [内存消耗：1,612.29kb] [文件加载：33]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+  'page' => '10',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+  1 => 'pwd',
+  2 => 'a',
+  3 => 'b',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T15:42:45+08:00 ] ::1 ::1 GET /index/index/index?page=10
+[ log ] www.thinkphp.com/index/index/index?page=10 [运行时间：0.061000s][吞吐率：16.39req/s] [内存消耗：1,786.09kb] [文件加载：35]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+  'page' => '10',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+  1 => 'pwd',
+  2 => 'a',
+  3 => 'b',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T15:42:48+08:00 ] ::1 ::1 GET /index/index/index?page=10
+[ log ] www.thinkphp.com/index/index/index?page=10 [运行时间：0.042000s][吞吐率：23.81req/s] [内存消耗：1,611.79kb] [文件加载：33]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+  'page' => '10',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+  1 => 'pwd',
+  2 => 'a',
+  3 => 'b',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T15:42:48+08:00 ] ::1 ::1 GET /index/index/index?page=10
+[ log ] www.thinkphp.com/index/index/index?page=10 [运行时间：0.043000s][吞吐率：23.26req/s] [内存消耗：1,611.79kb] [文件加载：33]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+  'page' => '10',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+  1 => 'pwd',
+  2 => 'a',
+  3 => 'b',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T15:42:49+08:00 ] ::1 ::1 GET /index/index/index?page=10
+[ log ] www.thinkphp.com/index/index/index?page=10 [运行时间：0.040000s][吞吐率：25.00req/s] [内存消耗：1,611.79kb] [文件加载：33]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+  'page' => '10',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+  1 => 'pwd',
+  2 => 'a',
+  3 => 'b',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T15:42:49+08:00 ] ::1 ::1 GET /index/index/index?page=10
+[ log ] www.thinkphp.com/index/index/index?page=10 [运行时间：0.062000s][吞吐率：16.13req/s] [内存消耗：1,611.79kb] [文件加载：33]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+  'page' => '10',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+  1 => 'pwd',
+  2 => 'a',
+  3 => 'b',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T15:42:49+08:00 ] ::1 ::1 GET /index/index/index?page=10
+[ log ] www.thinkphp.com/index/index/index?page=10 [运行时间：0.051000s][吞吐率：19.61req/s] [内存消耗：1,611.79kb] [文件加载：33]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+  'page' => '10',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'content',
+  1 => 'pwd',
+  2 => 'a',
+  3 => 'b',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T15:48:28+08:00 ] ::1 ::1 GET /index/index/add
+[ log ] www.thinkphp.com/index/index/add [运行时间：0.092000s][吞吐率：10.87req/s] [内存消耗：1,789.80kb] [文件加载：34]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->add[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\add.html [ array (
+  0 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T15:48:37+08:00 ] ::1 ::1 GET /index/index/add
+[ log ] www.thinkphp.com/index/index/add [运行时间：0.053000s][吞吐率：18.87req/s] [内存消耗：1,609.15kb] [文件加载：32]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->add[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\add.html [ array (
+  0 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T15:48:51+08:00 ] ::1 ::1 GET /index/index/add
+[ log ] www.thinkphp.com/index/index/add [运行时间：0.048000s][吞吐率：20.83req/s] [内存消耗：1,609.09kb] [文件加载：32]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->add[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\add.html [ array (
+  0 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T15:49:07+08:00 ] ::1 ::1 GET /index/index/add
+[ log ] www.thinkphp.com/index/index/add [运行时间：0.064000s][吞吐率：15.62req/s] [内存消耗：1,790.13kb] [文件加载：34]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->add[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\add.html [ array (
+  0 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T15:49:29+08:00 ] ::1 ::1 GET /index/index/add
+[ log ] www.thinkphp.com/index/index/add [运行时间：0.047000s][吞吐率：21.28req/s] [内存消耗：1,790.13kb] [文件加载：34]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->add[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\add.html [ array (
+  0 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-05-15T15:49:42+08:00 ] ::1 ::1 GET /index/index/add
+[ log ] www.thinkphp.com/index/index/add [运行时间：0.054000s][吞吐率：18.52req/s] [内存消耗：1,790.15kb] [文件加载：34]
+[ info ] [ LANG ] C:\wamp64\www\1702\high\27\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkphp.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=6575479808; pgv_si=s3630131200',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->add[ C:\wamp64\www\1702\high\27\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1702\high\27\thinkphp5\public/../application/index\view\index\add.html [ array (
+  0 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------

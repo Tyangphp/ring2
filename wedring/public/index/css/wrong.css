@@ -1,0 +1,41 @@
+/*相同公用的*/
+
+*{margin:0;padding:0}
+li,ul{list-style:none;}
+a{text-decoration:none}
+input{outline:none;padding-left:4px}
+img{border:0 none;vertical-align:middle;}
+em,i{font-style:normal}
+
+
+.fl{float:left;display:inline;}
+.fr{float:right;display:inline}
+/*清除浮动*/
+.fix:after{content:" ";display:block;visibility:hidden;clear:both;height:0;line-height:0;}
+.fix{*zoom:1;}
+
+.all-thing{background:#fef3f1;overflow:hidden}
+
+.wrong_wc{background:url(../images/bk_trp.jpg) repeat-x;width:100%;min-width:980px;height:584px}
+/*980宽度*/
+.cmain{width:980px;margin:0 auto;position:relative;clear:both}
+
+/*500报错*/
+.wrong_lm{background:url(../images/wrong_500.jpg) no-repeat;height:584px}
+.wrong_word{font-size:0;padding-top:212px;margin-left:106px}
+.wrong_word h3{font-size:50px;color:#444;font-family:arial;font-weight:100}
+.wrong_word h4{font-size:32px;color:#ee7c72;font-family:"微软雅黑";font-weight:100;margin-bottom:32px;}
+.wrong_word p{margin-bottom:12px}
+.wrong_word i,.wrong_word span,.wrong_word a,.wrong_word em{font-size:12px;vertical-align:middle;}
+.wrong_word i{color:#d90000}
+.wrong_word a{color:#ee7c72}
+.wrong_word a:hover{text-decoration:underline}
+.wrong_word em{color:#c8c8c8;padding:0 4px}
+
+/*404报错*/
+.wrong_two{background:url(../images/wrong_404.jpg) no-repeat;height:584px}
+
+/*商品下架*/
+.wrong_bk{background:#fff;padding:114px 0 144px 0;margin-bottom:50px}
+.wrong_bk .wrong_word{padding-top:70px;margin-left:10px}
+.wrong_img{margin-left:112px}

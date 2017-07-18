@@ -1,0 +1,302 @@
+/*品牌文化*/
+/*首页*/
+.culture_same{background:#fff}
+.culture_same h4{font-family:"Times New Roman", Times, serif;font-size:16px;font-weight:100;font-style:italic}
+/*标题*/
+.culture_top{text-align:center;padding:16px 0}
+.culture_top-tittle{font-size:0;margin-bottom:6px}
+.culture_top-tittle i{display:inline-block;vertical-align:middle;background:url(../images/line.jpg) no-repeat;width:83px;height:1px}
+.culture_top-tittle span{font-size:30px;color:#8e4f1b;vertical-align:middle;padding:0 22px}
+.culture_top-tittle .tittle_span{font-size:35px}
+.culture_top-tittle h3{font-size:30px;color:#8e4f1b;vertical-align:middle;padding:0 22px;font-weight:100}/*2014年9月4日*/
+.culture_top h4{color:#555}
+/*导航*/
+.culture_nav{text-align:center;font-size:0;padding-bottom:40px}
+.culture_nav a,.culture_nav i{font-size:12px;color:#666}
+.culture_nav i{padding:0 8px}
+.culture_nav a:hover{color:#8e4f1b;text-decoration:underline}
+.culture_nav .culture_click{color:#8e4f1b}
+/*文章*/
+.culture_wz{text-align:center;padding-bottom:30px}
+.culture_wz p{font-size:12px;color:#333;line-height:24px}
+/*品牌理念*/
+.culture_pp{margin:10px 20px;overflow:hidden}
+.culture_first{background:#fff8f7}
+.culture_pp-word{width:470px;text-align:center;margin-top:60px}
+.culture_pp-word p{font-size:12px;color:#333;line-height:24px}
+.culture_pp-word h3{color:#8e4f1b;font-size:24px}
+.culture_pp-word h4{color:#8e4f1b;margin-bottom:12px}
+.to_more{display:inline-block;width:112px;height:28px;text-align:center;line-height:28px;color:#c6a34d;font-size:14px;border:1px solid #e4cf9f;margin-top:30px;font-weight:bold;background:url(../images/all-right_y.png) no-repeat 26px center;padding-left:10px}
+.to_more:hover{background:url(../images/all-right_w.png) no-repeat 26px center #caa752;color:#fff;border:1px solid #caa752}
+/*社会名人推荐*/
+.culture_sec{background:#f0dddb}
+.culture_sec-right{padding:25px 0;margin-right:48px}
+/*最烂漫珠宝店*/
+.culture_thrid{background:#e8e8e8}
+.culture_thrid-left{padding:35px 0;margin-left:48px}
+/*品质工艺与dr族文化*/
+.culture_four-left,.culture_four-right{position:relative}
+.bk_opacity{background:#453b3c;opacity:0.8;filter:alpha(opacity=80);width:220px;height:170px;position:absolute;left:19px;top:57px}
+.professional_gy{position:absolute;left:52px;top:94px;width:154px;text-align:center}
+.professional_gy h3,.brand_drz h3{font-size:24px;color:#fff}
+.professional_gy h4,.brand_drz h4{font-size:16px;color:#fff}
+.professional_gy .to_more{margin-top:20px}
+.brand_drz{position:absolute;top:84px;right:32px;width:160px;text-align:center}
+.brand_drz p{color:#fff;font-size:12px;line-height:22px}
+.brand_drz h4{margin-bottom:10px}
+.brand_drz .to_more{border:1px solid #fff;color:#fff;background:url(../images/all-right_w.png) no-repeat 26px center}
+.brand_drz .to_more:hover{background:url(../images/all-right_w.png) no-repeat 26px center #caa752;border:1px solid #caa752}
+/*DR社区与加入我们*/
+.culture_last a{display:block}
+
+/*分享*/
+.culture_share{padding-bottom:48px;margin-top:38px}
+.culture_share-tittle{font-size:0;text-align:center;padding-bottom:18px}
+.culture_share-tittle i{display:inline-block;width:49px;height:1px;background:url(../images/line.jpg) no-repeat;vertical-align:middle}
+.culture_share-tittle span{vertical-align:middle;color:#8e4f1b;font-size:14px;padding:0 8px;font-weight:bold}
+.culture_share-it{text-align:center;font-size:0}
+.culture_share-it a{display:inline-block;width:33px;height:34px;background:url(../images/share.png) no-repeat;margin-right:10px}
+.culture_share-it a:hover{background:url(../images/share_hover.png) no-repeat}
+.culture_share-it .cshare_1,.culture_share-it .cshare_1:hover{background-position:0 0}
+.culture_share-it .cshare_2,.culture_share-it .cshare_2:hover{background-position:-33px 0}
+.culture_share-it .cshare_3,.culture_share-it .cshare_3:hover{background-position:-66px 0}
+.culture_share-it .cshare_4,.culture_share-it .cshare_4:hover{background-position:-99px 0}
+.culture_share-it .cshare_5,.culture_share-it .cshare_5:hover{background-position:-132px 0}
+
+/*品牌理念页面*/
+.culture_brand-text{text-align:center;margin-bottom:34px}
+.culture_brand-text p{font-size:14px;color:#666;line-height:24px}
+.culture_brand-ul{overflow:hidden;margin-left:105px;padding:36px 0}
+.culture_brand-ul li{float:left;text-align:center;margin-left:20px}
+.culture_brand-ul a{display:block}
+.culture_brand-ul p{font-size:14px;color:#666;margin-top:16px}
+.culture_brand-ul .curluthover a{opacity:0.5;filter:alpha(opacity=50)}
+.culture_brand-ul .curluthover p{text-decoration:underline}
+
+/*真爱验证页面*/
+.culture_truelove{width:730px;margin:0 auto}
+.culture_truelove-cort{overflow:hidden;padding-bottom:28px}
+.truelove_cort-img{padding-top:6px}
+.truelove_cort-img p{margin-top:16px;text-align:center}
+.truelove_cort-img a{color:#c6a34d;font-size:12px;font-weight:bold}
+.truelove_cort-img a:hover{text-decoration:underline}
+.truelove_cort-word{width:350px}
+.truelove_cort-word h5,.atricle_cort-word h5{font-size:14px;color:#666}
+.truelove_cort-word p,.atricle_cort-word p{font-size:14px;color:#666;line-height:23px}
+.truelove_word-text{margin-top:20px}
+.culture_truelove-ul{overflow:hidden;margin-left:-56px;padding:28px 0}
+.culture_truelove-ul li{float:left;height:50px;line-height:50px;margin-left:56px}
+.culture_truelove-ul a{display:block}
+.culture_truelove-ul span{display:inline-block;background:url(../images/yz_ul.jpg) no-repeat;height:50px;width:50px;vertical-align:middle;margin-right:10px}
+.culture_truelove-ul i{background:url(../images/right.png) no-repeat left center;padding-left:13px;font-size:13px;color:#666;font-weight:bold;display:inline-block;vertical-align:middle}
+.culture_truelove-ul .truelove_ul-2{background-position:0 -50px}
+.culture_truelove-ul .truelove_ul-3{background-position:0 -100px}
+.culture_truelove-ul .truelove_ul-4{background-position:0 -150px}
+
+/*真爱协议页面*/
+.culture_protocols-cort{overflow:hidden;margin-bottom:64px}
+
+/*国际认证页面*/
+.culture_zs{padding:20px 0 50px 0}
+.culture_zs h5{font-size:13px;color:#666}
+.culture_zs-ul{overflow:hidden;margin-left:-14px;margin-top:20px}
+.culture_zs-ul li{float:left;background:url(../images/allzs.jpg) no-repeat;width:110px;height:41px;margin-left:14px}
+.culture_zs-ul li a{display:block;height:41px}
+.culture_zs-ul .culture_zsul-2{background-position:0 -41px}
+.culture_zs-ul .culture_zsul-3{background-position:0 -82px}
+.culture_zs-ul .culture_zsul-4{background-position:0 -123px}
+.culture_zs-ul .culture_zsul-5{background-position:0 -164px}
+.culture_zs-ul .culture_zsul-6{background-position:0 -205px}
+.culture_certification-ul{overflow:hidden;padding:28px 0;margin-left:-56px}
+.culture_certification-ul li{float:left;height:50px;line-height:50px;margin-left:56px}
+.culture_certification-ul span{display:inline-block;background:url(../images/zs_ul.jpg) no-repeat;height:50px;width:50px;vertical-align:middle;margin-right:10px}
+.culture_certification-ul a{display:block}
+.culture_certification-ul i{background:url(../images/right.png) no-repeat left center;padding-left:13px;font-size:13px;color:#666;font-weight:bold;vertical-align:middle}
+.culture_certification-ul .truelove_ul-2{background-position:0 -50px}
+.culture_certification-ul .truelove_ul-3{background-position:0 -100px}
+.culture_certification-ul .truelove_ul-4{background-position:0 -150px}
+
+/*超4C标准页面*/
+.culture_standard{width:730px;margin:0 auto;overflow:hidden}
+.culture_standard-word h5{font-size:14px;color:#666;margin-bottom:6px}
+.culture_standard-word p{font-size:14px;color:#666;line-height:24px;margin-bottom:30px}
+.culture_standard-img{margin-bottom:60px}
+
+
+/*名人推荐页面*/
+.culture_mr{width:940px;margin:0 auto}
+.culture_mr-first{overflow:hidden} 
+/*左边*/
+.culture_mrf-left{position:relative;width:466px;height:415px;margin-top:8px}
+.culture_mr-banner{position:relative}
+.culture_mr-banner li{position:absolute;left:0;top:0;float:left;display:none}
+.culture_mr-banner a{display:block}
+.gray_back{background:#262724;opacity:0.4;filter:alpha(opacity=40);width:384px;height:95px;position:absolute;bottom:27px;left:50%;margin-left:-192px}
+.culture_banner-word{position:absolute;bottom:27px;text-align:center;width:384px;height:95px;left:50%;margin-left:-192px}
+.culture_banner-word h3,.culture_banner-word p{color:#fff}
+.culture_banner-word h3{font-size:18px;font-weight:100;margin-top:32px}
+.culture_banner-word p{font-size:12px;margin:7px 0 10px 0}
+.checkmore{display:inline-block;color:#f3dda8;border:1px solid #f3dda8;width:87px;height:25px;line-height:25px;text-align:center;font-size:12px;font-weight:bold;background:url(../images/all-right_y.png) no-repeat 14px center;padding-left:8px}
+.checkmore:hover{background:#caa752 url(../images/all-right_w.png) no-repeat 14px center;color:#fff;border:1px solid #caa752}
+.culture_banner-smalld{position:absolute;bottom:12px;left:50%;width:140px;margin-left:-70px}
+.culture_banner-smalld li{background:url(../images/diand.png) no-repeat;width:8px;height:8px;float:left;margin-right:15px;cursor:pointer}
+.culture_banner-smalld .hover_on{background-position:0 -8px}
+/*右边*/
+.culture_mrf-cort{overflow:hidden;margin-top:8px}
+.culture_mrf-text{width:233px;height:203px;text-align:center}
+.culture_mrf-text h3{color:#666;font-size:16px;margin:38px 0 12px 0}
+.culture_mrf-text p{color:#666;font-size:12px;width:190px;text-align:justify;margin:0 auto;overflow:hidden;line-height:20px}
+.culture_mrf-text .checkmore{border:1px solid #c9a548;color:#c9a548;margin-top:16px}
+.culture_mrtext-color1{background:#ffebeb}
+.culture_mrtext-color2{background:#ecfaf9}
+.culture_mrtext-color3{background:#fff3df}
+.culture_mrtext-color4{background:#fef2fe}
+.culture_mrf-img{position:relative}
+.culture_mrf-img a{display:block}
+.culture_mrf-img span{display:inline-block;background:url(../images/left.png) no-repeat;width:7px;height:13px;position:absolute;top:50%;margin-top:-6px}
+.culture_mrf-img .smallk_first{background-position:0 0;right:0}
+.culture_mrf-img .smallk_sec{background-position:0 -13px;left:0}
+.culture_mrf-img .smallk_third{background-position:0 -26px;right:0}
+.culture_mrf-img .smallk_forth{background-position:0 -39px;right:0}
+.culture_mr-sec{overflow:hidden;border-bottom:1px solid #d3d3d3;padding-bottom:26px;margin-bottom:16px}
+/*第三块*/
+.culture_mr-third{overflow:hidden;padding-top:11px}
+.culture_mr-third a{display:block}
+.culture_mr-third-word{background:#f1f1f1;width:678px;height:206px;padding:0 28px}
+.culture_mr-third-word h3{font-size:15px;color:#333;margin:24px 0 10px 0}
+.culture_mr-third-word a{color:#333}
+.culture_mr-third-word a:hover{text-decoration:underline}
+.culture_mr-third-word p{font-size:14px;color:#666;line-height:24px;height:80px;overflow:hidden}
+.culture_mr-third-more{overflow:hidden;margin-top:18px}
+.culture_mr-third-more a{color:#c6a34d;font-size:14px}
+.culture_mr-third-more a:hover{font-weight:bold;text-decoration:underline}
+
+/*分页*/
+
+.paging_all{margin:24px 0;position:relative;left:50%;float:left;-moz-user-select: none; /*火狐*/-webkit-user-select: none;  /*webkit浏览器*/-ms-user-select: none;   /*IE10*/-khtml-user-select: none; /*早期浏览器*/user-select: none;}
+.paging{height:40px}
+.paging li{float:left;border:1px solid #ccc;border-right-width:0px; width:36px;height:38px;line-height:38px;text-align:center;font-family:"Arial";font-size:14px;color:#cd505a;background:#fff;cursor:pointer}
+.paging .pli{float:left;border:1px solid #ccc;padding:0 13px;border-right-width:0px;width:auto}
+.paging .pli2{float:left;border:1px solid #ccc;padding:0 13px;width:auto}
+
+.paging .pag_gray{background:#efefef;color:#666}
+.paging .mouseover{background:#efefef;text-decoration:underline;}
+.pag_p{line-height:40px;font-size:14px;color:#666;padding-left:8px}
+.pag_txt{width:34px;margin-right:6px}
+.pag_bt{width:48px;background:#efefef;border:1px solid #ccc;height:18px;cursor:pointer}
+.paging_all-cort{position:relative;right:50%}
+
+/*名人推荐文章页面*/
+.culture_atricle{width:780px;margin:0 auto;border-top:1px solid #c5c5c5;padding-top:48px;padding-bottom:40px;font-family:微软雅黑;}
+.culture_atricle-cort{overflow:hidden;margin-bottom:46px}
+.atricle_cort-word{width:380px}
+.atricle_cort-word p{text-indent:2em;line-height:28px}
+.atricle_cort-text{margin-bottom:20px}
+.culture_atricleort-left{position:relative;width:382px;height:318px}
+.culture_atricleort-ul{position:relative;width:382px}
+.culture_atricleort-ul li{float:left;position:absolute;left:0;top:0;text-align:center;display:none}
+.culture_atricleort-ul p{margin-top:16px}
+.culture_atricleort-ul a{color:#c9a548;font-size:18px}
+.culture_atricle-cort .culture_banner-smalld{bottom:74px;width:92px;left:50%;margin-left:-32px}
+.culture_atricleort-right{width:310px;margin:28px 30px 0 0}
+.culture_atricleort-right p{color:#000;font-size:14px;line-height:28px}
+.culture_atricleort-tittle{overflow:hidden;margin-top:16px}
+/*同系列产品*/
+.culture_atricleort-border{border:1px solid #e5e5e5;width:778px;margin:0 auto;background:#f3f3f3}
+.atricleort-border{padding:24px 20px 10px 20px}
+.atricleort-border-top{padding-bottom:10px}
+.atricleort-border-top span{font-size:16px;color:#666;font-weight:bold;vertical-align:middle}
+.atricleort-border-top em{display:inline-block;width:7px;height:7px;background:url(../images/icon.png) no-repeat -87px -12px;vertical-align:middle}
+.atricleort-border-ul{overflow:hidden;margin-left:-12px}
+.atricleort-border-ul li{float:left;text-align:center;margin-left:12px}
+.atricleort-border-ultop{border:1px solid #eee}
+.atricleort-border-ultop a{display:block}
+.atricleort-border-ulbottom{margin-top:8px}
+.atricleort-border-ulbottom p{color:#888;font-size:12px;line-height:18px}
+.atricleort-border-ulbottom span{color:#ff0101;}
+
+
+/*加入我们的页面*/
+.culture_joinus{width:730px;margin:0 auto}
+.culture_joinus-word{padding-top:10px}
+.culture_joinus-word h5{font-size:14px;color:#666;margin-bottom:16px}
+.culture_joinus-word p{font-size:14px;color:#666;text-indent:2em;line-height:26px;margin-bottom:10px}
+.culture_joinus h3{border-bottom:1px solid #e6e6e6;padding-bottom:10px;font-size:14px;color:#666;margin:0 3px}
+/*工作职位*/
+.culture_joinus-work{padding-bottom:30px}
+.culture_joinus-work td{text-align:center}
+.joinus_work-first td{font-weight:bold;color:#333;font-size:14px;height:42px}
+.joinus_work-tr1{width:198px}
+.joinus_work-tr2{width:168px}
+.joinus_work-tr3{width:156px}
+.joinus_work-tr4{width:128px}
+.joinus_work-tr5{width:82px}
+.joinus_work-sec td{height:40px;color:#666;font-size:14px;background:#fafafa;border-bottom:2px solid #fff}
+.joinus_work-sec td a{color:#666;font-size:14px;text-decoration:underline}
+.joinus_work-spcolor td{background:#fef3f1}
+
+/*职位详情页面*/
+.culture_joinus-cort{padding:14px 0;color:#666;font-size:14px;line-height:26px}
+.culture_joinus-cort h2{color:#333;font-size:16px;margin-bottom:16px}
+.culture_joinus-cort p{font-size:14px;color:#666}
+.culture_joinus-cort a{color:#666}
+.culture_joinus-cort h4{margin-top:30px;font-size:14px;color:#666;font-style:normal;font-weight:bold;margin-bottom:12px}
+.culture_joinus-spsj{text-indent:5em}
+
+.culture_mrf-text .checkmore:hover{color:#fff}
+
+
+/*深圳店北京店*/
+.culture_store-cort{margin-bottom:82px;overflow:hidden}
+.culture_store-cort h5{line-height:22px}
+.store_cort-img{position:relative;width:345px;height:451px}
+.store_cortul{position:relative}
+.store_cortul li{float:left;position:absolute;top:0;left:0}
+.store_cortuldian{position:absolute;text-align:center;width:345px;font-size:0;bottom:18px;left:0}
+.store_cortuldian span{display:inline-block;background:url(../images/diand.png) no-repeat;width:8px;height:8px;margin-left:15px;cursor:pointer}
+.store_cortuldian .sp_cortyldian{background-position:0 -8px;}
+.store_word-text{margin-top:30px}
+
+.culture_store-seccort{margin-bottom:68px}
+.truelove_cort-word h3{font-size:16px;color:#666;margin-bottom:30px}
+.store_word-dz{width:342px}
+.store_word-dz p{line-height:26px;color:#7d7d7d}
+.store_word-dz span{font-weight:bold;}
+.store_word-dz i{color:#fff;display:block;width:100px;height:30px;line-height:30px;text-align:center;font-size:14px;background:#caa648;margin:0 auto;margin-top:10px;cursor:pointer}
+.store_word-dz a:hover{background:#caa752}
+.word_ident{text-indent:3em;}
+
+.culture_store-thircort h3{font-size:16px;color:#666;margin-bottom:12px}
+.map_adress{text-align:center;font-size:0;margin-top:18px}
+.map_adress span,.map_adress em{vertical-align:middle;color:#666}
+.map_adress span{font-size:14px}
+.map_adress input{padding:4px 0;vertical-align:middle;width:165px;border:1px solid #e5e5e5;text-align:center;margin:0 12px}
+.map_adress em{display:inline-block;width:70px;height:26px;line-height:26px;text-align:center;background:#dcdcdc;font-size:12px;cursor:pointer}
+.culture_store-thircort{margin-bottom:52px}
+
+/*填写信息*/
+.culture_store-tx{padding-bottom:50px}
+.culture_store-tx h3{color:#8d4e1b;font-size:24px;margin-bottom:20px}
+.online_left{width:350px}
+.ol_first{margin-bottom:22px}
+.ol_first label{font-size:14px;color:#666;vertical-align:middle}
+.ol_first select,.ol_first input{vertical-align:middle;border:1px solid #dcdcdc;font-size:12px;padding-left:6px}
+.ol_first select{height:26px;width:274px}
+.ol_first input{width:266px;height:30px;line-height:30px}
+.ol_first .small_left{width:134px}
+.ol_first .small_right{width:132px}
+.onlie_tj{width:100px;height:30px;line-height:30px;text-align:center;background:#caa648;margin:0 auto}
+.onlie_tj a{color:#fff;font-size:14px;display:block;font-weight:bold}
+.onlie_tj button{color:#ffffff;font-size:14px;display:block;font-weight:bold;background-color:transparent; border:0;}
+
+.online_right{width:350px}
+.online_right-word{margin-bottom:8px}
+.online_right h5{color:#7d7d7d;font-size:16px;margin-bottom:16px}
+.online_right p{color:#666;font-size:14px;line-height:24px}
+.online_right span{font-size:12px;padding-left:8px}
+.spword_margin{padding-left:62px}
+.spword_ml{margin-left:13px}
+
+
+.three_yz a{margin-left:20px;display:inline-block}
+.three_yz{margin-bottom:10px;font-size:0}
