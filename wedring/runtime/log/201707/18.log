@@ -60,3 +60,1560 @@
 [ info ] [ LOG ] INIT File
 
 ---------------------------------------------------------------
+[ 2017-07-18T11:03:45+08:00 ] ::1 ::1 GET /
+[ log ] www.wedring.com/ [运行时间：0.073004s][吞吐率：13.70req/s] [内存消耗：1,716.16kb] [文件加载：34]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\wedring\wedring\application\index\controller\Index.php ]
+[ info ] [ VIEW ] E:\wedring\wedring\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:05+08:00 ] ::1 ::1 GET /admin/index/index
+[ log ] www.wedring.com/admin/index/index [运行时间：0.091005s][吞吐率：10.99req/s] [内存消耗：1,559.76kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ E:\wedring\wedring\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] E:\wedring\wedring\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:06+08:00 ] ::1 ::1 GET /admin/index/js/jquery.nicescroll.js
+[ log ] www.wedring.com/admin/index/js/jquery.nicescroll.js [运行时间：0.270016s][吞吐率：3.70req/s] [内存消耗：1,416.64kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.wedring.com/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:06+08:00 ] ::1 ::1 GET /admin/index/right
+[ log ] www.wedring.com/admin/index/right [运行时间：0.058003s][吞吐率：17.24req/s] [内存消耗：1,560.19kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'right',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.wedring.com/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->right[ E:\wedring\wedring\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] E:\wedring\wedring\public/../application/admin\view\index\right.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:08+08:00 ] ::1 ::1 GET /admin/index/js/jquery.nicescroll.js
+[ log ] www.wedring.com/admin/index/js/jquery.nicescroll.js [运行时间：0.040002s][吞吐率：25.00req/s] [内存消耗：1,416.64kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.wedring.com/admin/index/right',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:09+08:00 ] ::1 ::1 GET /admin/index/js/dist/chart/line.js
+[ log ] www.wedring.com/admin/index/js/dist/chart/line.js [运行时间：0.096006s][吞吐率：10.42req/s] [内存消耗：1,417.15kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.wedring.com/admin/index/right',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+  'dist' => 'chart',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:09+08:00 ] ::1 ::1 GET /admin/index/js/dist/chart/bar.js
+[ log ] www.wedring.com/admin/index/js/dist/chart/bar.js [运行时间：0.055003s][吞吐率：18.18req/s] [内存消耗：1,417.15kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.wedring.com/admin/index/right',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+  'dist' => 'chart',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:25+08:00 ] ::1 ::1 GET /admin/index/index
+[ log ] www.wedring.com/admin/index/index [运行时间：0.039003s][吞吐率：25.64req/s] [内存消耗：1,379.03kb] [文件加载：33]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.wedring.com/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ E:\wedring\wedring\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] E:\wedring\wedring\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:25+08:00 ] ::1 ::1 GET /admin/index/js/jquery.nicescroll.js
+[ log ] www.wedring.com/admin/index/js/jquery.nicescroll.js [运行时间：0.033002s][吞吐率：30.30req/s] [内存消耗：1,416.64kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.wedring.com/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:25+08:00 ] ::1 ::1 GET /admin/index/right
+[ log ] www.wedring.com/admin/index/right [运行时间：0.043003s][吞吐率：23.25req/s] [内存消耗：1,379.03kb] [文件加载：33]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'right',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.wedring.com/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Index->right[ E:\wedring\wedring\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] E:\wedring\wedring\public/../application/admin\view\index\right.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:25+08:00 ] ::1 ::1 GET /admin/index/js/jquery.nicescroll.js
+[ log ] www.wedring.com/admin/index/js/jquery.nicescroll.js [运行时间：0.033002s][吞吐率：30.30req/s] [内存消耗：1,416.64kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.wedring.com/admin/index/right',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:26+08:00 ] ::1 ::1 GET /admin/index/js/dist/chart/line.js
+[ log ] www.wedring.com/admin/index/js/dist/chart/line.js [运行时间：0.070004s][吞吐率：14.28req/s] [内存消耗：1,417.15kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.wedring.com/admin/index/right',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+  'dist' => 'chart',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:26+08:00 ] ::1 ::1 GET /admin/index/js/dist/chart/bar.js
+[ log ] www.wedring.com/admin/index/js/dist/chart/bar.js [运行时间：0.074004s][吞吐率：13.51req/s] [内存消耗：1,417.15kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.wedring.com/admin/index/right',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+  'dist' => 'chart',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:27+08:00 ] ::1 ::1 GET /admin/product/s_product
+[ log ] www.wedring.com/admin/product/s_product [运行时间：0.088005s][吞吐率：11.36req/s] [内存消耗：1,561.05kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'product',
+    2 => 's_product',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.wedring.com/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Product->s_product[ E:\wedring\wedring\application\admin\controller\Product.php ]
+[ info ] [ VIEW ] E:\wedring\wedring\public/../application/admin\view\product\s_product.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:27+08:00 ] ::1 ::1 GET /admin/product/s_product
+[ log ] www.wedring.com/admin/product/s_product [运行时间：0.055003s][吞吐率：18.18req/s] [内存消耗：1,379.89kb] [文件加载：33]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'product',
+    2 => 's_product',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.wedring.com/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Product->s_product[ E:\wedring\wedring\application\admin\controller\Product.php ]
+[ info ] [ VIEW ] E:\wedring\wedring\public/../application/admin\view\product\s_product.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:27+08:00 ] ::1 ::1 GET /admin/products/p_55.jpg
+[ log ] www.wedring.com/admin/products/p_55.jpg [运行时间：0.044003s][吞吐率：22.73req/s] [内存消耗：1,052.69kb] [文件加载：27]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'products',
+    2 => 'p_55.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.wedring.com/admin/product/s_product',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:27+08:00 ] ::1 ::1 GET /admin/products/ad.jpg
+[ log ] www.wedring.com/admin/products/ad.jpg [运行时间：0.041002s][吞吐率：24.39req/s] [内存消耗：1,052.67kb] [文件加载：27]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'products',
+    2 => 'ad.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.wedring.com/admin/product/s_product',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:27+08:00 ] ::1 ::1 GET /admin/product/js/jquery.nicescroll.js
+[ log ] www.wedring.com/admin/product/js/jquery.nicescroll.js [运行时间：0.067004s][吞吐率：14.92req/s] [内存消耗：1,417.47kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'product',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.wedring.com/admin/product/s_product',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:27+08:00 ] ::1 ::1 GET /admin/products/ad.jpg
+[ log ] www.wedring.com/admin/products/ad.jpg [运行时间：0.026001s][吞吐率：38.46req/s] [内存消耗：1,052.67kb] [文件加载：27]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'products',
+    2 => 'ad.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.wedring.com/admin/product/s_product',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:28+08:00 ] ::1 ::1 GET /admin/products/p_55.jpg
+[ log ] www.wedring.com/admin/products/p_55.jpg [运行时间：0.029002s][吞吐率：34.48req/s] [内存消耗：1,052.69kb] [文件加载：27]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'products',
+    2 => 'p_55.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.wedring.com/admin/product/s_product',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:28+08:00 ] ::1 ::1 GET /admin/product/s_category
+[ log ] www.wedring.com/admin/product/s_category [运行时间：0.075005s][吞吐率：13.33req/s] [内存消耗：1,545.06kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'product',
+    2 => 's_category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.wedring.com/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Product->s_category[ E:\wedring\wedring\application\admin\controller\Product.php ]
+[ info ] [ VIEW ] E:\wedring\wedring\public/../application/admin\view\product\s_category.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:28+08:00 ] ::1 ::1 GET /admin/product/s_category
+[ log ] www.wedring.com/admin/product/s_category [运行时间：0.035002s][吞吐率：28.57req/s] [内存消耗：1,379.91kb] [文件加载：33]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'product',
+    2 => 's_category',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.wedring.com/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Product->s_category[ E:\wedring\wedring\application\admin\controller\Product.php ]
+[ info ] [ VIEW ] E:\wedring\wedring\public/../application/admin\view\product\s_category.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:29+08:00 ] ::1 ::1 GET /admin/product/font/css/font-awesome.min.css
+[ log ] www.wedring.com/admin/product/font/css/font-awesome.min.css [运行时间：0.036002s][吞吐率：27.78req/s] [内存消耗：1,418.03kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'product',
+    2 => 'font',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://www.wedring.com/admin/product/s_category',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'font-awesome.min.css',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:33+08:00 ] ::1 ::1 GET /admin/order/s_order
+[ log ] www.wedring.com/admin/order/s_order [运行时间：0.074004s][吞吐率：13.51req/s] [内存消耗：1,545.38kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 's_order',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.wedring.com/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Order->s_order[ E:\wedring\wedring\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] E:\wedring\wedring\public/../application/admin\view\order\s_order.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:33+08:00 ] ::1 ::1 GET /admin/order/js/jquery.nicescroll.js
+[ log ] www.wedring.com/admin/order/js/jquery.nicescroll.js [运行时间：0.037002s][吞吐率：27.03req/s] [内存消耗：1,417.84kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.wedring.com/admin/order/s_order',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:34+08:00 ] ::1 ::1 GET /admin/order/s_omanage
+[ log ] www.wedring.com/admin/order/s_omanage [运行时间：0.038002s][吞吐率：26.31req/s] [内存消耗：1,545.40kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 's_omanage',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.wedring.com/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Order->s_omanage[ E:\wedring\wedring\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] E:\wedring\wedring\public/../application/admin\view\order\s_omanage.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:35+08:00 ] ::1 ::1 GET /admin/order/js/jquery.nicescroll.js
+[ log ] www.wedring.com/admin/order/js/jquery.nicescroll.js [运行时间：0.032002s][吞吐率：31.25req/s] [内存消耗：1,417.84kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.wedring.com/admin/order/s_omanage',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:36+08:00 ] ::1 ::1 GET /admin/order/s_tmanage
+[ log ] www.wedring.com/admin/order/s_tmanage [运行时间：0.055003s][吞吐率：18.18req/s] [内存消耗：1,545.40kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 's_tmanage',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.wedring.com/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Order->s_tmanage[ E:\wedring\wedring\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] E:\wedring\wedring\public/../application/admin\view\order\s_tmanage.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:36+08:00 ] ::1 ::1 GET /admin/order/s_tmanage
+[ log ] www.wedring.com/admin/order/s_tmanage [运行时间：0.038003s][吞吐率：26.31req/s] [内存消耗：1,380.24kb] [文件加载：33]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 's_tmanage',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.wedring.com/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Order->s_tmanage[ E:\wedring\wedring\application\admin\controller\Order.php ]
+[ info ] [ VIEW ] E:\wedring\wedring\public/../application/admin\view\order\s_tmanage.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:36+08:00 ] ::1 ::1 GET /admin/order/js/jquery.nicescroll.js
+[ log ] www.wedring.com/admin/order/js/jquery.nicescroll.js [运行时间：0.049002s][吞吐率：20.41req/s] [内存消耗：1,417.84kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.wedring.com/admin/order/s_tmanage',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:38+08:00 ] ::1 ::1 GET /admin/ad/s_ad
+[ log ] www.wedring.com/admin/ad/s_ad [运行时间：0.083005s][吞吐率：12.05req/s] [内存消耗：1,551.79kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ad',
+    2 => 's_ad',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.wedring.com/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Ad->s_ad[ E:\wedring\wedring\application\admin\controller\Ad.php ]
+[ info ] [ VIEW ] E:\wedring\wedring\public/../application/admin\view\ad\s_ad.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:38+08:00 ] ::1 ::1 GET /admin/ad/s_ad
+[ log ] www.wedring.com/admin/ad/s_ad [运行时间：0.058003s][吞吐率：17.24req/s] [内存消耗：1,551.79kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ad',
+    2 => 's_ad',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.wedring.com/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Ad->s_ad[ E:\wedring\wedring\application\admin\controller\Ad.php ]
+[ info ] [ VIEW ] E:\wedring\wedring\public/../application/admin\view\ad\s_ad.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:38+08:00 ] ::1 ::1 GET /admin/ad/images/image.png
+[ log ] www.wedring.com/admin/ad/images/image.png [运行时间：0.042002s][吞吐率：23.81req/s] [内存消耗：1,416.34kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ad',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.wedring.com/admin/ad/s_ad',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:38+08:00 ] ::1 ::1 GET /admin/ad/js/jquery.nicescroll.js
+[ log ] www.wedring.com/admin/ad/js/jquery.nicescroll.js [运行时间：0.063003s][吞吐率：15.87req/s] [内存消耗：1,416.27kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ad',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.wedring.com/admin/ad/s_ad',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:38+08:00 ] ::1 ::1 GET /admin/ad/images/image.png
+[ log ] www.wedring.com/admin/ad/images/image.png [运行时间：0.087005s][吞吐率：11.49req/s] [内存消耗：1,416.34kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ad',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://www.wedring.com/admin/ad/s_ad',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:40+08:00 ] ::1 ::1 GET /admin/index/system_info.html
+[ log ] www.wedring.com/admin/index/system_info.html [运行时间：0.044002s][吞吐率：22.73req/s] [内存消耗：1,417.26kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'system_info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.wedring.com/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:40+08:00 ] ::1 ::1 GET /admin/index/system_info.html
+[ log ] www.wedring.com/admin/index/system_info.html [运行时间：0.054003s][吞吐率：18.52req/s] [内存消耗：1,417.26kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'system_info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.wedring.com/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:41+08:00 ] ::1 ::1 GET /admin/index/Columns.html
+[ log ] www.wedring.com/admin/index/Columns.html [运行时间：0.035002s][吞吐率：28.57req/s] [内存消耗：1,417.23kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'Columns',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.wedring.com/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:42+08:00 ] ::1 ::1 GET /admin/index/system_info.html
+[ log ] www.wedring.com/admin/index/system_info.html [运行时间：0.044003s][吞吐率：22.73req/s] [内存消耗：1,417.26kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'system_info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.wedring.com/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:43+08:00 ] ::1 ::1 GET /admin/index/Columns.html
+[ log ] www.wedring.com/admin/index/Columns.html [运行时间：0.032002s][吞吐率：31.25req/s] [内存消耗：1,417.23kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'Columns',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.wedring.com/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:44+08:00 ] ::1 ::1 GET /admin/index/Category_Manage.html
+[ log ] www.wedring.com/admin/index/Category_Manage.html [运行时间：0.034002s][吞吐率：29.41req/s] [内存消耗：1,417.30kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'Category_Manage',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.wedring.com/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:47+08:00 ] ::1 ::1 GET /admin/index/system_info.html
+[ log ] www.wedring.com/admin/index/system_info.html [运行时间：0.047003s][吞吐率：21.28req/s] [内存消耗：1,417.26kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'system_info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.wedring.com/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:55+08:00 ] ::1 ::1 GET /admin/member/s_member
+[ log ] www.wedring.com/admin/member/s_member [运行时间：0.074004s][吞吐率：13.51req/s] [内存消耗：1,545.01kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'member',
+    2 => 's_member',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.wedring.com/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Member->s_member[ E:\wedring\wedring\application\admin\controller\Member.php ]
+[ info ] [ VIEW ] E:\wedring\wedring\public/../application/admin\view\member\s_member.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:55+08:00 ] ::1 ::1 GET /admin/member/js/jquery.nicescroll.js
+[ log ] www.wedring.com/admin/member/js/jquery.nicescroll.js [运行时间：0.031002s][吞吐率：32.26req/s] [内存消耗：1,417.45kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'member',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.wedring.com/admin/member/s_member',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:56+08:00 ] ::1 ::1 GET /admin/member/s_reply
+[ log ] www.wedring.com/admin/member/s_reply [运行时间：0.041002s][吞吐率：24.39req/s] [内存消耗：1,544.99kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'member',
+    2 => 's_reply',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.wedring.com/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Member->s_reply[ E:\wedring\wedring\application\admin\controller\Member.php ]
+[ info ] [ VIEW ] E:\wedring\wedring\public/../application/admin\view\member\s_reply.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:56+08:00 ] ::1 ::1 GET /admin/member/js/jquery.nicescroll.js
+[ log ] www.wedring.com/admin/member/js/jquery.nicescroll.js [运行时间：0.034001s][吞吐率：29.41req/s] [内存消耗：1,417.45kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'member',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.wedring.com/admin/member/s_reply',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:04:58+08:00 ] ::1 ::1 GET /admin/close/close
+[ log ] www.wedring.com/admin/close/close [运行时间：0.074004s][吞吐率：13.51req/s] [内存消耗：1,530.34kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'close',
+    2 => 'close',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.wedring.com/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Close->close[ E:\wedring\wedring\application\admin\controller\Close.php ]
+[ info ] [ VIEW ] E:\wedring\wedring\public/../application/admin\view\close\close.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:05:00+08:00 ] ::1 ::1 GET /admin/admin/s_adm
+[ log ] www.wedring.com/admin/admin/s_adm [运行时间：0.060003s][吞吐率：16.67req/s] [内存消耗：1,545.35kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin',
+    2 => 's_adm',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.wedring.com/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Admin->s_adm[ E:\wedring\wedring\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] E:\wedring\wedring\public/../application/admin\view\admin\s_adm.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:05:00+08:00 ] ::1 ::1 GET /admin/admin/js/jquery.nicescroll.js
+[ log ] www.wedring.com/admin/admin/js/jquery.nicescroll.js [运行时间：0.047003s][吞吐率：21.28req/s] [内存消耗：1,417.80kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.wedring.com/admin/admin/s_adm',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:05:01+08:00 ] ::1 ::1 GET /admin/admin/s_admlist
+[ log ] www.wedring.com/admin/admin/s_admlist [运行时间：0.144009s][吞吐率：6.94req/s] [内存消耗：1,545.37kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin',
+    2 => 's_admlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.wedring.com/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Admin->s_admlist[ E:\wedring\wedring\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] E:\wedring\wedring\public/../application/admin\view\admin\s_admlist.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:05:01+08:00 ] ::1 ::1 GET /admin/admin/s_admlist
+[ log ] www.wedring.com/admin/admin/s_admlist [运行时间：0.076004s][吞吐率：13.16req/s] [内存消耗：1,545.37kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin',
+    2 => 's_admlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.wedring.com/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Admin->s_admlist[ E:\wedring\wedring\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] E:\wedring\wedring\public/../application/admin\view\admin\s_admlist.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:05:01+08:00 ] ::1 ::1 GET /admin/admin/js/jquery.nicescroll.js
+[ log ] www.wedring.com/admin/admin/js/jquery.nicescroll.js [运行时间：0.034002s][吞吐率：29.41req/s] [内存消耗：1,417.80kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.wedring.com/admin/admin/s_admlist',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:05:02+08:00 ] ::1 ::1 GET /admin/admin/s_adminfo
+[ log ] www.wedring.com/admin/admin/s_adminfo [运行时间：0.043003s][吞吐率：23.25req/s] [内存消耗：1,553.37kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin',
+    2 => 's_adminfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.wedring.com/admin/index/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Admin->s_adminfo[ E:\wedring\wedring\application\admin\controller\Admin.php ]
+[ info ] [ VIEW ] E:\wedring\wedring\public/../application/admin\view\admin\s_adminfo.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-18T11:05:02+08:00 ] ::1 ::1 GET /admin/admin/js/jquery.nicescroll.js
+[ log ] www.wedring.com/admin/admin/js/jquery.nicescroll.js [运行时间：0.033001s][吞吐率：30.30req/s] [内存消耗：1,417.80kb] [文件加载：35]
+[ info ] [ LANG ] E:\wedring\wedring\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.wedring.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.109 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://www.wedring.com/admin/admin/s_adminfo',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=5018330112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------

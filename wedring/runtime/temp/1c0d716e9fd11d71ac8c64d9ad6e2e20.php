@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"E:\wedring\wedring\public/../application/index\view\index\index.html";i:1500294884;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"E:\wedring\wedring\public/../application/index\view\index\index.html";i:1500346281;}*/ ?>
 ﻿<html xmlns="http://www.w3.org/1999/xhtml" class="hb-loaded">
 <head>
 <title>Weding Ring珍爱一生</title>
