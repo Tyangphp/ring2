@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2017-05-11 09:42:46
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-17 20:30:29
+ * @Last Modified time: 2017-07-18 10:53:28
  */
 namespace app\index\controller;
 use think\Controller;
@@ -46,6 +46,7 @@ class Index extends Controller
 
     public function detail()
     {
+
         return $this->fetch();
     }
 
