@@ -1,19 +1,17 @@
 <?php
 namespace app\admin\controller;
 use app\admin\controller\Base;
-
+use admin\model\Manager;
 
 class Index extends Base
 {
 	//首页展示	
     public function index()
     {
-    	// $isLogin = session('username','','admin');
-     //    if (!$isLogin) {
-     //        return $this->error('请登陆，兄弟','/admin/login/index');
-     //        die;
-     //    }
-		
+    	$manager = model('Manager');
+    	$suname = session('mangerName'); 
+    	$mname = $manager->manageInfo($suname)['username'];
+		$this->assign('mname',$mname);
 		return $this->fetch();
 	}
 	//分帧右边展示	
@@ -21,5 +19,10 @@ class Index extends Base
 	{
 		return $this->fetch();
 	}
-
+	//管理员退出
+	public function mnout()
+	{
+		session('mangerName',null);
+		$this->success('您辛苦了', 'admin/login/index');
+	}
 }

@@ -31,11 +31,11 @@
    <!--<div class="time_style"><i class="fa  fa-clock-o"></i><span id="time"></span></div>-->
    <div class="news l_f"><a href="#" class="fa  fa-bell "></a><em>5</em></div>
      <div class="administrator l_f">
-       <img src="/admin/images/avatar.png"  width="36px"/><span class="user-info">欢迎你,超级管理员</span><i class="glyph-icon fa  fa-caret-down"></i>
+       <img src="/admin/images/avatar.png"  width="36px"/><span class="user-info">欢迎你,{$mname}</span><i class="glyph-icon fa  fa-caret-down"></i>
        <ul class="dropdown-menu">
         <li><a href="#"><i class="fa fa-user"></i>个人信息</a></li>
         <li><a href="#"><i class="fa fa-cog"></i>系统设置</a></li>
-        <li><a href="javascript:void(0)" id="Exit_system"><i class="fa fa-user-times"></i>退出</a></li>
+        <li><a href="/admin/index/mnout" id="Exit_system"><i class="fa fa-user-times"></i>退出</a></li>
        </ul>
      </div>
    </div>
@@ -113,9 +113,9 @@
   <dt class="nav_link"><a href="#" class="dropdown-toggle title_nav"><i class="fa fa-bar-chart"></i><span class="menu-text"> 报表管理 </span><b class="arrow fa fa-angle-down"></b></a></dt>
     <dd class="submenu">
      <ul>
-       <li class="home"><a href="javascript:void(0)" name="system_info.html" title="订单报表" class="iframeurl"><i class="fa fa-angle-double-right"></i>订单报表</a></li>
-       <li class="home"><a href="javascript:void(0)" name="Columns.html" title="产品销量" class="iframeurl"><i class="fa fa-angle-double-right"></i>销量报表</a></li>
-       <li class="home"><a href="javascript:void(0)" name="Category_Manage.html" title="分类管理" class="iframeurl"><i class="fa fa-angle-double-right"></i>会员报表</a></li>
+       <li class="home"><a href="javascript:void(0)" name="/admin/report/order" title="订单报表" class="iframeurl"><i class="fa fa-angle-double-right"></i>订单报表</a></li>
+       <li class="home"><a href="javascript:void(0)" name="/admin/report/volume" title="产品销量" class="iframeurl"><i class="fa fa-angle-double-right"></i>销量报表</a></li>
+       <li class="home"><a href="javascript:void(0)" name="/admin/report/member" title="分类管理" class="iframeurl"><i class="fa fa-angle-double-right"></i>会员报表</a></li>
        </ul>
       </dd>
         <dt class="nav_link"><a href="#" class="dropdown-toggle title_nav"><i class="fa fa-user"></i><span class="menu-text"> 会员管理 </span><b class="arrow fa fa-angle-down"></b></a></dt>
@@ -203,7 +203,7 @@
   </div>
 <!--底部-->
   <div class="Sellerber_bottom info" id="bottom">
-  <span class="l_f">版权所有：南京思美软件系统有限公司</span>
+  <span class="l_f">版权所有：北京阳哥与前进老狗有限公司</span>
   </div>
  </div>
 </body>

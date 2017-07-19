@@ -46,15 +46,7 @@
  <label class="label_name">订单号：</label>
  <input name="" type="text"  class="form-control col-xs-6" style=" width:250px;"/>
   <label class="label_name">下单时间：</label>
-  <input class="inline laydate-icon " id="start" type="text"  style=" margin-right:10px; height:auto; float:left; width:150px;" /><script>
-        laydate({
-        									              elem: '#start',
-        												  format: 'YYYY/MM/DD',
-        												
-        												  max: '2099-06-16', //最大日期
-        												  istime: true,
-        												  istoday: false,})
-    </script>
+    <input type="text" name="" class="form-control laydate-icon" id="times" style=" height:30px;">
  <button class="btn button_btn bg-deep-blue " onclick=""  type="button"><i class="fa  fa-search"></i>&nbsp;搜索</button>
 </div>
 </div>
@@ -132,5 +124,8 @@ $("body").niceScroll({
 	cursorborderradius:"5px"  
 });
 	/*时间*/
-
+	laydate({
+    elem: '#start',
+    event: 'focus' 
+});
 </script>

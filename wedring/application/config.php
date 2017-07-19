@@ -237,4 +237,12 @@ return [
         'var_page'  => 'page',
         'list_rows' => 15,
     ],
+    //验证码配置
+    'captcha' => [
+    'codeSet' => '1234567890',
+    // 字体大小
+    'fontSize' => 14,
+    // 验证码长度（位数）
+    'length' => 4,
+    ],
 ];
