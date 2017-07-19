@@ -48,7 +48,7 @@
                 <div class="cort-right right">
                     <div class="r_bg"></div>
                     <!--登陆框内-->
-                    <form method="post" action="/index/index/index" id="loginform">
+                    <form id="loginform" >
                         <div class="cr_border">
                             <h3></h3>
                             <!--邮箱-->
@@ -100,7 +100,7 @@
                             <script type="text/javascript" src="http://open.51094.com/user/myscript/15966e2d64f21a.html"></script>
 
                             <div class="other_hz">
-                            <span id="hzy_fast_login"></span>
+                                <span id="hzy_fast_login"></span>
                                 <p>
                                     <span>更多合作网站帐号登录:</span>
 
@@ -111,7 +111,7 @@
                             </div>
                             <!--其他合作end-->
                         </div>
-                        <input type="hidden" value="index.html" name="forward" />
+                        <input type="hidden" value="/index/index/index" name="forward" />
                     </form>
                     <!--登陆框内end-->
                 </div>
@@ -132,10 +132,12 @@
 
     <script type="text/javascript">
         $(document).ready(function() {
+            //注册
             $('#login span').eq(0).click(function() {
                 location.href = "/index/user/reg"
             });
 
+            //登录
             $('#login span').eq(1).click(function() {
                 $('.ts_wrong').remove();
                 $('.the_input').removeClass('error');
@@ -153,7 +155,27 @@
                     return false;
                 }
 
-                $('form').submit();
+                //数据处理
+                $.ajax({
+                    url:'/index/user/checklogin',
+                    type: 'post',
+                    data: $('#loginform').serialize(),
+                    success: check
+                });
+
+                function check(data)
+                {
+                    // alert(data);
+                    // console.log(data);
+                    if (data == 0) {
+                        // console.log('ad');
+                        var notice = '<div class="ts_wrong"><span id="wrong">该账号还未注册！</span></div>';
+                        $('#txtName').parent().after(notice);
+                        $('#txtName').parent().addClass('error');
+                        return false;
+                    }
+                }
+                // $('form').submit();
             });
         });
 

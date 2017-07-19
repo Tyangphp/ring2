@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2017-05-16 19:37:35
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-18 21:01:44
+ * @Last Modified time: 2017-07-19 22:16:21
  */
 namespace app\index\controller;
 use think\Controller;
@@ -21,23 +21,21 @@ class User extends Controller
     //登录处理
     public function checkLogin()
     {
-        // return input();
+        // dump(input());
         //获取表单数据
         $input = input();
-        $username = $input['username'];
-        $password = $input['password'];
+        $username = $input['data']['email'];
+        $password = $input['data']['password'];
+        // dump($username);
+        // die;
 
         //查询数据库用户表
-        $data = Db::name('user')->where('username',$username)->field('uid,password,username')->select();
+        $data = Db::name('user')->where('email',$username)->field('id,password,email')->select();
 
-        // 判断用户是否存在
+        // 判断用户账号是否存在
         if (empty($data)) {
-             //判断是否输入用户名
-            if (empty($username)) {
-                return 1;
-            } else {
-                return 3;
-            }
+            echo 0;
+            return;
         }
 
         //判断用户密码是否正确
@@ -84,88 +82,50 @@ class User extends Controller
     public function sign()
     {
         //获取表单数据
-        dump(input());
-        // die;
+        // dump($_POST);
+        //dump(input());
+        // // die;
         $email = input('email');
         $password1 = input('email_pwd');
-        $password2 = input('email_pwd_confirm');
         $code = input('email_code');
-        $check = input('email_check');
-        dump($check);
-        // return $username;
-        //
-        $data = UserModel::where('email',$email)->select();
+        // $session = \think\Session::get();
 
-        //判断是否输入用户名
-        if (empty($username)) {
-            echo 0;
-            return;
-        }
+        //判断用户是否已存在
+        $data = Db::name('user')->where('email',$email)->select();
+        // echo $data;
 
-        //判断用户名是否已存在
         if (!empty($data)) {
-            echo 1;
-            return;
+            echo 0;
+            die;
         }
+        // } else {
+        //     $dcode = input('email_code');
+        //     // 判断验证码是否正确
+        //     $captcha = new \think\captcha\Captcha();
 
-        //判断用户是否输入密码
-        if (empty($password1)) {
-            echo 2;
-            return;
-        }
-
-        //判断密码是否符合规则
-        $num = strlen($password1);
-        $pattren = "/[0-9]{" . $num . "}/";
-        $pattren1 = "/\w{6,18}/";
-        if (preg_match($pattren,$password1,$match)){
-            //是否为纯数字
-            return 3;
-        } elseif (!preg_match($pattren1,$password1,$match)) {
-            //密码长度是否是6-18位
-            return 4;
-        } else {
-            //判断两次新密码输入是否相同
-            if ($password1 != $password2) {
-                return 5;
-            }
-        }
-
-        //判断两次密码输入是否一致
-        // if ($password1 != $password2) {
-        //     echo 3;
-        //     return;
+        //     if (!$captcha->check($dcode)) {
+        //         echo 2;
+        //         return;
+        //     }else {
+        //         echo 3;
+        //         return;
+        //     }
         // }
 
+
+
+
         //把数据插入到的数据库
-        //先将密码转化为md5格式
-        $password = md5($password1);
         $result = new UserModel();
         $result->data([
-                'username' => $username,
-                'password' => $password
+                'email' => $email,
+                'password' => md5($password1)
             ]);
         $result->save();
 
-        echo 6;
-        return;
-        // if ($data['username'] == $_POST['Username']) {
-        //     $this->error('该用户名已存在，请您重新输入！','/index/user/register');
-        // }
-        // if ($_POST['Password1'] !== $_POST['Password2']) {
-        //     $this->error('两次输入密码不一致，请您重新输入','/index/user/register');
-        // }
+        echo 3;
+        // return;
 
-        // $name = $_POST['Username'];
-        // $pwd = md5($_POST['Password1']);
-
-        // //将信息插入数据库
-        // $result = new UserModel;
-        // $result->data([
-        //     'username' => $name,
-        //     'password' => $pwd
-        // ]);
-        // $result->save();
 
         // if ($result) {
         //     $this->success('注册成功！','/index/index/index');
