@@ -2,7 +2,7 @@
 // +----------------------------------------------------------------------
 // | ThinkPHP [ WE CAN DO IT JUST THINK ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2006~2016 http://thinkphp.cn All rights reserved.
+// | Copyright (c) 2006~2017 http://thinkphp.cn All rights reserved.
 // +----------------------------------------------------------------------
 // | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
 // +----------------------------------------------------------------------
@@ -11,19 +11,9 @@
 
 namespace think;
 
-use think\Config;
-use think\Env;
-use think\Exception;
 use think\exception\HttpException;
 use think\exception\HttpResponseException;
 use think\exception\RouteNotFoundException;
-use think\Hook;
-use think\Lang;
-use think\Loader;
-use think\Log;
-use think\Request;
-use think\Response;
-use think\Route;
 
 /**
  * App 应用管理
@@ -95,14 +85,14 @@ class App
 
             $request->filter($config['default_filter']);
 
+            // 默认语言
+            Lang::range($config['default_lang']);
             if ($config['lang_switch_on']) {
                 // 开启多语言机制 检测当前语言
                 Lang::detect();
-            } else {
-                // 读取默认语言
-                Lang::range($config['default_lang']);
             }
             $request->langset(Lang::range());
+
             // 加载系统语言包
             Lang::load([
                 THINK_PATH . 'lang' . DS . $request->langset() . EXT,
@@ -128,37 +118,9 @@ class App
             // 监听app_begin
             Hook::listen('app_begin', $dispatch);
             // 请求缓存检查
-            $request->cache($config['request_cache'], $config['request_cache_expire']);
+            $request->cache($config['request_cache'], $config['request_cache_expire'], $config['request_cache_except']);
 
-            switch ($dispatch['type']) {
-                case 'redirect':
-                    // 执行重定向跳转
-                    $data = Response::create($dispatch['url'], 'redirect')->code($dispatch['status']);
-                    break;
-                case 'module':
-                    // 模块/控制器/操作
-                    $data = self::module($dispatch['module'], $config, isset($dispatch['convert']) ? $dispatch['convert'] : null);
-                    break;
-                case 'controller':
-                    // 执行控制器操作
-                    $vars = Request::instance()->param();
-                    $data = Loader::action($dispatch['controller'], array_merge($vars, $dispatch['var']));
-                    break;
-                case 'method':
-                    // 执行回调方法
-                    $vars = Request::instance()->param();
-                    $data = self::invokeMethod($dispatch['method'], array_merge($vars, $dispatch['var']));
-                    break;
-                case 'function':
-                    // 执行闭包
-                    $data = self::invokeFunction($dispatch['function']);
-                    break;
-                case 'response':
-                    $data = $dispatch['response'];
-                    break;
-                default:
-                    throw new \InvalidArgumentException('dispatch type not support');
-            }
+            $data = self::exec($dispatch, $config);
         } catch (HttpResponseException $exception) {
             $data = $exception->getResponse();
         }
@@ -255,9 +217,9 @@ class App
 
     /**
      * 绑定参数
-     * @access public
+     * @access private
      * @param \ReflectionMethod|\ReflectionFunction $reflect 反射类
-     * @param array             $vars    变量
+     * @param array                                 $vars    变量
      * @return array
      */
     private static function bindParams($reflect, $vars = [])
@@ -271,43 +233,88 @@ class App
             }
         }
         $args = [];
-        // 判断数组类型 数字数组时按顺序绑定参数
-        reset($vars);
-        $type = key($vars) === 0 ? 1 : 0;
         if ($reflect->getNumberOfParameters() > 0) {
+            // 判断数组类型 数字数组时按顺序绑定参数
+            reset($vars);
+            $type   = key($vars) === 0 ? 1 : 0;
             $params = $reflect->getParameters();
             foreach ($params as $param) {
-                $name  = $param->getName();
-                $class = $param->getClass();
-                if ($class) {
-                    $className = $class->getName();
-                    $bind      = Request::instance()->$name;
-                    if ($bind instanceof $className) {
-                        $args[] = $bind;
-                    } else {
-                        if (method_exists($className, 'invoke')) {
-                            $method = new \ReflectionMethod($className, 'invoke');
-                            if ($method->isPublic() && $method->isStatic()) {
-                                $args[] = $className::invoke(Request::instance());
-                                continue;
-                            }
-                        }
-                        $args[] = method_exists($className, 'instance') ? $className::instance() : new $className;
-                    }
-                } elseif (1 == $type && !empty($vars)) {
-                    $args[] = array_shift($vars);
-                } elseif (0 == $type && isset($vars[$name])) {
-                    $args[] = $vars[$name];
-                } elseif ($param->isDefaultValueAvailable()) {
-                    $args[] = $param->getDefaultValue();
-                } else {
-                    throw new \InvalidArgumentException('method param miss:' . $name);
-                }
+                $args[] = self::getParamValue($param, $vars, $type);
             }
-            // 全局过滤
-            array_walk_recursive($args, [Request::instance(), 'filterExp']);
         }
         return $args;
+    }
+
+    /**
+     * 获取参数值
+     * @access private
+     * @param \ReflectionParameter  $param
+     * @param array                 $vars    变量
+     * @param string                $type
+     * @return array
+     */
+    private static function getParamValue($param, &$vars, $type)
+    {
+        $name  = $param->getName();
+        $class = $param->getClass();
+        if ($class) {
+            $className = $class->getName();
+            $bind      = Request::instance()->$name;
+            if ($bind instanceof $className) {
+                $result = $bind;
+            } else {
+                if (method_exists($className, 'invoke')) {
+                    $method = new \ReflectionMethod($className, 'invoke');
+                    if ($method->isPublic() && $method->isStatic()) {
+                        return $className::invoke(Request::instance());
+                    }
+                }
+                $result = method_exists($className, 'instance') ? $className::instance() : new $className;
+            }
+        } elseif (1 == $type && !empty($vars)) {
+            $result = array_shift($vars);
+        } elseif (0 == $type && isset($vars[$name])) {
+            $result = $vars[$name];
+        } elseif ($param->isDefaultValueAvailable()) {
+            $result = $param->getDefaultValue();
+        } else {
+            throw new \InvalidArgumentException('method param miss:' . $name);
+        }
+        return $result;
+    }
+
+    protected static function exec($dispatch, $config)
+    {
+        switch ($dispatch['type']) {
+            case 'redirect':
+                // 执行重定向跳转
+                $data = Response::create($dispatch['url'], 'redirect')->code($dispatch['status']);
+                break;
+            case 'module':
+                // 模块/控制器/操作
+                $data = self::module($dispatch['module'], $config, isset($dispatch['convert']) ? $dispatch['convert'] : null);
+                break;
+            case 'controller':
+                // 执行控制器操作
+                $vars = array_merge(Request::instance()->param(), $dispatch['var']);
+                $data = Loader::action($dispatch['controller'], $vars, $config['url_controller_layer'], $config['controller_suffix']);
+                break;
+            case 'method':
+                // 执行回调方法
+                $vars = array_merge(Request::instance()->param(), $dispatch['var']);
+                $data = self::invokeMethod($dispatch['method'], $vars);
+                break;
+            case 'function':
+                // 执行闭包
+                $data = self::invokeFunction($dispatch['function']);
+                break;
+            case 'response':
+                $data = $dispatch['response'];
+                break;
+            default:
+                throw new \InvalidArgumentException('dispatch type not support');
+        }
+        return $data;
     }
 
     /**
@@ -348,7 +355,7 @@ class App
                 $request->module($module);
                 $config = self::init($module);
                 // 模块请求缓存检查
-                $request->cache($config['request_cache'], $config['request_cache_expire']);
+                $request->cache($config['request_cache'], $config['request_cache_expire'], $config['request_cache_except']);
             } else {
                 throw new HttpException(404, 'module not exists:' . $module);
             }
@@ -407,6 +414,11 @@ class App
     public static function initCommon()
     {
         if (empty(self::$init)) {
+            if (defined('APP_NAMESPACE')) {
+                self::$namespace = APP_NAMESPACE;
+            }
+            Loader::addNamespace(self::$namespace, APP_PATH);
+
             // 初始化应用
             $config       = self::init();
             self::$suffix = $config['class_suffix'];
@@ -426,9 +438,6 @@ class App
                 }
             }
 
-            // 注册应用命名空间
-            self::$namespace = $config['app_namespace'];
-            Loader::addNamespace($config['app_namespace'], APP_PATH);
             if (!empty($config['root_namespace'])) {
                 Loader::addNamespace($config['root_namespace']);
             }
@@ -483,7 +492,7 @@ class App
                 $dir   = CONF_PATH . $module . 'extra';
                 $files = scandir($dir);
                 foreach ($files as $file) {
-                    if (strpos($file, CONF_EXT)) {
+                    if ('.' . pathinfo($file, PATHINFO_EXTENSION) === CONF_EXT) {
                         $filename = $dir . DS . $file;
                         Config::load($filename, pathinfo($file, PATHINFO_FILENAME));
                     }

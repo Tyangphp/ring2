@@ -3,9 +3,11 @@
  * @Author: Marte
  * @Date:   2017-05-11 09:42:46
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-18 10:53:28
+ * @Last Modified time: 2017-07-18 15:11:22
  */
 namespace app\index\controller;
+use extend\open_example_php\open51094_class;
+
 use think\Controller;
 use app\index\model\Index as IndexModel;
 
@@ -13,6 +15,14 @@ class Index extends Controller
 {
     public function index()
     {
+        $open = new open51094_class();
+        if (!empty($_GET)) {
+            $code = $_GET['code'];
+            $message = $open->me($code);
+            dump($message);
+        }
+
+        // die;
         // //获取Session值
         // $username = session('username');
         // // dump($username);die;

@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2017-05-16 19:37:35
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-11 16:41:10
+ * @Last Modified time: 2017-07-18 21:01:44
  */
 namespace app\index\controller;
 use think\Controller;
@@ -81,15 +81,20 @@ class User extends Controller
     }
 
     //注册处理
-    public function checkRegister()
+    public function sign()
     {
         //获取表单数据
-        $username = input('username');
-        $password1 = input('password1');
-        $password2 = input('password2');
+        dump(input());
+        // die;
+        $email = input('email');
+        $password1 = input('email_pwd');
+        $password2 = input('email_pwd_confirm');
+        $code = input('email_code');
+        $check = input('email_check');
+        dump($check);
         // return $username;
         //
-        $data = UserModel::where('username',$username)->select();
+        $data = UserModel::where('email',$email)->select();
 
         //判断是否输入用户名
         if (empty($username)) {
