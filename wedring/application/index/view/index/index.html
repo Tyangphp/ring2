@@ -22,10 +22,9 @@
 </head>
 <body>
     <script type="text/javascript" src="/index/js/jquery.js"></script>
-    <form id="form1" action="/" method="post" name="form1">
+    <!-- <form id="form1" action="/" method="post" name="form1"> -->
     <!--遮罩-->
-    <div class="backall">
-    </div>
+    <div class="backall"></div>
     <!--遮罩end-->
     <!--头部-->
     <div class="cmain">
@@ -40,11 +39,19 @@
             <div class="top-right fr">
                 <!--登录注册-->
                 <ul class="tright-ul fl">
+                {if empty($username)}
                     <div id="ucheader1_pllogin1">
                         <li><a rel="nofollow" href="/index/user/login">登录</a><em>|</em></li>
                         <li><a rel="nofollow" href="/index/user/reg">注册</a></li>
                         <li class="headed"><em class="icon shooping"></em><a target="black" rel="nofollow" href="cart.html">购物车</a><i>(0)</i></li>
                     </div>
+                {else}
+                    <div id="ucheader1_pllogin1">
+                        <li><a rel="nofollow" href="/index/user/login">欢迎：{$username}</a><em>|</em></li>
+                        <li><a rel="nofollow" href="/index/user/logout">退出登录</a></li>
+                        <li class="headed"><em class="icon shooping"></em><a target="black" rel="nofollow" href="cart.html">购物车</a><i>(0)</i></li>
+                    </div>
+                {/if}
                 </ul>
                 <!--语言选择-->
                 <ul class="langruge-ul fr">

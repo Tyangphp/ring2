@@ -375,7 +375,7 @@
                 $.ajax({
                     type: "POST",
                     url: "/index/user/mobileSign",
-                    data: {"mobile":mobile,"code":code},
+                    data: {"mobile":mobile,"code":code,"pwd":pwd},
                     success: function(msg){
                         if(msg == 0){
                             var notice = '<div class="ts_wrong"><span id="wrong">该手机号码已被注册！</span></div>';

@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2017-05-16 19:37:35
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-20 16:49:40
+ * @Last Modified time: 2017-07-20 21:16:47
  */
 namespace app\index\controller;
 use think\Controller;
@@ -12,6 +12,12 @@ use think\Db;
 
 class User extends Controller
 {
+    protected $user;
+    public function _initialize()
+    {
+        $this->user = new UserModel();
+    }
+
     //登录
     public function login()
     {
@@ -21,17 +27,20 @@ class User extends Controller
     //登录处理
     public function checkLogin()
     {
-        // dump(input());
         //获取表单数据
         $input = input();
         $username = $input['data']['email'];
         $password = $input['data']['password'];
+
+        file_put_contents('input.txt',$password);
+
         $tel = "/^1[34578]\d{9}$/";
         $email = "/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/";
 
+        //检测，如果是手机号
         if (preg_match($tel,$username,$match)) {
-             //查询数据库用户表
-            $data = Db::name('user')->where('email',$username)->field('id,password,email')->select();
+            //查询数据库用户表
+            $data = $this->user->selected($username);
 
             // 判断用户账号是否存在
             if (empty($data)) {
@@ -41,7 +50,7 @@ class User extends Controller
 
             //判断用户密码是否正确
             if (!empty($data)) {
-                if ($data[0]['password'] != md5($password)) {
+                if ($data[0]['password'] !== md5($password)) {
                     echo 1;
                     return;
                 }
@@ -50,12 +59,13 @@ class User extends Controller
             //把username、uid保存到Session
             session('username',$username);
             session('uid',$data[0]['id']);
+
             echo 2;
             return;
 
-        } elseif (preg_match($email,$username,$match)) {
-             //查询数据库用户表
-            $data = Db::name('user')->where('email',$username)->field('id,password,email')->select();
+        } elseif (preg_match($email,$username,$match)) {//检测，如果是邮箱
+            //查询数据库用户表
+            $data = $this->user->selected($username);
 
             // 判断用户账号是否存在
             if (empty($data)) {
@@ -65,30 +75,22 @@ class User extends Controller
 
             //判断用户密码是否正确
             if (!empty($data)) {
-                if (empty($password)) {
-                    return 2;
-                }
                 if ($data[0]['password'] != md5($password)) {
-                   return 4;
+                   return 1;
                 }
-
-                //把username、uid保存到Session
-                // Session::set('username',$username);
-                // Session::set('uid',$data[0]['uid']);
-                // return 5;
             }
 
             //把username、uid保存到Session
             session('username',$username);
             session('uid',$data[0]['uid']);
-            return 5;
+
+            echo 2;
+            return;
 
         } else {
-            echo 6;
+            echo 3;
             return;
         }
-
-
     }
 
     //忘记密码
@@ -116,11 +118,12 @@ class User extends Controller
     {
         //获取表单数据
         $mobile = input('mobile');
-        $password = input('mobile_pwd');
+        $password = input('pwd');
         $code = input('code');
 
+        // var_dump(input());
         //写入文件，查看获得的数据
-        // file_put_contents('input.txt',$code);
+        // file_put_contents('input.txt',$password);
 
         //判断用户是否已存在
         $data = Db::name('user')->where('tel',$mobile)->select();
@@ -128,14 +131,14 @@ class User extends Controller
             echo 0;
             return;
         }
-        // } else {
+        // } else {//检验验证码
         //     if (!captcha_check($code)) {
         //         echo 1;
         //         return;
         //     }
         // }
 
-/***********************手机短信验证************************/
+        /***********************手机短信验证************************/
         // if ($_POST['phone']) {
         // //11111手机号
         // $phone = $_POST['phone'];
@@ -166,10 +169,12 @@ class User extends Controller
         // }
 
         //把数据插入到的数据库
+        $xx = md5($password);
+        // file_put_contents('input.txt',$xx);
         $result = new UserModel();
         $result->data([
                 'tel' => $mobile,
-                'password' => md5($password)
+                'password' => $xx
             ]);
         $result->save();
 

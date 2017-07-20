@@ -97,16 +97,16 @@
                             <!--按钮end-->
 
                             <!--其他合作-->
-                            <script type="text/javascript" src="http://open.51094.com/user/myscript/15966e2d64f21a.html"></script>
-
                             <div class="other_hz">
-                                <span id="hzy_fast_login"></span>
                                 <p>
                                     <span>更多合作网站帐号登录:</span>
 
-                                    <a href="/syncLogin/qq" class="oth_qq" target="black"></a>
+                                    <script type="text/javascript" src="http://open.51094.com/user/myscript/15966e2d64f21a.html"></script>
+                                    <span id="hzy_fast_login"></span>
+
+                                    <!-- <a href="/syncLogin/qq" class="oth_qq" target="black"></a>
                                     <a href="/syncLogin/weibo" class="oth_wb" target="black"></a>
-                                    <a href="/syncLogin/weixin" class="oth_wx" target="black"></a>
+                                    <a href="/syncLogin/weixin" class="oth_wx" target="black"></a> -->
                                 </p>
                             </div>
                             <!--其他合作end-->
@@ -173,11 +173,11 @@
                         $('#txtName').parent().addClass('error');
                         return false;
                     }
-
+                    console.log(data);
                     if (data == 1) {
                         var notice = '<div class="ts_wrong"><span id="wrong">密码错误！</span></div>';
-                        $('#txtName').parent().after(notice);
-                        $('#txtName').parent().addClass('error');
+                        $('#txtPwd').parent().after(notice);
+                        $('#txtPwd').parent().addClass('error');
                         return false;
                     }
 
@@ -189,7 +189,7 @@
                     }
 
                     if (data == 2) {
-                        alert('恭喜您注册成功！请您及时到您的个人中心完善您的信息');
+                        alert('恭喜您登录成功！如果您还没有完善您的信息，请您及时到您的个人中心完善！');
                         location.href = '/index/index/index';
                     };
                 }
@@ -197,11 +197,11 @@
             });
         });
 
-        $(document).keyup(function(event){
-            if(event.keyCode ==13){
-                $('#login span').eq(1).click();
-            }
-        });
+        // $(document).keyup(function(event){
+        //     if(event.keyCode ==13){
+        //         $('#login span').eq(1).click();
+        //     }
+        // });
     </script>
 </body>
 </html>
