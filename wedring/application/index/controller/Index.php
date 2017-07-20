@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2017-05-11 09:42:46
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-20 22:17:05
+ * @Last Modified time: 2017-07-20 22:31:41
  */
 namespace app\index\controller;
 use extend\open_example_php\open51094_class;
@@ -19,7 +19,7 @@ class Index extends Controller
         if (!empty($_GET)) {
             $code = $_GET['code'];
             $message = $open->me($code);
-            // dump($message);
+            dump($message);
 
             $username = $message['name'];
             $img = $message['img'];
