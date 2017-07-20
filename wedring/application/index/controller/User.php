@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2017-05-16 19:37:35
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-20 13:59:51
+ * @Last Modified time: 2017-07-20 16:49:40
  */
 namespace app\index\controller;
 use think\Controller;
@@ -26,36 +26,69 @@ class User extends Controller
         $input = input();
         $username = $input['data']['email'];
         $password = $input['data']['password'];
-        // dump($username);
-        // die;
+        $tel = "/^1[34578]\d{9}$/";
+        $email = "/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/";
 
-        //查询数据库用户表
-        $data = Db::name('user')->where('email',$username)->field('id,password,email')->select();
+        if (preg_match($tel,$username,$match)) {
+             //查询数据库用户表
+            $data = Db::name('user')->where('email',$username)->field('id,password,email')->select();
 
-        // 判断用户账号是否存在
-        if (empty($data)) {
-            echo 0;
-            return;
-        }
-
-        //判断用户密码是否正确
-        if (!empty($data)) {
-            if (empty($password)) {
-                return 2;
+            // 判断用户账号是否存在
+            if (empty($data)) {
+                echo 0;
+                return;
             }
-            if ($data[0]['password'] != md5($password)) {
-               return 4;
+
+            //判断用户密码是否正确
+            if (!empty($data)) {
+                if ($data[0]['password'] != md5($password)) {
+                    echo 1;
+                    return;
+                }
             }
 
             //把username、uid保存到Session
-            // Session::set('username',$username);
-            // Session::set('uid',$data[0]['uid']);
-            // return 5;
-        }
+            session('username',$username);
+            session('uid',$data[0]['id']);
+            echo 2;
+            return;
+
+        } elseif (preg_match($email,$username,$match)) {
+             //查询数据库用户表
+            $data = Db::name('user')->where('email',$username)->field('id,password,email')->select();
+
+            // 判断用户账号是否存在
+            if (empty($data)) {
+                echo 0;
+                return;
+            }
+
+            //判断用户密码是否正确
+            if (!empty($data)) {
+                if (empty($password)) {
+                    return 2;
+                }
+                if ($data[0]['password'] != md5($password)) {
+                   return 4;
+                }
+
+                //把username、uid保存到Session
+                // Session::set('username',$username);
+                // Session::set('uid',$data[0]['uid']);
+                // return 5;
+            }
+
             //把username、uid保存到Session
             session('username',$username);
             session('uid',$data[0]['uid']);
-           return 5;
+            return 5;
+
+        } else {
+            echo 6;
+            return;
+        }
+
+
     }
 
     //忘记密码
@@ -87,7 +120,7 @@ class User extends Controller
         $code = input('code');
 
         //写入文件，查看获得的数据
-        file_put_contents('input.txt',$code);
+        // file_put_contents('input.txt',$code);
 
         //判断用户是否已存在
         $data = Db::name('user')->where('tel',$mobile)->select();
