@@ -2,6 +2,7 @@
 namespace app\admin\controller;
 use think\Controller;
 use app\admin\model\Login as Mlogin;
+use think\Db;
 
 class Login extends Controller
 {
@@ -37,8 +38,8 @@ class Login extends Controller
 		                die;
 	                } else {
 		                echo 7;
-		                session('mangerName',$uname); 
-		                die;
+		                session('mangerName',$uname);
+		                $logsign = Db::name('manage_sign')->insert(['mname'=>$uname]); 
 	                }
 		}
 	}

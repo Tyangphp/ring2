@@ -237,32 +237,19 @@ return [
         'var_page'  => 'page',
         'list_rows' => 15,
     ],
-<<<<<<< HEAD
+
     //验证码配置
     'captcha' => [
     'codeSet' => '1234567890',
     // 字体大小
-    'fontSize' => 14,
+    'fontSize' => 18,
     // 验证码长度（位数）
     'length' => 4,
-=======
-
-    //验证码
-    'captcha' => [
-        // 验证码字符集合
-        'codeSet' => '2345678abcdefhijkmnpqrstuvwxyzABCDEFGHJKLMNPQRTUVWXY',
-        // 验证码字体大小(px)
-        'fontSize' => 20,
-        // 是否画混淆曲线
-        'useCurve' => false,
-        // 验证码图片高度
-        'imageH' => 40,
-        // 验证码图片宽度
-        'imageW' => 150,
-        // 验证码位数
-        'length' => 4,
-        // 验证成功后是否重置
-        'reset' => true
->>>>>>> ea81f1248c1453bd4aac69e61e5512caca755c9b
+     // 验证码图片高度
+    'imageH' => 40,
+    // 验证码图片宽度
+    'imageW' => 150,
+    // 验证成功后是否重置
+    'reset' => true
     ],
 ];

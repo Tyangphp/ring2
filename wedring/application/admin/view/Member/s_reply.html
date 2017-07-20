@@ -24,11 +24,12 @@
 </head>
 
 <body>
+
 <div class="margin" id="page_style">
 <div class="operation clearfix">
 
    <div class="search  clearfix">
- <label class="label_name">商品搜索：</label><input name="" type="text"  class="form-control col-xs-6"/><button class="btn button_btn bg-deep-blue " onclick=""  type="button"><i class="fa  fa-search"></i>&nbsp;搜索</button>
+ <!-- <label class="label_name">投诉搜索：</label><input name="" type="text"  class="form-control col-xs-6"/><button class="btn button_btn bg-deep-blue " onclick=""  type="button"><i class="fa  fa-search"></i>&nbsp;搜索</button> -->
 </div>
 </div>
 <!--列表展示-->
@@ -37,10 +38,10 @@
   <thead>
   <tr>
   <th width="30"><label><input type="checkbox" class="ace"><span class="lbl"></span></label></th>
-   <th width="80">排序</th>
-   <th>文章名称</th>   
-   <th width="80">分类</th>
-   <th width="80">浏览次数</th>
+   <th width="80">留言id</th>
+   <th>意见内容</th>   
+   <th width="80">用户姓名</th>
+   <th width="80">email</th>
    <th width="150">添加日期</th>
    <th width="200">操作</th>
    </tr>   
@@ -51,7 +52,9 @@
   </tbody>
  </table>
 </div>
+
 </div>
+{$page}
 </body>
 </html>
 <script>
@@ -63,8 +66,10 @@
 	});
 });
 var dataSet=[
- ['<label><input type="checkbox" class="ace"><span class="lbl"></span></label>','','为什么收货地址里面没有我的地区所在的街道？','帮助中心','45','2016-07-01','<a href="javascript:ovid()" onclick="picture_stop(this,'+10001+')" class="btn bg-green operation_btn">已读</a> <a href="/admin/member/add_reply" onclick="picture_edit(this,'+123+')" class="btn bg-deep-blue operation_btn">回复</a> <a href="javascript:ovid()" onclick="picture_del(this,'+10001+')" class="btn btn-danger operation_btn">未读</a>  '],
-  
+	{foreach $rpinfo as $rv}
+ ['<label><input type="checkbox" class="ace" ><span class="lbl"></span></label>','{$rv['id']}','{$rv['contnet']}','{$rv['uname']}','{$rv['email']}','{$rv['stime']}','{if $rv['is_rd'] == 1}<a href="javascript:ovid()" onclick="picture_stop(this)" " class="btn bg-green operation_btn">已处理</a>{else if} <a href="/admin/member/add_reply?email={$rv['email']}" onclick="picture_edit(this,'+123+')" class="btn bg-deep-blue operation_btn">回复</a> <a href="javascript:ovid()" onclick="picture_del(this)" id="{$rv['id']}" class="btn btn-danger operation_btn">已读</a> {/if} '],
+	
+  {/foreach}
 ];
  jQuery(function($) {
 				var oTable1 = $('#sample-table').dataTable( {
@@ -98,10 +103,11 @@ var dataSet=[
 				});
 			});
 	/*文章-删除*/
-function picture_del(obj,id){
-	layer.confirm('确认要删除吗？',{icon:0,},function(index){
-		$(obj).parents("tr").remove();
-		layer.msg('已删除!',{icon:1,time:1000});
+function picture_del(obj){
+	layer.confirm('确认标记已读吗？',{icon:0,},function(index){
+		selected= $(obj).attr('id');
+		location.href="/admin/member/ydreply?id="+selected;
+		layer.msg('已处理!',{icon:1,time:1000});
 	});
 }
 /*********滚动事件*********/

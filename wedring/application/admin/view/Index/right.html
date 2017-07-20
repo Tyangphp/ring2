@@ -137,11 +137,9 @@
   <div class="title_name"><i></i>登陆记录 <a href="#">+更多</a></div>
   <table class="record_list table table_list">
   <tbody>
-   <tr><td>管理员</td><td>2016-08-04 12:45:43</td></tr>
-   <tr><td>管理员</td><td>2016-08-14 23:34:23</td></tr>
-   <tr><td>管理员</td><td>2016-08-24 11:34:53</td></tr>
-   <tr><td>管理员</td><td>2016-08-24 11:34:53</td></tr>
-   <tr><td>管理员</td><td>2016-08-24 11:34:53</td></tr>
+  {foreach $msign as $msg}
+   <tr><td>{$msg['mname']}</td><td>{$msg['logtime']}</td></tr>
+  {/foreach}
    </tbody>
   </table>
   </div>
