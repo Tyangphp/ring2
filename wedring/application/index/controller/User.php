@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2017-05-16 19:37:35
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-19 22:16:21
+ * @Last Modified time: 2017-07-20 13:59:51
  */
 namespace app\index\controller;
 use think\Controller;
@@ -78,55 +78,110 @@ class User extends Controller
         return $this->fetch();
     }
 
-    //注册处理
-    public function sign()
+    //手机号注册处理
+    public function mobileSign()
     {
         //获取表单数据
-        // dump($_POST);
-        //dump(input());
-        // // die;
-        $email = input('email');
-        $password1 = input('email_pwd');
-        $code = input('email_code');
-        // $session = \think\Session::get();
+        $mobile = input('mobile');
+        $password = input('mobile_pwd');
+        $code = input('code');
+
+        //写入文件，查看获得的数据
+        file_put_contents('input.txt',$code);
 
         //判断用户是否已存在
-        $data = Db::name('user')->where('email',$email)->select();
-        // echo $data;
-
+        $data = Db::name('user')->where('tel',$mobile)->select();
         if (!empty($data)) {
             echo 0;
-            die;
+            return;
         }
         // } else {
-        //     $dcode = input('email_code');
-        //     // 判断验证码是否正确
-        //     $captcha = new \think\captcha\Captcha();
-
-        //     if (!$captcha->check($dcode)) {
-        //         echo 2;
-        //         return;
-        //     }else {
-        //         echo 3;
+        //     if (!captcha_check($code)) {
+        //         echo 1;
         //         return;
         //     }
         // }
 
+/***********************手机短信验证************************/
+        // if ($_POST['phone']) {
+        // //11111手机号
+        // $phone = $_POST['phone'];
+        // $name = "晶晶";
+        // $kdnumb = "阳哥正在反省的第一天";
+        // //发送短信
+        //  $c = new TopClient;
+        //  //222222APPKEY
+        // $c->appkey = "24537892";
+        // $c->secretKey = "6365ca1a286cc633b11d31708c368b3d";
+        // //请求对象，需要配置请求的参数
+        // $req = new AlibabaAliqinFcSmsNumSendRequest;
+        // $req->setExtend("123456");
+        // $req->setSmsType("normal");
+        // //个人签名
+        // $req->setSmsFreeSignName("刘春阳");
+        // //短信模板变量
+        // $req->setSmsParam("{\"name\":\"$name\",\"kdnumb\":\"$kdnumb\"}");
+        // //手机号
+        // $req->setRecNum($phone);
+        // $req->setSmsTemplateCode("SMS_76435050");
+        // $resp = $c->execute($req);
 
+        // //发送短信结束
+        //     die;
+        // }else {
+        //     echo "没有值";
+        // }
 
+        //把数据插入到的数据库
+        $result = new UserModel();
+        $result->data([
+                'tel' => $mobile,
+                'password' => md5($password)
+            ]);
+        $result->save();
+
+        echo 2;
+        return;
+        // if ($result) {
+        //     $this->success('注册成功！','/index/index/index');
+        // } else {
+        //     $this->error('注册失败！','/index/user/register');
+        // }
+    }
+
+    //邮箱注册处理
+    public function emailSign()
+    {
+        //获取表单数据
+        $email = input('email');
+        $password = input('email_pwd');
+        $code = input('code');
+
+        //写入文件，查看获得的数据
+        // file_put_contents('input.txt',$code);
+
+        //判断用户是否已存在
+        $data = Db::name('user')->where('email',$email)->select();
+        if (!empty($data)) {
+            echo 0;
+            return;
+        } else {
+            if (!captcha_check($code)) {
+                echo 1;
+                return;
+            }
+        }
 
         //把数据插入到的数据库
         $result = new UserModel();
         $result->data([
                 'email' => $email,
-                'password' => md5($password1)
+                'password' => md5($password)
             ]);
         $result->save();
 
-        echo 3;
-        // return;
-
-
+        echo 2;
+        return;
         // if ($result) {
         //     $this->success('注册成功！','/index/index/index');
         // } else {

@@ -55,7 +55,7 @@
                         </div>
 
                         <!--手机注册-->
-                        <form method="post" action="/index/user/sign" class="form_first">
+                        <form class="form_first">
                             <input type="hidden" value="1" name="type">
                             <input type="hidden" value="login.html" name="forward">
                             <input type="hidden" value="H6mY5VyS" name="skey">
@@ -276,7 +276,7 @@
                 //检测邮箱是否使用过
                 $.ajax({
                     type: "POST",
-                    url: "/index/user/sign",
+                    url: "/index/user/emailSign",
                     data: {"email":email,"code":code},
                     success: function(data){
                         if(data == 0){
@@ -287,7 +287,7 @@
                         }
 
                         if (data == 1) {
-                            alert(data);
+                            // alert(data);
                             var notice = '<div class="ts_wrong"><span id="wrong">验证码错误！</span></div>';
                             $('.ts_wrong').remove();
                             $('input[name="email_code"]').parent().after(notice);
@@ -295,39 +295,16 @@
                             return false;
                         };
 
-                        if (data == 3) {
+                        if (data == 2) {
                             location.href = '/index/index/index';
                         };
                     }
                 });
-                        // else{
-                        //     $.ajax({
-                        //         type: "POST",
-                        //         url: "/index/user/sign",
-                        //         data: "code="+code,
-                        //         success: function(data){
-                        //             console.log(data);
-                        //             if(data == 2){
-                        //                 alert(data);
-                        //                 var notice = '<div class="ts_wrong"><span id="wrong">验证码错误！</span></div>';
-                        //                 $('.ts_wrong').remove();
-                        //                 $('input[name="email_code"]').parent().after(notice);
-                        //                 $('input[name="email_code"]').addClass('error');
-                        //                 return false;
-                        //             }else{
-                        //                 $('.form_second').submit(function(){
-                        //                     location.href = '/index/user/sign';
-                        //                 });
-                        //             }
-                        //         }
-                        //     });
-                        // }
-                //     }
-                // });
             }
 
             if($('.ph').hasClass('focus')){
                 //手机注册
+                //判断是否输入手机号
                 var mobile = $('input[name="mobile"]').val();
                 if(mobile == ''){
                     var notice = '<div class="ts_wrong"><span id="wrong">请输入手机号码！</span></div>';
@@ -336,6 +313,7 @@
                     return false;
                 }
 
+                //判断是否是手机号
                 if(!checkMobile(mobile)){
                     var notice = '<div class="ts_wrong"><span id="wrong">手机号码格式错误 请重新输入！</span></div>';
                     $('input[name="mobile"]').parent().after(notice);
@@ -343,6 +321,7 @@
                     return false;
                 }
 
+                //判断是否输入验证码
                 var code = $('input[name="mobile_code"]').val();
                 if(code == ''){
                     var notice = '<div class="ts_wrong"><span id="wrong">请输入验证码！</span></div>';
@@ -351,6 +330,7 @@
                     return false;
                 }
 
+                //判断是否输入密码
                 var pwd = $('input[name="mobile_pwd"]').val();
                 if(pwd == ''){
                     var notice = '<div class="ts_wrong"><span id="wrong">请输入密码！</span></div>';
@@ -359,6 +339,7 @@
                     return false;
                 }
 
+                //判断密码长度
                 if(pwd.length < 6){
                     var notice = '<div class="ts_wrong"><span id="wrong">密码长度为6~21个字符！</span></div>';
                     $('input[name="mobile_pwd"]').parent().after(notice);
@@ -366,14 +347,16 @@
                     return false;
                 }
 
+                //判断是否输入确认密码
                 var pwd_confirm = $('input[name="mobile_pwd_confirm"]').val();
-                if(empty(pwd_confirm)){
+                if(pwd_confirm == ''){
                     var notice = '<div class="ts_wrong"><span id="wrong">请输入确认密码！</span></div>';
                     $('input[name="mobile_pwd_confirm"]').parent().after(notice);
                     $('input[name="mobile_pwd_confirm"]').addClass('error');
                     return false;
                 }
 
+                //判断两次密码输入是否一致
                 if(pwd != pwd_confirm){
                     var notice = '<div class="ts_wrong"><span id="wrong">密码与确认密码不一致 请重新输入！</span></div>';
                     $('input[name="mobile_pwd_confirm"]').parent().after(notice);
@@ -381,6 +364,7 @@
                     return false;
                 }
 
+                //判断用户是否同意用户注册协议
                 if(!$('input[name="mobile_check"]').is(':checked')){
                     var notice = '<div class="ts_wrong"><span id="wrong">请阅读并同意用户注册协议！</span></div>';
                     $('input[name="mobile_check"]').parent().parent().after(notice);
@@ -390,8 +374,8 @@
                 //检测手机号码是否使用过
                 $.ajax({
                     type: "POST",
-                    url: "/sign/validMobile",
-                    data: "mobile="+mobile,
+                    url: "/index/user/mobileSign",
+                    data: {"mobile":mobile,"code":code},
                     success: function(msg){
                       if(msg == 1){
                           var notice = '<div class="ts_wrong"><span id="wrong">该手机号码已被注册！</span></div>';
@@ -401,7 +385,7 @@
                         }else{
                             $.ajax({
                                 type: "POST",
-                                url: "/sign/validMobileCode",
+                                url: "/index/user/mobileSign",
                                 data: "code="+code,
                                 success: function(msg){
                                     if(msg == 1){
