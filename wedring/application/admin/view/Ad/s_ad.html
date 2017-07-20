@@ -77,9 +77,9 @@
 <div id="Advert_add_style" class="Advert_add_style padding display" >
  <div class="add_style">
  <ul>
-  <li class="clearfix"><label class="label_name col-xs-2">图片名称：&nbsp;&nbsp;</label><span class="cont_style col-xs-9"><input name="图片名称" type="text" id="form-field-1" class="col-xs-10 col-sm-5" style="width:450px"></span></li>
+  <li class="clearfix"><label class="label_name col-xs-2">广告名称：&nbsp;&nbsp;</label><span class="cont_style col-xs-9"><input name="图片名称" type="text" id="ggname" class="col-xs-10 col-sm-5" style="width:450px"></span></li>
   <li class="clearfix"><label class="label_name col-xs-2">显示排序：&nbsp;&nbsp;</label><span class="cont_style col-xs-9"><input name="排序" type="text" id="form-field-1" placeholder="0" class="col-xs-10 col-sm-5" style="width:50px"></span></li>
-  <li class="clearfix"><label class="label_name col-xs-2">链接地址：&nbsp;&nbsp;</label><span class="cont_style col-xs-9"><input name="地址" type="text" id="form-field-1" placeholder="地址" class="col-xs-10 col-sm-5" style="width:450px"></span></li>
+  <li class="clearfix"><label class="label_name col-xs-2">广告内容：&nbsp;&nbsp;</label><span class="cont_style col-xs-9"><input name="地址" type="text" id="ggcont" class="col-xs-10 col-sm-5" style="width:450px"></span></li>
    <li class="clearfix"><label class="label_name col-xs-2">状&nbsp;&nbsp;态：&nbsp;&nbsp;</label>
    <div class="Add_content col-xs-9">
      <label><input name="form-field-radio1" type="radio" checked="checked" class="ace">
@@ -100,7 +100,7 @@
     </li>
      <li class="clearfix"><label class="label_name col-xs-2">图&nbsp;&nbsp;片：&nbsp;&nbsp;</label>
      <span class="cont_style col-xs-9">        
-       <div id="preview" class="preview_img"><img id="imghead" border=0 src="images/image.png" /></div>
+       <div id="preview" class="preview_img"><img id="imghead" border=0 src="/admin/images/image.png" /></div>
        <div class="fileInput ">
         <input type="file" onchange="previewImage(this)" name="upfile" id="upfile" class="upfile"/>
         <input class="upFileBtn" type="button" value="上传图片" onclick="document.getElementById('upfile').click()" />
@@ -116,9 +116,10 @@
 </html>
 <script>
 var dataSet=[{foreach $ad as $val}
- ['<label><input type="checkbox" class="ace" id="{$val['nid']}"><span class="lbl"></span></label>','{$val['nid']}','{$val['title']}','活动广告','1','{$val['create_time']}','启用','','<a href="javascript:void()" onclick="Advert_add(this,'+102+')" class="btn bg-deep-blue  operation_btn">添加</a> <a href="javascript:void()" onclick="picture_del(this,'+10001+')" class="btn btn-danger operation_btn">删除</a> <a href="/admin/ad/ad_pic?nid={$val['nid']}" class="btn bg-deep-blue operation_btn">查看</a>'],
+ ['<label><input type="checkbox" class="ace" ><span class="lbl"></span></label>','{$val['nid']}','{$val['title']}','活动广告','1','{$val['create_time']}','启用','','<a href="javascript:void()" onclick="Advert_add(this,'+102+')" class="btn bg-deep-blue  operation_btn">添加</a> <a href="javascript:void()" onclick="picture_del(this)" class="btn btn-danger operation_btn" id="{$val['nid']}">删除</a> <a href="/admin/ad/ad_pic?nid={$val['nid']}" class="btn bg-deep-blue operation_btn">查看</a>'],
  {/foreach}
  ];
+
 jQuery(function($) {
 				var oTable1 = $('#sample-table').dataTable( {
 				"data": dataSet,
@@ -145,10 +146,10 @@ jQuery(function($) {
 				});
 			});
 	/*产品-删除*/
-function picture_del(obj,id){
+function picture_del(obj){
 	layer.confirm('确认要删除吗？',{icon:0,},function(index){
-    $nid = $(".ace").attr("id");
-		
+    selected= $(obj).attr('id');
+		location.href="/admin/ad/delad?nid="+selected;
 	});
 }
 /*****添加广告******/
@@ -165,24 +166,16 @@ function Advert_add(obj ,id){
 		 var num=0;
 		 var str="";
      $(".add_style input[type$='text']").each(function(n){
-          if($(this).val()=="")
-          {
-               
-			   layer.alert(str+=""+$(this).attr("name")+"不能为空！\r\n",{
-                title: '提示框',				
-				icon:0,								
-          }); 
-		    num++;
-            return false;            
-          } 
+          
 		 });
 		  if(num>0){  return false;}	 	
           else{
-			  layer.alert('添加成功！',{
-               title: '提示框',				
-			icon:1,		
-			  });
-			   layer.close(index);	
+            ggname = $('#ggname').val();
+            ggcont = $('#ggcont').val();
+            img = $('#imghead').val();
+            alert(img);
+              // location.href="/admin/ad/addad?title="+ggname+"&cont="+ggcont;
+			  
 		  }		  		     				
 		}
     });	
@@ -207,23 +200,12 @@ function add_AD_sort( ){
 		 var num=0;
 		 var str="";
 		  $(".add_style input[type$='text']").each(function(n){
-          if($(this).val()=="")
-          {
-               
-			   layer.alert(str+=""+$(this).attr("name")+"不能为空！\r\n",{
-                title: '提示框',				
-				icon:0,								
-          }); 
-		    num++;
-            return false;            
-          } 
+        
 		 });
 		  if(num>0){  return false;}	 	
           else{
-			  layer.alert('添加成功！',{
-               title: '提示框',				
-			icon:1,		
-			  });
+			  
+
 			   layer.close(index);	
 		  }	
 		 
