@@ -76,10 +76,11 @@
 <!--添加广告-->
 <div id="Advert_add_style" class="Advert_add_style padding display" >
  <div class="add_style">
+ <form method="post" action="/admin/ad/addad" enctype="multipart/form-data">
  <ul>
-  <li class="clearfix"><label class="label_name col-xs-2">广告名称：&nbsp;&nbsp;</label><span class="cont_style col-xs-9"><input name="图片名称" type="text" id="ggname" class="col-xs-10 col-sm-5" style="width:450px"></span></li>
+  <li class="clearfix"><label class="label_name col-xs-2">广告名称：&nbsp;&nbsp;</label><span class="cont_style col-xs-9"><input name="title" type="text" id="ggname" class="col-xs-10 col-sm-5" style="width:450px"></span></li>
   <li class="clearfix"><label class="label_name col-xs-2">显示排序：&nbsp;&nbsp;</label><span class="cont_style col-xs-9"><input name="排序" type="text" id="form-field-1" placeholder="0" class="col-xs-10 col-sm-5" style="width:50px"></span></li>
-  <li class="clearfix"><label class="label_name col-xs-2">广告内容：&nbsp;&nbsp;</label><span class="cont_style col-xs-9"><input name="地址" type="text" id="ggcont" class="col-xs-10 col-sm-5" style="width:450px"></span></li>
+  <li class="clearfix"><label class="label_name col-xs-2">广告内容：&nbsp;&nbsp;</label><span class="cont_style col-xs-9"><input name="content" type="text" id="ggcont" class="col-xs-10 col-sm-5" style="width:450px"></span></li>
    <li class="clearfix"><label class="label_name col-xs-2">状&nbsp;&nbsp;态：&nbsp;&nbsp;</label>
    <div class="Add_content col-xs-9">
      <label><input name="form-field-radio1" type="radio" checked="checked" class="ace">
@@ -104,7 +105,10 @@
        <div class="fileInput ">
         <input type="file" onchange="previewImage(this)" name="upfile" id="upfile" class="upfile"/>
         <input class="upFileBtn" type="button" value="上传图片" onclick="document.getElementById('upfile').click()" />
-        </div>
+        
+        </div>&nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 
+       &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; <input type="submit" name="sc" value="添加">
+        </form>
       </span>
   </li>
  </ul>
@@ -161,7 +165,7 @@ function Advert_add(obj ,id){
 		shadeClose: false, //点击遮罩关闭层
         area : ['800px' , ''],
         content:$('#Advert_add_style'),
-		btn:['提交','取消'],
+		// btn:['提交','取消'],
 		yes:function(index,layero){	
 		 var num=0;
 		 var str="";

@@ -29,4 +29,13 @@ class Ad extends Model
 		$data = Db::name('news')->where('nid',$nid)->delete();
 		return $data?true:false;
 	}
+	//添加广告
+	public function addad($title,$content,$pic)
+	{
+	$uppro = Db::name('news')->insert(['title'=>$title,
+                'content'=>$content,
+                'picture'=>$pic
+            ]);
+		return $uppro?true:false;
+    }
 }

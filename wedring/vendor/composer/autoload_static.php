@@ -4,11 +4,7 @@
 
 namespace Composer\Autoload;
 
-<<<<<<< HEAD
 class ComposerStaticInitf327b041b97ae588b4989153ecdca921
-=======
-class ComposerStaticInit586640336cf4653cce02868ad0d11819
->>>>>>> 2e7d9c0718796fc4446b6ca67660103aadf968b1
 {
     public static $files = array (
         '1cfd2761b63b0a29ed23657ea394cb2d' => __DIR__ . '/..' . '/topthink/think-captcha/src/helper.php',
@@ -17,29 +13,25 @@ class ComposerStaticInit586640336cf4653cce02868ad0d11819
     public static $prefixLengthsPsr4 = array (
         't' => 
         array (
-<<<<<<< HEAD
             'think\\captcha\\' => 14,
-=======
-            'think\\composer\\' => 15,
-            'think\\captcha\\' => 14,
-            'think\\' => 6,
->>>>>>> 2e7d9c0718796fc4446b6ca67660103aadf968b1
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-<<<<<<< HEAD
-=======
-        'think\\composer\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/topthink/think-installer/src',
-        ),
->>>>>>> 2e7d9c0718796fc4446b6ca67660103aadf968b1
         'think\\captcha\\' => 
         array (
             0 => __DIR__ . '/..' . '/topthink/think-captcha/src',
         ),
-<<<<<<< HEAD
+    );
+
+    public static $prefixesPsr0 = array (
+        'P' => 
+        array (
+            'PHPExcel' => 
+            array (
+                0 => __DIR__ . '/..' . '/phpoffice/phpexcel/Classes',
+            ),
+        ),
     );
 
     public static $classMap = array (
@@ -51,25 +43,15 @@ class ComposerStaticInit586640336cf4653cce02868ad0d11819
         'SMTP' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.smtp.php',
         'ntlm_sasl_client_class' => __DIR__ . '/..' . '/phpmailer/phpmailer/extras/ntlm_sasl_client.php',
         'phpmailerException' => __DIR__ . '/..' . '/phpmailer/phpmailer/class.phpmailer.php',
-=======
-        'think\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/thinkphp/library/think',
-        ),
->>>>>>> 2e7d9c0718796fc4446b6ca67660103aadf968b1
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-<<<<<<< HEAD
             $loader->prefixLengthsPsr4 = ComposerStaticInitf327b041b97ae588b4989153ecdca921::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitf327b041b97ae588b4989153ecdca921::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitf327b041b97ae588b4989153ecdca921::$prefixesPsr0;
             $loader->classMap = ComposerStaticInitf327b041b97ae588b4989153ecdca921::$classMap;
-=======
-            $loader->prefixLengthsPsr4 = ComposerStaticInit586640336cf4653cce02868ad0d11819::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit586640336cf4653cce02868ad0d11819::$prefixDirsPsr4;
->>>>>>> 2e7d9c0718796fc4446b6ca67660103aadf968b1
 
         }, null, ClassLoader::class);
     }

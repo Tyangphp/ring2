@@ -24,7 +24,7 @@
 <div class="margin" id="page_style">
    <div class="operation clearfix">
     <ul class="choice_search">
-     <li class="clearfix col-xs-2 col-lg-2 col-ms-3 "><label class="label_name ">会员名称：</label><input name="" type="text"  class="form-control col-xs-6 col-lg-5"/></li>
+     
       <li class="clearfix col-xs-4 col-lg-5 col-ms-5 "><label class="label_name ">注册时间：</label> 
      <input class="laydate-icon col-xs-4 col-lg-3" id="start" style=" margin-right:10px; height:28px; line-height:28px; float:left">
       <span  style=" float:left; padding:0px 10px; line-height:32px;">至</span>
@@ -55,53 +55,57 @@
                 laydate(start);
                 laydate(end);
 </script>
-     <button class="btn button_btn bg-deep-blue " onclick=""  type="button"><i class="fa  fa-search"></i>&nbsp;搜索</button>
+     <button class="btn button_btn bg-deep-blue " onclick="times()" type="button"><i class="fa  fa-search"></i>&nbsp;搜索</button>
     </ul>
     </div>
 <div class="bkg_List_style">
  <div class="bkg_List_operation clearfix">
   <ul class="bkg_List_Button_operation">
-   <li class="btn btn-danger"><a href="javascrpt:void()" class="btn_add"><em class="bkg_List_icon icon_add"></em>删除用户</a></li>
+   <li class="btn btn-danger"><a href="javascrpt:void()" onclick="delus()" class="btn_add"><em class="bkg_List_icon icon_add"></em>双击删除</a></li>
    
   
-   <li class="btn btn-Dark-success"><a href="javascrpt:void()" class="btn_add"><em class="bkg_List_icon icon_close"></em>关闭用户</a></li>
-   <li class="btn bg-deep-blue"><a href="javascrpt:void()" class="btn_add"><em class="bkg_List_icon icon_modify"></em>导出Excel</a></li>
+   <li class="btn btn-Dark-success"><a href="javascrpt:void()" onclick="stop()" class="btn_add"><em class="bkg_List_icon icon_close"></em>关闭用户</a></li>
+   <li class="btn bg-deep-blue"><a href="javascrpt:void()" onclick="excel()" class="btn_add"><em class="bkg_List_icon icon_modify"></em>导出Excel</a></li>
   </ul>
  </div>
  <div class="bkg_List clearfix">
   <table class="table  table_list table_striped table-bordered">
    <thead>
     <tr>
-     <th  width="40"><label><input type="checkbox" class="ace"><span class="lbl"></span></label></th>
+     <th  </th>
+     <th>ID</th>
      <th>用户名</th>
      <th>真实姓名</th>
      <th>性别</th>
      <th>电话</th>
      <th>邮箱</th>
-     <th>地址</th>
      <th>加入时间</th>
      <th>等级</th>
      <th>状态</th>
     </tr>
    </thead>
    <tbody>
+    {foreach $usinfo as $uv}
     <tr>
-     <td><label><input type="checkbox" class="ace"><span class="lbl"></span></label></td>
-     <td>汇海天堂</td>
-     <td>张明珠</td>
-     <td>男</td>
-     <td>1345665656</td>
-     <td>4545455@qq.com</td>
-     <td>江苏南京雨花台区</td>
-     <td>2016-07-22 </td>
+
+     <td><label><input type="checkbox" name="ace" value="{$uv['uid']}" class="ace"><span class="lbl"></span></label></td>
+     <td>{$uv['id']}</td>
+     <td>{$uv['nickname']}</td>
+     <td>{$uv['username']}</td>
+     <td>{$uv['sex']}</td>
+     <td>{$uv['tel']}</td>
+     <td>{$uv['email']}</td>
+     <td>{$uv['create_time']}</td>
      <td>普通用户</td>
-     <td>启用</td>
+     <td>{if 1 == $uv['is_stop']}禁用{else}正常{/if}</td>
     </tr>
+     {/foreach}
    </tbody>
   </table>
  </div>
 </div>
 </div>
+{$page}
 </body>
 </html>
 <script>
@@ -150,4 +154,49 @@ $('table th input:checkbox').on('click' , function(){
 					});
 						
 				});
+/***************搜索跳转***********/
+
+function times()
+{
+   $stime = $("#start").val();
+   $etime = $("#end").val();
+   location.href="/admin/member/s_member?stime="+$stime+"&etime="+$etime;
+}
+/***************删除跳转***********/
+function delus(){
+
+        var obj = document.getElementsByName("ace");
+        $uid = '';
+
+        for(k in obj){
+            if(obj[k].checked)
+                $uid = obj[k].value;
+        }
+        if($uid){
+           location.href="/admin/member/delus?uid="+$uid;
+           
+        }
+    }
+/***************导出excel***********/
+
+function excel()
+{
+   location.href="/admin/member/excel";   
+}
+
+/***************禁止用户***********/
+function stop(){
+
+        var obj1 = document.getElementsByName("ace");
+        $uid1 = '';
+
+        for(k in obj1){
+            if(obj1[k].checked)
+                $uid1 = obj1[k].value;
+        }
+        if($uid1){
+           location.href="/admin/member/stop?uid="+$uid1;
+           
+        }
+    }
 </script>

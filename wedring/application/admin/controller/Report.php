@@ -5,19 +5,20 @@ use admin\model\Manager;
 
 class Report extends Base
 {
-	//首页展示	
+	//订单报表	
     public function order()
     {
     	return $this->fetch();
 	}
-	//分帧右边展示	
+	//销量报表
 	public function volume()
 	{
 		return $this->fetch();
 	}
-	//管理员退出
+	//会员报表
 	public function member()
 	{
 		return $this->fetch();
 	}
+	
 }

@@ -46,15 +46,22 @@ class Login extends Controller
 	//测试
 	public function test()
 	{
-				$uname = 'yangge';
-	       		$upass = '611888';
+				// $uname = 'yangge';
+	   //     		$upass = '611888';
 				
-				$ckpass = $Mlogin->checkup($uname,$upass);
-	                if (!$ckpass) {
-	                echo 2;
-	                } else {
-	                echo 7;
-	                }
+				// $ckpass = $Mlogin->checkup($uname,$upass);
+	   //              if (!$ckpass) {
+	   //              echo 2;
+	   //              } else {
+	   //              echo 7;
+	   //              }
+	   //              
+	   $data = Db::name('manage')->where('username','yangge')
+				->alias('m') //命名别名
+				->join('manage_sign s','m.username=s.mname')
+				->field('sid')
+				->select();      
+	    
 	}
 
 
