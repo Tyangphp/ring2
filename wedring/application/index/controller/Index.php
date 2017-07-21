@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2017-05-11 09:42:46
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-21 17:03:27
+ * @Last Modified time: 2017-07-21 22:09:11
  */
 namespace app\index\controller;
 use extend\open_example_php\open51094_class;
@@ -95,14 +95,22 @@ class Index extends Controller
             // $this->assign('news',$news);
             return $this->fetch();
         } else {
-            // //查询数据库，获取goods信息
-            // $goods = Goods::where('gid','>',0)->paginate(4);
-            $data = $this->index->selectGoods();
-            dump($data);
+            // 获取goods信息
+            $goods = $this->index->selectGoods();
+
+            //获取系列信息
+            $nav = $this->index->selectNav();
+
+             //获取种类信息
+            $kind = $this->index->selectKind();
+            // dump($kind);
+            // dump($goods[0]['gid']);
             // die;
 
             //分配变量
-            $this->assign('data',$data);
+            $this->assign('goods',$goods);
+            $this->assign('nav',$nav);
+            $this->assign('kind',$kind);
             // $this->assign('goods',$goods);
             // $this->assign('classname',$classname);
             // $this->assign('class_goods',$class_goods);
@@ -130,7 +138,6 @@ class Index extends Controller
     {
         return $this->fetch();
     }
-
     //contact
     // public function contact()
     // {
