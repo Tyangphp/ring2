@@ -3,23 +3,32 @@
  * @Author: Marte
  * @Date:   2017-05-11 09:42:46
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-20 22:31:41
+ * @Last Modified time: 2017-07-21 17:03:27
  */
 namespace app\index\controller;
 use extend\open_example_php\open51094_class;
+use app\index\model\Index as IndexModel;
+use app\index\model\Goods;
 
 use think\Controller;
-use app\index\model\Index as IndexModel;
+use think\Db;
+
 
 class Index extends Controller
 {
+    protected $index;
+    public function _initialize()
+    {
+        $this->index = new IndexModel();
+        $this->index = new Goods();
+    }
     public function index()
     {
         $open = new open51094_class();
-        if (!empty($_GET)) {
+        if (!empty($_GET)) {//第三方登录
             $code = $_GET['code'];
             $message = $open->me($code);
-            dump($message);
+            // dump($message);
 
             $username = $message['name'];
             $img = $message['img'];
@@ -28,6 +37,9 @@ class Index extends Controller
             $from = $message['from'];
 
             session('username',$username);
+            session('img',$img);
+            session('sex',$sex);
+            session('openId',$openId);
             // //查询数据库，获取goods信息
             // $goods = Goods::where('gid','>',0)->paginate(4);
 
@@ -53,11 +65,9 @@ class Index extends Controller
             // $this->assign('class_goods',$class_goods);
             // $this->assign('news',$news);
             return $this->fetch();
-        } elseif (!empty(session('username'))) {
+        } elseif (!empty(session('username'))) {//手机或邮箱登录
             //获取Session值
             $username = session('username');
-            // dump($username);
-            // die;
 
             // //查询数据库，获取goods信息
             // $goods = Goods::where('gid','>',0)->paginate(4);
@@ -77,7 +87,7 @@ class Index extends Controller
             //     $value['content'] = mb_substr(ltrim($value['content'],'<p/>'),0,50,'utf-8') . '...';
             // }
 
-            // //分配变量
+            //分配变量
             $this->assign('username',$username);
             // $this->assign('goods',$goods);
             // $this->assign('classname',$classname);
@@ -85,15 +95,24 @@ class Index extends Controller
             // $this->assign('news',$news);
             return $this->fetch();
         } else {
+            // //查询数据库，获取goods信息
+            // $goods = Goods::where('gid','>',0)->paginate(4);
+            $data = $this->index->selectGoods();
+            dump($data);
+            // die;
+
+            //分配变量
+            $this->assign('data',$data);
+            // $this->assign('goods',$goods);
+            // $this->assign('classname',$classname);
+            // $this->assign('class_goods',$class_goods);
+            // $this->assign('news',$news);
             return $this->fetch();
         }
-
-
     }
 
     public function detail()
     {
-
         return $this->fetch();
     }
 

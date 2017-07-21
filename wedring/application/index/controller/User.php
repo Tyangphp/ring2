@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2017-05-16 19:37:35
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-20 21:16:47
+ * @Last Modified time: 2017-07-21 10:35:06
  */
 namespace app\index\controller;
 use think\Controller;
@@ -39,8 +39,8 @@ class User extends Controller
 
         //检测，如果是手机号
         if (preg_match($tel,$username,$match)) {
-            //查询数据库用户表
-            $data = $this->user->selected($username);
+            //查询数据库用户登录注册表
+            $data = $this->user->selectMobile($username);
 
             // 判断用户账号是否存在
             if (empty($data)) {
@@ -60,12 +60,20 @@ class User extends Controller
             session('username',$username);
             session('uid',$data[0]['id']);
 
-            echo 2;
+            //查询数据库用户详细信息表
+            $msg = $this->user->usersMobile($username);
+            // 判断用户是否已完善信息
+            if (empty($msg)) {
+                echo 2;
+                return;
+            }
+
+            echo 3;
             return;
 
         } elseif (preg_match($email,$username,$match)) {//检测，如果是邮箱
-            //查询数据库用户表
-            $data = $this->user->selected($username);
+            //查询数据库用户登录注册表
+            $data = $this->user->selectEmail($username);
 
             // 判断用户账号是否存在
             if (empty($data)) {
@@ -82,13 +90,21 @@ class User extends Controller
 
             //把username、uid保存到Session
             session('username',$username);
-            session('uid',$data[0]['uid']);
+            session('uid',$data[0]['id']);
 
-            echo 2;
+            //查询数据库用户详细信息表
+            $msg = $this->user->usersMobile($username);
+            // 判断用户是否已完善信息
+            if (empty($msg)) {
+                echo 2;
+                return;
+            }
+
+            echo 3;
             return;
 
         } else {
-            echo 3;
+            echo 4;
             return;
         }
     }
@@ -121,12 +137,12 @@ class User extends Controller
         $password = input('pwd');
         $code = input('code');
 
-        // var_dump(input());
         //写入文件，查看获得的数据
         // file_put_contents('input.txt',$password);
 
         //判断用户是否已存在
-        $data = Db::name('user')->where('tel',$mobile)->select();
+        // $data = Db::name('user')->where('tel',$mobile)->select();
+        $data = $this->user->selectMobile($mobile);
         if (!empty($data)) {
             echo 0;
             return;
@@ -169,22 +185,16 @@ class User extends Controller
         // }
 
         //把数据插入到的数据库
-        $xx = md5($password);
-        // file_put_contents('input.txt',$xx);
-        $result = new UserModel();
-        $result->data([
-                'tel' => $mobile,
-                'password' => $xx
-            ]);
-        $result->save();
-
+        // $result = new UserModel();
+        // $result->data([
+        //         'tel' => $mobile,
+        //         'password' => md5($password)
+        //     ]);
+        // $result->save();
+        $data = ['tel' => $mobile,'password' => md5($password)];
+        $this->user->insertInto($data);
         echo 2;
         return;
-        // if ($result) {
-        //     $this->success('注册成功！','/index/index/index');
-        // } else {
-        //     $this->error('注册失败！','/index/user/register');
-        // }
     }
 
     //邮箱注册处理
@@ -192,14 +202,16 @@ class User extends Controller
     {
         //获取表单数据
         $email = input('email');
-        $password = input('email_pwd');
+        $password = input('pwd');
         $code = input('code');
 
         //写入文件，查看获得的数据
         // file_put_contents('input.txt',$code);
 
         //判断用户是否已存在
-        $data = Db::name('user')->where('email',$email)->select();
+        // $data = Db::name('user')->where('email',$email)->select();
+        $data = $this->user->selectEmail($email);
+
         if (!empty($data)) {
             echo 0;
             return;
@@ -211,20 +223,17 @@ class User extends Controller
         }
 
         //把数据插入到的数据库
-        $result = new UserModel();
-        $result->data([
-                'email' => $email,
-                'password' => md5($password)
-            ]);
-        $result->save();
+        // $result = new UserModel();
+        // $result->data([
+        //         'email' => $email,
+        //         'password' => md5($password)
+        //     ]);
+        // $result->save();
+        $data = ['email' => $email,'password' => md5($password)];
+        $this->user->insertInto($data);
 
         echo 2;
         return;
-        // if ($result) {
-        //     $this->success('注册成功！','/index/index/index');
-        // } else {
-        //     $this->error('注册失败！','/index/user/register');
-        // }
     }
 
     public function person()
