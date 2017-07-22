@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2017-05-16 19:37:35
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-21 10:35:06
+ * @Last Modified time: 2017-07-22 09:55:23
  */
 namespace app\index\controller;
 use think\Controller;
@@ -185,12 +185,6 @@ class User extends Controller
         // }
 
         //把数据插入到的数据库
-        // $result = new UserModel();
-        // $result->data([
-        //         'tel' => $mobile,
-        //         'password' => md5($password)
-        //     ]);
-        // $result->save();
         $data = ['tel' => $mobile,'password' => md5($password)];
         $this->user->insertInto($data);
         echo 2;

@@ -1,356 +1,382 @@
 ﻿<html xmlns="http://www.w3.org/1999/xhtml" class="hb-loaded">
  <head>
   <link href="/index/css/same.css?v=1.3.7.2" type="text/css" rel="stylesheet" />
- </head>
- <body>
- <!--/*技术支持，小庄602842076     验证：官网技术支持*/
-/*技术支持，小庄602842076    验证：官网技术支持*/
-/*技术支持，小庄602842076    验证：官网技术支持*/
-/*技术支持，小庄602842076    验证：官网技术支持*/
-/*技术支持，小庄602842076    验证：官网技术支持*/
-/*https://shop116998991.taobao.com/*/
-/*https://shop116998991.taobao.com/*/
-/*https://shop116998991.taobao.com/*/-->
+
+
   <script src="/index/js/jquery.js" type="text/javascript"></script>
   <script src="/index/js/index.js?virsion=1.3.7.2" type="text/javascript"></script>
   <title>品牌文化</title>
   <link href="/index/css/same.css?v=1.3.7.2" type="text/css" rel="stylesheet" />
   <link href="/index/css/dr_culture.css?v=1.3.5.0" type="text/css" rel="stylesheet" />
 
-  <form id="aspnetForm" action="brand.html" method="post" name="aspnetForm">
-
-   <div>
+  <!-- <form id="aspnetForm" action="brand.html" method="post" name="aspnetForm"> -->
+ </head>
+ <body>
+   <!-- <div> -->
 
     <!--头部-->
     <div class="cmain">
-     <div class="headtop">
-      <!--头部左边-->
-      <div class="top-left fl">
-       <a title="Darry Ring" href="index.html"> <img width="187" height="42" alt="Darry Ring官网" src="/index/images/logo.png" /> </a>
-       <span style="font-weight: normal;">求婚钻戒领导品牌</span>
-      </div>
-      <!--头部左边end-->
-      <!--头部右边-->
-      <div class="top-right fr">
-       <!--登录注册-->
-       <ul class="tright-ul fl">
-        <div id="ctl00_ucheader_pllogin1">
-         <li><a rel="nofollow" href="login.html">登录</a><em>|</em></li>
-         <li><a rel="nofollow" href="reg.html">注册</a></li>
-         <li class="headed"><em class="icon shooping"></em><a target="black" rel="nofollow" href="cart.html">购物车</a><i>(0)</i></li>
+        <div class="headtop">
+            <!--头部左边-->
+            <div class="top-left fl">
+                <a title="Darry Ring" href="index.html"> <img width="187" height="42" alt="Darry Ring官网" src="/index/images/logo.png" /> </a>
+                <span style="font-weight: normal;">求婚钻戒领导品牌</span>
+            </div>
+            <!--头部左边end-->
+
+            <!--头部右边-->
+            <div class="top-right fr">
+                <!--登录注册-->
+                <ul class="tright-ul fl">
+                {if empty($username)}
+                    <div id="ucheader1_pllogin1">
+                        <li><a rel="nofollow" href="/index/user/login">登录</a><em>|</em></li>
+                        <li><a rel="nofollow" href="/index/user/reg">注册</a></li>
+                        <li class="headed"><em class="icon shooping"></em><a target="black" rel="nofollow" href="cart.html">购物车</a><i>(0)</i></li>
+                    </div>
+                {else}
+                    <div id="ucheader1_pllogin1">
+                        <li><a rel="nofollow" href="/index/user/login">欢迎：{$username}</a><em>|</em></li>
+                        <li><a rel="nofollow" href="/index/user/logout">退出登录</a></li>
+                        <li class="headed"><em class="icon shooping"></em><a target="black" rel="nofollow" href="cart.html">购物车</a><i>(0)</i></li>
+                    </div>
+                {/if}
+                </ul>
+                <!--语言选择-->
+                <ul class="langruge-ul fr">
+                    <li><a target="_blank" href="index.html/en">English</a></li>
+                </ul>
+                <!--搜索框-->
+                <div style="display:none;" class="search">
+                    <input type="text" placeholder="求婚钻戒" class="txt1" />
+                    <div onClick="showSearch()" class="icon toser"></div>
+                </div>
+            </div>
+            <!--头部右边end-->
         </div>
-       </ul>
-       <!--语言选择-->
-       <ul class="langruge-ul fr">
-        <li><a target="_blank" href="index.html/en">English</a></li>
-       </ul>
-       <!--搜索框-->
-       <div style="display:none;" class="search">
-        <input type="text" placeholder="求婚钻戒" class="txt1" />
-        <div onClick="showSearch()" class="icon toser">
-        </div>
-       </div>
-      </div>
-      <!--头部右边end-->
-     </div>
     </div>
     <!--头部end-->
+
     <!--导航-->
     <div class="nav">
-     <div class="cmain">
-      <!--导航的左边-->
-      <ul class="nav-ul fl">
-       <li><a href="index.html">首页</a> </li>
-       <li><a href="brand.html">品牌文化</a> </li>
-       <!--
-            <li><a href="/pinkdiamond.aspx" target="_blank">高级定制</a>
+        <div class="cmain">
+            <!--导航的左边-->
+            <ul class="nav-ul fl">
+                <li><a href="/index/index/index">首页</a> </li>
+                <li><a href="/index/index/brand">品牌文化</a> </li>
+                <!--
+                <li><a href="/pinkdiamond.aspx" target="_blank">高级定制</a>
                 <div class="nav-div">
-                    <div class="navdiv-right">
-                        <p>
-                            <a href="/pinkdiamond.aspx" target="_blank">稀世粉钻系列</a></p>
-                    </div>
-                    <div class="navdiv-left">
-                        <h3>
-                            NEW</h3>
-                        <img src="/index/images/02wj.jpg" width="138" height="97" />
-                        <div class="more_cp">
-                            <a href="/pinkdiamond.aspx" target="_blank">> 了解该系列产品</a>
-                        </div>
-                    </div>
+                <div class="navdiv-right">
+                <p>
+                <a href="/pinkdiamond.aspx" target="_blank">稀世粉钻系列</a></p>
                 </div>
-            </li>-->
-       <li><a style="font-family:arial" href="lists.html">Darry Ring 求婚钻戒</a>
-        <div class="nav-div" style="display: none;">
-         <div class="navdiv_top">
-          <div class="navdiv-right">
-           <p> <a href="lists.html"> 查看所有款</a></p>
-           <p> <a href="/pinkdiamond.aspx">稀世粉钻系列</a></p>
-           <p> <a href="/dr_series/12_22.html">Forever系列</a></p>
-           <p> <a href="/dr_series/11_20.html">My Heart系列</a></p>
-           <p> <a href="/dr_series/16_30.html">True Love系列</a></p>
-           <p> <a href="/dr_series/15_28.html">I Swear系列</a></p>
-           <p> <a href="/dr_series/13_24.html">Just you系列</a></p>
-          </div>
-          <div class="navdiv-left">
-           <h3> NEW</h3>
-           <a href="/darry_ring/349.html"> <img width="138" height="97" alt="2克拉钻戒价格_E色EX切工VVS2净度_True Love系列 奢华款 _Darry Ring求婚钻戒 戴瑞珠宝官网" src="/index/images/03wj.jpg" /></a>
-           <div class="more_cp">
-            <a href="/darry_ring/349.html">&gt; 了解该系列产品</a>
-           </div>
-          </div>
-         </div>
-         <div class="navdiv_bottom"></div>
-        </div> </li>
-       <li class=""><a style="font-family:arial" href="lists.html">Darry Ring 爱的礼物</a>
-        <div class="nav-div" style="display: none;">
-         <div class="navdiv_top">
-          <div class="navdiv-right">
-           <p> <a href="lists.html">查看所有</a></p>
-           <p> <a href="/dr_phonics">对戒</a></p>
-           <p> <a href="/jewelry_2">男戒</a></p>
-           <p> <a href="/jewelry_4">吊坠</a></p>
-           <p> <a href="/jewelry_5">项链</a></p>
-           <p> <a href="/jewelry_8">手链</a></p>
-           <p> <a href="/jewelry_6">耳钉/耳环</a></p>
-          </div>
-          <div class="navdiv-right special_right noborder">
-           <p> <a href="/j_series/22_12.html">Forever系列</a></p>
-           <p> <a href="/j_series/20_11.html">My Heart系列</a></p>
-           <p> <a href="/j_series/24_13.html">Just You系列</a></p>
-           <p> <a href="/j_series/30_16.html">True Love系列</a></p>
-           <p> <a href="/j_series/28_15.html">I Swear系列</a></p>
-           <div class="more_cp">
-            <a href="lists.html">&gt; 查看所有款</a>
-           </div>
-          </div>
-         </div>
-         <div class="navdiv_bottom"></div>
-        </div> </li>
-       <li class=""><a href="question.html">常见问题</a></li>
-      </ul>
-      <!--导航的右边-->
-      <ul class="nav-right fr">
-       <li class="lipos"><em></em><a href="active.html">最新活动</a> <i class="icon"></i>
-        <div class="theright_div">
-         <div class="navdiv_top">
-          <div class="navright_div fl">
-           <h3> 小时代4陆烧林萧求婚钻戒， </h3>
-           <p> Darry Ring钻戒顶级定制！</p>
-           <div class="more_cp">
-            <a href="/xiaoshidai4.html">&gt; 点击了解详细</a>
-           </div>
-          </div>
-          <div class="navleft_div fl">
-           <a href="/xiaoshidai4.html"> <img width="187" height="163" alt="" src="/index/images/xsdcat.jpg" /></a>
-          </div>
-         </div>
-         <div class="navdiv_bottom"></div>
-        </div> </li>
-      </ul>
-     </div>
+                <div class="navdiv-left">
+                <h3>
+                NEW</h3>
+                <img src="images/02wj.jpg" width="138" height="97" />
+                <div class="more_cp">
+                <a href="/pinkdiamond.aspx" target="_blank">> 了解该系列产品</a>
+                </div>
+                </div>
+                </div>
+                </li>-->
+                <li><a style="font-family:arial" href="/index/lists/lists?id=1">Darry Ring 求婚钻戒</a>
+                    <div class="nav-div">
+                        <div class="navdiv_top">
+                            <div class="navdiv-right">
+                                <p> <a href="/index/lists/lists?id=1"> 查看所有款</a></p>
+                                <p> <a href="/index/lists/lists?id=1&nid={$nav[0]['id']}">{$nav[0]['nname']}</a></p>
+                                <p> <a href="/index/lists/lists?id=1&nid={$nav[1]['id']}">{$nav[1]['nname']}</a></p>
+                                <p> <a href="/index/lists/lists?id=1&nid={$nav[2]['id']}">{$nav[2]['nname']}</a></p>
+                                <p> <a href="/index/lists/lists?id=1&nid={$nav[3]['id']}">{$nav[3]['nname']}</a></p>
+                                <p> <a href="/index/lists/lists?id=1&nid={$nav[4]['id']}">{$nav[4]['nname']}</a></p>
+                                <p> <a href="/index/lists/lists?id=1&nid={$nav[5]['id']}">{$nav[5]['nname']}</a></p>
+                            </div>
+                            <div class="navdiv-left">
+                                <h3> NEW</h3>
+                                <a href="/index/index/detail?id=1&nid={$nav[3]['id']}"> <img width="138" height="97" alt="2克拉钻戒价格_E色EX切工VVS2净度_True Love系列 奢华款 _Darry Ring求婚钻戒 戴瑞珠宝官网" src="/index/images/03wj.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2克拉钻戒价格_E色EX切工VVS2净度_True Love系列 奢华款 _Darry Ring求婚钻戒 </a>
+                                <div class="more_cp">
+                                    <a href="/index/lists/lists?id=1&nid={$nav[3]['id']}">&gt; 了解该系列产品</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navdiv_bottom"></div>
+                    </div>
+                </li>
+                <li><a style="font-family:arial" href="/index/lists/lists?id=2">Darry Ring 爱的礼物</a>
+                    <div class="nav-div">
+                        <div class="navdiv_top">
+                            <div class="navdiv-right">
+                                <p> <a href="/index/lists/lists?id=2">查看所有</a></p>
+                                <p> <a href="/index/lists/lists?id=2?kid={$kind[0]['id']}">{$kind[0]['classname']}</a></p>
+                                <p> <a href="/index/lists/lists?id=2?kid={$kind[1]['id']}">{$kind[1]['classname']}</a></p>
+                                <p> <a href="/index/lists/lists?id=2?kid={$kind[2]['id']}">{$kind[2]['classname']}</a></p>
+                                <p> <a href="/index/lists/lists?id=2?kid={$kind[3]['id']}">{$kind[3]['classname']}</a></p>
+                                <p> <a href="/index/lists/lists?id=2?kid={$kind[4]['id']}">{$kind[4]['classname']}</a></p>
+                                <p> <a href="/index/lists/lists?id=2?kid={$kind[5]['id']}">{$kind[5]['classname']}</a></p>
+                                <p> <a href="/index/lists/lists?id=2?kid={$kind[6]['id']}">{$kind[6]['classname']}</a></p>
+                            </div>
+                            <div class="navdiv-right special_right noborder">
+                                <p> <a href="/index/lists/lists?id=1&nid={$nav[1]['id']}">Forever系列</a></p>
+                                <p> <a href="/index/lists/lists?id=1&nid={$nav[2]['id']}">My Heart系列</a></p>
+                                <p> <a href="/index/lists/lists?id=1&nid={$nav[3]['id']}">Just You系列</a></p>
+                                <p> <a href="/index/lists/lists?id=1&nid={$nav[4]['id']}">True Love系列</a></p>
+                                <p> <a href="/index/lists/lists?id=1&nid={$nav[5]['id']}">I Swear系列</a></p>
+                                <div class="more_cp">
+                                    <a href="/index/lists/lists">&gt; 查看所有款</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navdiv_bottom"></div>
+                    </div>
+                </li>
+                <li><a href="/index/index/question">常见问题</a></li>
+            </ul>
+            <!--导航的右边-->
+            <ul class="nav-right fr">
+                <li class="lipos"><em></em><a href="/index/index/active">最新活动</a> <i class="icon"></i>
+                    <div class="theright_div">
+                    <div class="navdiv_top">
+                    <div class="navright_div fl">
+                    <h3> 小时代4陆烧林萧求婚钻戒， </h3>
+                    <p> Darry Ring钻戒顶级定制！</p>
+                    <div class="more_cp">
+                    <a href="/xiaoshidai4">&gt; 点击了解详细</a>
+                    </div>
+                    </div>
+                    <div class="navleft_div fl">
+                    <a href="/xiaoshidai4"> <img width="187" height="163" alt="" src="/index/images/xsdcat.jpg" /></a>
+                    </div>
+                    </div>
+                    <div class="navdiv_bottom"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
     <!--导航end-->
+
     <script type="text/javascript">
-    function logout() {
-        if (window.confirm('确定退出吗？')) {
+        function logout() {
+            if (window.confirm('确定退出吗？')) {
 
-            $.get("/nAPI/QuitExit.ashx", function (data) {
-                window.location.href = "/";
-            });
+                $.get("/nAPI/QuitExit.ashx", function (data) {
+                    window.location.href = "/";
+                });
+            }
         }
-    }
-</script>
-    <div class="cort">
-     <!--中间-->
-     <div class="cort">
-      <!--内容-->
-      <div class="cmain culture_same">
-       <!--面包屑-->
-       <div class="zbk_top spalid">
-        <div class="zbk_top spalid">
-         <span>您当前的位置：</span>
-         <span id="ctl00_content_website_SiteMapPath1"><a href="#ctl00_content_website_SiteMapPath1_SkipLink"></a><span> <a target="_blank" href="index.html">Darry Ring</a> </span><span> <em>&gt;</em> </span><span> <span>品牌文化</span> </span><a id="ctl00_content_website_SiteMapPath1_SkipLink"></a></span>
-        </div>
-       </div>
-       <!--面包屑end-->
-       <!--标题-->
-       <div class="culture_top">
-        <div class="culture_top-tittle">
-         <i></i>
-         <span class="tittle_span">关于Darry Ring</span>
-         <i></i>
-        </div>
-        <h4> About Darry Ring</h4>
-       </div>
-       <!--标题end-->
-       <!--导航-->
-       <div class="culture_nav">
-        <a href="brand.html">品牌文化</a>
-        <i>|</i>
-        <a href="brand.html_br">品牌理念</a>
-        <i>|</i>
-        <a target="_blank" href="brand.html_mr">名人推荐</a>
-        <i>|</i>
-        <a target="_blank" href="/shopyd">实体店</a>
-        <i>|</i>
-        <a href="brand.html_pz">品质工艺</a>
-        <i>|</i>
-        <a href="brand.html_tl">真爱验证</a>
-        <i>|</i>
-        <a target="_blank" href="http://bbs.darryring.com/">DR社区</a>
-        <i>|</i>
-        <a href="brand.html_jo">加入我们</a>
-        <i>|</i>
-        <a target="_blank" href="/heizuan">黑钻专题</a>
-       </div>
-       <!--导航end-->
-       <!--特殊颜色的P-->
-       <div class="culture_wz">
-        <p> 早于上个世纪90年代，戴瑞珠宝便在香港开始从事裸钻高级定制,以寻求、欣赏珍宝的眼光，苛刻的甄选标准，搜集来自世界各地的珍稀钻石。</p>
-        <p> 这些卓越品质的钻石戴瑞珠宝只提供给少数专属的顶尖珠宝商,让钻石在不同珠宝艺术大师演绎绝美工艺创作。</p>
-       </div>
-       <!--特殊颜色的P end-->
-       <!--品牌理念-->
-       <div class="culture_pp culture_first">
-        <!--左边-->
-        <div class="fl">
-         <a target="_blank" href="/dr_brand.aspx"> <img width="470" height="300" src="/index/images/wh1.jpg" /> </a>
-        </div>
-        <!--左边end-->
-        <!--右边-->
-        <div class="culture_pp-word fr">
-         <h3> 品牌理念</h3>
-         <h4> Brand Beliefs</h4>
-         <p> Darry Ring，有着世间最独特的规定，</p>
-         <p> 男士凭身份证一生仅能定制一枚唯一的戒指，赠予此生唯一挚爱的女子，</p>
-         <p> 以示“一生只爱你一人”的至高承诺……</p>
-         <a class="to_more" target="_blank" href="brand.html_br">了解更多</a>
-        </div>
-        <!--右边end-->
-       </div>
-       <!--品牌理念end-->
-       <!--三大块-->
-       <div class="three_yz">
-        <a href="index.htmlbrand.html_tl" target="_blank"> <img width="300" height="426" src="/index/images/re1.jpg" /> </a>
-        <a href="index.htmlbrand.html_pr" target="_blank"> <img width="300" height="426" src="/index/images/re2.jpg" /> </a>
-        <a href="index.htmlbrand.html_zo" target="_blank"> <img width="300" height="426" src="/index/images/re3.jpg" /> </a>
-       </div>
-       <!--三大块end-->
-       <!--社会名人-->
-       <div class="culture_pp culture_sec">
-        <!--左边-->
-        <div class="culture_pp-word fl">
-         <h3> 社会名人倾情推荐</h3>
-         <h4> Expert Advice</h4>
-         <p> 《小时代3.0》御用求婚钻戒品牌</p>
-         <p> 著名功夫明星吴京凭DarryRing 向谢楠求婚成功</p>
-         <p> 知名情感作家苏岑、陆琪等社会名人倾情推荐 ……</p>
-         <a class="to_more" target="_blank" href="brand.html_mr">了解更多</a>
-        </div>
-        <!--左边end-->
-        <!--右边-->
-        <div class="culture_sec-right fr">
-         <a target="_blank" href="dr_mrtj.aspx"> <img width="367" height="250" src="/index/images/wh2.jpg" /> </a>
-        </div>
-        <!--右边end-->
-       </div>
-       <!--社会名人end-->
-       <!--最烂漫的珠宝店-->
-       <div class="culture_pp culture_thrid">
-        <!--左边-->
-        <div class="culture_thrid-left fl">
-         <a target="_blank" href="/shopyd"> <img width="367" height="230" src="/index/images/wh3.jpg" /> </a>
-        </div>
-        <!--左边end-->
-        <!--右边-->
-        <div class="culture_pp-word fr">
-         <h3> 最浪漫的珠宝店</h3>
-         <h4> Store Locator</h4>
-         <p> 从设立之初，DarryRing 就在全球范围内，甄选最具有浪漫情调的地址</p>
-         <p> 让每一位来到DarryRing 挑选钻戒的顾客</p>
-         <p> 都感受到与Shopping Mall 中其它品牌完全不同的独特购物体验。</p>
-         <p> 同时，DarryRing 最浪漫的珠宝店也成为众多客户求婚的首选场所。</p>
-         <a class="to_more" target="_blank" href="/shopyd">了解更多</a>
-        </div>
-        <!--右边end-->
-       </div>
-       <!--最烂漫的珠宝店end-->
-       <!--品质工艺与DR族-->
-       <div class="culture_pp">
-        <!--品质工艺-->
-        <div class="culture_four-left fl">
-         <img width="465" height="300" src="/index/images/wh4.jpg" />
-         <!--透明背景-->
-         <div class="bk_opacity">
-         </div>
-         <!--透明背景end-->
-         <!--工艺-->
-         <div class="professional_gy">
-          <h3> 卓越品质工艺</h3>
-          <h4> Professional Quality</h4>
-          <a class="to_more" target="_blank" href="brand.html_pz">了解更多</a>
-         </div>
-         <!--工艺end-->
-        </div>
-        <!--品质工艺end-->
-        <!--DR族-->
-        <div class="culture_four-right fr">
-         <img width="465" height="300" src="/index/images/wh5.jpg" />
-         <!--DR族-->
-         <div class="brand_drz">
-          <h3> 真爱验证</h3>
-          <h4> Brand Culture</h4>
-          <p> 男士一生仅能定制一枚，</p>
-          <p> 赠予此生唯一挚爱的女子</p>
-          <a class="to_more" target="_blank" href="/dryz">了解更多</a>
-         </div>
-         <!--DR族end-->
-        </div>
-        <!--DR族end-->
-       </div>
-       <!--品质工艺与DR族end-->
-       <!--DR社区与加入我们-->
-       <div class="culture_pp">
-        <!--左边-->
-        <div class="culture_last fl">
-         <a target="_blank" href="http://bbs.darryring.com"> <img width="465" height="200" src="/index/images/wh6.jpg" /> </a>
-        </div>
-        <!--左边end-->
-        <!--右边-->
-        <div class="culture_last fr">
-         <a target="_blank" href="brand.html_jo"> <img width="466" height="200" src="/index/images/wh7.jpg" /> </a>
-        </div>
-        <!--右边end-->
-       </div>
-       <!--DR社区与加入我们end-->
-       <!--分享-->
-       <div class="culture_share">
-        <div class="culture_share-tittle">
-         <i></i>
-         <span>分享至</span>
-         <i></i>
-        </div>
-        <div class="culture_share-it">
-         <a class="cshare_1" target="_blank" title="QQ空间" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=index.htmlbrand.html"></a>
-         <a class="cshare_2" id="wb" href="#"> </a>
-         <a class="cshare_3" target="_blank" href="http://widget.renren.com/dialog/share?resourceUrl=index.htmlbrand.html&amp;title=一生唯一真爱，凭身份证一生只能购买一次!Darry Ring钻石戒指！"></a>
-         <a class="cshare_4" href="http://share.v.t.qq.com/index.php?c=share&amp;a=index&amp;url=index.htmlbrand.html&amp;title=&amp;appkey=333cf198acc94876a684d043a6b48e14"></a>
-         <a class="cshare_5" target="_blank" href="http://www.douban.com/share/service?href=index.htmlbrand.html&amp;name=品牌文化&amp;text=早于上个世纪90年代，戴瑞珠宝便在香港开始从事裸钻高级定制,以寻求、欣赏珍宝的眼光，苛刻的甄选标准，搜集来自世界各地的珍稀钻石。"></a>
-        </div>
-       </div>
-       <!--分享end-->
-      </div>
-      <!--内容end-->
-     </div>
-     <!--中间end-->
-     <script>
-        $("#wb").click(function () {
-            var href = "http://service.weibo.com/share/share.php?title=品牌文化 &url=index.htmlbrand.html";
-            window.open(href, 'newwindow', 'height=700,width=650,top=300,left=400,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no');
-
-        });
     </script>
+
+    <div class="cort">
+        <!--中间-->
+        <div class="cort">
+            <!--内容-->
+            <div class="cmain culture_same">
+                <!--面包屑-->
+                <div class="zbk_top spalid">
+                    <div class="zbk_top spalid">
+                        <span>您当前的位置：</span>
+                        <span id="ctl00_content_website_SiteMapPath1">
+                            <a href="#ctl00_content_website_SiteMapPath1_SkipLink"></a>
+                            <span> <a target="_blank" href="index.html">Darry Ring</a></span>
+                            <span> <em>&gt;</em> </span>
+                            <span> <span>品牌文化</span> </span>
+                            <a id="ctl00_content_website_SiteMapPath1_SkipLink"></a>
+                        </span>
+                    </div>
+                </div>
+                <!--面包屑end-->
+
+                <!--标题-->
+                <div class="culture_top">
+                    <div class="culture_top-tittle">
+                        <i></i>
+                        <span class="tittle_span">关于Darry Ring</span>
+                        <i></i>
+                    </div>
+                    <h4> About Darry Ring</h4>
+                </div>
+                <!--标题end-->
+
+                <!--导航-->
+                <div class="culture_nav">
+                    <a href="brand.html">品牌文化</a>
+                    <i>|</i>
+                    <a href="brand.html_br">品牌理念</a>
+                    <i>|</i>
+                    <a target="_blank" href="brand.html_mr">名人推荐</a>
+                    <i>|</i>
+                    <a target="_blank" href="/shopyd">实体店</a>
+                    <i>|</i>
+                    <a href="brand.html_pz">品质工艺</a>
+                    <i>|</i>
+                    <a href="brand.html_tl">真爱验证</a>
+                    <i>|</i>
+                    <a target="_blank" href="http://bbs.darryring.com/">DR社区</a>
+                    <i>|</i>
+                    <a href="brand.html_jo">加入我们</a>
+                    <i>|</i>
+                    <a target="_blank" href="/heizuan">黑钻专题</a>
+                </div>
+                <!--导航end-->
+
+                <!--特殊颜色的P-->
+                <div class="culture_wz">
+                    <p> 早于上个世纪90年代，戴瑞珠宝便在香港开始从事裸钻高级定制,以寻求、欣赏珍宝的眼光，苛刻的甄选标准，搜集来自世界各地的珍稀钻石。</p>
+                    <p> 这些卓越品质的钻石戴瑞珠宝只提供给少数专属的顶尖珠宝商,让钻石在不同珠宝艺术大师演绎绝美工艺创作。</p>
+                </div>
+                <!--特殊颜色的P end-->
+
+                <!--品牌理念-->
+                <div class="culture_pp culture_first">
+                    <!--左边-->
+                    <div class="fl">
+                        <a target="_blank" href="/dr_brand.aspx"> <img width="470" height="300" src="/index/images/wh1.jpg" /> </a>
+                        </div>
+                    <!--左边end-->
+                    <!--右边-->
+                    <div class="culture_pp-word fr">
+                        <h3> 品牌理念</h3>
+                        <h4> Brand Beliefs</h4>
+                        <p> Darry Ring，有着世间最独特的规定，</p>
+                        <p> 男士凭身份证一生仅能定制一枚唯一的戒指，赠予此生唯一挚爱的女子，</p>
+                        <p> 以示“一生只爱你一人”的至高承诺……</p>
+                        <a class="to_more" target="_blank" href="brand.html_br">了解更多</a>
+                    </div>
+                <!--右边end-->
+                </div>
+                <!--品牌理念end-->
+
+                <!--三大块-->
+                <div class="three_yz">
+                    <a href="index.htmlbrand.html_tl" target="_blank"> <img width="300" height="426" src="/index/images/re1.jpg" /> </a>
+                    <a href="index.htmlbrand.html_pr" target="_blank"> <img width="300" height="426" src="/index/images/re2.jpg" /> </a>
+                    <a href="index.htmlbrand.html_zo" target="_blank"> <img width="300" height="426" src="/index/images/re3.jpg" /> </a>
+                </div>
+                <!--三大块end-->
+
+                <!--社会名人-->
+                <div class="culture_pp culture_sec">
+                    <!--左边-->
+                    <div class="culture_pp-word fl">
+                        <h3> 社会名人倾情推荐</h3>
+                        <h4> Expert Advice</h4>
+                        <p> 《小时代3.0》御用求婚钻戒品牌</p>
+                        <p> 著名功夫明星吴京凭DarryRing 向谢楠求婚成功</p>
+                        <p> 知名情感作家苏岑、陆琪等社会名人倾情推荐 ……</p>
+                        <a class="to_more" target="_blank" href="brand.html_mr">了解更多</a>
+                    </div>
+                    <!--左边end-->
+                    <!--右边-->
+                    <div class="culture_sec-right fr">
+                        <a target="_blank" href="dr_mrtj.aspx"> <img width="367" height="250" src="/index/images/wh2.jpg" /> </a>
+                    </div>
+                    <!--右边end-->
+                </div>
+                <!--社会名人end-->
+
+                <!--最烂漫的珠宝店-->
+                <div class="culture_pp culture_thrid">
+                    <!--左边-->
+                    <div class="culture_thrid-left fl">
+                        <a target="_blank" href="/shopyd"> <img width="367" height="230" src="/index/images/wh3.jpg" /> </a>
+                    </div>
+                    <!--左边end-->
+                    <!--右边-->
+                    <div class="culture_pp-word fr">
+                        <h3> 最浪漫的珠宝店</h3>
+                        <h4> Store Locator</h4>
+                        <p> 从设立之初，DarryRing 就在全球范围内，甄选最具有浪漫情调的地址</p>
+                        <p> 让每一位来到DarryRing 挑选钻戒的顾客</p>
+                        <p> 都感受到与Shopping Mall 中其它品牌完全不同的独特购物体验。</p>
+                        <p> 同时，DarryRing 最浪漫的珠宝店也成为众多客户求婚的首选场所。</p>
+                        <a class="to_more" target="_blank" href="/shopyd">了解更多</a>
+                    </div>
+                    <!--右边end-->
+                </div>
+                <!--最烂漫的珠宝店end-->
+
+                <!--品质工艺与DR族-->
+                <div class="culture_pp">
+                    <!--品质工艺-->
+                    <div class="culture_four-left fl">
+                        <img width="465" height="300" src="/index/images/wh4.jpg" />
+                        <!--透明背景-->
+                        <div class="bk_opacity"></div>
+                        <!--透明背景end-->
+                        <!--工艺-->
+                        <div class="professional_gy">
+                            <h3> 卓越品质工艺</h3>
+                            <h4> Professional Quality</h4>
+                            <a class="to_more" target="_blank" href="brand.html_pz">了解更多</a>
+                        </div>
+                        <!--工艺end-->
+                    </div>
+                    <!--品质工艺end-->
+
+                    <!--DR族-->
+                    <div class="culture_four-right fr">
+                        <img width="465" height="300" src="/index/images/wh5.jpg" />
+                        <!--DR族-->
+                        <div class="brand_drz">
+                            <h3> 真爱验证</h3>
+                            <h4> Brand Culture</h4>
+                            <p> 男士一生仅能定制一枚，</p>
+                            <p> 赠予此生唯一挚爱的女子</p>
+                            <a class="to_more" target="_blank" href="/dryz">了解更多</a>
+                        </div>
+                        <!--DR族end-->
+                    </div>
+                    <!--DR族end-->
+                </div>
+                <!--品质工艺与DR族end-->
+
+                <!--DR社区与加入我们-->
+                <div class="culture_pp">
+                    <!--左边-->
+                    <div class="culture_last fl">
+                        <a target="_blank" href="http://bbs.darryring.com"> <img width="465" height="200" src="/index/images/wh6.jpg" /> </a>
+                    </div>
+                    <!--左边end-->
+                    <!--右边-->
+                    <div class="culture_last fr">
+                        <a target="_blank" href="brand.html_jo"> <img width="466" height="200" src="/index/images/wh7.jpg" /> </a>
+                    </div>
+                    <!--右边end-->
+                </div>
+                <!--DR社区与加入我们end-->
+
+                <!--分享-->
+                <div class="culture_share">
+                    <div class="culture_share-tittle">
+                        <i></i>
+                        <span>分享至</span>
+                        <i></i>
+                    </div>
+                    <div class="culture_share-it">
+                        <a class="cshare_1" target="_blank" title="QQ空间" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=index.htmlbrand.html"></a>
+                        <a class="cshare_2" id="wb" href="#"> </a>
+                        <a class="cshare_3" target="_blank" href="http://widget.renren.com/dialog/share?resourceUrl=index.htmlbrand.html&amp;title=一生唯一真爱，凭身份证一生只能购买一次!Darry Ring钻石戒指！"></a>
+                        <a class="cshare_4" href="http://share.v.t.qq.com/index.php?c=share&amp;a=index&amp;url=index.htmlbrand.html&amp;title=&amp;appkey=333cf198acc94876a684d043a6b48e14"></a>
+                        <a class="cshare_5" target="_blank" href="http://www.douban.com/share/service?href=index.htmlbrand.html&amp;name=品牌文化&amp;text=早于上个世纪90年代，戴瑞珠宝便在香港开始从事裸钻高级定制,以寻求、欣赏珍宝的眼光，苛刻的甄选标准，搜集来自世界各地的珍稀钻石。"></a>
+                    </div>
+                </div>
+                <!--分享end-->
+            </div>
+            <!--内容end-->
+        </div>
+        <!--中间end-->
+
+        <script>
+            $("#wb").click(function () {
+                var href = "http://service.weibo.com/share/share.php?title=品牌文化 &url=index.htmlbrand.html";
+                window.open(href, 'newwindow', 'height=700,width=650,top=300,left=400,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no');
+
+            });
+        </script>
     </div>
+
     <!--底部-->
     <div class="footer">
      <!--错误-->

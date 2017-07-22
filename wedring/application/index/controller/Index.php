@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2017-05-11 09:42:46
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-21 22:09:11
+ * @Last Modified time: 2017-07-22 17:36:50
  */
 namespace app\index\controller;
 use extend\open_example_php\open51094_class;
@@ -40,58 +40,40 @@ class Index extends Controller
             session('img',$img);
             session('sex',$sex);
             session('openId',$openId);
-            // //查询数据库，获取goods信息
-            // $goods = Goods::where('gid','>',0)->paginate(4);
+            // 获取goods信息
+            $goods = $this->index->selectGoods();
 
-            // //查询数据库，获取nav信息
-            // $classname = Nav::where('cid',2)->select()[0];
-            // //根据nav的cid获取goods信息
-            // $class_goods = Goods::where('cid',$classname['cid'])->paginate(4);
-            // //foreach遍历修改content
+            //获取系列信息
+            $nav = $this->index->selectNav();
 
-            // //查询数据库，获取news信息
-            // $news = News::where('nid','>',0)->paginate(4);
-
-            // //遍历获取title和content的部分内容
-            // foreach ($news as $key => &$value) {
-            //     $value['title'] = mb_substr($value['title'],0,12,'utf-8') . '...';
-            //     $value['content'] = mb_substr(ltrim($value['content'],'<p/>'),0,50,'utf-8') . '...';
-            // }
+             //获取种类信息
+            $kind = $this->index->selectKind();
 
             // //分配变量
             $this->assign('username',$username);
-            // $this->assign('goods',$goods);
-            // $this->assign('classname',$classname);
-            // $this->assign('class_goods',$class_goods);
+            $this->assign('goods',$goods);
+            $this->assign('nav',$nav);
+            $this->assign('kind',$kind);
             // $this->assign('news',$news);
             return $this->fetch();
         } elseif (!empty(session('username'))) {//手机或邮箱登录
             //获取Session值
             $username = session('username');
 
-            // //查询数据库，获取goods信息
-            // $goods = Goods::where('gid','>',0)->paginate(4);
+           // 获取goods信息
+            $goods = $this->index->selectGoods();
 
-            // //查询数据库，获取nav信息
-            // $classname = Nav::where('cid',2)->select()[0];
-            // //根据nav的cid获取goods信息
-            // $class_goods = Goods::where('cid',$classname['cid'])->paginate(4);
-            // //foreach遍历修改content
+            //获取系列信息
+            $nav = $this->index->selectNav();
 
-            // //查询数据库，获取news信息
-            // $news = News::where('nid','>',0)->paginate(4);
-
-            // //遍历获取title和content的部分内容
-            // foreach ($news as $key => &$value) {
-            //     $value['title'] = mb_substr($value['title'],0,12,'utf-8') . '...';
-            //     $value['content'] = mb_substr(ltrim($value['content'],'<p/>'),0,50,'utf-8') . '...';
-            // }
+             //获取种类信息
+            $kind = $this->index->selectKind();
 
             //分配变量
             $this->assign('username',$username);
-            // $this->assign('goods',$goods);
-            // $this->assign('classname',$classname);
-            // $this->assign('class_goods',$class_goods);
+            $this->assign('goods',$goods);
+            $this->assign('nav',$nav);
+            $this->assign('kind',$kind);
             // $this->assign('news',$news);
             return $this->fetch();
         } else {
@@ -103,17 +85,11 @@ class Index extends Controller
 
              //获取种类信息
             $kind = $this->index->selectKind();
-            // dump($kind);
-            // dump($goods[0]['gid']);
-            // die;
 
             //分配变量
             $this->assign('goods',$goods);
             $this->assign('nav',$nav);
             $this->assign('kind',$kind);
-            // $this->assign('goods',$goods);
-            // $this->assign('classname',$classname);
-            // $this->assign('class_goods',$class_goods);
             // $this->assign('news',$news);
             return $this->fetch();
         }
@@ -121,6 +97,29 @@ class Index extends Controller
 
     public function detail()
     {
+        //获取用户名称
+        if (!empty(session('username'))) {
+            $username = session('username');
+        }
+        //获取系列信息
+        $nav = $this->index->selectNav();
+
+         //获取种类信息
+        $kind = $this->index->selectKind();
+
+        $gid = $_GET['gid'];
+        // 获取goods信息
+        $goods = $this->index->seeGoods($gid)[0];
+        dump($goods);
+
+        //分配变量
+        $this->assign('username',$username);
+        $this->assign('goods',$goods);
+        $this->assign('nav',$nav);
+        $this->assign('kind',$kind);
+        // $this->assign('class_goods',$class_goods);
+        // $this->assign('news',$news);
+
         return $this->fetch();
     }
 

@@ -1,473 +1,502 @@
 ﻿<html xmlns="http://www.w3.org/1999/xhtml" class="hb-loaded">
- <head></head>
- <body>
+<head>
 
-  <link href="/index/css/same.css?v=1.3.7.2" type="text/css" rel="stylesheet" />
-  <script src="/index/js/jquery.js" type="text/javascript"></script>
-  <script src="/index/js/index.js?virsion=1.3.7.2" type="text/javascript"></script>
-  <meta content="Darry Ring官网提供Darry Ring 锁住一生 LOCK套链购买，更有锁住一生 LOCK套链等相关资讯，了解锁住一生 LOCK套链图片、价格就上戴瑞珠宝官网。" name="description" />
- <!--/*技术支持，小庄602842076     验证：官网技术支持*/
-/*技术支持，小庄602842076    验证：官网技术支持*/
-/*技术支持，小庄602842076    验证：官网技术支持*/
-/*技术支持，小庄602842076    验证：官网技术支持*/
-/*技术支持，小庄602842076    验证：官网技术支持*/
-/*https://shop116998991.taobao.com/*/
-/*https://shop116998991.taobao.com/*/
-/*https://shop116998991.taobao.com/*/-->
-  <script src="/index/js/buy_xq.js" type="text/javascript"></script>
-  <script src="/index/js/Magnifier.js" type="text/javascript"></script>
-  <script src="/index/js/fd_hd.js" type="text/javascript"></script>
-  <script src="/index/js/navQH.js" type="text/javascript"></script>
-  <link href="/index/css/dr.css?v=1.3.5.0" type="text/css" rel="stylesheet" />
-  <script language="javascript" type="text/javascript">
+    <link href="/index/css/same.css?v=1.3.7.2" type="text/css" rel="stylesheet" />
+    <script src="/index/js/jquery.js" type="text/javascript"></script>
+    <script src="/index/js/index.js?virsion=1.3.7.2" type="text/javascript"></script>
+    <meta content="Darry Ring官网提供Darry Ring 锁住一生 LOCK套链购买，更有锁住一生 LOCK套链等相关资讯，了解锁住一生 LOCK套链图片、价格就上戴瑞珠宝官网。" name="description" />
+    <script src="/index/js/buy_xq.js" type="text/javascript"></script>
+    <script src="/index/js/Magnifier.js" type="text/javascript"></script>
+    <script src="/index/js/fd_hd.js" type="text/javascript"></script>
+    <script src="/index/js/navQH.js" type="text/javascript"></script>
+    <link href="/index/css/dr.css?v=1.3.5.0" type="text/css" rel="stylesheet" />
+    <script language="javascript" type="text/javascript">
 
-    var CurrentDiamondPrice = 0.00 * 45;
-    var FDiamondPrice = 0 * 0;
-    var CurrentMaterialPrice = 0;
+        var CurrentDiamondPrice = 0.00 * 45;
+        var FDiamondPrice = 0 * 0;
+        var CurrentMaterialPrice = 0;
 
-    function getProductPrice()
-    {
-        return formatCurrency(CurrentDiamondPrice + FDiamondPrice + CurrentMaterialPrice);
-    }
-
-    $(function(){
-        MaterialChoosedEvent = function(m,p){
-            CurrentMaterialPrice = p;
-            $(".byright_top span").text("¥"+getProductPrice());
-        };
-    });
-
-    function addCart(msg) {
-//            alert(msg);
-       window.location = "/nCart/Cart.aspx";
-
-    }
-
-    var addCartComplete= function(){};
-    function addCartFun() {
-        var data = {
-        pid : 404,
-         caizhi : $(".thr_first .iborder").text()
-        };
-        $.post("/nAPI/Cart.aspx?action=addcart&type=jewelry",data, function (msg) {
-            addCart(msg);
-
-        });
-    }
-
-    function formatCurrency(num) {
-            num = num.toString().replace(/\$|\,/g, '');
-            if (isNaN(num))
-                num = "0";
-            sign = (num == (num = Math.abs(num)));
-            num = Math.floor(num * 100 + 0.50000000001);
-            cents = num % 100;
-            num = Math.floor(num / 100).toString();
-            if (cents < 10)
-                cents = "0" + cents;
-            for (var i = 0; i < Math.floor((num.length - (1 + i)) / 3); i++)
-                num = num.substring(0, num.length - (4 * i + 3)) + ',' +
-             num.substring(num.length - (4 * i + 3));
-            var str = (((sign) ? '' : '-') + num + '.' + cents);
-            str = str.substr(0, str.length - 3);
-            return str;
+        function getProductPrice()
+        {
+            return formatCurrency(CurrentDiamondPrice + FDiamondPrice + CurrentMaterialPrice);
         }
-</script>
-  <title>钻戒详情</title>
-  <script type="text/javascript" async="async" charset="utf-8" src="/index/js/zh_cn.js?siteid=kf_9883" data-requiremodule="lang"></script>
-  <script type="text/javascript" async="async" charset="utf-8" src="/index/js/chat.in.js?siteid=kf_9883" data-requiremodule="chatManage"></script>
-  <script type="text/javascript" async="async" charset="utf-8" src="/index/js/nt2.js?siteid=kf_9883" data-requiremodule="Window"></script>
-  <script type="text/javascript" async="async" charset="utf-8" src="/index/js/zh_cn.js?siteid=kf_9883" data-requiremodule="lang"></script>
-  <script type="text/javascript" async="async" charset="utf-8" src="/index/js/chat.in.js?siteid=kf_9883" data-requiremodule="chatManage"></script>
-  <script type="text/javascript" async="async" charset="utf-8" src="/index/js/nt2.js?siteid=kf_9883" data-requiremodule="Window"></script>
-  <iframe src="javascript:false;" style="display: none;"></iframe>
-  <link href="/index/css/jiathis_counter.css" rel="stylesheet" type="text/css" />
 
-  <script src="http://tajs.qq.com/jiathis.php?uid=1626433&amp;dm=www.darryring.com" charset="utf-8"></script>
-  <link href="/index/css/jiathis_share.css" rel="stylesheet" type="text/css" />
-  <iframe frameborder="0" style="position: fixed; display: none; opacity: 0;"></iframe>
-  <div class="jiathis_style" style="position: absolute; z-index: 1000000000; display: none; top: 50%; left: 50%; overflow: auto;"></div>
-  <div class="jiathis_style" style="position: absolute; z-index: 1000000000; display: none; overflow: auto;"></div>
-  <iframe frameborder="0" style="display: none;" src="http://v3.jiathis.com/code_mini/jiathis_utility.html"></iframe>
-  <form id="aspnetForm" action="/jewelry/404.html" method="post" name="aspnetForm">
-   <div>
-    <input type="hidden" value="/wEPDwUJOTIyMDg5NDk3D2QWAmYPZBYCAgMQZGQWBgIBD2QWAgIBDw8WAh4HVmlzaWJsZWdkZAIDD2QWCgIBD2QWBGYPFgIeC18hSXRlbUNvdW50AgQWCGYPZBYCZg8VAiHplIHkvY/kuIDnlJ8gTE9DS+Wll+mTviAwLjAwNiBHLUlNaHR0cDovL2ltZy5kYXJyeXJpbmcuY29tL3VzZXJmaWxlcy9pbWFnZS9Qcm9kdWN0LzIwMTUwMTIxMTA1OTA5MTRiMmZlZTRiMi5qcGdkAgEPZBYCZg8VAiHplIHkvY/kuIDnlJ8gTE9DS+Wll+mTviAwLjAwNiBHLUlNaHR0cDovL2ltZy5kYXJyeXJpbmcuY29tL3VzZXJmaWxlcy9pbWFnZS9Qcm9kdWN0LzIwMTUwMTIxMTA1OTEwMjc3YjkyOTU2NC5qcGdkAgIPZBYCZg8VAiHplIHkvY/kuIDnlJ8gTE9DS+Wll+mTviAwLjAwNiBHLUlNaHR0cDovL2ltZy5kYXJyeXJpbmcuY29tL3VzZXJmaWxlcy9pbWFnZS9Qcm9kdWN0LzIwMTUwMTIwMTg1MTMwNTJmNGNkZWM1Ni5qcGdkAgMPZBYCZg8VAiHplIHkvY/kuIDnlJ8gTE9DS+Wll+mTviAwLjAwNiBHLUlNaHR0cDovL2ltZy5kYXJyeXJpbmcuY29tL3VzZXJmaWxlcy9pbWFnZS9Qcm9kdWN0LzIwMTUwMTIwMTg1MTMwMzFkYWE5YmVkNy5qcGdkAgEPFgIfAQIEFghmD2QWAmYPFQMEMjA4MyHplIHkvY/kuIDnlJ8gTE9DS+Wll+mTviAwLjAwNiBHLUlNaHR0cDovL2ltZy5kYXJyeXJpbmcuY29tL3VzZXJmaWxlcy9pbWFnZS9Qcm9kdWN0LzIwMTUwMTIxMTA1OTA5MTRiMmZlZTRiMi5qcGdkAgEPZBYCZg8VAwQyMDg0IemUgeS9j+S4gOeUnyBMT0NL5aWX6ZO+IDAuMDA2IEctSU1odHRwOi8vaW1nLmRhcnJ5cmluZy5jb20vdXNlcmZpbGVzL2ltYWdlL1Byb2R1Y3QvMjAxNTAxMjExMDU5MTAyNzdiOTI5NTY0LmpwZ2QCAg9kFgJmDxUDBDIwODUh6ZSB5L2P5LiA55SfIExPQ0vlpZfpk74gMC4wMDYgRy1JTWh0dHA6Ly9pbWcuZGFycnlyaW5nLmNvbS91c2VyZmlsZXMvaW1hZ2UvUHJvZHVjdC8yMDE1MDEyMDE4NTEzMDUyZjRjZGVjNTYuanBnZAIDD2QWAmYPFQMEMjA4NiHplIHkvY/kuIDnlJ8gTE9DS+Wll+mTviAwLjAwNiBHLUlNaHR0cDovL2ltZy5kYXJyeXJpbmcuY29tL3VzZXJmaWxlcy9pbWFnZS9Qcm9kdWN0LzIwMTUwMTIwMTg1MTMwMzFkYWE5YmVkNy5qcGdkAgIPZBYCAgMPFgIfAGhkAgMPZBYCAgEPFgIfAQIBFgJmD2QWAmYPFQIHNTkyMC4wMAkxOEvnmb3ph5FkAgQPZBYIZg8PFgIfAGhkZAICDw8WAh8AaGRkAgMPDxYCHwBoZGQCBg9kFgJmDxAPFgYeDURhdGFUZXh0RmllbGQFCHNob3BuYW1lHg5EYXRhVmFsdWVGaWVsZAUCaWQeC18hRGF0YUJvdW5kZ2QQFRAY6K+36YCJ5oup6aKE57qm5a6e5L2T5bqXD+a3seWcs+WunuS9k+W6lw/ljJfkuqzlrp7kvZPlupcP5bm/5bee5a6e5L2T5bqXD+mHjeW6huWunuS9k+W6lw/kuIrmtbflrp7kvZPlupcP5q2m5rGJ5a6e5L2T5bqXD+WNl+S6rOWunuS9k+W6lw/plb/mspnlrp7kvZPlupcP5aSp5rSl5a6e5L2T5bqXD+aYhuaYjuWunuS9k+W6lw/oi4/lt57lrp7kvZPlupcP5aSn6L+e5a6e5L2T5bqXD+aXoOmUoeWunuS9k+W6lw/miJDpg73lrp7kvZPlupcP5a6B5rOi5a6e5L2T5bqXFRACLTEBMQEyATMBNAE3ATkCMTACMTECMTICMTMCMTQCMTUCMTYCMTcCMTgUKwMQZ2dnZ2dnZ2dnZ2dnZ2dnZ2RkAgUPZBYEZg8WAh8BAgEWAmYPZBYCZg8VBhBqZXdlbHJ5LzQwNC5odG1sJOmUgeS9j+S4gOeUnyBMT0NL5aWX6ZO+IDAuNuWIhkctSeiJsk1odHRwOi8vaW1nLmRhcnJ5cmluZy5jb20vdXNlcmZpbGVzL2ltYWdlL1Byb2R1Y3QvMjAxNTAxMjExMDU5MDkxNGIyZmVlNGIyLmpwZxBqZXdlbHJ5LzQwNC5odG1sJOmUgeS9j+S4gOeUnyBMT0NL5aWX6ZO+IDAuNuWIhkctSeiJsgU1LDkyMGQCAQ8WAh8BAgUWCmYPZBYCZg8VBhJkYXJyeV9yaW5nLzc4Lmh0bWwXRm9yZXZlcuezu+WIlyDnu4/lhbjmrL5NaHR0cDovL2ltZy5kYXJyeXJpbmcuY29tL3VzZXJmaWxlcy9pbWFnZS9Qcm9kdWN0LzIwMTQwOTAxMTkzNTA3MTczODZkN2ExZS5qcGcSZGFycnlfcmluZy83OC5odG1sF0ZvcmV2ZXLns7vliJcg57uP5YW45qy+BjI1LDcwMGQCAQ9kFgJmDxUGE2RhcnJ5X3JpbmcvMTM3Lmh0bWwXRm9yZXZlcuezu+WIlyDnu4/lhbjmrL5NaHR0cDovL2ltZy5kYXJyeXJpbmcuY29tL3VzZXJmaWxlcy9pbWFnZS9Qcm9kdWN0LzIwMTQwOTAxMTkyOTE3MTc5ZDFhZTM4Ni5qcGcTZGFycnlfcmluZy8xMzcuaHRtbBdGb3JldmVy57O75YiXIOe7j+WFuOasvgYxMCwyMDBkAgIPZBYCZg8VBhJkYXJyeV9yaW5nLzkyLmh0bWwYSnVzdCB5b3Xns7vliJcg57uP5YW45qy+TWh0dHA6Ly9pbWcuZGFycnlyaW5nLmNvbS91c2VyZmlsZXMvaW1hZ2UvUHJvZHVjdC8yMDE0MDkwMTE5NTUwNzY4M2FkODQ0NzcuanBnEmRhcnJ5X3JpbmcvOTIuaHRtbBhKdXN0IHlvdeezu+WIlyDnu4/lhbjmrL4FMyw2ODlkAgMPZBYCZg8VBhNkYXJyeV9yaW5nLzE2OC5odG1sGE15IGhlYXJ057O75YiXIOWlouWNjuasvk1odHRwOi8vaW1nLmRhcnJ5cmluZy5jb20vdXNlcmZpbGVzL2ltYWdlL1Byb2R1Y3QvMjAxNTAyMDMxNTQxNDcwZjU0OWVlY2I0LmpwZxNkYXJyeV9yaW5nLzE2OC5odG1sGE15IGhlYXJ057O75YiXIOWlouWNjuasvgYzOCw2MzZkAgQPZBYCZg8VBhNkYXJyeV9yaW5nLzM4Ny5odG1sFlRydWUgTG92Zeezu+WIlyDlhbjpm4VNaHR0cDovL2ltZy5kYXJyeXJpbmcuY29tL3VzZXJmaWxlcy9pbWFnZS9Qcm9kdWN0LzIwMTQxMjA4MTUxMjA3MGI4MmQ1MTljYi5qcGcTZGFycnlfcmluZy8zODcuaHRtbBZUcnVlIExvdmXns7vliJcg5YW46ZuFBjE5LDE1MGQCBQ9kFgJmDxYCHwECCmRkQTlXYn/HqbRvVStqoFxk/OAQTVI=" id="__VIEWSTATE" name="__VIEWSTATE" />
-   </div>
-   <div>
-    <input type="hidden" value="4468300E" id="__VIEWSTATEGENERATOR" name="__VIEWSTATEGENERATOR" />
-    <input type="hidden" value="/wEdABPmDV05eWhYMawVeIG9LaEAsC97KIAWj2wmqprDk0ZFfBmrXOWER3/4/m5yEc8uWkvMfAXnnZyfT8O8wycQ1daW6wXG53fuIhcEU1rRrD8VYn76jonvOgQAR5uwWhkr+WbEFrp2GqYqfBR6Toy05bu9X20A1goxdbNPp2EaMJ27GmCMQ1KZ5BxOTlXrOHqoUzkCVIgD8HUcDyuUNwIarwJvjVVBdxebYoCGLrNNhW2BUusc+m3r0pGLz+c7yIHP5W4HmUSy+rTIGTfg6M5McYWMqxHpnClB/5tsp9jq0gsw6ZLgUqk/Zkcqzzi2xsF31HSkEjNHVKO89fSjX6G2hkPdNBcPHT8YZZ3PoZ+PBbm2zXNvqNfM116QcozRJGJF7GPfg5TVZ8FwN1E5uzyZN0xKYD9rtZEpN/w4cD/SakQ6A0kj6ec=" id="__EVENTVALIDATION" name="__EVENTVALIDATION" />
-   </div>
-   <div>
+        $(function(){
+            MaterialChoosedEvent = function(m,p){
+                CurrentMaterialPrice = p;
+                $(".byright_top span").text("¥"+getProductPrice());
+            };
+        });
+
+        function addCart(msg) {
+          //alert(msg);
+           window.location = "/nCart/Cart.aspx";
+
+        }
+
+        var addCartComplete= function(){};
+        function addCartFun() {
+            var data = {
+            pid : 404,
+             caizhi : $(".thr_first .iborder").text()
+            };
+            $.post("/nAPI/Cart.aspx?action=addcart&type=jewelry",data, function (msg) {
+                addCart(msg);
+
+            });
+        }
+
+        function formatCurrency(num) {
+                num = num.toString().replace(/\$|\,/g, '');
+                if (isNaN(num))
+                    num = "0";
+                sign = (num == (num = Math.abs(num)));
+                num = Math.floor(num * 100 + 0.50000000001);
+                cents = num % 100;
+                num = Math.floor(num / 100).toString();
+                if (cents < 10)
+                    cents = "0" + cents;
+                for (var i = 0; i < Math.floor((num.length - (1 + i)) / 3); i++)
+                    num = num.substring(0, num.length - (4 * i + 3)) + ',' +
+                 num.substring(num.length - (4 * i + 3));
+                var str = (((sign) ? '' : '-') + num + '.' + cents);
+                str = str.substr(0, str.length - 3);
+                return str;
+            }
+    </script>
+    <title>钻戒详情</title>
+    <script type="text/javascript" async="async" charset="utf-8" src="/index/js/zh_cn.js?siteid=kf_9883" data-requiremodule="lang"></script>
+    <script type="text/javascript" async="async" charset="utf-8" src="/index/js/chat.in.js?siteid=kf_9883" data-requiremodule="chatManage"></script>
+    <script type="text/javascript" async="async" charset="utf-8" src="/index/js/nt2.js?siteid=kf_9883" data-requiremodule="Window"></script>
+    <script type="text/javascript" async="async" charset="utf-8" src="/index/js/zh_cn.js?siteid=kf_9883" data-requiremodule="lang"></script>
+    <script type="text/javascript" async="async" charset="utf-8" src="/index/js/chat.in.js?siteid=kf_9883" data-requiremodule="chatManage"></script>
+    <script type="text/javascript" async="async" charset="utf-8" src="/index/js/nt2.js?siteid=kf_9883" data-requiremodule="Window"></script>
+    <iframe src="javascript:false;" style="display: none;"></iframe>
+    <link href="/index/css/jiathis_counter.css" rel="stylesheet" type="text/css" />
+
+    <script src="http://tajs.qq.com/jiathis.php?uid=1626433&amp;dm=www.darryring.com" charset="utf-8"></script>
+    <link href="/index/css/jiathis_share.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <iframe frameborder="0" style="position: fixed; display: none; opacity: 0;"></iframe>
+    <div class="jiathis_style" style="position: absolute; z-index: 1000000000; display: none; top: 50%; left: 50%; overflow: auto;"></div>
+    <div class="jiathis_style" style="position: absolute; z-index: 1000000000; display: none; overflow: auto;"></div>
+    <iframe frameborder="0" style="display: none;" src="http://v3.jiathis.com/code_mini/jiathis_utility.html"></iframe>
+
+    <form id="aspnetForm" action="/jewelry/404.html" method="post" name="aspnetForm">
+        <div>
+            <input type="hidden" value="/wEPDwUJOTIyMDg5NDk3D2QWAmYPZBYCAgMQZGQWBgIBD2QWAgIBDw8WAh4HVmlzaWJsZWdkZAIDD2QWCgIBD2QWBGYPFgIeC18hSXRlbUNvdW50AgQWCGYPZBYCZg8VAiHplIHkvY/kuIDnlJ8gTE9DS+Wll+mTviAwLjAwNiBHLUlNaHR0cDovL2ltZy5kYXJyeXJpbmcuY29tL3VzZXJmaWxlcy9pbWFnZS9Qcm9kdWN0LzIwMTUwMTIxMTA1OTA5MTRiMmZlZTRiMi5qcGdkAgEPZBYCZg8VAiHplIHkvY/kuIDnlJ8gTE9DS+Wll+mTviAwLjAwNiBHLUlNaHR0cDovL2ltZy5kYXJyeXJpbmcuY29tL3VzZXJmaWxlcy9pbWFnZS9Qcm9kdWN0LzIwMTUwMTIxMTA1OTEwMjc3YjkyOTU2NC5qcGdkAgIPZBYCZg8VAiHplIHkvY/kuIDnlJ8gTE9DS+Wll+mTviAwLjAwNiBHLUlNaHR0cDovL2ltZy5kYXJyeXJpbmcuY29tL3VzZXJmaWxlcy9pbWFnZS9Qcm9kdWN0LzIwMTUwMTIwMTg1MTMwNTJmNGNkZWM1Ni5qcGdkAgMPZBYCZg8VAiHplIHkvY/kuIDnlJ8gTE9DS+Wll+mTviAwLjAwNiBHLUlNaHR0cDovL2ltZy5kYXJyeXJpbmcuY29tL3VzZXJmaWxlcy9pbWFnZS9Qcm9kdWN0LzIwMTUwMTIwMTg1MTMwMzFkYWE5YmVkNy5qcGdkAgEPFgIfAQIEFghmD2QWAmYPFQMEMjA4MyHplIHkvY/kuIDnlJ8gTE9DS+Wll+mTviAwLjAwNiBHLUlNaHR0cDovL2ltZy5kYXJyeXJpbmcuY29tL3VzZXJmaWxlcy9pbWFnZS9Qcm9kdWN0LzIwMTUwMTIxMTA1OTA5MTRiMmZlZTRiMi5qcGdkAgEPZBYCZg8VAwQyMDg0IemUgeS9j+S4gOeUnyBMT0NL5aWX6ZO+IDAuMDA2IEctSU1odHRwOi8vaW1nLmRhcnJ5cmluZy5jb20vdXNlcmZpbGVzL2ltYWdlL1Byb2R1Y3QvMjAxNTAxMjExMDU5MTAyNzdiOTI5NTY0LmpwZ2QCAg9kFgJmDxUDBDIwODUh6ZSB5L2P5LiA55SfIExPQ0vlpZfpk74gMC4wMDYgRy1JTWh0dHA6Ly9pbWcuZGFycnlyaW5nLmNvbS91c2VyZmlsZXMvaW1hZ2UvUHJvZHVjdC8yMDE1MDEyMDE4NTEzMDUyZjRjZGVjNTYuanBnZAIDD2QWAmYPFQMEMjA4NiHplIHkvY/kuIDnlJ8gTE9DS+Wll+mTviAwLjAwNiBHLUlNaHR0cDovL2ltZy5kYXJyeXJpbmcuY29tL3VzZXJmaWxlcy9pbWFnZS9Qcm9kdWN0LzIwMTUwMTIwMTg1MTMwMzFkYWE5YmVkNy5qcGdkAgIPZBYCAgMPFgIfAGhkAgMPZBYCAgEPFgIfAQIBFgJmD2QWAmYPFQIHNTkyMC4wMAkxOEvnmb3ph5FkAgQPZBYIZg8PFgIfAGhkZAICDw8WAh8AaGRkAgMPDxYCHwBoZGQCBg9kFgJmDxAPFgYeDURhdGFUZXh0RmllbGQFCHNob3BuYW1lHg5EYXRhVmFsdWVGaWVsZAUCaWQeC18hRGF0YUJvdW5kZ2QQFRAY6K+36YCJ5oup6aKE57qm5a6e5L2T5bqXD+a3seWcs+WunuS9k+W6lw/ljJfkuqzlrp7kvZPlupcP5bm/5bee5a6e5L2T5bqXD+mHjeW6huWunuS9k+W6lw/kuIrmtbflrp7kvZPlupcP5q2m5rGJ5a6e5L2T5bqXD+WNl+S6rOWunuS9k+W6lw/plb/mspnlrp7kvZPlupcP5aSp5rSl5a6e5L2T5bqXD+aYhuaYjuWunuS9k+W6lw/oi4/lt57lrp7kvZPlupcP5aSn6L+e5a6e5L2T5bqXD+aXoOmUoeWunuS9k+W6lw/miJDpg73lrp7kvZPlupcP5a6B5rOi5a6e5L2T5bqXFRACLTEBMQEyATMBNAE3ATkCMTACMTECMTICMTMCMTQCMTUCMTYCMTcCMTgUKwMQZ2dnZ2dnZ2dnZ2dnZ2dnZ2RkAgUPZBYEZg8WAh8BAgEWAmYPZBYCZg8VBhBqZXdlbHJ5LzQwNC5odG1sJOmUgeS9j+S4gOeUnyBMT0NL5aWX6ZO+IDAuNuWIhkctSeiJsk1odHRwOi8vaW1nLmRhcnJ5cmluZy5jb20vdXNlcmZpbGVzL2ltYWdlL1Byb2R1Y3QvMjAxNTAxMjExMDU5MDkxNGIyZmVlNGIyLmpwZxBqZXdlbHJ5LzQwNC5odG1sJOmUgeS9j+S4gOeUnyBMT0NL5aWX6ZO+IDAuNuWIhkctSeiJsgU1LDkyMGQCAQ8WAh8BAgUWCmYPZBYCZg8VBhJkYXJyeV9yaW5nLzc4Lmh0bWwXRm9yZXZlcuezu+WIlyDnu4/lhbjmrL5NaHR0cDovL2ltZy5kYXJyeXJpbmcuY29tL3VzZXJmaWxlcy9pbWFnZS9Qcm9kdWN0LzIwMTQwOTAxMTkzNTA3MTczODZkN2ExZS5qcGcSZGFycnlfcmluZy83OC5odG1sF0ZvcmV2ZXLns7vliJcg57uP5YW45qy+BjI1LDcwMGQCAQ9kFgJmDxUGE2RhcnJ5X3JpbmcvMTM3Lmh0bWwXRm9yZXZlcuezu+WIlyDnu4/lhbjmrL5NaHR0cDovL2ltZy5kYXJyeXJpbmcuY29tL3VzZXJmaWxlcy9pbWFnZS9Qcm9kdWN0LzIwMTQwOTAxMTkyOTE3MTc5ZDFhZTM4Ni5qcGcTZGFycnlfcmluZy8xMzcuaHRtbBdGb3JldmVy57O75YiXIOe7j+WFuOasvgYxMCwyMDBkAgIPZBYCZg8VBhJkYXJyeV9yaW5nLzkyLmh0bWwYSnVzdCB5b3Xns7vliJcg57uP5YW45qy+TWh0dHA6Ly9pbWcuZGFycnlyaW5nLmNvbS91c2VyZmlsZXMvaW1hZ2UvUHJvZHVjdC8yMDE0MDkwMTE5NTUwNzY4M2FkODQ0NzcuanBnEmRhcnJ5X3JpbmcvOTIuaHRtbBhKdXN0IHlvdeezu+WIlyDnu4/lhbjmrL4FMyw2ODlkAgMPZBYCZg8VBhNkYXJyeV9yaW5nLzE2OC5odG1sGE15IGhlYXJ057O75YiXIOWlouWNjuasvk1odHRwOi8vaW1nLmRhcnJ5cmluZy5jb20vdXNlcmZpbGVzL2ltYWdlL1Byb2R1Y3QvMjAxNTAyMDMxNTQxNDcwZjU0OWVlY2I0LmpwZxNkYXJyeV9yaW5nLzE2OC5odG1sGE15IGhlYXJ057O75YiXIOWlouWNjuasvgYzOCw2MzZkAgQPZBYCZg8VBhNkYXJyeV9yaW5nLzM4Ny5odG1sFlRydWUgTG92Zeezu+WIlyDlhbjpm4VNaHR0cDovL2ltZy5kYXJyeXJpbmcuY29tL3VzZXJmaWxlcy9pbWFnZS9Qcm9kdWN0LzIwMTQxMjA4MTUxMjA3MGI4MmQ1MTljYi5qcGcTZGFycnlfcmluZy8zODcuaHRtbBZUcnVlIExvdmXns7vliJcg5YW46ZuFBjE5LDE1MGQCBQ9kFgJmDxYCHwECCmRkQTlXYn/HqbRvVStqoFxk/OAQTVI=" id="__VIEWSTATE" name="__VIEWSTATE" />
+        </div>
+        <div>
+            <input type="hidden" value="4468300E" id="__VIEWSTATEGENERATOR" name="__VIEWSTATEGENERATOR" />
+            <input type="hidden" value="/wEdABPmDV05eWhYMawVeIG9LaEAsC97KIAWj2wmqprDk0ZFfBmrXOWER3/4/m5yEc8uWkvMfAXnnZyfT8O8wycQ1daW6wXG53fuIhcEU1rRrD8VYn76jonvOgQAR5uwWhkr+WbEFrp2GqYqfBR6Toy05bu9X20A1goxdbNPp2EaMJ27GmCMQ1KZ5BxOTlXrOHqoUzkCVIgD8HUcDyuUNwIarwJvjVVBdxebYoCGLrNNhW2BUusc+m3r0pGLz+c7yIHP5W4HmUSy+rTIGTfg6M5McYWMqxHpnClB/5tsp9jq0gsw6ZLgUqk/Zkcqzzi2xsF31HSkEjNHVKO89fSjX6G2hkPdNBcPHT8YZZ3PoZ+PBbm2zXNvqNfM116QcozRJGJF7GPfg5TVZ8FwN1E5uzyZN0xKYD9rtZEpN/w4cD/SakQ6A0kj6ec=" id="__EVENTVALIDATION" name="__EVENTVALIDATION" />
+        </div>
+    </form>
+    <!-- <div> -->
     <script type="text/javascript">
-    function showSearch() {
-        window.location = "/diydr/?pname=" + encodeURI($(".search input").val()) + "&bprice=&eprice=&bct=&ect=&orderby=&pagenum=1";
-    }
-//    $(function () {
-//        $.getJSON("/nAPI/loginuser.ashx", function (json) {
-//            if (json.islogin) {
-//                $(".tright-ul li").eq(3).show();
-//                $(".tright-ul li").eq(4).show();
-//                $(".tright-ul li").eq(3).find("a").eq(0).text(json.username);
-//                $(".headed i").text("(" + json.cartcount + ")");
-//            }
-//            else {
-//                $(".tright-ul li").eq(1).show();
-//                $(".tright-ul li").eq(2).show();
-//            }
-//        });
-//    });
-</script>
+        function showSearch() {
+            window.location = "/diydr/?pname=" + encodeURI($(".search input").val()) + "&bprice=&eprice=&bct=&ect=&orderby=&pagenum=1";
+        }
+       // $(function () {
+       //     $.getJSON("/nAPI/loginuser.ashx", function (json) {
+       //         if (json.islogin) {
+       //             $(".tright-ul li").eq(3).show();
+       //             $(".tright-ul li").eq(4).show();
+       //             $(".tright-ul li").eq(3).find("a").eq(0).text(json.username);
+       //             $(".headed i").text("(" + json.cartcount + ")");
+       //         }
+       //         else {
+       //             $(".tright-ul li").eq(1).show();
+       //             $(".tright-ul li").eq(2).show();
+       //         }
+       //     });
+       // });
+    </script>
+
     <!--头部-->
     <div class="cmain">
-     <div class="headtop">
-      <!--头部左边-->
-      <div class="top-left fl">
-       <a title="Darry Ring" href="/index/index/index"> <img width="187" height="42" alt="Darry Ring官网" src="/index/images/logo.png" /> </a>
-       <span style="font-weight: normal;">求婚钻戒领导品牌</span>
-      </div>
-      <!--头部左边end-->
-      <!--头部右边-->
-      <div class="top-right fr">
-       <!--登录注册-->
-       <ul class="tright-ul fl">
-        <div id="ctl00_ucheader_pllogin1">
-         <li><a rel="nofollow" href="/index/user/login">登录</a><em>|</em></li>
-         <li><a rel="nofollow" href="reg.html">注册</a></li>
-         <li class="headed"><em class="icon shooping"></em><a target="black" rel="nofollow" href="cart.html">购物车</a><i>(0)</i></li>
+        <div class="headtop">
+            <!--头部左边-->
+            <div class="top-left fl">
+                <a title="Darry Ring" href="index.html"> <img width="187" height="42" alt="Darry Ring官网" src="/index/images/logo.png" /> </a>
+                <span style="font-weight: normal;">求婚钻戒领导品牌</span>
+            </div>
+            <!--头部左边end-->
+
+            <!--头部右边-->
+            <div class="top-right fr">
+                <!--登录注册-->
+                <ul class="tright-ul fl">
+                {if empty($username)}
+                    <div id="ucheader1_pllogin1">
+                        <li><a rel="nofollow" href="/index/user/login">登录</a><em>|</em></li>
+                        <li><a rel="nofollow" href="/index/user/reg">注册</a></li>
+                        <li class="headed"><em class="icon shooping"></em><a target="black" rel="nofollow" href="cart.html">购物车</a><i>(0)</i></li>
+                    </div>
+                {else}
+                    <div id="ucheader1_pllogin1">
+                        <li><a rel="nofollow" href="/index/user/login">欢迎：{$username}</a><em>|</em></li>
+                        <li><a rel="nofollow" href="/index/user/logout">退出登录</a></li>
+                        <li class="headed"><em class="icon shooping"></em><a target="black" rel="nofollow" href="cart.html">购物车</a><i>(0)</i></li>
+                    </div>
+                {/if}
+                </ul>
+                <!--语言选择-->
+                <ul class="langruge-ul fr">
+                    <li><a target="_blank" href="index.html/en">English</a></li>
+                </ul>
+                <!--搜索框-->
+                <div style="display:none;" class="search">
+                    <input type="text" placeholder="求婚钻戒" class="txt1" />
+                    <div onClick="showSearch()" class="icon toser"></div>
+                </div>
+            </div>
+            <!--头部右边end-->
         </div>
-       </ul>
-       <!--语言选择-->
-       <ul class="langruge-ul fr">
-        <li><a target="_blank" href="index.html/en">English</a></li>
-       </ul>
-       <!--搜索框-->
-       <div style="display:none;" class="search">
-        <input type="text" placeholder="求婚钻戒" class="txt1" />
-        <div onClick="showSearch()" class="icon toser">
-        </div>
-       </div>
-      </div>
-      <!--头部右边end-->
-     </div>
     </div>
     <!--头部end-->
+
     <!--导航-->
     <div class="nav">
-     <div class="cmain">
-      <!--导航的左边-->
-      <ul class="nav-ul fl">
-       <li><a href="/index/index/index">首页</a> </li>
-       <li><a href="brand.html">品牌文化</a> </li>
-       <!--
-            <li><a href="/pinkdiamond.aspx" target="_blank">高级定制</a>
+        <div class="cmain">
+            <!--导航的左边-->
+            <ul class="nav-ul fl">
+                <li><a href="/index/index/index">首页</a> </li>
+                <li><a href="/index/index/brand">品牌文化</a> </li>
+                <!--
+                <li><a href="/pinkdiamond.aspx" target="_blank">高级定制</a>
                 <div class="nav-div">
-                    <div class="navdiv-right">
-                        <p>
-                            <a href="/pinkdiamond.aspx" target="_blank">稀世粉钻系列</a></p>
-                    </div>
-                    <div class="navdiv-left">
-                        <h3>
-                            NEW</h3>
-                        <img src="images/02wj.jpg" width="138" height="97" />
-                        <div class="more_cp">
-                            <a href="/pinkdiamond.aspx" target="_blank">> 了解该系列产品</a>
-                        </div>
-                    </div>
+                <div class="navdiv-right">
+                <p>
+                <a href="/pinkdiamond.aspx" target="_blank">稀世粉钻系列</a></p>
                 </div>
-            </li>-->
-       <li><a style="font-family:arial" href="lists.html">Darry Ring 求婚钻戒</a>
-        <div class="nav-div">
-         <div class="navdiv_top">
-          <div class="navdiv-right">
-           <p> <a href="lists.html"> 查看所有款</a></p>
-           <p> <a href="/pinkdiamond.aspx">稀世粉钻系列</a></p>
-           <p> <a href="/dr_series/12_22.html">Forever系列</a></p>
-           <p> <a href="/dr_series/11_20.html">My Heart系列</a></p>
-           <p> <a href="/dr_series/16_30.html">True Love系列</a></p>
-           <p> <a href="/dr_series/15_28.html">I Swear系列</a></p>
-           <p> <a href="/dr_series/13_24.html">Just you系列</a></p>
-          </div>
-          <div class="navdiv-left">
-           <h3> NEW</h3>
-           <a href="/darry_ring/349.html"> <img width="138" height="97" alt="2克拉钻戒价格_E色EX切工VVS2净度_True Love系列 奢华款 _Darry Ring求婚钻戒 戴瑞珠宝官网" src="/index/images/03wj.jpg" /></a>
-           <div class="more_cp">
-            <a href="/darry_ring/349.html">&gt; 了解该系列产品</a>
-           </div>
-          </div>
-         </div>
-         <div class="navdiv_bottom"></div>
-        </div> </li>
-       <li><a style="font-family:arial" href="lists.html">Darry Ring 爱的礼物</a>
-        <div class="nav-div">
-         <div class="navdiv_top">
-          <div class="navdiv-right">
-           <p> <a href="lists.html">查看所有</a></p>
-           <p> <a href="/dr_phonics">对戒</a></p>
-           <p> <a href="/jewelry_2">男戒</a></p>
-           <p> <a href="/jewelry_4">吊坠</a></p>
-           <p> <a href="/jewelry_5">项链</a></p>
-           <p> <a href="/jewelry_8">手链</a></p>
-           <p> <a href="/jewelry_6">耳钉/耳环</a></p>
-          </div>
-          <div class="navdiv-right special_right noborder">
-           <p> <a href="/j_series/22_12.html">Forever系列</a></p>
-           <p> <a href="/j_series/20_11.html">My Heart系列</a></p>
-           <p> <a href="/j_series/24_13.html">Just You系列</a></p>
-           <p> <a href="/j_series/30_16.html">True Love系列</a></p>
-           <p> <a href="/j_series/28_15.html">I Swear系列</a></p>
-           <div class="more_cp">
-            <a href="lists.html">&gt; 查看所有款</a>
-           </div>
-          </div>
-         </div>
-         <div class="navdiv_bottom"></div>
-        </div> </li>
-       <li><a href="question.html">常见问题</a></li>
-      </ul>
-      <!--导航的右边-->
-      <ul class="nav-right fr">
-       <li class="lipos"><em></em><a href="active.html">最新活动</a> <i class="icon"></i>
-        <div class="theright_div" style="display: none;">
-         <div class="navdiv_top">
-          <div class="navright_div fl">
-           <h3> 小时代4陆烧林萧求婚钻戒， </h3>
-           <p> Darry Ring钻戒顶级定制！</p>
-           <div class="more_cp">
-            <a href="/xiaoshidai4.html">&gt; 点击了解详细</a>
-           </div>
-          </div>
-          <div class="navleft_div fl">
-           <a href="/xiaoshidai4.html"> <img width="187" height="163" alt="" src="/index/images/xsdcat.jpg" /></a>
-          </div>
-         </div>
-         <div class="navdiv_bottom"></div>
-        </div> </li>
-      </ul>
-     </div>
+                <div class="navdiv-left">
+                <h3>
+                NEW</h3>
+                <img src="images/02wj.jpg" width="138" height="97" />
+                <div class="more_cp">
+                <a href="/pinkdiamond.aspx" target="_blank">> 了解该系列产品</a>
+                </div>
+                </div>
+                </div>
+                </li>-->
+                <li><a style="font-family:arial" href="/index/lists/lists?id=1">Darry Ring 求婚钻戒</a>
+                    <div class="nav-div">
+                        <div class="navdiv_top">
+                            <div class="navdiv-right">
+                                <p> <a href="/index/lists/lists?id=1"> 查看所有款</a></p>
+                                <p> <a href="/index/lists/lists?id=1&nid={$nav[0]['id']}">{$nav[0]['nname']}</a></p>
+                                <p> <a href="/index/lists/lists?id=1&nid={$nav[1]['id']}">{$nav[1]['nname']}</a></p>
+                                <p> <a href="/index/lists/lists?id=1&nid={$nav[2]['id']}">{$nav[2]['nname']}</a></p>
+                                <p> <a href="/index/lists/lists?id=1&nid={$nav[3]['id']}">{$nav[3]['nname']}</a></p>
+                                <p> <a href="/index/lists/lists?id=1&nid={$nav[4]['id']}">{$nav[4]['nname']}</a></p>
+                                <p> <a href="/index/lists/lists?id=1&nid={$nav[5]['id']}">{$nav[5]['nname']}</a></p>
+                            </div>
+                            <div class="navdiv-left">
+                                <h3> NEW</h3>
+                                <a href="/index/index/detail?id=1&nid={$nav[3]['id']}"> <img width="138" height="97" alt="2克拉钻戒价格_E色EX切工VVS2净度_True Love系列 奢华款 _Darry Ring求婚钻戒 戴瑞珠宝官网" src="/index/images/03wj.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2克拉钻戒价格_E色EX切工VVS2净度_True Love系列 奢华款 _Darry Ring求婚钻戒 </a>
+                                <div class="more_cp">
+                                    <a href="/index/lists/lists?id=1&nid={$nav[3]['id']}">&gt; 了解该系列产品</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navdiv_bottom"></div>
+                    </div>
+                </li>
+                <li><a style="font-family:arial" href="/index/lists/lists?id=2">Darry Ring 爱的礼物</a>
+                    <div class="nav-div">
+                        <div class="navdiv_top">
+                            <div class="navdiv-right">
+                                <p> <a href="/index/lists/lists?id=2">查看所有</a></p>
+                                <p> <a href="/index/lists/lists?id=2?kid={$kind[0]['id']}">{$kind[0]['classname']}</a></p>
+                                <p> <a href="/index/lists/lists?id=2?kid={$kind[1]['id']}">{$kind[1]['classname']}</a></p>
+                                <p> <a href="/index/lists/lists?id=2?kid={$kind[2]['id']}">{$kind[2]['classname']}</a></p>
+                                <p> <a href="/index/lists/lists?id=2?kid={$kind[3]['id']}">{$kind[3]['classname']}</a></p>
+                                <p> <a href="/index/lists/lists?id=2?kid={$kind[4]['id']}">{$kind[4]['classname']}</a></p>
+                                <p> <a href="/index/lists/lists?id=2?kid={$kind[5]['id']}">{$kind[5]['classname']}</a></p>
+                                <p> <a href="/index/lists/lists?id=2?kid={$kind[6]['id']}">{$kind[6]['classname']}</a></p>
+                            </div>
+                            <div class="navdiv-right special_right noborder">
+                                <p> <a href="/index/lists/lists?id=1&nid={$nav[1]['id']}">Forever系列</a></p>
+                                <p> <a href="/index/lists/lists?id=1&nid={$nav[2]['id']}">My Heart系列</a></p>
+                                <p> <a href="/index/lists/lists?id=1&nid={$nav[3]['id']}">Just You系列</a></p>
+                                <p> <a href="/index/lists/lists?id=1&nid={$nav[4]['id']}">True Love系列</a></p>
+                                <p> <a href="/index/lists/lists?id=1&nid={$nav[5]['id']}">I Swear系列</a></p>
+                                <div class="more_cp">
+                                    <a href="/index/lists/lists">&gt; 查看所有款</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navdiv_bottom"></div>
+                    </div>
+                </li>
+                <li><a href="/index/index/question">常见问题</a></li>
+            </ul>
+            <!--导航的右边-->
+            <ul class="nav-right fr">
+                <li class="lipos"><em></em><a href="/index/index/active">最新活动</a> <i class="icon"></i>
+                    <div class="theright_div">
+                    <div class="navdiv_top">
+                    <div class="navright_div fl">
+                    <h3> 小时代4陆烧林萧求婚钻戒， </h3>
+                    <p> Darry Ring钻戒顶级定制！</p>
+                    <div class="more_cp">
+                    <a href="/xiaoshidai4">&gt; 点击了解详细</a>
+                    </div>
+                    </div>
+                    <div class="navleft_div fl">
+                    <a href="/xiaoshidai4"> <img width="187" height="163" alt="" src="/index/images/xsdcat.jpg" /></a>
+                    </div>
+                    </div>
+                    <div class="navdiv_bottom"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
     <!--导航end-->
     <script type="text/javascript">
-    function logout() {
-        if (window.confirm('确定退出吗？')) {
+        function logout() {
+            if (window.confirm('确定退出吗？')) {
 
-            $.get("/nAPI/QuitExit.ashx", function (data) {
-                window.location.href = "/";
-            });
-        }
-    }
-</script>
-    <div class="cort">
-     <!--遮罩-->
-     <div class="backall">
-     </div>
-     <!--遮罩end-->
-     <!--钻戒页面中间-->
-     <div class="cort">
-      <div class="tobuy cmain">
-       <div class="zbk_top spalid">
-        <span>您当前的位置：</span>
-        <span id="ctl00_content_website_SiteMapPath1"><a href="#ctl00_content_website_SiteMapPath1_SkipLink"></a><span> <a target="_blank" href="index.html">Darry Ring</a> </span><span> <em>&gt;</em> </span><span> <a target="_blank" href="lists.html">珠宝饰品</a> </span><span> <em>&gt;</em> </span><span> <a target="_blank" href="/jewelry_4">吊坠</a> </span><span> <em>&gt;</em> </span><span> <span>锁住一生 LOCK套链</span> </span><a id="ctl00_content_website_SiteMapPath1_SkipLink"></a></span>
-       </div>
-       <!--购买页中间-->
-       <div class="buy_cort">
-        <script type="text/javascript">
-    /*收藏事件*/
-    var favoritesEvent = function () { };
-    $(function () {
-        try {
-            favoritesEvent = function () {
-                var _self = this;
-                $(_self).unbind("click");
-                var url = window.location.href;
-                var arr = url.split("/");
-                url = arr[arr.length - 1].toString();
-                url = url.substring(0, url.indexOf(".html"));
-                var price = $(".byright_top span").text();
-                price = price.substr(1);
-                $.get("/nAPI/favorites.ashx?action=add&pid=404&myParm=" + url + "&price=" + price, function (msg) {
-                    $(_self).click(favoritesEvent);
-
-                    if (msg != "") {
-                        alert(msg);
-                    }
-                    else {
-                        favoritesCss(true);
-                        alert("收藏成功。")
-                    }
-                }, "html");
-            };
-        }
-        catch (e) { }
-        $(".share_sc").click(function () {
-            if ('false' == 'false') {
-                alert("请登录！");
-                window.location.href = '/index/user/login?forward=index.html/jewelry/404.html';
+                $.get("/nAPI/QuitExit.ashx", function (data) {
+                    window.location.href = "/";
+                });
             }
-        });
+        }
+    </script>
 
-    });
+    <div class="cort">
+        <!--遮罩-->
+        <div class="backall"></div>
+        <!--遮罩end-->
+        <!--钻戒页面中间-->
+        <div class="cort">
+            <div class="tobuy cmain">
+                <div class="zbk_top spalid">
+                    <span>您当前的位置：</span>
+                    <span id="ctl00_content_website_SiteMapPath1">
+                        <a href="#ctl00_content_website_SiteMapPath1_SkipLink"></a>
+                        <span> <a target="_blank" href="index.html">Darry Ring</a> </span>
+                        <span> <em>&gt;</em> </span>
+                        <span> <a target="_blank" href="lists.html">珠宝饰品</a> </span>
+                        <span> <em>&gt;</em> </span>
+                        <span> <a target="_blank" href="/jewelry_4">吊坠</a> </span>
+                        <span> <em>&gt;</em> </span>
+                        <span> <span>锁住一生 LOCK套链</span> </span>
+                        <a id="ctl00_content_website_SiteMapPath1_SkipLink"></a>
+                    </span>
+                </div>
+                <!--购买页中间-->
+                <div class="buy_cort">
+                    <script type="text/javascript">
+                        /*收藏事件*/
+                        var favoritesEvent = function () { };
+                        $(function () {
+                        try {
+                            favoritesEvent = function () {
+                                var _self = this;
+                                $(_self).unbind("click");
+                                var url = window.location.href;
+                                var arr = url.split("/");
+                                url = arr[arr.length - 1].toString();
+                                url = url.substring(0, url.indexOf(".html"));
+                                var price = $(".byright_top span").text();
+                                price = price.substr(1);
+                                $.get("/nAPI/favorites.ashx?action=add&pid=404&myParm=" + url + "&price=" + price, function (msg) {
+                                    $(_self).click(favoritesEvent);
 
-</script>
-        <!--购买页中间的左边图片-->
-        <div class="buycort_left fl">
-         <ul class="bc_left">
-          <li class="li_border"> <img src="/index/images/2015012110590914b2fee4b2.jpg" alt="锁住一生 LOCK套链 0.006 G-I" /> </li>
-          <li> <img src="/index/images/20150121105910277b929564.jpg" alt="锁住一生 LOCK套链 0.006 G-I" /> </li>
-          <li> <img src="/index/images/2015012018513052f4cdec56.jpg" alt="锁住一生 LOCK套链 0.006 G-I" /> </li>
-          <li> <img src="/index/images/2015012018513031daa9bed7.jpg" alt="锁住一生 LOCK套链 0.006 G-I" /> </li>
-         </ul>
-         <!--上下按钮-->
-         <div class="top"></div>
-         <div class="bottom"></div>
-        </div>
-        <!--购买页中间的左边图片end-->
-        <!--购买页中间的中间图片-->
-        <div class="buycort_center fl">
-         <ul class="ul_center">
-          <li id="magnifier2083" style="display: list-item;"> <img src="/index/images/2015012110590914b2fee4b2.jpg" alt="锁住一生 LOCK套链 0.006 G-I" /> <span style="position: absolute; left: 248px; top: 248px; display: none; width: 150px; height: 150px; background: rgb(153, 153, 153) none repeat scroll 0% 0%; border: 1px solid rgb(0, 0, 0); cursor: move; opacity: 0.4;"></span>
-           <div style="position: absolute; overflow: hidden; width: 300px; height: 300px; top: 0px; right: -385px; border: 1px solid rgb(204, 204, 204); z-index: 99998; display: none;">
-            <img src="/index/images/2015012110590914b2fee4b2.jpg" style="position: absolute; left: -498px; top: -498px; width: 800px; height: 800px;" />
-           </div></li>
-          <li id="magnifier2084"> <img src="/index/images/20150121105910277b929564.jpg" alt="锁住一生 LOCK套链 0.006 G-I" /> </li>
-          <li id="magnifier2085"> <img src="/index/images/2015012018513052f4cdec56.jpg" alt="锁住一生 LOCK套链 0.006 G-I" /> </li>
-          <li id="magnifier2086"> <img src="/index/images/2015012018513031daa9bed7.jpg" alt="锁住一生 LOCK套链 0.006 G-I" /> </li>
-         </ul>
-         <div class="kzyl"></div>
-         <!--右按钮-->
-         <div class="big_next"></div>
-         <!--收藏分享-->
-         <div class="share">
-          <span class="share_sc fl">收藏商品</span>
-          <!-- JiaThis Button BEGIN -->
-          <div class="jiathis_style fl">
-           <span class="jiathis_txt">分享到：</span>
-           <a class="jiathis_button_qzone" title="分享到QQ空间"><span class="jiathis_txt jtico jtico_qzone"></span></a>
-           <a class="jiathis_button_tsina" title="分享到新浪微博"><span class="jiathis_txt jtico jtico_tsina"></span></a>
-           <a class="jiathis_button_tqq" title="分享到腾讯微博"><span class="jiathis_txt jtico jtico_tqq"></span></a>
-           <a class="jiathis_button_renren" title="分享到人人网"><span class="jiathis_txt jtico jtico_renren"></span></a>
-           <a target="_blank" class="jiathis jiathis_txt jtico jtico_jiathis" href="http://www.jiathis.com/share"></a>
-           <a class="jiathis_counter_style"><span class="jiathis_button_expanded jiathis_counter jiathis_bubble_style" id="jiathis_counter_46" title="累计分享18次">18</span></a>
-          </div>
-          <script charset="utf-8" src="/index/js/jia.js" type="text/javascript"></script>
-          <script charset="utf-8" src="/index/js/plugin.client.js" type="text/javascript"></script>
-          <!-- JiaThis Button END -->
-         </div>
-         <!--收藏分享end-->
-        </div>
-        <!--购买页中间的中间图片end-->
-        <!--购买页中间的右边购买选项-->
-        <div class="buycort_right fr">
-         <!--钻戒-->
-         <div class="byright_top">
-          <p>锁住一生 LOCK套链[N04001205]</p>
-          <p> <span>&yen;5,920</span> </p>
-          <div class="byright_top-xq">
-           <i>最近售出：135</i>
-           <i>用户评论：6</i>
-           <i>收藏人气：25</i>
-          </div>
-         </div>
-         <!--钻戒end-->
-         <!--参数-->
-         <div class="pho_cs" id="ctl00_content_zbDiv">
-          <p> <span>尺寸：</span> <i>1*1cm</i> </p>
-          <p id="ctl00_content_zDiamondDiv"> <span>钻石：</span> <i>主钻45颗</i> <i>0.006克拉/颗</i> </p>
-         </div>
-         <!--参数end-->
-         <!--选择材质刻字等-->
-         <div class="byright_thr">
-          <!--第一行-->
-          <script type="text/javascript">
-    var MaterialChoosedEvent = function (m,p) { };
-    $(function () {
-        $("#materialDiv i").click(function () {
-            //alert("222");
-            MaterialChoosedEvent($(this).text(), parseFloat($(this).attr("value")));
-        });
-        var w = $(".border_cs-td4 em").eq(0).text();
-        $("#materialDiv i").eq(0).click();
-        $("#materialDiv i").eq(0).click(function() {
-            $(".border_cs-td4 em").eq(0).text(w);
-        });
+                                    if (msg != "") {
+                                        alert(msg);
+                                    }
+                                    else {
+                                        favoritesCss(true);
+                                        alert("收藏成功。")
+                                    }
+                                }, "html");
+                            };
+                        }
+                        catch (e) { }
+                        $(".share_sc").click(function () {
+                            if ('false' == 'false') {
+                                alert("请登录！");
+                                window.location.href = '/index/user/login?forward=index.html/jewelry/404.html';
+                            }
+                        });
+                        });
+                    </script>
+                    <!--购买页中间的左边图片-->
+                    <div class="buycort_left fl">
+                        <ul class="bc_left">
+                            <li class="li_border"> <img src="{$goods['images']}" alt="锁住一生 LOCK套链 0.006 G-I" /> </li>
+                            <li> <img src="/index/images/20150121105910277b929564.jpg" alt="锁住一生 LOCK套链 0.006 G-I" /> </li>
+                            <li> <img src="/index/images/2015012018513052f4cdec56.jpg" alt="锁住一生 LOCK套链 0.006 G-I" /> </li>
+                            <li> <img src="/index/images/2015012018513031daa9bed7.jpg" alt="锁住一生 LOCK套链 0.006 G-I" /> </li>
+                        </ul>
+                        <!--上下按钮-->
+                        <div class="top"></div>
+                        <div class="bottom"></div>
+                    </div>
+                    <!--购买页中间的左边图片end-->
 
-//        var m = $("#materialDiv i").eq(1).text();
-//        $("#materialDiv i").eq(1).click(function () {
-//            if (m=="PT950") {
-//                var ww = w * 1.375;
-//                $(".border_cs-td4 em").eq(0).text(ww);
-//            }
-//
-//        });
+                    <!--购买页中间的中间图片-->
+                    <div class="buycort_center fl">
+                        <ul class="ul_center">
+                            <li id="magnifier2083" style="display: list-item;">
+                                <img src="{$goods['images']}" alt="锁住一生 LOCK套链 0.006 G-I" />
+                                <span style="position: absolute; left: 248px; top: 248px; display: none; width: 150px; height: 150px; background: rgb(153, 153, 153) none repeat scroll 0% 0%; border: 1px solid rgb(0, 0, 0); cursor: move; opacity: 0.4;"></span>
+                                <div style="position: absolute; overflow: hidden; width: 300px; height: 300px; top: 0px; right: -385px; border: 1px solid rgb(204, 204, 204); z-index: 99998; display: none;">
+                                    <img src="/index/images/2015012110590914b2fee4b2.jpg" style="position: absolute; left: -498px; top: -498px; width: 800px; height: 800px;" />
+                                </div>
+                            </li>
+                            <li id="magnifier2084"> <img src="/index/images/20150121105910277b929564.jpg" alt="锁住一生 LOCK套链 0.006 G-I" /> </li>
+                            <li id="magnifier2085"> <img src="/index/images/2015012018513052f4cdec56.jpg" alt="锁住一生 LOCK套链 0.006 G-I" /> </li>
+                            <li id="magnifier2086"> <img src="/index/images/2015012018513031daa9bed7.jpg" alt="锁住一生 LOCK套链 0.006 G-I" /> </li>
+                        </ul>
+                        <div class="kzyl"></div>
+                        <!--右按钮-->
+                        <div class="big_next"></div>
+                        <!--收藏分享-->
+                        <div class="share">
+                            <span class="share_sc fl">收藏商品</span>
+                            <!-- JiaThis Button BEGIN -->
+                            <div class="jiathis_style fl">
+                                <span class="jiathis_txt">分享到：</span>
+                                <a class="jiathis_button_qzone" title="分享到QQ空间"><span class="jiathis_txt jtico jtico_qzone"></span></a>
+                                <a class="jiathis_button_tsina" title="分享到新浪微博"><span class="jiathis_txt jtico jtico_tsina"></span></a>
+                                <a class="jiathis_button_tqq" title="分享到腾讯微博"><span class="jiathis_txt jtico jtico_tqq"></span></a>
+                                <a class="jiathis_button_renren" title="分享到人人网"><span class="jiathis_txt jtico jtico_renren"></span></a>
+                                <a target="_blank" class="jiathis jiathis_txt jtico jtico_jiathis" href="http://www.jiathis.com/share"></a>
+                                <a class="jiathis_counter_style"><span class="jiathis_button_expanded jiathis_counter jiathis_bubble_style" id="jiathis_counter_46" title="累计分享18次">18</span></a>
+                            </div>
+                            <script charset="utf-8" src="/index/js/jia.js" type="text/javascript"></script>
+                            <script charset="utf-8" src="/index/js/plugin.client.js" type="text/javascript"></script>
+                            <!-- JiaThis Button END -->
+                        </div>
+                        <!--收藏分享end-->
+                    </div>
+                    <!--购买页中间的中间图片end-->
 
-    });
-</script>
-          <div id="materialDiv" class="thr_first">
-           <span>材质：</span>
-           <i value="5920.00" class="iborder">18K白金</i>
-          </div>
-          <!--第二行-->
-          <div class="thr_secound">
-           <span>数量：</span>
-           <select> <option>1</option> </select>
-          </div>
-         </div>
-         <!--选择材质刻字等end-->
-         <p class="thered_word">中国大陆用户付款后15个工作日内可收到货品,其它地区请咨询客服。</p>
-         <!--购买选项-->
-         <div id="addCa" class="button buy_button">
-          <div title="购买darry ring钻戒" class="bt1">
-           <span>加入购物车</span>
-          </div>
-          <div title="把darry ring加入购物车" class="bt2">
-           <span>立即购买</span>
-          </div>
-         </div>
-        </div>
-        <!--购买页中间的右边end-->
-       </div>
-       <!--购买页中间end-->
-      </div>
-      <script type="text/javascript" language="javascript">
-    $(function () {
-        CommentLoadEvent = function (datacount) {
+                    <!--购买页中间的右边购买选项-->
+                    <div class="buycort_right fr">
+                        <!--钻戒-->
+                        <div class="byright_top">
+                            <p>{$goods['gname']}[N04001205]</p>
+                            <p> <span>&yen;{$goods['price_sale']}</span> </p>
+                            <div class="byright_top-xq">
+                                <i>最近售出：{$goods['sales']}</i>
+                                <i>用户评论：{$goods['review']}</i>
+                                <i>收藏人气：{$goods['collected']}</i>
+                            </div>
+                        </div>
+                        <!--钻戒end-->
+
+                        <!--参数-->
+                        <div class="pho_cs" id="ctl00_content_zbDiv">
+                            <p> <span>尺寸：</span> <i>{$goods['size']}</i> </p>
+                            <p id="ctl00_content_zDiamondDiv"> <span>钻石：</span> <i>主钻45颗</i> <i>0.006克拉/颗</i> </p>
+                        </div>
+                        <!--参数end-->
+
+                        <!--选择材质刻字等-->
+                        <div class="byright_thr">
+                            <!--第一行-->
+                            <script type="text/javascript">
+                                var MaterialChoosedEvent = function (m,p) { };
+                                $(function () {
+                                    $("#materialDiv i").click(function () {
+                                        //alert("222");
+                                        MaterialChoosedEvent($(this).text(), parseFloat($(this).attr("value")));
+                                    });
+
+                                    var w = $(".border_cs-td4 em").eq(0).text();
+                                    $("#materialDiv i").eq(0).click();
+                                    $("#materialDiv i").eq(0).click(function() {
+                                        $(".border_cs-td4 em").eq(0).text(w);
+                                    });
+
+                                    var m = $("#materialDiv i").eq(1).text();
+                                    $("#materialDiv i").eq(1).click(function () {
+                                       if (m=="PT950") {
+                                           var ww = w * 1.375;
+                                           $(".border_cs-td4 em").eq(0).text(ww);
+                                       }
+                                    });
+                                });
+                            </script>
+                            <div id="materialDiv" class="thr_first">
+                                <span>材质：</span>
+                                <i value="5920.00" class="iborder">18K白金</i>
+                            </div>
+                            <!--第二行-->
+                            <div class="thr_secound">
+                                <span>数量：</span>
+                                <select> <option>1</option> </select>
+                            </div>
+                        </div>
+                        <!--选择材质刻字等end-->
+
+                        <p class="thered_word">中国大陆用户付款后15个工作日内可收到货品,其它地区请咨询客服。</p>
+
+                        <!--购买选项-->
+                        <div id="addCa" class="button buy_button">
+                            <div title="购买darry ring钻戒" class="bt1">
+                                <span>加入购物车</span>
+                            </div>
+                            <div title="把darry ring加入购物车" class="bt2">
+                                <span>立即购买</span>
+                            </div>
+                        </div>
+                        <!--购买选项end-->
+                    </div>
+                    <!--购买页中间的右边end-->
+                </div>
+                <!--购买页中间end-->
+            </div>
+
+            <script type="text/javascript" language="javascript">
+            $(function () {
+            CommentLoadEvent = function (datacount) {
             $(".gdnav_ul #commentDataCount").text("(" + datacount + ")");
-        };
+            };
 
-    });
-</script>
-      <script>
-    function addy(id) {
-
-        $.post("/API/ProductAPI.ashx", { action: 'addy', id: id }, function(data) {
+            });
+            </script>
+            <script>
+            function addy(id) {
+            $.post("/API/ProductAPI.ashx", { action: 'addy', id: id }, function(data) {
             $("#addy" + id).text('(' + data + ')是');
 
-        });
-    }
-    function addn(id) {
+            });
+            }
+            function addn(id) {
 
-        $.post("/API/ProductAPI.ashx", { action: 'addn', id: id }, function (data) {
+            $.post("/API/ProductAPI.ashx", { action: 'addn', id: id }, function (data) {
             $("#addn" + id).text('(' + data + ')否');
-        });
-    }
-    </script>
-      <!--小导航-->
-      <div class="allthenav">
-       <!--导航-->
-       <div class="gd_nav">
-        <ul class="gdnav_ul">
-         <li class="gdnav_sp"> <span>商品详情</span> </li>
-         <li> <span>最新评论<em id="commentDataCount">(6)</em></span> </li>
-         <li> <span>如何购买</span> </li>
-         <li> <span>常见问答</span> </li>
-         <li> <span>售后服务</span> </li>
-        </ul>
-       </div>
-       <!--导航end-->
-       <!--导航下的线条-->
-       <div class="gd_nav-line"></div>
-       <!--导航下的线条end-->
-      </div>
-      <!--小导航end-->
+            });
+            }
+            </script>
+
+            <!--小导航-->
+            <div class="allthenav">
+                <!--导航-->
+                <div class="gd_nav">
+                    <ul class="gdnav_ul">
+                        <li class="gdnav_sp"> <span>商品详情</span> </li>
+                        <li> <span>最新评论<em id="commentDataCount">(6)</em></span> </li>
+                        <li> <span>如何购买</span> </li>
+                        <li> <span>常见问答</span> </li>
+                        <li> <span>售后服务</span> </li>
+                    </ul>
+                </div>
+                <!--导航end-->
+
+                <!--导航下的线条-->
+                <div class="gd_nav-line"></div>
+                <!--导航下的线条end-->
+            </div>
+            <!--小导航end-->
+
       <!--导航下的所有-->
       <div class="sy_xx">
        <!--商品详情-->
