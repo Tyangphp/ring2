@@ -267,13 +267,13 @@
                     <span>您当前的位置：</span>
                     <span id="ctl00_content_website_SiteMapPath1">
                         <a href="#ctl00_content_website_SiteMapPath1_SkipLink"></a>
-                        <span> <a target="_blank" href="index.html">Darry Ring</a> </span>
+                        <span> <a href="/index/index/index">Darry Ring</a> </span>
                         <span> <em>&gt;</em> </span>
-                        <span> <a target="_blank" href="lists.html">珠宝饰品</a> </span>
+                        <span> <a href="/index/lists/lists?id={$goodsnav[0]['id']}">{$goodsnav[0]['sname']}</a> </span>
                         <span> <em>&gt;</em> </span>
-                        <span> <a target="_blank" href="/jewelry_4">吊坠</a> </span>
+                        <span> <a target="_blank" href="/index/lists/lists?kid={$goodsnavs[0]['id']}">{$goodsnavs[0]['classname']}</a> </span>
                         <span> <em>&gt;</em> </span>
-                        <span> <span>锁住一生 LOCK套链</span> </span>
+                        <span> <span>{$goods['gname']}</span> </span>
                         <a id="ctl00_content_website_SiteMapPath1_SkipLink"></a>
                     </span>
                 </div>
@@ -313,15 +313,15 @@
                                 window.location.href = '/index/user/login?forward=index.html/jewelry/404.html';
                             }
                         });
-                        });
+
                     </script>
                     <!--购买页中间的左边图片-->
                     <div class="buycort_left fl">
                         <ul class="bc_left">
                             <li class="li_border"> <img src="{$goods['images']}" alt="锁住一生 LOCK套链 0.006 G-I" /> </li>
-                            <li> <img src="/index/images/20150121105910277b929564.jpg" alt="锁住一生 LOCK套链 0.006 G-I" /> </li>
+                            <!-- <li> <img src="/index/images/20150121105910277b929564.jpg" alt="锁住一生 LOCK套链 0.006 G-I" /> </li>
                             <li> <img src="/index/images/2015012018513052f4cdec56.jpg" alt="锁住一生 LOCK套链 0.006 G-I" /> </li>
-                            <li> <img src="/index/images/2015012018513031daa9bed7.jpg" alt="锁住一生 LOCK套链 0.006 G-I" /> </li>
+                            <li> <img src="/index/images/2015012018513031daa9bed7.jpg" alt="锁住一生 LOCK套链 0.006 G-I" /> </li> -->
                         </ul>
                         <!--上下按钮-->
                         <div class="top"></div>
@@ -339,9 +339,9 @@
                                     <img src="/index/images/2015012110590914b2fee4b2.jpg" style="position: absolute; left: -498px; top: -498px; width: 800px; height: 800px;" />
                                 </div>
                             </li>
-                            <li id="magnifier2084"> <img src="/index/images/20150121105910277b929564.jpg" alt="锁住一生 LOCK套链 0.006 G-I" /> </li>
+                            <!-- <li id="magnifier2084"> <img src="/index/images/20150121105910277b929564.jpg" alt="锁住一生 LOCK套链 0.006 G-I" /> </li>
                             <li id="magnifier2085"> <img src="/index/images/2015012018513052f4cdec56.jpg" alt="锁住一生 LOCK套链 0.006 G-I" /> </li>
-                            <li id="magnifier2086"> <img src="/index/images/2015012018513031daa9bed7.jpg" alt="锁住一生 LOCK套链 0.006 G-I" /> </li>
+                            <li id="magnifier2086"> <img src="/index/images/2015012018513031daa9bed7.jpg" alt="锁住一生 LOCK套链 0.006 G-I" /> </li> -->
                         </ul>
                         <div class="kzyl"></div>
                         <!--右按钮-->
@@ -431,10 +431,10 @@
                         <!--购买选项-->
                         <div id="addCa" class="button buy_button">
                             <div title="购买darry ring钻戒" class="bt1">
-                                <span>加入购物车</span>
+                                <span id="car">加入购物车</span>
                             </div>
                             <div title="把darry ring加入购物车" class="bt2">
-                                <span>立即购买</span>
+                                <span id="buy">立即购买</span>
                             </div>
                         </div>
                         <!--购买选项end-->
@@ -443,28 +443,38 @@
                 </div>
                 <!--购买页中间end-->
             </div>
+            <script type="text/javascript">
+                var aDiv = document.getElementById('addCa');
+                var car = document.getElementById('car');
+                var buy = document.getElementById('buy');
+                $('#car').click(function(){
+                    $.post('/index/cart/cart',{},function(){
+                        window.location.href = "/index/cart/cart";
+                    });
 
+                });
+
+            </script>
             <script type="text/javascript" language="javascript">
-            $(function () {
-            CommentLoadEvent = function (datacount) {
-            $(".gdnav_ul #commentDataCount").text("(" + datacount + ")");
-            };
+                $(function () {
+                    CommentLoadEvent = function (datacount) {
+                        $(".gdnav_ul #commentDataCount").text("(" + datacount + ")");
+                    };
 
-            });
+                });
             </script>
             <script>
-            function addy(id) {
-            $.post("/API/ProductAPI.ashx", { action: 'addy', id: id }, function(data) {
-            $("#addy" + id).text('(' + data + ')是');
+                function addy(id) {
+                    $.post("/API/ProductAPI.ashx", { action: 'addy', id: id }, function(data) {
+                        $("#addy" + id).text('(' + data + ')是');
+                    });
+                }
+                function addn(id) {
 
-            });
-            }
-            function addn(id) {
-
-            $.post("/API/ProductAPI.ashx", { action: 'addn', id: id }, function (data) {
-            $("#addn" + id).text('(' + data + ')否');
-            });
-            }
+                    $.post("/API/ProductAPI.ashx", { action: 'addn', id: id }, function (data) {
+                        $("#addn" + id).text('(' + data + ')否');
+                    });
+                }
             </script>
 
             <!--小导航-->
@@ -1041,29 +1051,7 @@
          <li>
           <div class="read_top">
            <a target="_blank" href="/jewelry/404.html" rel="nofollow"> <img src="/index/images/2015012110590914b2fee4b2.jpg" alt="锁住一生 LOCK套链 0.6分G-I色" /> </a>
-          </div> <p><a target="_blank" href="/jewelry/404.html"> 锁住一生 LOCK套链 0.6分G-I色 </a></p> <p><span>￥{goods['price_sale']}</span></p> </li>
-        </ul>
-        <ul style="display: none; width: 1650px;" id="u_rx" class="read_ul">
-         <li>
-          <div class="read_top">
-           <a target="_blank" href="/darry_ring/78.html" rel="nofollow"> <img src="/index/images/2014090119350717386d7a1e.jpg" alt="Forever系列 经典款" /> </a>
-          </div> <p><a target="_blank" href="/darry_ring/78.html"> Forever系列 经典款 </a></p> <p><span>￥25,700</span></p> </li>
-         <li>
-          <div class="read_top">
-           <a target="_blank" href="/darry_ring/137.html" rel="nofollow"> <img src="/index/images/20140901192917179d1ae386.jpg" alt="Forever系列 经典款" /> </a>
-          </div> <p><a target="_blank" href="/darry_ring/137.html"> Forever系列 经典款 </a></p> <p><span>￥10,200</span></p> </li>
-         <li>
-          <div class="read_top">
-           <a target="_blank" href="/darry_ring/92.html" rel="nofollow"> <img src="/index/images/20140901195507683ad84477.jpg" alt="Just you系列 经典款" /> </a>
-          </div> <p><a target="_blank" href="/darry_ring/92.html"> Just you系列 经典款 </a></p> <p><span>￥3,689</span></p> </li>
-         <li>
-          <div class="read_top">
-           <a target="_blank" href="/darry_ring/168.html" rel="nofollow"> <img src="/index/images/201502031541470f549eecb4.jpg" alt="My heart系列 奢华款" /> </a>
-          </div> <p><a target="_blank" href="/darry_ring/168.html"> My heart系列 奢华款 </a></p> <p><span>￥38,636</span></p> </li>
-         <li>
-          <div class="read_top">
-           <a target="_blank" href="/darry_ring/387.html" rel="nofollow"> <img src="/index/images/201412081512070b82d519cb.jpg" alt="True Love系列 典雅" /> </a>
-          </div> <p><a target="_blank" href="/darry_ring/387.html"> True Love系列 典雅 </a></p> <p><span>￥19,150</span></p> </li>
+          </div> <p><a target="_blank" href="/jewelry/404.html"> 锁住一生 LOCK套链 0.6分G-I色 </a></p> <p><span>￥{$goods['price_sale']}</span></p> </li>
         </ul>
        </div>
        <!--向左-->

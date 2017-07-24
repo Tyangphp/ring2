@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2017-05-17 12:00:23
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-21 10:27:03
+ * @Last Modified time: 2017-07-24 20:52:26
  */
 namespace app\index\model;
 use think\Model;
@@ -34,14 +34,14 @@ class User extends Model
     // 查询数据库用户详情表手机号信息
     public function usersMobile($username)
     {
-        $msg = Db::name('users')->where('tel',$username)->field('id,password,tel')->select();
+        $msg = Db::name('users')->where('tel',$username)->field('id,username,nickname,tel')->select();
         return $msg;
     }
 
     // 查询数据库用户详情表邮箱信息
     public function usersEmail($username)
     {
-        $msg = Db::name('users')->where('email',$username)->field('id,password,tel')->select();
+        $msg = Db::name('users')->where('email',$username)->field('id,username,nickname,tel')->select();
         return $msg;
     }
 }

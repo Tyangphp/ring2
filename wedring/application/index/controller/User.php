@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2017-05-16 19:37:35
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-22 09:55:23
+ * @Last Modified time: 2017-07-24 20:47:50
  */
 namespace app\index\controller;
 use think\Controller;
@@ -32,7 +32,7 @@ class User extends Controller
         $username = $input['data']['email'];
         $password = $input['data']['password'];
 
-        file_put_contents('input.txt',$password);
+        // file_put_contents('input.txt',$password);
 
         $tel = "/^1[34578]\d{9}$/";
         $email = "/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/";

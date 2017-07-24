@@ -173,7 +173,21 @@
             <div class="zj_bk">
                 <div class="zbk_top spalid">
                     <span>您当前的位置：</span>
-                    <span id="website_SiteMapPath1"><a href="#website_SiteMapPath1_SkipLink"></a><span> <a target="_blank" href="index.html">Darry Ring</a> </span><span> <em>&gt;</em> </span><span> <span>求婚钻戒</span> </span><a id="website_SiteMapPath1_SkipLink"></a></span>
+                    <span id="website_SiteMapPath1">
+                        <a href="/index/index/index"></a>
+                        <span> <a href="/index/index/index">Darry Ring</a> </span>
+                        <span> <em>&gt;</em> </span>
+                        {if !empty($_GET['id'])}
+                        <span> <span>{$goodsnav[0]['sname']}</span> </span>
+                        <a id="website_SiteMapPath1_SkipLink"></a>
+                        {elseif !empty($_GET['nid'])}
+                        <span> <span>{$goodsnav[0]['nname']}</span> </span>
+                        <a id="website_SiteMapPath1_SkipLink"></a>
+                        {else}
+                        <span> <span>所有</span> </span>
+                        <a id="website_SiteMapPath1_SkipLink"></a>
+                        {/if}
+                    </span>
                 </div>
                 <!--banner中间内容-->
                 <div class="zbk_center">
@@ -296,7 +310,7 @@
                     <!--每一个款式-->
                     <li>
                         <div class="by_top">
-                            <a target="_blank" href="/index/index/detail?gid={$value['gid']}"></a>
+                            <a href="/index/index/detail?gid={$value['gid']}"></a>
                             <div class="bything-one">
                                 <img width="236px" height="236" alt="DR钻戒 Forever系列 {$value['gname']}&nbsp;{$value['weight']}&nbsp;{$value['color']}" src="{$value['images']}" />
                             </div>

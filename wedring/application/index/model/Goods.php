@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2017-07-21 15:50:12
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-24 17:40:48
+ * @Last Modified time: 2017-07-24 20:07:36
  */
 namespace app\index\model;
 use think\Model;
@@ -11,6 +11,20 @@ use think\Db;
 
 class Goods extends Model
 {
+    // 查询数据库商品分类表商品分类
+    public function series($id)
+    {
+        $data = Db::name('goods_series')->where('id',$id)->field('id,sname')->select();
+        return $data;
+    }
+
+    // 查询数据库商品种类表商品种类
+    public function kind($gid)
+    {
+        $data = Db::name('goods')->alias('g')->where('gid',$gid)->join('goods_kind k','k.id=g.kid')->select();
+        // $data = Db::name('goods_series')->where('gid',$gid)->field('kid')->select();
+        return $data;
+    }
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>求婚钻戒>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     // 查询数据库商品表求婚钻戒
     public function selectGoods()

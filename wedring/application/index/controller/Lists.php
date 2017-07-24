@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2017-07-11 19:34:39
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-24 17:41:18
+ * @Last Modified time: 2017-07-24 19:53:14
  */
 namespace app\index\controller;
 use app\index\model\Goods;
@@ -82,6 +82,19 @@ class Lists extends Controller
         $navs = $this->list->selectNavs();
         $nav = $this->list->selectNav();
 
+        //位置
+        if (!empty($id)) {
+            session('id',$id);
+            $goodsnav = $this->list->series($id);
+            $this->assign('goodsnav',$goodsnav);
+        } elseif (!empty($nid)) {
+            session('nid',$nid);
+            $goodsnav = $this->list->seeGoodsNav($nid);
+            $this->assign('goodsnav',$goodsnav);
+        }
+        // $goodsnav = $this->list->seeGoodsNav($nid);
+        // dump($goodsnav);die;
+
          //获取种类信息
         $kind = $this->list->selectKind();
 
@@ -102,6 +115,7 @@ class Lists extends Controller
         $this->assign('count',$count);
         $this->assign('navs',$navs);
         $this->assign('nav',$nav);
+
         $this->assign('kind',$kind);
         $this->assign('page',$page);
         $this->assign('pages',$pages);
