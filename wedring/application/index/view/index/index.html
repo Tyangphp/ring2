@@ -13,14 +13,7 @@
 
 <meta content="darry ring,戴瑞珠宝,darry ring钻戒价格,darry ring 实体店,求婚戒指" name="Keywords" />
 <meta content="香港戴瑞珠宝DR（DarryRing）官方网站,每位男士凭身份证一生只可购买一枚，最独特的求婚钻戒，购钻授予真爱证书，可定制专属页面，证明与找寻一生唯一真爱的首选，其它产品包括求婚钻戒、结婚钻戒、求婚戒指、结婚戒指、对戒。" name="Description" />
-<!--/*技术支持，小庄602842076     验证：官网技术支持*/
-/*技术支持，小庄602842076    验证：官网技术支持*/
-/*技术支持，小庄602842076    验证：官网技术支持*/
-/*技术支持，小庄602842076    验证：官网技术支持*/
-/*技术支持，小庄602842076    验证：官网技术支持*/
-/*https://shop116998991.taobao.com/*/
-/*https://shop116998991.taobao.com/*/
-/*https://shop116998991.taobao.com/*/-->
+
 </head>
 <body>
     <script type="text/javascript" src="/index/js/index_A.js.js"></script>
@@ -77,34 +70,30 @@
             <ul class="nav-ul fl">
                 <li><a href="/index/index/index">首页</a> </li>
                 <li><a href="/index/index/brand">品牌文化</a> </li>
-                <!--
-                <li><a href="/pinkdiamond.aspx" target="_blank">高级定制</a>
-                <div class="nav-div">
-                <div class="navdiv-right">
-                <p>
-                <a href="/pinkdiamond.aspx" target="_blank">稀世粉钻系列</a></p>
-                </div>
-                <div class="navdiv-left">
-                <h3>
-                NEW</h3>
-                <img src="images/02wj.jpg" width="138" height="97" />
-                <div class="more_cp">
-                <a href="/pinkdiamond.aspx" target="_blank">> 了解该系列产品</a>
-                </div>
-                </div>
-                </div>
+                <!--<li><a href="/pinkdiamond.aspx" target="_blank">高级定制</a>
+                    <div class="nav-div">
+                    <div class="navdiv-right">
+                    <p>
+                    <a href="/pinkdiamond.aspx" target="_blank">稀世粉钻系列</a></p>
+                    </div>
+                    <div class="navdiv-left">
+                    <h3>
+                    NEW</h3>
+                    <img src="images/02wj.jpg" width="138" height="97" />
+                    <div class="more_cp">
+                    <a href="/pinkdiamond.aspx" target="_blank">> 了解该系列产品</a>
+                    </div>
+                    </div>
+                    </div>
                 </li>-->
                 <li><a style="font-family:arial" href="/index/lists/lists?id=1">Darry Ring 求婚钻戒</a>
                     <div class="nav-div">
                         <div class="navdiv_top">
                             <div class="navdiv-right">
                                 <p> <a href="/index/lists/lists?id=1"> 查看所有款</a></p>
-                                <p> <a href="/index/lists/lists?id=1&nid={$nav[0]['id']}">{$nav[0]['nname']}</a></p>
-                                <p> <a href="/index/lists/lists?id=1&nid={$nav[1]['id']}">{$nav[1]['nname']}</a></p>
-                                <p> <a href="/index/lists/lists?id=1&nid={$nav[2]['id']}">{$nav[2]['nname']}</a></p>
-                                <p> <a href="/index/lists/lists?id=1&nid={$nav[3]['id']}">{$nav[3]['nname']}</a></p>
-                                <p> <a href="/index/lists/lists?id=1&nid={$nav[4]['id']}">{$nav[4]['nname']}</a></p>
-                                <p> <a href="/index/lists/lists?id=1&nid={$nav[5]['id']}">{$nav[5]['nname']}</a></p>
+                                {foreach $navs as $value}
+                                <p> <a href="/index/lists/lists?id=1&nid={$value['id']}">{$value['nname']}</a></p>
+                                {/foreach}
                             </div>
                             <div class="navdiv-left">
                                 <h3> NEW</h3>
@@ -122,20 +111,14 @@
                         <div class="navdiv_top">
                             <div class="navdiv-right">
                                 <p> <a href="/index/lists/lists?id=2">查看所有</a></p>
-                                <p> <a href="/index/lists/lists?id=2?kid={$kind[0]['id']}">{$kind[0]['classname']}</a></p>
-                                <p> <a href="/index/lists/lists?id=2?kid={$kind[1]['id']}">{$kind[1]['classname']}</a></p>
-                                <p> <a href="/index/lists/lists?id=2?kid={$kind[2]['id']}">{$kind[2]['classname']}</a></p>
-                                <p> <a href="/index/lists/lists?id=2?kid={$kind[3]['id']}">{$kind[3]['classname']}</a></p>
-                                <p> <a href="/index/lists/lists?id=2?kid={$kind[4]['id']}">{$kind[4]['classname']}</a></p>
-                                <p> <a href="/index/lists/lists?id=2?kid={$kind[5]['id']}">{$kind[5]['classname']}</a></p>
-                                <p> <a href="/index/lists/lists?id=2?kid={$kind[6]['id']}">{$kind[6]['classname']}</a></p>
+                                {foreach $kind as $value}
+                                <p> <a href="/index/lists/lists?id=2&kid={$value['id']}">{$value['classname']}</a></p>
+                                {/foreach}
                             </div>
                             <div class="navdiv-right special_right noborder">
-                                <p> <a href="/index/lists/lists?id=1&nid={$nav[1]['id']}">Forever系列</a></p>
-                                <p> <a href="/index/lists/lists?id=1&nid={$nav[2]['id']}">My Heart系列</a></p>
-                                <p> <a href="/index/lists/lists?id=1&nid={$nav[3]['id']}">Just You系列</a></p>
-                                <p> <a href="/index/lists/lists?id=1&nid={$nav[4]['id']}">True Love系列</a></p>
-                                <p> <a href="/index/lists/lists?id=1&nid={$nav[5]['id']}">I Swear系列</a></p>
+                                {foreach $nav as $value}
+                                <p> <a href="/index/lists/lists?id=2&nid={$value['id']}">{$value['nname']}</a></p>
+                                {/foreach}
                                 <div class="more_cp">
                                     <a href="/index/lists/lists">&gt; 查看所有款</a>
                                 </div>
@@ -209,11 +192,11 @@
                         </div>
                     </div>
                 </li>
-                <li class="tb_sec" style="display: list-item; opacity: 0.0177213;">
+                <!-- <li class="tb_sec" style="display: list-item; opacity: 0.0177213;">
                     <a target="_blank" href="/index/index/xiaoshidai4.html">
                         <div class="cmain cb_main"></div>
                     </a>
-                </li>
+                </li> -->
                 <li class="tb_third" style="display: none;">
                     <div class="cmain cb_main">
                         <a class="cb_jdt" target="_blank" href="/sindex/index/brand"></a>
@@ -342,11 +325,13 @@
                 <!--tab选项卡ul-->
                 <div class="ultab_all">
                     <ul class="ul-tab">
-                        <li class=""><span>Forever经典系列</span></li>
+                        <!-- <li class=""><span>Forever系列</span></li>
                         <li><span>Just You系列</span> </li>
                         <li><span>My Heart系列</span> </li>
-                        <li><span>True Love系列</span> </li>
-                        <li class="active"><span style="border: none; width: 196px">I Swear系列</span> </li>
+                        <li><span>True Love系列</span> </li> -->
+                        {foreach $nav as $value}
+                        <li class="active"><span style="border: none; width: 196px">{$value['nname']}</span> </li>
+                        {/foreach}
                     </ul>
 
                     <!--进度条-->
@@ -369,7 +354,7 @@
                     <li style="display: none;">
                         <!--tab选项卡下的左边内容-->
                         <div class="tab_left fl">
-                            <a href="/index/lists/lists?nid={$nav[1]['id']}">
+                            <a href="/index/lists/lists?nid={$nav[0]['id']}">
                                 <img width="504" height="314" alt="Forever经典系列" src="/index/images/fimg6.jpg" />
                             </a>
                         </div>
@@ -382,14 +367,14 @@
                             <p> 任时光流逝,唯爱永固,祈岁月静好,唯爱永恒</p>
                             <div class="to_more">
                                 <div class="bt2">
-                                    <a target="_blank" href="/index/lists/lists">了解更多</a>
+                                    <a href="/index/lists/lists?nid={$nav[0]['id']}">了解更多</a>
                                 </div>
                             </div>
                             <!--更多选择-->
                             <div class="more-ul">
                                 <p>
-                                    <a target="_blank" href="/dr_series/12_22.html">求婚钻戒</a>
-                                    <a target="_blank" href="dr_phonics">结婚对戒</a> <a target="_blank" href="/j_series/22_12.html">饰品</a>
+                                    <a target="_blank" href="/index/lists/lists?id=1&kid=8">求婚钻戒</a>
+                                    <a target="_blank" href="/index/lists/lists?id=1&kid=9">结婚对戒</a> <a target="_blank" href="/index/lists/lists?id=2">饰品</a>
                                 </p>
                             </div>
                         </div>
@@ -399,30 +384,7 @@
                     <li style="display: none;">
                         <!--tab选项卡下的左边内容-->
                         <div class="tab_left fl">
-                            <a href="/index/lists/lists?nid={$nav[5]['id']}">
-                                <img width="504" height="314" alt="Just You系列" src="/index/images/fimg1.jpg" />
-                            </a>
-                        </div>
-                        <!--tab选项卡下的左边内容 end-->
-
-                        <!--tab选项卡下的右边内容-->
-                        <div class="tab_right fr">
-                            <h3> Just You系列</h3>
-                            <p> 承诺相伴一生真爱之人,一生一次，一次一生的爱情信物</p>
-                            <p> 7月15日 正午12点浪漫发售</p>
-                            <div class="to_more">
-                                <div class="bt2">
-                                    <a target="_blank" href="/index/lists/lists">了解更多</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!--tab选项卡下的右边内容  end-->
-                    </li>
-
-                    <li style="display: none;">
-                        <!--tab选项卡下的左边内容-->
-                        <div class="tab_left fl">
-                            <a href="/index/lists/lists?nid={$nav[2]['id']}">
+                            <a href="/index/lists/lists?nid={$nav[1]['id']}">
                                 <img width="504" height="314" alt="My heart系列" src="/index/images/fimg2.jpg" />
                             </a>
                         </div>
@@ -435,24 +397,24 @@
                             <p> 此生只愿，把心交给你</p>
                             <div class="to_more">
                                 <div class="bt2">
-                                    <a target="_blank" href="/index/lists/lists">了解更多</a>
+                                    <a href="/index/lists/lists?nid={$nav[1]['id']}">了解更多</a>
                                 </div>
                             </div>
                             <!--更多选择-->
                             <div class="more-ul">
                                 <p>
-                                    <a target="_blank" href="/dr_series/11_20.html">求婚钻戒</a> <a target="_blank" href="dr_phonics"> 结婚对戒</a>
-                                    <a target="_blank" href="/j_series/20_11.html">饰品</a>
+                                    <a target="_blank" href="/index/lists/lists?id=1&kid=8">求婚钻戒</a>
+                                    <a target="_blank" href="/index/lists/lists?id=1&kid=9">结婚对戒</a> <a target="_blank" href="/index/lists/lists?id=2">饰品</a>
                                 </p>
                             </div>
                         </div>
                         <!--tab选项卡下的右边内容  end-->
                     </li>
 
-                    <li style="display: list-item; opacity: 0.470565;">
+                    <li style="display: list-item;">
                         <!--tab选项卡下的左边内容-->
                         <div class="tab_left fl">
-                            <a href="/index/lists/lists?nid={$nav[3]['id']}">
+                            <a href="/index/lists/lists?nid={$nav[2]['id']}">
                                 <img width="515" height="314" alt="True Love系列" src="/index/images/fimg3.jpg" />
                             </a>
                         </div>
@@ -465,25 +427,24 @@
                             <p> 从今往后，将你我恒久岁月,用True Love细细包容</p>
                             <div class="to_more">
                                 <div class="bt2">
-                                    <a target="_blank" href="/index/lists/lists">了解更多</a>
+                                    <a href="/index/lists/lists?nid={$nav[2]['id']}">了解更多</a>
                                 </div>
                             </div>
                             <!--更多选择-->
                             <div class="more-ul">
                                 <p>
-                                    <a target="_blank" href="/dr_series/16_30.html">求婚钻戒</a>
-                                    <a target="_blank" href="dr_phonics"> 结婚对戒</a>
-                                    <a target="_blank" href="/j_series/30_16.html">饰品</a>
+                                    <a target="_blank" href="/index/lists/lists?id=1&kid=8">求婚钻戒</a>
+                                    <a target="_blank" href="/index/lists/lists?id=1&kid=9">结婚对戒</a> <a target="_blank" href="/index/lists/lists?id=2">饰品</a>
                                 </p>
                             </div>
                         </div>
                         <!--tab选项卡下的右边内容  end-->
                     </li>
 
-                    <li style="opacity: 0.529435; display: list-item;">
+                    <li style="display: list-item;">
                         <!--tab选项卡下的左边内容-->
                         <div class="tab_left fl">
-                            <a href="/index/lists/lists?nid={$nav[4]['id']}">
+                            <a href="/index/lists/lists?nid={$nav[3]['id']}">
                                 <img width="504" height="314" alt="I Swear系列" src="/index/images/fimg4.jpg" />
                             </a>
                         </div>
@@ -496,15 +457,44 @@
                             <p> 将我们的誓言印刻在永恒的钻石上，散发最闪耀的光芒</p>
                             <div class="to_more">
                                 <div class="bt2">
-                                    <a target="_blank" href="/index/lists/lists">了解更多</a>
+                                    <a href="/index/lists/lists?nid={$nav[3]['id']}">了解更多</a>
                                 </div>
                             </div>
                             <!--更多选择-->
                             <div class="more-ul">
                                 <p>
-                                    <a target="_blank" href="/dr_series/15_28.html">求婚钻戒</a>
-                                    <a target="_blank" href="dr_phonics"> 结婚对戒</a>
-                                    <a target="_blank" href="/j_series/28_15.html">饰品</a>
+                                    <a target="_blank" href="/index/lists/lists?id=1&kid=8">求婚钻戒</a>
+                                    <a target="_blank" href="/index/lists/lists?id=1&kid=9">结婚对戒</a> <a target="_blank" href="/index/lists/lists?id=2">饰品</a>
+                                </p>
+                            </div>
+                        </div>
+                        <!--tab选项卡下的右边内容  end-->
+                    </li>
+
+                    <li style="display: none;">
+                        <!--tab选项卡下的左边内容-->
+                        <div class="tab_left fl">
+                            <a href="/index/lists/lists?nid={$navs[4]['id']}">
+                                <img width="504" height="314" alt="Just You系列" src="/index/images/fimg1.jpg" />
+                            </a>
+                        </div>
+                        <!--tab选项卡下的左边内容 end-->
+
+                        <!--tab选项卡下的右边内容-->
+                        <div class="tab_right fr">
+                            <h3> Just You系列</h3>
+                            <p> 承诺相伴一生真爱之人,一生一次，一次一生的爱情信物</p>
+                            <p> 7月15日 正午12点浪漫发售</p>
+                            <div class="to_more">
+                                <div class="bt2">
+                                    <a href="/index/lists/lists?nid={$navs[4]['id']}">了解更多</a>
+                                </div>
+                            </div>
+                            <!--更多选择-->
+                            <div class="more-ul">
+                                <p>
+                                    <a target="_blank" href="/index/lists/lists?id=1&kid=8">求婚钻戒</a>
+                                    <a target="_blank" href="/index/lists/lists?id=1&kid=9">结婚对戒</a> <a target="_blank" href="/index/lists/lists?id=2">饰品</a>
                                 </p>
                             </div>
                         </div>
@@ -527,9 +517,9 @@
                         {foreach $goods as $value}
                         <li>
                             <div class="by_top">
-                                <a target="_blank" href="/index/index/detail?kid=8&gid={$value['gid']}" rel="nofollow"></a>
+                                <a href="/index/index/detail?kid=8&gid={$value['gid']}" rel="nofollow"></a>
                                 <div style="opacity:1" class="bything-one">
-                                    <img width="236px" height="236px" alt="Forever系列 经典款&nbsp;50分&nbsp;{$value['color']}" src="{$value['images']}" />
+                                    <img width="236px" height="236px" alt="{$value['nname']} 经典款&nbsp;50分&nbsp;{$value['color']}" src="{$value['images']}" />
                                 </div>
                                 <!-- <div style="opacity:0" class="bything-two">
                                     <img width="236px" height="236px" src="/index/images/201409011935072849fe802f.jpg" />
@@ -537,7 +527,9 @@
                             </div>
                             <div class="by_center"></div>
                             <div class="by_bottom">
-                                <p><a target="_blank" href="detail.html">Forever系列 {$value['gname']}&nbsp;{$value['weight']}&nbsp;H色</a></p>
+                                <p>
+                                    <a target="_blank" href="detail.html">{$value['nname']} {$value['gname']}&nbsp;{$value['weight']}&nbsp;H色</a>
+                                </p>
                                 <p> <span>￥{$value['price_sale']}</span><i>销量：{$value['sales']}</i></p>
                             </div>
                         </li>

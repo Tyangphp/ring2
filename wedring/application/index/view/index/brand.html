@@ -64,34 +64,30 @@
             <ul class="nav-ul fl">
                 <li><a href="/index/index/index">首页</a> </li>
                 <li><a href="/index/index/brand">品牌文化</a> </li>
-                <!--
-                <li><a href="/pinkdiamond.aspx" target="_blank">高级定制</a>
-                <div class="nav-div">
-                <div class="navdiv-right">
-                <p>
-                <a href="/pinkdiamond.aspx" target="_blank">稀世粉钻系列</a></p>
-                </div>
-                <div class="navdiv-left">
-                <h3>
-                NEW</h3>
-                <img src="images/02wj.jpg" width="138" height="97" />
-                <div class="more_cp">
-                <a href="/pinkdiamond.aspx" target="_blank">> 了解该系列产品</a>
-                </div>
-                </div>
-                </div>
+                <!--<li><a href="/pinkdiamond.aspx" target="_blank">高级定制</a>
+                    <div class="nav-div">
+                    <div class="navdiv-right">
+                    <p>
+                    <a href="/pinkdiamond.aspx" target="_blank">稀世粉钻系列</a></p>
+                    </div>
+                    <div class="navdiv-left">
+                    <h3>
+                    NEW</h3>
+                    <img src="images/02wj.jpg" width="138" height="97" />
+                    <div class="more_cp">
+                    <a href="/pinkdiamond.aspx" target="_blank">> 了解该系列产品</a>
+                    </div>
+                    </div>
+                    </div>
                 </li>-->
                 <li><a style="font-family:arial" href="/index/lists/lists?id=1">Darry Ring 求婚钻戒</a>
                     <div class="nav-div">
                         <div class="navdiv_top">
                             <div class="navdiv-right">
                                 <p> <a href="/index/lists/lists?id=1"> 查看所有款</a></p>
-                                <p> <a href="/index/lists/lists?id=1&nid={$nav[0]['id']}">{$nav[0]['nname']}</a></p>
-                                <p> <a href="/index/lists/lists?id=1&nid={$nav[1]['id']}">{$nav[1]['nname']}</a></p>
-                                <p> <a href="/index/lists/lists?id=1&nid={$nav[2]['id']}">{$nav[2]['nname']}</a></p>
-                                <p> <a href="/index/lists/lists?id=1&nid={$nav[3]['id']}">{$nav[3]['nname']}</a></p>
-                                <p> <a href="/index/lists/lists?id=1&nid={$nav[4]['id']}">{$nav[4]['nname']}</a></p>
-                                <p> <a href="/index/lists/lists?id=1&nid={$nav[5]['id']}">{$nav[5]['nname']}</a></p>
+                                {foreach $navs as $value}
+                                <p> <a href="/index/lists/lists?id=1&nid={$value['id']}">{$value['nname']}</a></p>
+                                {/foreach}
                             </div>
                             <div class="navdiv-left">
                                 <h3> NEW</h3>
@@ -109,20 +105,14 @@
                         <div class="navdiv_top">
                             <div class="navdiv-right">
                                 <p> <a href="/index/lists/lists?id=2">查看所有</a></p>
-                                <p> <a href="/index/lists/lists?id=2?kid={$kind[0]['id']}">{$kind[0]['classname']}</a></p>
-                                <p> <a href="/index/lists/lists?id=2?kid={$kind[1]['id']}">{$kind[1]['classname']}</a></p>
-                                <p> <a href="/index/lists/lists?id=2?kid={$kind[2]['id']}">{$kind[2]['classname']}</a></p>
-                                <p> <a href="/index/lists/lists?id=2?kid={$kind[3]['id']}">{$kind[3]['classname']}</a></p>
-                                <p> <a href="/index/lists/lists?id=2?kid={$kind[4]['id']}">{$kind[4]['classname']}</a></p>
-                                <p> <a href="/index/lists/lists?id=2?kid={$kind[5]['id']}">{$kind[5]['classname']}</a></p>
-                                <p> <a href="/index/lists/lists?id=2?kid={$kind[6]['id']}">{$kind[6]['classname']}</a></p>
+                                {foreach $kind as $value}
+                                <p> <a href="/index/lists/lists?id=2&kid={$value['id']}">{$value['classname']}</a></p>
+                                {/foreach}
                             </div>
                             <div class="navdiv-right special_right noborder">
-                                <p> <a href="/index/lists/lists?id=1&nid={$nav[1]['id']}">Forever系列</a></p>
-                                <p> <a href="/index/lists/lists?id=1&nid={$nav[2]['id']}">My Heart系列</a></p>
-                                <p> <a href="/index/lists/lists?id=1&nid={$nav[3]['id']}">Just You系列</a></p>
-                                <p> <a href="/index/lists/lists?id=1&nid={$nav[4]['id']}">True Love系列</a></p>
-                                <p> <a href="/index/lists/lists?id=1&nid={$nav[5]['id']}">I Swear系列</a></p>
+                                {foreach $nav as $value}
+                                <p> <a href="/index/lists/lists?id=2&nid={$value['id']}">{$value['nname']}</a></p>
+                                {/foreach}
                                 <div class="more_cp">
                                     <a href="/index/lists/lists">&gt; 查看所有款</a>
                                 </div>

@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2017-05-11 09:42:46
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-23 16:54:18
+ * @Last Modified time: 2017-07-24 15:07:58
  */
 namespace app\index\controller;
 use extend\open_example_php\open51094_class;
@@ -44,6 +44,7 @@ class Index extends Controller
             $goods = $this->index->selectGoods();
 
             //获取系列信息
+            $navs = $this->index->selectNavs();
             $nav = $this->index->selectNav();
 
              //获取种类信息
@@ -52,6 +53,7 @@ class Index extends Controller
             // //分配变量
             $this->assign('username',$username);
             $this->assign('goods',$goods);
+            $this->assign('navs',$navs);
             $this->assign('nav',$nav);
             $this->assign('kind',$kind);
             // $this->assign('news',$news);
@@ -64,6 +66,7 @@ class Index extends Controller
             $goods = $this->index->selectGoods();
 
             //获取系列信息
+            $navs = $this->index->selectNavs();
             $nav = $this->index->selectNav();
 
              //获取种类信息
@@ -72,6 +75,7 @@ class Index extends Controller
             //分配变量
             $this->assign('username',$username);
             $this->assign('goods',$goods);
+            $this->assign('navs',$navs);
             $this->assign('nav',$nav);
             $this->assign('kind',$kind);
             // $this->assign('news',$news);
@@ -81,6 +85,7 @@ class Index extends Controller
             $goods = $this->index->selectGoods();
 
             //获取系列信息
+            $navs = $this->index->selectNavs();
             $nav = $this->index->selectNav();
 
              //获取种类信息
@@ -88,6 +93,7 @@ class Index extends Controller
 
             //分配变量
             $this->assign('goods',$goods);
+            $this->assign('navs',$navs);
             $this->assign('nav',$nav);
             $this->assign('kind',$kind);
             // $this->assign('news',$news);
@@ -103,6 +109,7 @@ class Index extends Controller
             $this->assign('username',$username);
         }
         //获取系列信息
+        $navs = $this->index->selectNavs();
         $nav = $this->index->selectNav();
 
          //获取种类信息
@@ -111,10 +118,11 @@ class Index extends Controller
         $gid = $_GET['gid'];
         // 获取goods信息
         $goods = $this->index->seeGoods($gid)[0];
-        dump($goods);
+        // dump($goods);
 
         //分配变量
         $this->assign('goods',$goods);
+        $this->assign('navs',$navs);
         $this->assign('nav',$nav);
         $this->assign('kind',$kind);
         // $this->assign('class_goods',$class_goods);
@@ -137,24 +145,4 @@ class Index extends Controller
     {
         return $this->fetch();
     }
-    //contact
-    // public function contact()
-    // {
-    //     //获取Session值
-    //     $username = session('username');
-
-    //     //分配变量
-    //     $this->assign('username',$username);
-    //     return $this->fetch();
-    // }
-
-    // public function message()
-    // {
-    //     //获取Session值
-    //     $username = session('username');
-
-    //     //分配变量
-    //     $this->assign('username',$username);
-    //     return $this->fetch();
-    // }
 }
