@@ -27,50 +27,42 @@
 <div class="margin" id="page_style">
    <div class="personal_info">
    <div class="add_style clearfix border_style">
-   <form id="user_info" action="json/test_user.json" method="post">
+   <form id="user_info" action="/admin/admin/edtminfo" method="post">
     <div class="clearfix">   
         <div class="form-group clearfix col-xs-3">
         <label class="col-xs-3 label_name" for="form-field-1">用户名：</label>
-         <div class="col-xs-9 line_height1"><input type="text" name="username" data-name="用户名" id="username" value="admin123" class="col-xs-7 text_info" disabled="disabled"></div>         
+         <div class="col-xs-9 line_height1"><input type="text" name="username" data-name="用户名" id="username" value="{$mname['username']}" class="col-xs-7 text_info" disabled="disabled"></div>         
           </div>
               <div class="form-group clearfix col-xs-3">
-        <label class="col-xs-3 label_name" for="form-field-1">真实姓名：</label>
-         <div class="col-xs-9 line_height1"><input type="text" name="surname" data-name="真实姓名" id="surname" value="张小泉" class="col-xs-7 text_info" disabled="disabled"></div>         
+        <label class="col-xs-3 label_name" for="form-field-1">密码：</label>
+         <div class="col-xs-9 line_height1"><input type="text" name="surname" data-name="真实姓名" id="surname" value="{$mname['password']}" class="col-xs-7 text_info" disabled="disabled"></div>         
           </div>
-          <div class="form-group clearfix col-xs-3"><label class="col-xs-3 label_name" for="form-field-1">性别： </label>
-          <div class="col-xs-9 line_height1">
-          <span class="sex">男</span>
-            <div class="add_sex">
-            <label><input name="form-field-radio" type="radio" id="" class="ace" value="保密" checked="checked"><span class="lbl">保密</span></label>&nbsp;&nbsp;
-            <label><input name="form-field-radio" type="radio" id="" class="ace" value="男"><span class="lbl">男</span></label>&nbsp;&nbsp;
-            <label><input name="form-field-radio" type="radio" id="" class="ace" value="女"><span class="lbl">女</span></label>
-            </div>
-           </div>
-          </div>
-          <div class="form-group clearfix col-xs-3"><label class="col-xs-3 label_name" for="form-field-1">年龄： </label>
-          <div class="col-xs-9 line_height1"><input type="text" name="age" data-name="年龄" id="age" value="24" class="col-xs-7 text_info" disabled="disabled"></div>
-          </div>
+         
+          
           <div class="form-group clearfix col-xs-3"><label class="col-xs-3 label_name" for="form-field-1">移动电话： </label>
-          <div class="col-xs-9 line_height1"><input type="text" name="phone" data-name="移动电话" id="phone" value="13567878908" class="col-xs-7 text_info" disabled="disabled"></div>
+          <div class="col-xs-9 line_height1"><input type="text" name="phone" data-name="移动电话" id="phone" value="{$mname['tel']}" class="col-xs-7 text_info" disabled="disabled"></div>
           </div>
           <div class="form-group clearfix col-xs-3"><label class="col-xs-3 label_name" for="form-field-1">电子邮箱： </label>
-          <div class="col-xs-9 line_height1"><input type="text" name="mailbox"  data-name="电子邮箱" id="mailbox" value="567890@qq.com" class="col-xs-7 text_info" disabled="disabled"></div>
+          <div class="col-xs-9 line_height1"><input type="text" name="mailbox"  data-name="电子邮箱" id="mailbox" value="{$mname['email']}" class="col-xs-7 text_info" disabled="disabled"></div>
           </div>
-          <div class="form-group clearfix col-xs-3"><label class="col-xs-3 label_name" for="form-field-1">QQ： </label>
-          <div class="col-xs-9 line_height1"><input type="text" name="QQ" id="QQ" data-name="QQ"  value="456789787" class="col-xs-7 text_info" disabled="disabled"> </div>
-          </div>
+          
            <div class="form-group clearfix col-xs-3"><label class="col-xs-3 label_name" for="form-field-1">权限： </label>
-          <div class="col-xs-9 line_height1"> <span>普通管理员</span></div>
+          <div class="col-xs-9 line_height1"> <span>
+          	{if 1 == $mname['lev']}爸爸 {elseif 2 == $mname['lev']}管理员{else}普通员工{/if}
+
+
+
+          </span></div>
           </div>
            <div class="form-group clearfix col-xs-3"><label class="col-xs-3 label_name" for="form-field-1">注册时间： </label>
-          <div class="col-xs-9 line_height1"> <span>2016-7-5</span></div>
+          <div class="col-xs-9 line_height1"> <span>{$mname['create_time']}</span></div>
           </div>
           </div>
         
            <div class="Button_operation clearfix"> 
                 <input type="button" onclick="modify();" class="btn btn-danger operation_btn"  value="修改信息"/>
-                <a href="javascript:ovid()" onclick="change_Password()" class="btn bg-green operation_btn">修改密码</a>	
-                <input type="button" id="save_info" class="btn bg-deep-blue operation_btn save"  value="保存修改"/>			     
+                
+                <input type="submit" id="save_info" class="btn bg-deep-blue operation_btn save"  value="保存修改"/>			     
 			</div>
             </form>
             </div><div id="text_name"></div>

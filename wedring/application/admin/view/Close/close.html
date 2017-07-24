@@ -11,22 +11,36 @@
 
 <body>
 	<div class="div">
-		&nbsp;&nbsp;&nbsp;&nbsp;<b>是&nbsp;否&nbsp;关&nbsp;闭&nbsp;站&nbsp;点&nbsp;？</b><br/><br/><br/>
-		<input type="button" name="xxx" value="老哥们要维护" id="btn1"> <input type="button" value="不了不了" name="x" id="btn2">
+		{if 0 == $istp}
+			<b>是&nbsp;否&nbsp;关&nbsp;闭&nbsp;站&nbsp;点&nbsp;？</b><br/><br/><br/>
+			<input type="button" name="xxx" onclick="shabi()" value="老哥们要维护" id="btn1"> 
+		{else}
+			<b>老&nbsp;哥&nbsp;辛&nbsp;苦&nbsp;了&nbsp;！</b><br/><br/><br/>
+			<input type="button" onclick="shabi2()" value="万事万事" name="x" id="btn2">
+		{/if}
 	</div>
 </body>
 <script language="javascript"> //js脚本标注
-		var pswd;
-		var btn1 = document.getElementById("btn1");
-		var btn2 = document.getElementById("btn2");
-		btn1.addEventListener("click", function() {
-		    pswd=prompt("请输入超级管理员密码"); /*在页面上弹出提示对话框，
-			将用户输入的结果赋给变量name*/
-			alert(pswd)//输出用户输入的信息
-		});
-		btn2.addEventListener("click", function() {
-		    window.history.back(-1); 
-		});
+		var pswd = '';
+		var pswd2 = '';
+			function shabi()
+			{
+			    pswd = prompt("请输入超级管理员密码");
+			   if (pswd) {
+			   		location.href="/admin/close/doclose?pwd="+pswd;
+			   }
+			    
+			}
+
+			function shabi2()
+			{
+			    pswd2 = prompt("请输入超级管理员密码");
+			   if (pswd2) {
+			   		location.href="/admin/close/rev?pwd="+pswd2;
+			   }
+			    
+			}
+		
 	
 </script>
 </html>

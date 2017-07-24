@@ -25,7 +25,7 @@
 <body>
 <div class="margin" id="page_style">
 <div class="operation">
-<span class="submenu"><a href="javascript:void(0)"class="btn button_btn bg-deep-blue" title="添加栏目"  onclick="add_columns()"><i class="fa  fa-edit"></i>&nbsp;添加分类</a></span>
+<span class="submenu"><a href="javascript:void(0)"class="btn button_btn bg-deep-blue" title="添加栏目"  onclick="add_columns()"><i class="fa  fa-edit"></i>&nbsp;添加系列</a></span>
 </div>
 <div class="Columns_list slideBox margin-top" id="Columns_list">
 <div class="hd">
@@ -40,8 +40,8 @@
   <thead>
   
   <tr>
-   <th width="7%">种类id</th>
-   <th width="15%">种类名称</th>
+   <th width="7%">系列id</th>
+   <th width="15%">系列名称</th>
    <th width="45%">购买类型</th>
    <th width="8%">级别</th>
    <th width="8%">状态</th>
@@ -55,20 +55,28 @@
   <div class="dd" id="nestable">
  
     
-        {foreach $kind as $kval}
+        {foreach $series as $sval}
         <ol class="dd-list">
           <li class="dd-item" data-id="4">
            <div class="dd-handle dd-handle_two">
              <table>
                <tbody>
                <tr>
-                <td width="7%">{$kval['id']}</td>
-                <td width="15%">{$kval['classname']} </td>
-                <td width="45%">{$kval['sname']}</td>
+                <td width="7%"> {$sval['id']}</td>
+                <td width="15%">{$sval['nname']} </td>
+                <td width="45%">
+                  {if '1,2' == $sval['sid']}
+                    求婚钻戒/爱的礼物
+                  {elseif 1 ==$sval['sid']}
+                    求婚钻戒
+                  {elseif 2 ==$sval['sid']}
+                    爱的礼物
+                  {/if}
+                </td>
                 <td width="8%">二级</td>
                 <td width="8%">启用</td>
                 <td width="17%">
-                 <a href="javascrpt:void()" id="{$kval['id']}" onclick="fldel(this);" class="btn button_btn btn-danger">删除</a>
+                 <a href="javascrpt:void()" id="{$sval['id']}" onclick="fldel(this);" class="btn button_btn btn-danger">删除</a>
                  
                 </td>
                 </tr>
@@ -78,7 +86,7 @@
              </li>
              
           </ol>
-          {/foreach}
+       {/foreach}
       
       
 </div>  
@@ -109,14 +117,12 @@
   <div class="add_style">
   <br/> <br/> <br/>
   <ul>
-   
-      <li class="clearfix"><label class="label_name col-xs-3">购买类型：&nbsp;&nbsp;</label><div class="Add_content col-xs-9"><input name="teo" type="text" id="one" class="col-xs-6"/></div>  
-      </li>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <li class="clearfix"><label class="label_name col-xs-3">分类一级名称：&nbsp;&nbsp;</label><div class="Add_content col-xs-9"><input name="" type="text" id="one" class="col-xs-6"/></div>  
+    </li>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         注：求婚戒指编号为1，爱的礼物编号为2  <br/>
-      <li class="clearfix"><label class="label_name col-xs-3">分类二级名称：&nbsp;&nbsp;</label><div class="Add_content col-xs-9"><input name="teo" type="text" id="two" class="col-xs-6"/></div>  
-      </li>
-   
+    <li class="clearfix"><label class="label_name col-xs-3">分类二级名称：&nbsp;&nbsp;</label><div class="Add_content col-xs-9"><input name="" type="text" id="two" class="col-xs-6"/></div>  
+    </li>
   </ul>
   <br/>
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
@@ -213,22 +219,23 @@ $("body").niceScroll({
 /*******分类删除********/
 function fldel(obj)
 {
- var kid = $(obj).attr('id');
+ var nid = $(obj).attr('id');
+
   $.ajax({
             type:'post',
-            url:'/admin/product/delKind',
+            url:'/admin/product/delseries',
             async:true,
             dataType:'json',
-            data:{'kid': kid,},
+            data:{'nid': nid,},
             success: sudel
         });
         function sudel (data)
         {
           if (data == 1) {
-              location.href="/admin/product/s_category";
+              location.href="/admin/product/s_series";
             } else {
-              alert('提交信息有误！');
-              location.href="/admin/product/s_category";
+              alert('提交信息有误');
+              
             }
         }
 }
@@ -239,7 +246,7 @@ function tjfl()
 {
   $.ajax({
             type:'post',
-            url:'/admin/Product/addCategory',
+            url:'/admin/Product/addSeries',
             async:true,
             dataType:'json',
             data:{
@@ -250,11 +257,12 @@ function tjfl()
         });
         function add(data)
         {
+
             if (data == 1) {
-              location.href="/admin/product/s_category";
+              location.href="/admin/product/s_series";
             } else {
               alert('提交信息有误！');
-              location.href="/admin/product/s_category";
+              location.href="/admin/product/s_series";
             }
         }
       
