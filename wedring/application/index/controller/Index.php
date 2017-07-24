@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2017-05-11 09:42:46
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-22 17:36:50
+ * @Last Modified time: 2017-07-23 16:54:18
  */
 namespace app\index\controller;
 use extend\open_example_php\open51094_class;
@@ -100,6 +100,7 @@ class Index extends Controller
         //获取用户名称
         if (!empty(session('username'))) {
             $username = session('username');
+            $this->assign('username',$username);
         }
         //获取系列信息
         $nav = $this->index->selectNav();
@@ -113,7 +114,6 @@ class Index extends Controller
         dump($goods);
 
         //分配变量
-        $this->assign('username',$username);
         $this->assign('goods',$goods);
         $this->assign('nav',$nav);
         $this->assign('kind',$kind);

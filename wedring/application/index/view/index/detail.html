@@ -16,17 +16,17 @@
         var FDiamondPrice = 0 * 0;
         var CurrentMaterialPrice = 0;
 
-        function getProductPrice()
-        {
-            return formatCurrency(CurrentDiamondPrice + FDiamondPrice + CurrentMaterialPrice);
-        }
+        // function getProductPrice()
+        // {
+        //     return formatCurrency(CurrentDiamondPrice + FDiamondPrice + CurrentMaterialPrice);
+        // }
 
-        $(function(){
-            MaterialChoosedEvent = function(m,p){
-                CurrentMaterialPrice = p;
-                $(".byright_top span").text("¥"+getProductPrice());
-            };
-        });
+        // $(function(){
+        //     MaterialChoosedEvent = function(m,p){
+        //         CurrentMaterialPrice = p;
+        //         $(".byright_top span").text("¥"+getProductPrice());
+        //     };
+        // });
 
         function addCart(msg) {
           //alert(msg);
@@ -394,7 +394,7 @@
                         <!--参数-->
                         <div class="pho_cs" id="ctl00_content_zbDiv">
                             <p> <span>尺寸：</span> <i>{$goods['size']}</i> </p>
-                            <p id="ctl00_content_zDiamondDiv"> <span>钻石：</span> <i>主钻45颗</i> <i>0.006克拉/颗</i> </p>
+                            <p id="ctl00_content_zDiamondDiv"> <span>钻石：</span> <i>{$goods['weight']}</i> </p>
                         </div>
                         <!--参数end-->
 
@@ -426,7 +426,7 @@
                             </script>
                             <div id="materialDiv" class="thr_first">
                                 <span>材质：</span>
-                                <i value="5920.00" class="iborder">18K白金</i>
+                                <i value="5920.00" class="iborder">{$goods['quality']}</i>
                             </div>
                             <!--第二行-->
                             <div class="thr_secound">
@@ -1051,7 +1051,7 @@
          <li>
           <div class="read_top">
            <a target="_blank" href="/jewelry/404.html" rel="nofollow"> <img src="/index/images/2015012110590914b2fee4b2.jpg" alt="锁住一生 LOCK套链 0.6分G-I色" /> </a>
-          </div> <p><a target="_blank" href="/jewelry/404.html"> 锁住一生 LOCK套链 0.6分G-I色 </a></p> <p><span>￥5,920</span></p> </li>
+          </div> <p><a target="_blank" href="/jewelry/404.html"> 锁住一生 LOCK套链 0.6分G-I色 </a></p> <p><span>￥{goods['price_sale']}</span></p> </li>
         </ul>
         <ul style="display: none; width: 1650px;" id="u_rx" class="read_ul">
          <li>
