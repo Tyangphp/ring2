@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="/admin/css/shop.css" type="text/css" rel="stylesheet" />
+<link href="/admin/css/Sellerber.css" type="text/css"  rel="stylesheet" />
+<link href="/admin/css/bkg_ui.css" type="text/css"  rel="stylesheet" />
+<link href="/admin/font/css/font-awesome.min.css"  rel="stylesheet" type="text/css" />
+<script src="/admin/js/jquery-1.9.1.min.js" type="text/javascript" ></script>
+<script type="text/javascript" src="/admin/js/jquery.cookie.js"></script>
+<script src="/admin/js/shopFrame.js" type="text/javascript"></script>
+<script src="/admin/js/Sellerber.js" type="text/javascript"></script>
+<script src="/admin/js/layer/layer.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js" type="text/javascript"></script>
+<script src="js/respond.min.js"></script>
+<script src="js/css3-mediaqueries.js"  type="text/javascript"></script>
+  <![endif]-->
+<title>订单详细</title>
+</head>
+
+<body class="">
+
+<div class="logistics_info" id="logistics_info" >
+  <div class="track-rcol">
+			<div class="track-list">
+				<ul>
+					<li class="first">
+						<i class="node-icon"></i>
+						<span class="txt">{$title}</span>
+					</li>
+          {foreach $content as $cval}
+					<li>
+						<i class="node-icon"></i>
+            <span class="time">{$cval['datetime']}</span>
+						<span class="txt">{$cval['remark']}</span>
+					</li>
+					{/foreach}
+				</ul>
+			</div>
+		</div>
+</div>
+</body>
+</html>
+<script>
+/***********图片查看**********/
+function logistics_info(){
+	 layer.open({
+        type: 1,
+        title: '物流信息',
+		maxmin: true, 
+		shadeClose:false, //点击遮罩关闭层
+        area : ['600px' , '400px'],
+        content:$('#logistics_info'),
+	 });
+	}
+/*******滚动条*******/
+$("body").niceScroll({  
+	cursorcolor:"#888888",  
+	cursoropacitymax:1,  
+	touchbehavior:false,  
+	cursorwidth:"5px",  
+	cursorborder:"0",  
+	cursorborderradius:"5px"  
+});
+</script>

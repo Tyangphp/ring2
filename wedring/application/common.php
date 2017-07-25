@@ -83,3 +83,5 @@ function excelExport($fileName = '', $headArr = [], $data = []) {
     $objWriter->save('php://output'); // 文件通过浏览器下载
     exit();
 }
+
+//curl
