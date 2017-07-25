@@ -3,10 +3,11 @@
  * @Author: Marte
  * @Date:   2017-07-11 19:34:39
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-24 19:53:14
+ * @Last Modified time: 2017-07-25 17:24:36
  */
 namespace app\index\controller;
 use app\index\model\Goods;
+use app\index\model\Cart;
 // use app\index\model\User as UserModel;
 
 use think\Controller;
@@ -15,10 +16,12 @@ use think\Db;
 class Lists extends Controller
 {
     protected $list;
+    protected $cart;
     public function _initialize()
     {
         // $this->list = new IndexModel();
         $this->list = new Goods();
+        $this->cart = new Cart();
     }
     public function lists()
     {
@@ -29,7 +32,12 @@ class Lists extends Controller
         //获取用户名称
         if (!empty(session('username'))) {
             $username = session('username');
+            $uid = session('uid');
+
+            //我的购物车中商品数量
+            $counts = $this->cart->countCart($uid);
             $this->assign('username',$username);
+            $this->assign('counts',$counts);
         }
 
         // 获取goods信息
@@ -78,6 +86,8 @@ class Lists extends Controller
             $count = $this->list->statGoods();
         }
 
+
+
         //获取系列信息
         $navs = $this->list->selectNavs();
         $nav = $this->list->selectNav();
@@ -113,6 +123,7 @@ class Lists extends Controller
         //分配变量
         $this->assign('goods',$goods);
         $this->assign('count',$count);
+
         $this->assign('navs',$navs);
         $this->assign('nav',$nav);
 

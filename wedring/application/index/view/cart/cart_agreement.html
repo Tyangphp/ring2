@@ -7,14 +7,6 @@
   <script src="/index/js/shoppcart.js" type="text/javascript"></script>
   <title>购物车 - 真爱协议</title>
 
-<!--/*技术支持，小庄602842076     验证：官网技术支持*/
-/*技术支持，小庄602842076    验证：官网技术支持*/
-/*技术支持，小庄602842076    验证：官网技术支持*/
-/*技术支持，小庄602842076    验证：官网技术支持*/
-/*技术支持，小庄602842076    验证：官网技术支持*/
-/*https://shop116998991.taobao.com/*/
-/*https://shop116998991.taobao.com/*/
-/*https://shop116998991.taobao.com/*/-->
   <form id="aspnetForm" action="/index/cart/cart_order" method="post" name="aspnetForm">
 
    <!--全部背景-->
@@ -24,14 +16,14 @@
      <!--头部-->
      <div class="shop_top">
       <div class="shopt_left fl">
-       <a title="Darry Ring" href="index.html"> <img width="186" height="42" src="/index/images/dr.png" /> </a>
+       <a title="Darry Ring" href="/index/index/index"> <img width="186" height="42" src="/index/images/dr.png" /> </a>
        <span>求婚钻戒领导品牌</span>
       </div>
       <div class="shopt_right fr">
-       <span id="ctl00_ltlUname">你好！KLNgOk</span>
-       <a class="my_dr" href="member_index.html">我的DR</a>
-       <a onClick="javascript:logout()" class="tc_dr" href="#">退出</a>
-       <a class="help_dr" href="help.html">帮助中心</a>
+       <span id="ctl00_ltlUname">你好！{$username}</span>
+       <a class="my_dr" href="/index/member/member_index">我的DR</a>
+       <a onClick="javascript:logout()" class="tc_dr" href="">退出</a>
+       <a class="help_dr" href="/lists/lists/help">帮助中心</a>
       </div>
      </div>
      <!--头部end-->
@@ -53,6 +45,12 @@
             alert("先生身份证不能为空。");
             return false;
         }
+
+        // if ($("#sirCode").val().length < 18 || $("#sirCode").val() > 18) {
+        //   alert("请你填写正确的身份证号码。");
+        //   return false;
+        // };
+
         if (!$("#cbAgree").attr("checked")) {
             alert("必须先接受真爱协议。");
             return false;
@@ -89,11 +87,11 @@
        </div>
        <div class="shopagree_cort-input">
         <label><i>*</i>先生姓名:</label>
-        <input type="text" value="黄金" readonly="readonly" id="sirName" name="sirName" class="it_1" />
+        <input type="text" id="sirName" name="sirName" class="it_1" />
         <label><i>*</i>女士姓名:</label>
         <input type="text" id="ladyName" name="ladyName" class="it_1" />
         <label><i>*</i>先生身份证号:</label>
-        <input type="text" value="320923198801132113" readonly="readonly" id="sirCode" name="sirCode" class="it_2" />
+        <input type="text" id="sirCode" name="sirCode" class="it_2" />
        </div>
        <div class="shopagree_cort-spcenter">
         <p>温馨提示：当您填写此资料,即默认同意本公司相关资料制作的网页放在Darry Ring专属页面。此资料将做合同永久保留。</p>
@@ -136,16 +134,16 @@
      <!--底部end-->
     </div>
     <!--全部背景end-->
-   </div>
-   <script type="text/javascript">
+    </div>
+    <script type="text/javascript">
         function logout() {
             if (window.confirm('确定退出吗？')) {
-                $.get("/nAPI/QuitExit.ashx", function (data) {
-                    window.location.href = "/";
+                $.get("/index/cart/cart", function (data) {
+                    window.location.href = "/index/user/logout";
                 });
             }
         }
-</script>
+    </script>
   </form>
 
  </body>

@@ -3,11 +3,12 @@
  * @Author: Marte
  * @Date:   2017-05-11 09:42:46
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-24 21:23:24
+ * @Last Modified time: 2017-07-25 17:33:52
  */
 namespace app\index\controller;
 use extend\open_example_php\open51094_class;
 use app\index\model\Index as IndexModel;
+use app\index\model\Cart;
 use app\index\model\Goods;
 
 use think\Controller;
@@ -17,10 +18,12 @@ use think\Db;
 class Index extends Controller
 {
     protected $index;
+    protected $cart;
     public function _initialize()
     {
-        $this->index = new IndexModel();
+        // $this->index = new IndexModel();
         $this->index = new Goods();
+        $this->cart = new Cart();
     }
     public function index()
     {
@@ -39,9 +42,20 @@ class Index extends Controller
             session('username',$username);
             session('img',$img);
             session('sex',$sex);
-            session('openId',$openId);
+            session('uid',$openId);
+
+
+            //获取Session值
+            $username = session('username');
+            $uid = session('uid');
+
+            //我的购物车中商品数量
+            $counts = $this->cart->countCart($uid);
+
             // 获取goods信息
             $goods = $this->index->selectGoods();
+            $sid = $goods[0]['sid'];
+            session('sid',$sid);
 
             //获取系列信息
             $navs = $this->index->selectNavs();
@@ -52,6 +66,7 @@ class Index extends Controller
 
             // //分配变量
             $this->assign('username',$username);
+            $this->assign('counts',$counts);
             $this->assign('goods',$goods);
             $this->assign('navs',$navs);
             $this->assign('nav',$nav);
@@ -61,9 +76,15 @@ class Index extends Controller
         } elseif (!empty(session('username'))) {//手机或邮箱登录
             //获取Session值
             $username = session('username');
+            $uid = session('uid');
 
-           // 获取goods信息
+            //我的购物车中商品数量
+            $counts = $this->cart->countCart($uid);
+
+            // 获取goods信息
             $goods = $this->index->selectGoods();
+            $sid = $goods[0]['sid'];
+            session('sid',$sid);
 
             //获取系列信息
             $navs = $this->index->selectNavs();
@@ -74,6 +95,7 @@ class Index extends Controller
 
             //分配变量
             $this->assign('username',$username);
+            $this->assign('counts',$counts);
             $this->assign('goods',$goods);
             $this->assign('navs',$navs);
             $this->assign('nav',$nav);
@@ -83,6 +105,8 @@ class Index extends Controller
         } else {
             // 获取goods信息
             $goods = $this->index->selectGoods();
+            $sid = $goods[0]['sid'];
+            session('sid',$sid);
 
             //获取系列信息
             $navs = $this->index->selectNavs();
@@ -101,15 +125,22 @@ class Index extends Controller
         }
     }
 
+    //商品详情
     public function detail()
     {
         //获取用户名称
         if (!empty(session('username'))) {
             $username = session('username');
+            $uid = session('uid');
+
+            //我的购物车中商品数量
+            $counts = $this->cart->countCart($uid);
             $this->assign('username',$username);
+            $this->assign('counts',$counts);
         }
 
         $gid = $_GET['gid'];
+        session('gid',$gid);
         // 获取goods信息
         $goods = $this->index->seeGoods($gid)[0];
         // dump($goods);
@@ -123,7 +154,12 @@ class Index extends Controller
             $nid = session('nid');
             $goodsnavs = $this->index->kind($gid);
             $goodsnav = $this->index->series($id);
+        } elseif (!empty(session('sid'))) {
+            $id = session('sid');
+            $goodsnavs = $this->index->kind($gid);
+            $goodsnav = $this->index->series($id);
         }
+        // dump($id);
 
         //获取系列信息
         $navs = $this->index->selectNavs();
@@ -145,12 +181,35 @@ class Index extends Controller
         return $this->fetch();
     }
 
+    //加入购物车
+    public function intoCart()
+    {
+        if (empty(session('username'))) {
+            echo 1;
+            return;
+        } else {
+            $username = session('username');
+            $gid = session('gid');
+            $uid = session('uid');
+            //数据存入数据库
+            $data = ['uid'=>$uid,'gid'=>$gid];
+            $this->cart->insertCart($data);
+            echo 2;
+            return;
+        }
+    }
+
     public function brand()
     {
         //获取用户名称
         if (!empty(session('username'))) {
             $username = session('username');
+            $uid = session('uid');
+
+            //我的购物车中商品数量
+            $counts = $this->cart->countCart($uid);
             $this->assign('username',$username);
+            $this->assign('counts',$counts);
         }
         //获取系列信息
         $navs = $this->index->selectNavs();
@@ -176,11 +235,31 @@ class Index extends Controller
 
     public function question()
     {
+        //获取用户名称
+        if (!empty(session('username'))) {
+            $username = session('username');
+            $uid = session('uid');
+
+            //我的购物车中商品数量
+            $counts = $this->cart->countCart($uid);
+            $this->assign('username',$username);
+            $this->assign('counts',$counts);
+        }
         return $this->fetch();
     }
 
     public function active()
     {
+        //获取用户名称
+        if (!empty(session('username'))) {
+            $username = session('username');
+            $uid = session('uid');
+
+            //我的购物车中商品数量
+            $counts = $this->cart->countCart($uid);
+            $this->assign('username',$username);
+            $this->assign('counts',$counts);
+        }
         return $this->fetch();
     }
 }

@@ -17,39 +17,54 @@
   <form id="form1" action="active.html" method="post" name="form1">
 
    <!--头部-->
-   <div class="cmain">
-    <div class="headtop">
-     <!--头部左边-->
-     <div class="top-left fl">
-      <a title="Darry Ring" href="index.html"> <img width="187" height="42" alt="Darry Ring官网" src="/index/images/logo.png" /> </a>
-      <span style="font-weight: normal;">求婚钻戒领导品牌</span>
-     </div>
-     <!--头部左边end-->
-     <!--头部右边-->
-     <div class="top-right fr">
-      <!--登录注册-->
-      <ul class="tright-ul fl">
-       <div id="ucheader1_pllogin2">
-        <li><a><span id="ucheader1_lit">KLNgOk</span></a></li>
-        <li> <a href="javascript:logout()" rel="nofollow">退出</a><em>|</em> </li>
-        <li><a target="black" rel="nofollow" href="member_index.html">我的DR</a><em>|</em></li>
-        <li class="headed"><em class="icon shooping"></em><a target="black" rel="nofollow" href="cart.html">购物车</a><i>(0)</i></li>
-       </div>
-      </ul>
-      <!--语言选择-->
-      <ul class="langruge-ul fr">
-       <li><a target="_blank" href="index.html/en">English</a></li>
-      </ul>
-      <!--搜索框-->
-      <div style="display:none;" class="search">
-       <input type="text" placeholder="求婚钻戒" class="txt1" />
-       <div onClick="showSearch()" class="icon toser">
-       </div>
-      </div>
-     </div>
-     <!--头部右边end-->
+    <div class="cmain">
+        <div class="headtop">
+            <!--头部左边-->
+            <div class="top-left fl">
+                <a title="Darry Ring" href="/index/index/index"> <img width="187" height="42" alt="Darry Ring官网" src="/index/images/logo.png" /> </a>
+                <span style="font-weight: normal;">求婚钻戒领导品牌</span>
+            </div>
+            <!--头部左边end-->
+            <!--头部右边-->
+            <div class="top-right fr">
+                <!--登录注册-->
+                <ul class="tright-ul fl">
+                {if empty($username)}
+                    <div id="ucheader1_pllogin1">
+                        <li><a rel="nofollow" href="/index/user/login">登录</a><em>|</em></li>
+                        <li><a rel="nofollow" href="/index/user/reg">注册</a></li>
+                        <li class="headed"><em class="icon shooping"></em><a rel="nofollow" onClick="javascript:login()" href="">购物车</a><i>(0)</i></li>
+                    </div>
+                    <script type="text/javascript">
+                        function login() {
+                            if (window.confirm('请先登录')) {
+                                $.get("/index/cart/cart", function (data) {
+                                    window.location.href = "/index/user/login";
+                                });
+                            }
+                        }
+                    </script>
+                {else}
+                    <div id="ucheader1_pllogin1">
+                        <li><a rel="nofollow" href="/index/member/member_index">欢迎：{$username}</a><em>|</em></li>
+                        <li><a rel="nofollow" href="/index/user/logout">退出登录</a></li>
+                        <li class="headed"><em class="icon shooping"></em><a rel="nofollow" href="/index/cart/cart">购物车</a><i>({$counts})</i></li>
+                    </div>
+                {/if}
+                </ul>
+                <!--语言选择-->
+                <ul class="langruge-ul fr">
+                    <li><a target="_blank" href="/index/index/index/en">English</a></li>
+                </ul>
+                <!--搜索框-->
+                <div style="display:none;" class="search">
+                    <input type="text" placeholder="求婚钻戒" class="txt1" />
+                    <div onClick="showSearch()" class="icon toser"></div>
+                </div>
+            </div>
+            <!--头部右边end-->
+        </div>
     </div>
-   </div>
    <!--头部end-->
    <!--导航-->
    <div class="nav">

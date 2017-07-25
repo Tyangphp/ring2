@@ -28,14 +28,14 @@
      <!--头部-->
      <div class="shop_top">
       <div class="shopt_left fl">
-       <a title="Darry Ring" href="index.html"> <img width="186" height="42" src="/index/images/dr.png" /> </a>
+       <a title="Darry Ring" href="/index/index/index"> <img width="186" height="42" src="/index/images/dr.png" /> </a>
        <span>求婚钻戒领导品牌</span>
       </div>
       <div class="shopt_right fr">
-       <span id="ctl00_ltlUname">你好！KLNgOk</span>
-       <a class="my_dr" href="member_index.html">我的DR</a>
-       <a onClick="javascript:logout()" class="tc_dr" href="#">退出</a>
-       <a class="help_dr" href="help.html">帮助中心</a>
+       <span id="ctl00_ltlUname">你好！{$username}</span>
+       <a class="my_dr" href="/index/member/member_index">我的DR</a>
+       <a onClick="javascript:logout()" class="tc_dr" href="">退出</a>
+       <a class="help_dr" href="/lists/lists/help">帮助中心</a>
       </div>
      </div>
      <!--头部end-->
@@ -269,14 +269,53 @@
           <label><i>*</i>收 货 人：</label>
           <input type="text" class="true_name" placeholder="请准确填写真实姓名" id="addressName" />
          </div>
-         <div class="shop_adress-Toadd">
+        <div class="shop_adress-Toadd">
           <label><i>*</i>所在地区：</label>
-          <select id="province"> <option value="-1">请选择省份</option> <option value="340000">安徽省</option><option value="110000">北京市</option><option value="350000">福建省</option><option value="620000">甘肃省</option><option value="440000">广东省</option><option value="450000">广西壮族自治区</option><option value="520000">贵州省</option><option value="460000">海南省</option><option value="130000">河北省</option><option value="410000">河南省</option><option value="230000">黑龙江省</option><option value="420000">湖北省</option><option value="430000">湖南省</option><option value="220000">吉林省</option><option value="320000">江苏省</option><option value="360000">江西省</option><option value="210000">辽宁省</option><option value="150000">内蒙古自治区</option><option value="640000">宁夏回族自治区</option><option value="630000">青海省</option><option value="370000">山东省</option><option value="140000">山西省</option><option value="610000">陕西省</option><option value="310000">上海市</option><option value="510000">四川省</option><option value="120000">天津市</option><option value="540000">西藏自治区</option><option value="650000">新疆维吾尔自治区</option><option value="530000">云南省</option><option value="330000">浙江省</option><option value="500000">重庆市</option></select>
+          <select id="province">
+            <option value="-1">请选择省份</option>
+            <option value="340000">安徽省</option>
+            <option value="110000">北京市</option>
+            <option value="350000">福建省</option>
+            <option value="620000">甘肃省</option>
+            <option value="440000">广东省</option>
+            <option value="450000">广西壮族自治区</option>
+            <option value="520000">贵州省</option>
+            <option value="460000">海南省</option>
+            <option value="130000">河北省</option>
+            <option value="410000">河南省</option>
+            <option value="230000">黑龙江省</option>
+            <option value="420000">湖北省</option>
+            <option value="430000">湖南省</option>
+            <option value="220000">吉林省</option>
+            <option value="320000">江苏省</option>
+            <option value="360000">江西省</option>
+            <option value="210000">辽宁省</option>
+            <option value="150000">内蒙古自治区</option>
+            <option value="640000">宁夏回族自治区</option>
+            <option value="630000">青海省</option>
+            <option value="370000">山东省</option>
+            <option value="140000">山西省</option>
+            <option value="610000">陕西省</option>
+            <option value="310000">上海市</option>
+            <option value="510000">四川省</option>
+            <option value="120000">天津市</option>
+            <option value="540000">西藏自治区</option>
+            <option value="650000">新疆维吾尔自治区</option>
+            <option value="530000">云南省</option>
+            <option value="330000">浙江省</option>
+            <option value="500000">重庆市</option>
+          </select>
           <span>市：</span>
-          <select id="city"> <option value="-1">请选择城市</option> </select>
+          <select id="city">
+            <option value="-1">请选择城市</option>
+            <option value="123132">石家庄</option>
+          </select>
           <span>县：</span>
-          <select id="district"> <option value="-1">请选择区县</option> </select>
-         </div>
+          <select id="district">
+            <option value="-1">请选择区县</option>
+            <option value="233233">赵县</option>
+          </select>
+        </div>
          <div class="shop_adress-Toadd">
           <label><i>*</i>详细地址：</label>
           <input type="text" placeholder="请填写详细路名及门牌号" class="adt_1" id="street" />
@@ -319,13 +358,15 @@
             <td class="shop_adress-kz">刻 字</td>
             <td class="shop_adress-pirce">价 格</td>
            </tr>
+           {foreach $goods as $value}
            <tr class="shop_adressqr-sec">
-            <td class="shop_adress-shoop">Forever系列 经典款</td>
-            <td class="shop_adress-cz">18K白金</td>
-            <td class="shop_adress-sc">7</td>
-            <td class="shop_adress-kz">素材火♥</td>
-            <td class="shop_adress-pirce"><span style="font-family:微软雅黑">￥10,800</span></td>
+            <td class="shop_adress-shoop">{$value['gname']}</td>
+            <td class="shop_adress-cz">{$value['quality']}</td>
+            <td class="shop_adress-sc">{$value['size']}</td>
+            <td class="shop_adress-kz">{$value['content']}</td>
+            <td class="shop_adress-pirce"><span style="font-family:微软雅黑">￥{$value['price_sale']}</span></td>
            </tr>
+           {/foreach}
           </tbody>
          </table>
          <!--订单end-->
@@ -335,10 +376,10 @@
            <span>总计</span>
           </div>
           <div class="fr">
-           <i>1</i>
+           <i>{$count}</i>
            <span>件商品</span>
            <span>应付金额：</span>
-           <i style="font-family:微软雅黑" class="fw_bold">￥10,800</i>
+           <i style="font-family:微软雅黑" class="fw_bold">￥{$price}</i>
           </div>
          </div>
          <!--总计-->
@@ -404,12 +445,12 @@
    <script type="text/javascript">
         function logout() {
             if (window.confirm('确定退出吗？')) {
-                $.get("/nAPI/QuitExit.ashx", function (data) {
-                    window.location.href = "/";
+                $.get("/index/cart/cart", function (data) {
+                    window.location.href = "/index/user/logout";
                 });
             }
         }
-</script>
+    </script>
   </form>
 
  </body>

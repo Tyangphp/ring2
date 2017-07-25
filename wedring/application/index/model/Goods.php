@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2017-07-21 15:50:12
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-24 20:07:36
+ * @Last Modified time: 2017-07-25 10:13:42
  */
 namespace app\index\model;
 use think\Model;
@@ -22,7 +22,13 @@ class Goods extends Model
     public function kind($gid)
     {
         $data = Db::name('goods')->alias('g')->where('gid',$gid)->join('goods_kind k','k.id=g.kid')->select();
-        // $data = Db::name('goods_series')->where('gid',$gid)->field('kid')->select();
+        return $data;
+    }
+
+    // 查询数据库商品系列表商品系列
+    public function nav($gid)
+    {
+        $data = Db::name('goods')->alias('g')->where('gid',$gid)->join('goods_nav n','n.id=g.nid')->select();
         return $data;
     }
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>求婚钻戒>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

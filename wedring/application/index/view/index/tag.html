@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" class="hb-loaded">
     <head id="Head1"><title>标签</title><meta content="戴瑞戒指一般价格" name="Keywords"><meta content="Darry Ring官网有戴瑞戒指价格的具体资讯！" name="Description">
    <meta charset="utf-8"/>
-  
+
 <!--/*技术支持，小庄602842076     验证：官网技术支持*/
 /*技术支持，小庄602842076    验证：官网技术支持*/
 /*技术支持，小庄602842076    验证：官网技术支持*/
@@ -19,41 +19,52 @@
 
 <!--头部-->
 <div class="cmain">
-    <div class="headtop">
-        <!--头部左边-->
-        <div class="top-left fl">
-            <a title="Darry Ring" href="index.html">
-                <img width="187" height="42" alt="Darry Ring官网" src="images/logo.png">
-            </a><span style="font-weight: normal;">求婚钻戒领导品牌</span>
-        </div>
-        <!--头部左边end-->
-        <!--头部右边-->
-        <div class="top-right fr">
-            <!--登录注册-->
-            <ul class="tright-ul fl">
-              
-                <div id="ucheader1_pllogin2">
-	
-                <li><a><span id="ucheader1_lit">KLNgOk</span></a></li>
-               <li> <a href="javascript:logout()" rel="nofollow">退出</a><em>|</em> </li>
-                <li><a target="black" rel="nofollow" href="member_index.html">我的DR</a><em>|</em></li>
-                <li class="headed"><em class="icon shooping"></em><a target="black" rel="nofollow" href="cart.html">购物车</a><i>(0)</i></li>
-                
-</div>
-            </ul>
-            <!--语言选择-->
-            <ul class="langruge-ul fr">
-                <li><a target="_blank" href="index.html/en">English</a></li>
-            </ul>
-            <!--搜索框-->
-            <div style="display:none;" class="search">
-                <input type="text" placeholder="求婚钻戒" class="txt1">
-                <div onClick="showSearch()" class="icon toser">
+        <div class="headtop">
+            <!--头部左边-->
+            <div class="top-left fl">
+                <a title="Darry Ring" href="/index/index/index"> <img width="187" height="42" alt="Darry Ring官网" src="/index/images/logo.png" /> </a>
+                <span style="font-weight: normal;">求婚钻戒领导品牌</span>
+            </div>
+            <!--头部左边end-->
+            <!--头部右边-->
+            <div class="top-right fr">
+                <!--登录注册-->
+                <ul class="tright-ul fl">
+                {if empty($username)}
+                    <div id="ucheader1_pllogin1">
+                        <li><a rel="nofollow" href="/index/user/login">登录</a><em>|</em></li>
+                        <li><a rel="nofollow" href="/index/user/reg">注册</a></li>
+                        <li class="headed"><em class="icon shooping"></em><a rel="nofollow" onClick="javascript:login()" href="">购物车</a><i>(0)</i></li>
+                    </div>
+                    <script type="text/javascript">
+                        function login() {
+                            if (window.confirm('请先登录')) {
+                                $.get("/index/cart/cart", function (data) {
+                                    window.location.href = "/index/user/login";
+                                });
+                            }
+                        }
+                    </script>
+                {else}
+                    <div id="ucheader1_pllogin1">
+                        <li><a rel="nofollow" href="/index/member/member_index">欢迎：{$username}</a><em>|</em></li>
+                        <li><a rel="nofollow" href="/index/user/logout">退出登录</a></li>
+                        <li class="headed"><em class="icon shooping"></em><a rel="nofollow" href="/index/cart/cart">购物车</a><i>({$count})</i></li>
+                    </div>
+                {/if}
+                </ul>
+                <!--语言选择-->
+                <ul class="langruge-ul fr">
+                    <li><a target="_blank" href="/index/index/index/en">English</a></li>
+                </ul>
+                <!--搜索框-->
+                <div style="display:none;" class="search">
+                    <input type="text" placeholder="求婚钻戒" class="txt1" />
+                    <div onClick="showSearch()" class="icon toser"></div>
                 </div>
             </div>
+            <!--头部右边end-->
         </div>
-        <!--头部右边end-->
-    </div>
 </div>
 <!--头部end-->
 <!--导航-->
@@ -63,7 +74,7 @@
         <ul class="nav-ul fl">
             <li><a href="index.html">首页</a> </li>
             <li><a href="brand.html">品牌文化</a>
-               
+
             </li>
             <!--
             <li><a href="/pinkdiamond.aspx" target="_blank">高级定制</a>
@@ -99,7 +110,7 @@
                             <a href="/dr_series/15_28.html">I Swear系列</a></p>
                         <p>
                             <a href="/dr_series/13_24.html">Just you系列</a></p>
-                         
+
                     </div>
                     <div class="navdiv-left">
                         <h3>
@@ -114,7 +125,7 @@
                       <div class="navdiv_bottom"></div>
                 </div>
             </li>
-          
+
             <li><a style="font-family:arial" href="lists.html">Darry Ring 爱的礼物</a>
                 <div class="nav-div">
                  <div class="navdiv_top">
@@ -133,7 +144,7 @@
                             <a href="/jewelry_8">手链</a></p>
                         <p>
                             <a href="/jewelry_6">耳钉/耳环</a></p>
-                       
+
                     </div>
                     <div class="navdiv-right special_right noborder">
                         <p>
@@ -144,7 +155,7 @@
                             <a href="/j_series/24_13.html">Just You系列</a></p>
                         <p>
                             <a href="/j_series/30_16.html">True Love系列</a></p>
-                        
+
                         <p>
                             <a href="/j_series/28_15.html">I Swear系列</a></p>
                         <div class="more_cp">
@@ -198,7 +209,7 @@
     }
 </script>
 
-      
+
 
     <!--中间-->
 <div class="cort">
@@ -206,16 +217,16 @@
 	<!--资讯新闻的列表页-->
 	<div class="cmain newindex">
     	<div class="zbk_top spalid">
-           
+
 <table align="center" width="980" cellspacing="0" cellpadding="0" border="0" height="40" class="auto">
     <tbody><tr>
         <td align="left" style="color: #666666; font-size:13px;" class="alink">
-          
+
 
            您当前的位置：<a href="../">Darry Ring</a>&nbsp;>&nbsp;<a href="/news/index.aspx">资讯中心</a>&nbsp;>&nbsp;<span style="color: #666666;">戴瑞戒指一般价格 戴瑞戒指价格表 戴瑞戒指价格是多少</span>
         </td>
         <td align="right" style=" padding-top:2px;">
-            
+
         </td>
         <td align="right" width="60"></td>
     </tr>
@@ -229,40 +240,40 @@
                 <div class="newslist_first">
                 	<h4>最新热点</h4>
                     <ul class="newslist_first-ul">
-                    
+
                         <li>
                              <a href="/ProposeDetail.aspx?id=37" target="_blank">
                             <img width="190" height="140" alt="Darry Ring求婚钻戒 见证唯一真爱" src="images/201504221050541f11bc8e64.jpg">
-                        	</a>                            
+                        	</a>
                             <p>
                             <a href="/ProposeDetail.aspx?id=37"> Darry Ring求婚钻戒 见证唯一真爱</a></p>
                         </li>
-                        
+
                         <li>
                              <a href="/ProposeDetail.aspx?id=86" target="_blank">
                             <img width="190" height="140" alt="史上最浪漫的求婚" src="images/20150422114249c8b953947f.jpg">
-                        	</a>                            
+                        	</a>
                             <p>
                             <a href="/ProposeDetail.aspx?id=86"> 史上最浪漫的求婚</a></p>
                         </li>
-                        
+
                         <li>
                              <a href="/ProposeDetail.aspx?id=65" target="_blank">
                             <img width="190" height="140" alt="Darry Ring求婚钻戒定制流程" src="images/20150422115158705aee2cbe.jpg">
-                        	</a>                            
+                        	</a>
                             <p>
                             <a href="/ProposeDetail.aspx?id=65"> Darry Ring求婚钻戒定制流程</a></p>
                         </li>
-                        
+
                     </ul>
                 </div>
                 <!--列表第一块end-->
                 <!--列表第二块-->
                 <div class="newslist_sec">
                 	<h4>戴瑞戒指一般价格 戴瑞戒指价格表 戴瑞戒指价格是多少</h4>
-                    
+
                     <div class="newslist_sec-border">
-                    
+
 	                <div class="newslist_sec-border-cort">
                         	<a class="sec-border-cort-img fl" target="_blank" href="/news/4830.html">
                         		<img width="136" height="100" src="images/201507071827441eab53dc33.jpg" alt="戴瑞无限爱意钻戒价格">
@@ -274,17 +285,17 @@
                                     <span>发布时间: 2015/7/7 18:33:44</span>
                                 </div>
                                 <p>
-                                  
+
 	戴瑞无限爱意具备了所有女性喜爱的钻戒特征，浪漫、璀璨、闪耀，每一枚戴瑞无限爱意钻戒，都是男生献给女生，最真挚动人的告白，象征着一生唯一的真爱之情...
                                 </p>
                             	<div class="sec-border-cort-tb">
                                 	<i class="cort-tb-news"></i>
                                     <em>标签:</em>
-                                      <a href="/tag_203">戴瑞戒指价格</a>                                  
+                                      <a href="/tag_203">戴瑞戒指价格</a>
                                 </div>
                             </div>
                         </div>
-                        
+
 	                <div class="newslist_sec-border-cort">
                         	<a class="sec-border-cort-img fl" target="_blank" href="/news/4829.html">
                         		<img width="136" height="100" src="images/20150707180015f927e652ee.jpg" alt="戴瑞相守一生戒指价格">
@@ -296,17 +307,17 @@
                                     <span>发布时间: 2015/7/7 18:05:19</span>
                                 </div>
                                 <p>
-                                  
+
 	戴瑞(Darry Ring)从上世纪90年代开始，就在香港开始裸钻的高级定制。每一款戴瑞戒指的设计理念不同，但戒指背后代表的，都是男生对女生一生唯一真爱的承诺...
                                 </p>
                             	<div class="sec-border-cort-tb">
                                 	<i class="cort-tb-news"></i>
                                     <em>标签:</em>
-                                      <a href="/tag_203">戴瑞戒指价格</a>                                  
+                                      <a href="/tag_203">戴瑞戒指价格</a>
                                 </div>
                             </div>
                         </div>
-                        
+
 	                <div class="newslist_sec-border-cort">
                         	<a class="sec-border-cort-img fl" target="_blank" href="/news/4821.html">
                         		<img width="136" height="100" src="images/2015070716091640cbbfb67e.jpg" alt="戴瑞在香港买是不是比官网便宜">
@@ -318,17 +329,17 @@
                                     <span>发布时间: 2015/7/7 16:14:48</span>
                                 </div>
                                 <p>
-                                  
+
 	许多人喜欢到香港买珠宝首饰，因为港币和人民币汇率的差价，香港的税率，香港珠宝首饰的价格要比大陆便宜一些。戴瑞珠宝作为香港戴瑞珠宝集团，旗下的求婚...
                                 </p>
                             	<div class="sec-border-cort-tb">
                                 	<i class="cort-tb-news"></i>
                                     <em>标签:</em>
-                                      <a href="/tag_414" target="_blank">香港戴瑞</a>&nbsp;&nbsp;<a href="/tag_203" target="_blank">戴瑞戒指价格</a>&nbsp;&nbsp;<a href="/tag_1006" target="_blank">戴瑞香港买便宜吗</a>&nbsp;&nbsp;                                  
+                                      <a href="/tag_414" target="_blank">香港戴瑞</a>&nbsp;&nbsp;<a href="/tag_203" target="_blank">戴瑞戒指价格</a>&nbsp;&nbsp;<a href="/tag_1006" target="_blank">戴瑞香港买便宜吗</a>&nbsp;&nbsp;
                                 </div>
                             </div>
                         </div>
-                        
+
 	                <div class="newslist_sec-border-cort">
                         	<a class="sec-border-cort-img fl" target="_blank" href="/news/4817.html">
                         		<img width="136" height="100" src="images/20150707144116ede2ed910a.jpg" alt="戴瑞实体店和淘宝的价格比较">
@@ -340,17 +351,17 @@
                                     <span>发布时间: 2015/7/7 14:46:16</span>
                                 </div>
                                 <p>
-                                  
+
 	戴瑞钻戒有两种购买渠道，一种是通过实体店购买，一种是通过网上购买，经常网购的人会知道，网上购买的东西会比实体店的价格优惠，所以想要买Darry Ring钻...
                                 </p>
                             	<div class="sec-border-cort-tb">
                                 	<i class="cort-tb-news"></i>
                                     <em>标签:</em>
-                                      <a href="/tag_203">戴瑞戒指价格</a>                                  
+                                      <a href="/tag_203">戴瑞戒指价格</a>
                                 </div>
                             </div>
                         </div>
-                        
+
 	                <div class="newslist_sec-border-cort">
                         	<a class="sec-border-cort-img fl" target="_blank" href="/news/4316.html">
                         		<img width="136" height="100" src="images/20150707184853bf1307dd75.jpg" alt="戴瑞戒指价格知多少 价值连城的一生承诺">
@@ -362,17 +373,17 @@
                                     <span>发布时间: 2015/7/7 18:48:53</span>
                                 </div>
                                 <p>
-                                  
+
 	香港戴瑞珠宝被誉为最浪漫珠宝品牌。然而，戴瑞珠宝更为大众所知晓的名字，其实是其旗下求婚钻戒品牌Darry Ring(DR真爱戒指)。戴瑞戒指价格多少呢?最浪漫...
                                 </p>
                             	<div class="sec-border-cort-tb">
                                 	<i class="cort-tb-news"></i>
                                     <em>标签:</em>
-                                      <a href="/tag_203">戴瑞戒指价格</a>                                  
+                                      <a href="/tag_203">戴瑞戒指价格</a>
                                 </div>
                             </div>
                         </div>
-                        
+
 	                <div class="newslist_sec-border-cort">
                         	<a class="sec-border-cort-img fl" target="_blank" href="/news/2796.html">
                         		<img width="136" height="100" src="images/201412161821271e4468041c.jpg" alt="戴瑞戒指价格">
@@ -384,17 +395,17 @@
                                     <span>发布时间: 2015/5/25 14:19:57</span>
                                 </div>
                                 <p>
-                                  
+
 	戒指随处可见，大大小小的珠宝店铺陈列于喧闹的街边商铺商场。有没有一种戒指足够代表心意，有没有一种戒指足够代表诚意，有!戴瑞戒指!或许有人会好奇，有...
                                 </p>
                             	<div class="sec-border-cort-tb">
                                 	<i class="cort-tb-news"></i>
                                     <em>标签:</em>
-                                      <a href="/tag_415" target="_blank">戴瑞戒指</a>&nbsp;&nbsp;<a href="/tag_203" target="_blank">戴瑞戒指价格</a>&nbsp;&nbsp;                                  
+                                      <a href="/tag_415" target="_blank">戴瑞戒指</a>&nbsp;&nbsp;<a href="/tag_203" target="_blank">戴瑞戒指价格</a>&nbsp;&nbsp;
                                 </div>
                             </div>
                         </div>
-                        
+
 	                <div class="newslist_sec-border-cort">
                         	<a class="sec-border-cort-img fl" target="_blank" href="/news/2707.html">
                         		<img width="136" height="100" src="images/20141202172437db3348c056.jpg" alt="香港戴瑞戒指款式">
@@ -406,17 +417,17 @@
                                     <span>发布时间: 2014/12/2 17:35:00</span>
                                 </div>
                                 <p>
-                                  
+
 	香港戴瑞珠宝成立于上个世纪90年代，香港戴瑞珠宝追求的是一生仅一枚，一生爱一人的真爱文化，香港戴瑞戒指的品质一直在业界有着一定的信誉，极致的工艺，...
                                 </p>
                             	<div class="sec-border-cort-tb">
                                 	<i class="cort-tb-news"></i>
                                     <em>标签:</em>
-                                      <a href="/tag_414" target="_blank">香港戴瑞</a>&nbsp;&nbsp;<a href="/tag_415" target="_blank">戴瑞戒指</a>&nbsp;&nbsp;<a href="/tag_203" target="_blank">戴瑞戒指价格</a>&nbsp;&nbsp;                                  
+                                      <a href="/tag_414" target="_blank">香港戴瑞</a>&nbsp;&nbsp;<a href="/tag_415" target="_blank">戴瑞戒指</a>&nbsp;&nbsp;<a href="/tag_203" target="_blank">戴瑞戒指价格</a>&nbsp;&nbsp;
                                 </div>
                             </div>
                         </div>
-                        
+
 	                <div class="newslist_sec-border-cort">
                         	<a class="sec-border-cort-img fl" target="_blank" href="/news/2705.html">
                         		<img width="136" height="100" src="images/20141202171728236d1a271c.jpg" alt="戴瑞戒指怎么样">
@@ -428,17 +439,17 @@
                                     <span>发布时间: 2014/12/2 17:21:00</span>
                                 </div>
                                 <p>
-                                  
+
 	对于一件商品的判断，每个人都有不同的见解，从不同的角度，不同的方面去判断商品的好与坏，很难得到一个肯定的答案。就拿戴瑞戒指怎么样来说，有人会说好...
                                 </p>
                             	<div class="sec-border-cort-tb">
                                 	<i class="cort-tb-news"></i>
                                     <em>标签:</em>
-                                      <a href="/tag_415" target="_blank">戴瑞戒指</a>&nbsp;&nbsp;<a href="/tag_414" target="_blank">香港戴瑞</a>&nbsp;&nbsp;<a href="/tag_203" target="_blank">戴瑞戒指价格</a>&nbsp;&nbsp;                                  
+                                      <a href="/tag_415" target="_blank">戴瑞戒指</a>&nbsp;&nbsp;<a href="/tag_414" target="_blank">香港戴瑞</a>&nbsp;&nbsp;<a href="/tag_203" target="_blank">戴瑞戒指价格</a>&nbsp;&nbsp;
                                 </div>
                             </div>
                         </div>
-                        
+
 	                <div class="newslist_sec-border-cort">
                         	<a class="sec-border-cort-img fl" target="_blank" href="/news/2621.html">
                         		<img width="136" height="100" src="images/201411201721019341ac25d6.jpg" alt="DR戒指贵吗">
@@ -450,17 +461,17 @@
                                     <span>发布时间: 2014/11/20 17:23:00</span>
                                 </div>
                                 <p>
-                                  
+
 	DR戒指贵吗?有些东西贵的是牌子，有些东西贵的是价钱，但有些东西贵的却是它的意义。DR是Darry Ring的简称，DR珠宝品牌理念是向更多的人传播真爱文化，让...
                                 </p>
                             	<div class="sec-border-cort-tb">
                                 	<i class="cort-tb-news"></i>
                                     <em>标签:</em>
-                                      <a href="/tag_395" target="_blank">DR戒指</a>&nbsp;&nbsp;<a href="/tag_410" target="_blank">DR戒指价格</a>&nbsp;&nbsp;<a href="/tag_203" target="_blank">戴瑞戒指价格</a>&nbsp;&nbsp;                                  
+                                      <a href="/tag_395" target="_blank">DR戒指</a>&nbsp;&nbsp;<a href="/tag_410" target="_blank">DR戒指价格</a>&nbsp;&nbsp;<a href="/tag_203" target="_blank">戴瑞戒指价格</a>&nbsp;&nbsp;
                                 </div>
                             </div>
                         </div>
-                        
+
 	                <div class="newslist_sec-border-cort">
                         	<a class="sec-border-cort-img fl" target="_blank" href="/news/2607.html">
                         		<img width="136" height="100" src="images/2014111917282523fd66b45e.jpg" alt="DR戒指的图片">
@@ -472,17 +483,17 @@
                                     <span>发布时间: 2014/11/19 18:14:00</span>
                                 </div>
                                 <p>
-                                  
+
 	从DR戒指的图片看DR戒指的款式，带有浪漫色彩的DR戒指是许多女孩们的向往，只因DR戒指“一生唯一真爱”的美丽寓意，将一生交给唯一的他，将一辈...
                                 </p>
                             	<div class="sec-border-cort-tb">
                                 	<i class="cort-tb-news"></i>
                                     <em>标签:</em>
-                                      <a href="/tag_395" target="_blank">DR戒指</a>&nbsp;&nbsp;<a href="/tag_203" target="_blank">戴瑞戒指价格</a>&nbsp;&nbsp;                                  
+                                      <a href="/tag_395" target="_blank">DR戒指</a>&nbsp;&nbsp;<a href="/tag_203" target="_blank">戴瑞戒指价格</a>&nbsp;&nbsp;
                                 </div>
                             </div>
                         </div>
-                        
+
 	                <div class="newslist_sec-border-cort">
                         	<a class="sec-border-cort-img fl" target="_blank" href="/news/2535.html">
                         		<img width="136" height="100" src="images/20141110150509719b7d664c.jpg" alt="DR戒指价格">
@@ -494,20 +505,20 @@
                                     <span>发布时间: 2014/11/10 15:06:00</span>
                                 </div>
                                 <p>
-                                  
-	
+
+
 		DR戒指价格一直是DR族最关心的话题，真爱固然无价，可是受生活所迫，每个人都希望自己用最少的钱买到最好的东西。DR戒指一生只可定制一枚，被这份浪漫...
                                 </p>
                             	<div class="sec-border-cort-tb">
                                 	<i class="cort-tb-news"></i>
                                     <em>标签:</em>
-                                      <a href="/tag_395" target="_blank">DR戒指</a>&nbsp;&nbsp;<a href="/tag_410" target="_blank">DR戒指价格</a>&nbsp;&nbsp;<a href="/tag_203" target="_blank">戴瑞戒指价格</a>&nbsp;&nbsp;                                  
+                                      <a href="/tag_395" target="_blank">DR戒指</a>&nbsp;&nbsp;<a href="/tag_410" target="_blank">DR戒指价格</a>&nbsp;&nbsp;<a href="/tag_203" target="_blank">戴瑞戒指价格</a>&nbsp;&nbsp;
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div style="line-height: 40px; text-align: right;clear:both;margin:20px 0">
-                     
+
 
         <div class="paging_all" id="paging_pagingDiv">
             <div class="paging_all-cort">
@@ -536,17 +547,17 @@
                 </div>
                 <!--列表第二块end-->
                 <!--友情链接-->
-               
+
                 <!--友情链接end-->
             </div>
-            
-            <!--左边end-->	
+
+            <!--左边end-->
             <!--右边-->
             <div class="newindex_all-right fr">
             	<!--广告轮播-->
                 <div class="newindex_all-right-banner">
                 	<ul class="newindex_all-right-first">
-                    	
+
                          <li style="z-index: 4; display: none;"><a href="index.html/xindex/xindex.aspx" rel="nofollow" target="_blank"><img width="240" height="228" alt="小时代3 darry ring钻戒" src="images/201501060941408c8e6fe04b.jpg"></a></li><li style="display: list-item; opacity: 0.233746;"><a href="index.html/zt/qw/qwindex.aspx" rel="nofollow" target="_blank"><img width="240" height="228" alt="DR见证：戚薇&李承铉真爱" src="images/201501060941410721183d16.jpg"></a></li><li style="display: list-item; opacity: 0.766254;"><a href="http://game.darryring.com/" rel="nofollow" target="_blank"><img width="240" height="228" alt="DR好男人测试" src="images/2015010609414149c8e7644b.jpg"></a></li>
                     </ul>
                     <!--页数-->
@@ -562,7 +573,7 @@
                 <div class="newindex_all-right-hot">
                 	<h4>热销款式</h4>
                     <ul class="newindex_all-right-hotks-choose">
-                    	 
+
                                   <li>
                         	<a target="_blank" href="/darry_ring/78.html">
                             	<img width="94" height="94" alt="Forever系列 经典款" src="images/2014090119350717386d7a1e.jpg">
@@ -571,7 +582,7 @@
                             <p><a target="_blank" href="/darry_ring/78.html">Forever系列 经典款 50分 H色</a></p>
                             <p><i>￥25,700</i></p>
                         </li>
-                                
+
                                   <li>
                         	<a target="_blank" href="/darry_ring/137.html">
                             	<img width="94" height="94" alt="Forever系列 经典款" src="images/20140901192917179d1ae386.jpg">
@@ -580,7 +591,7 @@
                             <p><a target="_blank" href="/darry_ring/137.html">Forever系列 经典款 30分 F色</a></p>
                             <p><i>￥10,200</i></p>
                         </li>
-                                
+
                                   <li>
                         	<a target="_blank" href="/darry_ring/92.html">
                             	<img width="94" height="94" alt="Just you系列 经典款" src="images/20140901195507683ad84477.jpg">
@@ -589,7 +600,7 @@
                             <p><a target="_blank" href="/darry_ring/92.html">Just you系列 经典款 15分 I-J色</a></p>
                             <p><i>￥3,689</i></p>
                         </li>
-                                
+
                                   <li>
                         	<a target="_blank" href="/darry_ring/168.html">
                             	<img width="94" height="94" alt="My heart系列 奢华款" src="images/201502031541470f549eecb4.jpg">
@@ -598,7 +609,7 @@
                             <p><a target="_blank" href="/darry_ring/168.html">My heart系列 奢华款 70分 H色</a></p>
                             <p><i>￥38,636</i></p>
                         </li>
-                                
+
                                   <li>
                         	<a target="_blank" href="/darry_ring/387.html">
                             	<img width="94" height="94" alt="True Love系列 典雅" src="images/201412081512070b82d519cb.jpg">
@@ -607,7 +618,7 @@
                             <p><a target="_blank" href="/darry_ring/387.html">True Love系列 典雅 40分 F色</a></p>
                             <p><i>￥19,150</i></p>
                         </li>
-                                
+
                                   <li>
                         	<a target="_blank" href="/darry_ring/87.html">
                             	<img width="94" height="94" alt="Forever系列 经典款" src="images/201409011932585de1c2f2a9.jpg">
@@ -616,7 +627,7 @@
                             <p><a target="_blank" href="/darry_ring/87.html">Forever系列 经典款 40分 D色</a></p>
                             <p><i>￥15,800</i></p>
                         </li>
-                                
+
                     </ul>
                 </div>
                 <!--热销款式end-->
@@ -627,11 +638,11 @@
                         <li id="li_hot2" onClick="changeHot(this.id)">最新发布</li>
                     </ul>
                     <!--文章列表-->
-                    
+
                    <ul id="ul_hot1" class="newindex_all-right-atitle">
                              <li><span class="sred"><i class="atitle-color">1</i></span>&nbsp;<a href="/ProposeDetail.aspx?id=118" target="_blank">凭身份证号购买的戒指 DR...</a></li><li><span class="sred"><i class="atitle-color">2</i></span>&nbsp;<a href="/news/2258.html" target="_blank">Darry Ring殿堂级尊贵黑钻</a></li><li><span class="sred"><i class="atitle-color">3</i></span>&nbsp;<a href="/news/2800.html" target="_blank">darryring什么意思</a></li><li><i>4</i>&nbsp;<a href="/news/2946.html" target="_blank">杜海涛微博晒Darry Ring...</a></li><li><i>5</i>&nbsp;<a href="/ProposeDetail.aspx?id=26" target="_blank">浪漫的求婚方法大全</a></li><li><i>6</i>&nbsp;<a href="/ProposeDetail.aspx?id=174" target="_blank">戒指尺寸对照表 DR戴瑞婚...</a></li><li><i>7</i>&nbsp;<a href="/ProposeDetail.aspx?id=1029" target="_blank">Darry Ring钻戒报价一般...</a></li><li><i>8</i>&nbsp;<a href="/ProposeDetail.aspx?id=260" target="_blank">何晟铭公布真爱戒指Darry...</a></li><li><i>9</i>&nbsp;<a href="/news/3123.html" target="_blank">12克拉钻戒多少钱能买</a></li><li><i>10</i>&nbsp;<a href="/news/3115.html" target="_blank">s925银戒指多少钱</a></li>
                     </ul>
-                    
+
                    <ul style="display:none" id="ul_hot2" class="newindex_all-right-atitle">
                       <li><span class="sred"><i class="atitle-color">1</i></span>&nbsp;<a href="/news/4831.html">戴瑞双十一会便宜吗</a></li><li><span class="sred"><i class="atitle-color">2</i></span>&nbsp;<a href="/news/4830.html">戴瑞无限爱意钻戒价格</a></li><li><span class="sred"><i class="atitle-color">3</i></span>&nbsp;<a href="/news/4829.html">戴瑞相守一生戒指价格</a></li><li><i>4</i>&nbsp;<a href="/news/4828.html">戴瑞香港和大陆价格有没...</a></li><li><i>5</i>&nbsp;<a href="/news/4827.html">小时代4剧情揭秘，杨幂戴...</a></li><li><i>6</i>&nbsp;<a href="/news/4826.html">小时代4陆烧跟林萧求婚，...</a></li><li><i>7</i>&nbsp;<a href="/news/4825.html">最浪漫珠宝店Darry Ring7...</a></li><li><i>8</i>&nbsp;<a href="/news/4824.html">小时代4有哪些看点，林萧...</a></li><li><i>9</i>&nbsp;<a href="/news/4822.html">为什么淘宝旗舰店也能买...</a></li><li><i>10</i>&nbsp;<a href="/news/4823.html">戴瑞项链au750是多钱</a></li>
                     </ul>
@@ -642,7 +653,7 @@
                 <div class="newindex_all-hottittle">
                 	<h4>热门标签</h4>
                     <div class="newindex_all-hotword">
-                       
+
                         <a target="_blank" href="/tag_1009">戴瑞双十一</a><a target="_blank" href="/tag_203">戴瑞戒指价格</a><a target="_blank" href="/tag_1008">戴瑞香港和大陆价格</a><a target="_blank" href="/tag_930">小时代4求婚钻戒</a><a target="_blank" href="/tag_214">darry ring 实体店</a><a target="_blank" href="/tag_1004">darry ring淘宝旗舰店</a><a target="_blank" href="/tag_1007">戴瑞项链</a><a target="_blank" href="/tag_696">18k金项链</a><a target="_blank" href="/tag_1006">戴瑞香港买便宜吗</a><a target="_blank" href="/tag_414">香港戴瑞</a><a target="_blank" href="/tag_392">DR钻戒价格</a><a target="_blank" href="/tag_1005">戴瑞50分钻戒价格</a><a target="_blank" href="/tag_417">戴瑞钻戒</a><a target="_blank" href="/tag_353">戒指价格</a><a target="_blank" href="/tag_223">戴瑞珠宝</a><a target="_blank" href="/tag_996">戴瑞和卡地亚</a><a target="_blank" href="/tag_410">DR戒指价格</a><a target="_blank" href="/tag_175">18K金</a><a target="_blank" href="/tag_488">Darry Ring钻戒</a><a target="_blank" href="/tag_988">七夕节礼物</a><a target="_blank" href="/tag_989">七夕送女朋友什么礼物</a><a target="_blank" href="/tag_995">bloves婚戒</a><a target="_blank" href="/tag_7">钻戒价格</a><a target="_blank" href="/tag_125">七夕情人节</a><a target="_blank" href="/tag_736">七夕情人节祝福语</a><a target="_blank" href="/tag_737">七夕情人节活动</a><a target="_blank" href="/tag_931">小时代4求婚戒指</a><a target="_blank" href="/tag_987">七夕节怎么过</a><a target="_blank" href="/tag_983">七夕节日期</a><a target="_blank" href="/tag_984">七夕节表白</a><a target="_blank" href="/tag_982">七夕节习俗</a><a target="_blank" href="/tag_976">DR宁波实体店</a><a target="_blank" href="/tag_971">DR深圳实体店</a><a target="_blank" href="/tag_972">DR重庆实体店</a><a target="_blank" href="/tag_963">DR南京实体店</a><a target="_blank" href="/tag_970">DR广州实体店</a><a target="_blank" href="/tag_968">DR成都实体店</a><a target="_blank" href="/tag_969">Darry Ring式爱情</a><a target="_blank" href="/tag_958">DR昆明实体店</a><a target="_blank" href="/tag_964">DR无锡实体店</a><a target="_blank" href="/tag_957">DR长沙实体店</a><a target="_blank" href="/tag_48">darry ring</a><a target="_blank" href="/tag_945">DR北京实体店</a><a target="_blank" href="/tag_919">DR苏州实体店</a><a target="_blank" href="/tag_948">DR大连实体店</a><a target="_blank" href="/tag_947">DR天津实体店</a><a target="_blank" href="/tag_918">DR上海实体店</a><a target="_blank" href="/tag_929">小时代4婚戒品牌</a><a target="_blank" href="/tag_928">小时代4珠宝品牌</a><a target="_blank" href="/tag_934">贾青</a>
                     </div>
                 </div>
@@ -659,7 +670,7 @@
 
     <div style="clear: both;">
     </div>
-    
+
 
 <!--底部-->
 <div class="footer">
@@ -667,9 +678,9 @@
             <!--提示-->
 	        <div class="loverit_word2">Darry Ring严格规定男士凭身份证一生仅能定制一枚，象征男人一生真爱的最高承诺。输入身份证号码即可查询购买记录。</div>
 	        <!--提示end-->
-	        <div class="loverit_wrong2"><p>信息填写不正确，请重新输入。</p></div>      
+	        <div class="loverit_wrong2"><p>信息填写不正确，请重新输入。</p></div>
 	    <!--错误end-->
-        <!--验证身份--> 
+        <!--验证身份-->
             <div class="loveit_center">
 		        <div class="love_doit2">
 			        <div class="loverit_center2">
@@ -751,7 +762,7 @@
             </li>
         </ul>
         <!--服务条款-->
-        
+
         <div class="service">
             <!--二维码-->
             <div class="erwei fl">
@@ -763,13 +774,13 @@
                     24小时全国免费服务热线</p>
                 <img width="171" height="32" src="images/tel.jpg">
                 <p class="theshare">
-                    <span>关注我们：</span> 
+                    <span>关注我们：</span>
                     <a class="wb" target="_blank" href="http://weibo.com/13520comcn" rel="nofollow"></a>
                     <a class="rr" target="_blank" href="http://e.t.qq.com/DarryRing" rel="nofollow"></a>
                     <a class="qzone" target="_blank" title="QQ空间" href="http://user.qzone.qq.com/2678181289/" rel="nofollow"></a>
                 </p>
             </div>
-       
+
             <!--左边的服务条款-->
             <ul class="Service_know fr">
                 <!--每一块li-->
@@ -842,7 +853,7 @@
         </div>
         <!--条文-->
         <div class="auto" id="Menu_Service">
-            
+
         </div>
         <div class="tw-foot">
             <div class="auto" id="Copyright">
@@ -864,7 +875,7 @@
     <span id="log_uname" style="display:none"></span>
     <span id="log_orderid" style="display:none"></span>
     <span id="log_price" style="display:none"></span>
-    
+
 </div>
 <script src="http://wpa.b.qq.com/cgi/wpa.php" charset="utf-8" type="text/javascript"></script>
 <!--客服(2014年8月29日)-->
@@ -881,7 +892,7 @@
         <div id="bdBridge">
         <a href="javascript:NTKF.im_openInPageChat()">
             <img width="75" height="37" src="images/zx.jpg"></a></div>
-            
+
     </div>
     <div class="fkf_bottom">
         <img width="92" height="82" alt="Darry Ring 官方微信" src="images/to_erwei.jpg">
@@ -951,7 +962,7 @@
     </div>
 <div style="display:none;" class="modelsever" id="modelsever">
 <div class="cs_top">
-<div class="cs_topcenter"><div style="width:300px; height:40px; line-height:40px; float:left; display:inline-block; ">顾客常见疑问</div> 
+<div class="cs_topcenter"><div style="width:300px; height:40px; line-height:40px; float:left; display:inline-block; ">顾客常见疑问</div>
 <div style="width:385px; height:20px; float:left; text-align:right; padding-top:20px;">
 <img width="55" height="9" style="cursor: pointer;" onClick="CloseMaskser()" src="images/popup_window_btn_close.gif">
 </div>
@@ -1003,7 +1014,7 @@
 <div id="content_title2_2" class="content_txt">
 </div>
 <div onClick="contenttxt(2,3)" id="content_title_23" class="content_title"></div>
-<div id="content_title2_3" class="content_txt"> 
+<div id="content_title2_3" class="content_txt">
 </div>
 <!--<div class="content_title"  onclick="contenttxt(2,4)">4、Q：LES可以购买吗？</div>
 <div class="content_txt" id="content_title2_4">A：真爱不分性别，只要确定了对方就是您这辈子的真爱，同时您愿意为此绑定自己的身份证信息，那
@@ -1062,10 +1073,10 @@
 <div onClick="contenttxt(6,1)" id="content_title_61" class="content_title"></div>
 <div id="content_title6_1" class="content_txt"></div>
 <div onClick="contenttxt(6,2)" id="content_title_62" class="content_title"></div>
-<div id="content_title6_2" class="content_txt"> 
+<div id="content_title6_2" class="content_txt">
 </div>
 <div onClick="contenttxt(6,3)" id="content_title_63" class="content_title"></div>
-<div id="content_title6_3" class="content_txt">  
+<div id="content_title6_3" class="content_txt">
 </div>
 <div onClick="contenttxt(6,4)" id="content_title_64" class="content_title"></div>
 <div id="content_title6_4" class="content_txt">
@@ -1106,7 +1117,7 @@
             else {
                 hidediv(i);
             }
-        } 
+        }
     }
     function contenttxt(id, sid) {
         for (var i = 1; i <= 7; i++) {

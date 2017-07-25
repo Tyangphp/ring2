@@ -36,13 +36,22 @@
                     <div id="ucheader1_pllogin1">
                         <li><a rel="nofollow" href="/index/user/login">登录</a><em>|</em></li>
                         <li><a rel="nofollow" href="/index/user/reg">注册</a></li>
-                        <li class="headed"><em class="icon shooping"></em><a target="black" rel="nofollow" href="cart.html">购物车</a><i>(0)</i></li>
+                        <li class="headed"><em class="icon shooping"></em><a rel="nofollow" onClick="javascript:login()" href="">购物车</a><i>(0)</i></li>
                     </div>
+                    <script type="text/javascript">
+                        function login() {
+                            if (window.confirm('请先登录')) {
+                                $.get("/index/cart/cart", function (data) {
+                                    window.location.href = "/index/user/login";
+                                });
+                            }
+                        }
+                    </script>
                 {else}
                     <div id="ucheader1_pllogin1">
-                        <li><a rel="nofollow" href="/index/user/login">欢迎：{$username}</a><em>|</em></li>
+                        <li><a rel="nofollow" href="/index/member/member_index">欢迎：{$username}</a><em>|</em></li>
                         <li><a rel="nofollow" href="/index/user/logout">退出登录</a></li>
-                        <li class="headed"><em class="icon shooping"></em><a target="black" rel="nofollow" href="cart.html">购物车</a><i>(0)</i></li>
+                        <li class="headed"><em class="icon shooping"></em><a rel="nofollow" href="/index/cart/cart">购物车</a><i>({$count})</i></li>
                     </div>
                 {/if}
                 </ul>
