@@ -24,59 +24,40 @@
 <div class="Interface_spacing clearfix">
   <div class="order_detailed">
     <div class="order_number">
-    订单编号：<b>2016082507890453</b>
+    订单编号：<b>{$sorder['oid']}</b>
     <span class="r_f">下单时间：2016-08-25</span>
     </div>
     <div class="order_content clearfix">
      <div class="Buyers_info margin-bottom clearfix">
        <ul>
-       <li><label class="title_name">买家姓名：</label><span>张小泉</span></li>
-       <li><label class="title_name">卖家电话：</label><span>13565678765</span></li>
-       <li><label class="title_name">地址邮编：</label><span>200016</span></li>
-       <li><label class="title_name">备&nbsp;&nbsp;&nbsp;&nbsp;注：</label><span>随机</span></li>
-       <li class="address"><label class="title_name">卖家地址：</label><span>江苏南京雨花台区郁金香路3号实业大厦A区34号</span></li>     
+       
+       <li><label class="title_name">卖家电话：</label><span>{$sorder['tel']}</span></li>
+       <li><label class="title_name">备&nbsp;&nbsp;&nbsp;&nbsp;注：</label><span>{$sorder['text']}</span></li>
+       <li class="address"><label class="title_name">卖家地址：</label><span>{$sorder['oaddress']}</span></li>     
        </ul>
      </div>
      <table  class="table table_list table_striped  table-bordered">
       <thead>
        <tr>
         <th>产品名称</th>
-        <th width="100">原价</th>
-        <th width="100">现价</th>
-        <th width="100">优惠</th>
+        <th width="100">售价</th>
         <th width="50">数量</th>
        </tr>
       </thead>
       <tbody>
-       <tr>
-        <td class="product_name text-align">
-        <a href="#" class="link_name">
-        <div class="l_f img"><img src="../products/p_55.jpg"  width="80px" height="80px"/></div>
-        <div class="l_f content padding">
-        <p>正宗福鼎特产祥利蜜汁鸡翅乡巴佬美味食品秘制鸡翅膀小吃</p>
-        <p class="color">1.2kg/1件</p>
-        </div>
-        </a>
-        </td>
-        <td>140</td>
-        <td>105</td>
-        <td>35</td>
-        <td>1</td>
-       </tr>
+      
         <tr>
         <td class="product_name text-align">
         <a href="#" class="link_name">
-        <div class="l_f img"><img src="../products/p_45.jpg"  width="80px" height="80px"/></div>
+        <div class="l_f img"><img src="{$sorder['images']}"  width="80px" height="80px"/></div>
         <div class="l_f content padding">
-        <p>正宗福鼎特产祥利蜜汁鸡翅乡巴佬美味食品秘制鸡翅膀小吃</p>
-        <p class="color">1.2kg/1件</p>
+        <p>{$sorder['gname']}</p>
+        <p class="color">{$sorder['size']}</p>
         </div>
         </a>
         </td>
-        <td>140</td>
-        <td>105</td>
-        <td>35</td>
-        <td>1</td>
+        <td>{$sorder['unit_price']}</td>
+        <td>{$sorder['order_cont']}</td>
        </tr>
       </tbody>
      </table>
@@ -84,60 +65,23 @@
       <ul>
        <li><label class="title_name">支付方式：</label><span>支付宝</span></li>
        <li><label class="title_name">支付状态：</label><span>已完成</span></li>
-       <li><label class="title_name">发货日期：</label><span>2016-08-25</span></li>
-       <li><label class="title_name">交易完成时间：</label><span>2016-08-28</span></li>
-       <li><label class="title_name">发货快递：</label><span>圆通</span></li>
-       <li><label class="title_name">快递单号：</label><span>34567878787</span></li>    
+       <li><label class="title_name">发货日期：</label><span>{$sorder['create_time']}</span></li>
+       <li><label class="title_name">交易完成时间：</label><span>{$sorder['update_time']}</span></li>
+       <li><label class="title_name">发货快递：</label><span>{$sorder['fms']}</span></li>
+       <li><label class="title_name">快递单号：</label><span>{$sorder['fmsnum']}</span></li>    
        </ul>
      </div>
      <div class="Price clearfix">
-     <a href="javascrpit:void()" class="btn button_btn bg-deep-blue margin-top" onclick="logistics_info()">物流信息</a>
+     
      <div class="right_Price">
-      <p><span class="Price_name">总价：</span><b class="font_size_das color_mu">345.80</b>x2</p>
-      <p><span class="Price_name">优惠：</span><b class="font_size color_mu">35.00</b></p>
+      <p><span class="Price_name">总价：</span><b class="font_size_das color_mu">{$sorder['unit_price']}</b>x{$sorder['order_cont']}</p>
+
       </div>
      </div>
     </div>
   </div>
 </div>
-<div class="logistics_info" id="logistics_info" style="display:none">
-  <div class="track-rcol">
-			<div class="track-list">
-				<ul>
-					<li class="first">
-						<i class="node-icon"></i>
-						<span class="time">2016-03-10 18:07:15</span>
-						<span class="txt">感谢您在京东购物，欢迎您再次光临！</span>
-					</li>
-					<li>
-						<i class="node-icon"></i>
-						<span class="time">2016-03-10 18:07:15</span>
-						<span class="txt">【京东到家】京东配送员【申国龙】已出发，联系电话【18410106883，感谢您的耐心等待，参加评价还能赢取京豆呦】</span>
-					</li>
-					<li>
-						<i class="node-icon"></i>
-						<span class="time">2016-03-10 18:07:15</span>
-						<span class="txt">感谢您在京东购物，欢迎您再次光临！</span>
-					</li>
-					<li>
-						<i class="node-icon"></i>
-						<span class="time">2016-03-10 18:07:15</span>
-						<span class="txt">感谢您在京东购物，欢迎您再次光临！</span>
-					</li>
-					<li>
-						<i class="node-icon"></i>
-						<span class="time">2016-03-10 18:07:15</span>
-						<span class="txt">感谢您在京东购物，欢迎您再次光临！</span>
-					</li>
-					<li>
-						<i class="node-icon"></i>
-						<span class="time">2016-03-10 18:07:15</span>
-						<span class="txt">感谢您在京东购物，欢迎您再次光临！</span>
-					</li>
-				</ul>
-			</div>
-		</div>
-</div>
+ <a href="/admin/order/logicis?fmsnum={$sorder['fmsnum']}" class="btn button_btn bg-deep-blue margin-top" >物流信息</a>
 </body>
 </html>
 <script>

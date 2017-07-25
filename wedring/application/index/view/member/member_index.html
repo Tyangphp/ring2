@@ -39,8 +39,8 @@
         <div id="ctl00_ucheader_pllogin2">
          <li><a><span id="ctl00_ucheader_lit">KLNgOk</span></a></li>
          <li> <a href="javascript:logout()" rel="nofollow">退出</a><em>|</em> </li>
-         <li><a target="black" rel="nofollow" href="member_index.html">我的DR</a><em>|</em></li>
-         <li class="headed"><em class="icon shooping"></em><a target="black" rel="nofollow" href="cart.html">购物车</a><i>(0)</i></li>
+         <li><a target="black" rel="nofollow" href="/index/member/member_index">我的DR</a><em>|</em></li>
+         <li class="headed"><em class="icon shooping"></em><a target="black" rel="nofollow" href="/index/cart/cart">购物车</a><i>(0)</i></li>
         </div>
        </ul>
        <!--语言选择-->
@@ -157,7 +157,7 @@
     function logout() {
         if (window.confirm('确定退出吗？')) {
 
-            $.get("/nAPI/QuitExit.ashx", function (data) {
+            $.get("/index/user/logut", function (data) {
                 window.location.href = "/";
             });
         }
