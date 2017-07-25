@@ -46,22 +46,31 @@ class Login extends Controller
 	//测试
 	public function test()
 	{
-				// $uname = 'yangge';
-	   //     		$upass = '611888';
-				
-				// $ckpass = $Mlogin->checkup($uname,$upass);
-	   //              if (!$ckpass) {
-	   //              echo 2;
-	   //              } else {
-	   //              echo 7;
-	   //              }
-	   //              
-	   $data = Db::name('manage')->where('username','yangge')
-				->alias('m') //命名别名
-				->join('manage_sign s','m.username=s.mname')
-				->field('sid')
-				->select();      
-	    
+		//查询权限
+		$roleid = 2;
+		$ro_no = Db::name('access')->where('role_id',2)->find()['node_id'];      
+	    $forno = explode(',', $ro_no);
+	    //遍历所有小数组
+	    $allxl = [];
+	    foreach ($forno as $key => $value) {
+	    	$sno = Db::name('node')->where('id',$value)->find();
+	    	$allxl[] = $sno;
+	    }
+	    //新数组
+	    $newbl = [];
+	    foreach ($allxl as $ki => $val) {
+	     	$newbl[$val["pid"]][] = $val;
+	     } 
+	    //最终数组
+	   
+	     foreach ($newbl as $fnk => $fnv) {
+	     	$pname = Db::name('node')
+			->field('title')
+			->where('id',$fnk)
+			->find();
+			$newbl["$fnk"]['pname'] = $pname;
+	     }
+	    dump($newbl);
 	}
 
 
