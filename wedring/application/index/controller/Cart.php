@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2017-07-24 21:34:21
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-25 16:06:18
+ * @Last Modified time: 2017-07-25 21:31:56
  */
 namespace app\index\controller;
 use app\index\model\Cart as CartModel;
@@ -44,7 +44,7 @@ class Cart extends Controller
         return $this->fetch();
     }
 
-    //删除购物车一条记录
+    //删除购物车记录
     public function deleteCart()
     {
         $uid = session('uid');
@@ -83,7 +83,7 @@ class Cart extends Controller
         foreach ($goods as $key => $value) {
             $price = $price + $value['price_sale'];
         }
-        // dump($goods);
+        // dump(input());
 
         //分配变量
         $this->assign('username',$username);
@@ -100,12 +100,18 @@ class Cart extends Controller
         $uid = session('uid');
 
         $goods = $this->cart->selsctCart($uid);
+
+        //订单号
+        $ordernumb = date("Ymd",time()) . rand(100000,999999);
+
         $price = 0;
         foreach ($goods as $key => $value) {
+            //总价格
             $price = $price + $value['price_sale'];
         }
+        dump(input());
+        dump($goods);
 
-        $ordernumb = date("Ymd",time()) . rand(100000,999999);
         // dump($ordernumb);
 
         //分配变量

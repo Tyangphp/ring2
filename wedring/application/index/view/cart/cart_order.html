@@ -34,13 +34,8 @@
       <div class="shopt_right fr">
        <span id="ctl00_ltlUname">你好！{$username}</span>
        <a class="my_dr" href="/index/member/member_index">我的DR</a>
-<<<<<<< HEAD
        <a onClick="javascript:logout()" class="tc_dr" href="">退出</a>
        <a class="help_dr" href="/lists/lists/help">帮助中心</a>
-=======
-       <a onClick="javascript:logout()" class="tc_dr" href="#">退出</a>
-       <a class="help_dr" href="/index/lists/help">帮助中心</a>
->>>>>>> df8f1231cd48aabf9e9feacb53c72b90ed3c6f30
       </div>
      </div>
      <!--头部end-->
@@ -88,7 +83,6 @@
                     });
                     CityDataLoadEvent();
                 };
-
             });
             //市下拉框onchange事件
             $(city).change(function () {
@@ -99,7 +93,6 @@
                     });
                     DistrictDataLoadEvent();
                 };
-
             });
 
             //保存地址按钮事件
@@ -232,12 +225,7 @@
                 return;
             }
             var nu = '1';
-
-
             $("#aspnetForm").submit();
-
-
-
         }
         $(function () {
             $("#aspnetForm").attr("action", "cart_order_success.html");
@@ -254,9 +242,10 @@
        <div class="shop_cort-adress">
         <!--地址-->
         <div class="shop_adress-top">
-         <input type="radio" checked="checked" name="adress" value="61921" />
+         <input type="radio" checked="checked" name="adress" value="61921"/>
          <label>福建省龙岩市长汀县娃娃亲到青岛</label>
-         <label> 张合(收) 13851435593</label>
+         <label> 张合(收) </label>
+         <label> 13851435593</label>
          <span>默认地址</span>
          <a href="javascript:showAddress(61921);">修改</a>
          <i>|</i>
@@ -313,12 +302,12 @@
           <span>市：</span>
           <select id="city">
             <option value="-1">请选择城市</option>
-            <option value="123132">石家庄</option>
+            <option value="340000">安徽省</option>
           </select>
           <span>县：</span>
           <select id="district">
             <option value="-1">请选择区县</option>
-            <option value="233233">赵县</option>
+            <option value="340000">安徽省</option>
           </select>
         </div>
          <div class="shop_adress-Toadd">
