@@ -3,11 +3,10 @@
  * @Author: Marte
  * @Date:   2017-05-11 09:42:46
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-25 17:33:52
+ * @Last Modified time: 2017-07-26 20:45:50
  */
 namespace app\index\controller;
 use extend\open_example_php\open51094_class;
-use app\index\model\Index as IndexModel;
 use app\index\model\Cart;
 use app\index\model\Goods;
 
@@ -21,7 +20,6 @@ class Index extends Controller
     protected $cart;
     public function _initialize()
     {
-        // $this->index = new IndexModel();
         $this->index = new Goods();
         $this->cart = new Cart();
     }
@@ -191,10 +189,15 @@ class Index extends Controller
             $username = session('username');
             $gid = session('gid');
             $uid = session('uid');
+            $goods = $this->cart->seeCart($gid,$uid);
+            if (!empty($goods)) {
+                echo 2;
+                return;
+            }
             //数据存入数据库
             $data = ['uid'=>$uid,'gid'=>$gid];
             $this->cart->insertCart($data);
-            echo 2;
+            echo 3;
             return;
         }
     }

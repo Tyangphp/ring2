@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" class="hb-loaded">
     <head>
 <meta charset="utf-8"/>
-    <title>个人中心 - 订单中心</title><!--/*技术支持，小庄602842076     验证：官网技术支持*/
+    <title>个人中心 - 订单中心</title>
 
     <link href="/index/css/same.css?v=1.3.7.2" type="text/css" rel="stylesheet"/>
     <link href="/index/css/member.css?v=1.3.6.0" type="text/css" rel="stylesheet"/>
@@ -149,7 +149,15 @@
                 <div class="cmain mb_back">
                     <div class="zbk_top spalid">
                         <span>您当前的位置：</span>
-                        <span id="ctl00_content_website_SiteMapPath1"><a href="#ctl00_content_website_SiteMapPath1_SkipLink"></a><span> <a href="/index/index/index">Darry Ring</a> </span><span> <em>&gt;</em> </span><span> <span>我的DR</span> </span><a id="ctl00_content_website_SiteMapPath1_SkipLink"></a></span>
+                        <span id="ctl00_content_website_SiteMapPath1">
+                            <a href="#ctl00_content_website_SiteMapPath1_SkipLink"></a>
+                            <span> <a href="/index/index/index">Darry Ring</a> </span>
+                            <span> <em>&gt;</em> </span>
+                            <span> <a href="/index/member/member_index">我的DR</a> </span>
+                            <span> <em>&gt;</em> </span>
+                            <span> <span>我的订单</span> </span>
+                            <a id="ctl00_content_website_SiteMapPath1_SkipLink"></a>
+                        </span>
                     </div>
                     <div class="member_cort">
                         <div class="member_cort-left fl">
@@ -258,41 +266,49 @@
 
                                         <table cellspacing="0" cellpadding="0" border="0" class="member_myorder-table">
                                             <tbody>
+                                            {foreach $news as $value}
+
                                                 <tr class="member_myorder-table-sec">
-                                                    <td class="myorder-table-sec_td1" colspan="4">订单号：20150707888887</td>
-                                                    <td class="myorder-table-sec_td2" colspan="2">下单时间：2015/7/7 22:04:56</td>
+                                                    <td class="myorder-table-sec_td1" colspan="4">订单号：{$value[0]['oid']}</td>
+                                                    <td class="myorder-table-sec_td2" colspan="2">下单时间：{$value[0]['create_time']}</td>
                                                 </tr>
+
+
                                                 <tr class="member_myorder-table-third">
                                                     <td class="myorder-table_td1">
-
                                                         <div class="myorder-table-third-cp">
+                                                            {foreach $value as $val}
                                                             <div class="img_left fl">
                                                                 <a href="/darry_ring/87.html">
-                                                                <img width="55" height="55" src="/index/images/201409011932585de1c2f2a9.jpg">
+                                                                <img width="55" height="55" src="{$val['images']}">
                                                                 </a>
                                                             </div>
                                                             <div class="img_right fr">
-                                                                <a href="/darry_ring/87.html">
-                                                                <p>Forever系列 经典款 [DRNJ00015]</p>
+                                                                <a href="/index/index/detail?{$val['gid']}">
+                                                                <p>{$val['gname']}</p>
                                                                 </a>
                                                             </div>
+                                                            {/foreach}
                                                         </div>
-
                                                     </td>
+
                                                     <td class="myorder-table_td3">
-
-                                                        <div style="height:55px;line-height:55px;font-family:微软雅黑;" class="myorder-table-third-cp">￥10,800</div>
-
+                                                        <div style="height:55px;line-height:55px;font-family:微软雅黑;" class="myorder-table-third-cp">￥{$value[0]['total_price']}</div>
                                                     </td>
+
                                                     <td style="font-family:微软雅黑;" class="myorder-table_td2">￥0</td>
                                                     <td class="myorder-table_td4"></td>
-                                                    <td class="myorder-table_td5">未处理</td>
+                                                    <td class="myorder-table_td5">{$value[0]['order_state']}</td>
+
                                                     <td class="myorder-table_td6">
                                                         <a class="myorder-table_pay" href="/nCart/ConfirmOrder.aspx?orderid=20150707888887&process=other">支 付</a>
                                                         <p><a href="/index/member/member_order_detail">查看</a></p>
                                                         <p style="cursor:pointer"><a onClick="deleteOrder(20150707888887)">取消订单</a></p>
                                                     </td>
+
                                                 </tr>
+
+                                            {/foreach}
                                             </tbody>
                                         </table>
                                     </div>
@@ -301,7 +317,7 @@
                                         <script type="text/javascript" language="javascript">
                                             function deleteOrder(orderid) {
                                                 if (confirm("确定要取消订单吗?")) {
-                                                    window.location.href = "/member/myorder.aspx?action=delete&orderid=" + orderid;
+                                                    window.location.href = "/index/member/myorder.aspx?action=delete&orderid=" + orderid;
                                                 }
                                             }
                                         </script>
@@ -310,7 +326,6 @@
                                                 <tr class="member_myorder-table-first">
                                                     <td class="myorder-table_td1">订单商品</td>
                                                     <td class="myorder-table_td2">订单金额</td>
-
                                                     <td class="myorder-table_td2">已付金额</td>
                                                     <td class="myorder-table_td4">预计到货日期</td>
                                                     <td class="myorder-table_td5">订单状态</td>
@@ -318,7 +333,9 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <table cellspacing="0" cellpadding="0" border="0" class="member_myorder-table"></table>
+                                        <table cellspacing="0" cellpadding="0" border="0" class="member_myorder-table">
+
+                                        </table>
                                     </div>
                                 </div>
                             </div>

@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2017-07-24 22:00:08
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-25 20:57:26
+ * @Last Modified time: 2017-07-26 21:27:23
  */
 namespace app\index\controller;
 use app\index\model\Member as MemberModel;
@@ -16,11 +16,12 @@ use think\Db;
 
 class Member extends Controller
 {
+    protected $me;
     protected $member;
     protected $cart;
     public function _initialize()
     {
-        $this->member = new MemberModel();
+        $this->me = new MemberModel();
         $this->member = new Goods();
         $this->cart = new Cart();
     }
@@ -28,7 +29,6 @@ class Member extends Controller
     //个人首页
     public function member_index()
     {
-
         //获取用户名称
         $username = session('username');
         $uid = session('uid');
@@ -80,6 +80,27 @@ class Member extends Controller
          //获取种类信息
         $kind = $this->member->selectKind();
 
+        //订单信息及对应的商品信息
+        $msg = $this->me->goodsOrder($uid);
+        // dump($msg);
+        $news = [];
+        foreach ($msg as $key => $value) {
+            $news[$value["oid"]][] = $value;
+        }
+
+        foreach ($news as $key => &$value) {
+            foreach ($value as $key => &$val) {
+                if ($val['order_state'] ==1 ) {
+                    $val['order_state'] = '未付款';
+                } elseif ($val['order_state'] == 2) {
+                    $val['order_state'] = '未发货';
+                } else {
+                    $val['order_state'] = '已发货';
+                }
+            }
+        }
+        dump($news);
+
         //分配变量
         $this->assign('username',$username);
         $this->assign('counts',$counts);
@@ -87,8 +108,9 @@ class Member extends Controller
         $this->assign('navs',$navs);
         $this->assign('nav',$nav);
         $this->assign('kind',$kind);
+        $this->assign('news',$news);
 
-        return $this->fetch();
+       return $this->fetch();
     }
 
     public function member_order_detail()

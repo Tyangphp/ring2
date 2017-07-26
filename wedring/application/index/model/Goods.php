@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2017-07-21 15:50:12
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-25 10:13:42
+ * @Last Modified time: 2017-07-26 10:58:45
  */
 namespace app\index\model;
 use think\Model;
@@ -175,5 +175,11 @@ class Goods extends Model
     {
         $data = Db::name('goods')->where('kid',$kid)->count();
         return $data;
+    }
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>加入订单后数量-1>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    public function easeCount($gid)
+    {
+        return Db::name('goods')->where('gid',$gid)->setDec('count');
     }
 }
