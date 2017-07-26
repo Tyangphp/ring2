@@ -24,16 +24,16 @@
 <div class="Interface_spacing clearfix">
   <div class="order_detailed">
     <div class="order_number">
-    订单编号：<b>{$sorder['oid']}</b>
+    订单编号：<b>{$orderinfo['oid']}</b>
     <span class="r_f">下单时间：2016-08-25</span>
     </div>
     <div class="order_content clearfix">
      <div class="Buyers_info margin-bottom clearfix">
        <ul>
        
-       <li><label class="title_name">卖家电话：</label><span>{$sorder['tel']}</span></li>
-       <li><label class="title_name">备&nbsp;&nbsp;&nbsp;&nbsp;注：</label><span>{$sorder['text']}</span></li>
-       <li class="address"><label class="title_name">卖家地址：</label><span>{$sorder['oaddress']}</span></li>     
+       <li><label class="title_name">卖家电话：</label><span>{$orderinfo['tel']}</span></li>
+       <li><label class="title_name">备&nbsp;&nbsp;&nbsp;&nbsp;注：</label><span>{$orderinfo['text']}</span></li>
+       <li class="address"><label class="title_name">卖家地址：</label><span>{$orderinfo['oaddress']}</span></li>     
        </ul>
      </div>
      <table  class="table table_list table_striped  table-bordered">
@@ -45,43 +45,44 @@
        </tr>
       </thead>
       <tbody>
-      
+        {foreach $sorder as $sval}
         <tr>
         <td class="product_name text-align">
         <a href="#" class="link_name">
-        <div class="l_f img"><img src="{$sorder['images']}"  width="80px" height="80px"/></div>
+        <div class="l_f img"><img src="{$sval['images']}"  width="80px" height="80px"/></div>
         <div class="l_f content padding">
-        <p>{$sorder['gname']}</p>
-        <p class="color">{$sorder['size']}</p>
+        <p>产品名称：{$sval['gname']}</p>
+        <p class="color">尺寸：{$sval['size']}</p>
         </div>
         </a>
         </td>
-        <td>{$sorder['unit_price']}</td>
-        <td>{$sorder['order_cont']}</td>
+        <td>{$sval['unit_price']}</td>
+        <td>{$sval['order_count']}</td>
        </tr>
+      {/foreach}
       </tbody>
      </table>
      <div class="order_info Buyers_info margin-sx clearfix">
       <ul>
        <li><label class="title_name">支付方式：</label><span>支付宝</span></li>
        <li><label class="title_name">支付状态：</label><span>已完成</span></li>
-       <li><label class="title_name">发货日期：</label><span>{$sorder['create_time']}</span></li>
-       <li><label class="title_name">交易完成时间：</label><span>{$sorder['update_time']}</span></li>
-       <li><label class="title_name">发货快递：</label><span>{$sorder['fms']}</span></li>
-       <li><label class="title_name">快递单号：</label><span>{$sorder['fmsnum']}</span></li>    
+       <li><label class="title_name">发货日期：</label><span>发货</span></li>
+       <li><label class="title_name">交易完成时间：</label><span>完成</span></li>
+       <li><label class="title_name">发货快递：</label><span>{$orderinfo['fms']}</span></li>
+       <li><label class="title_name">快递单号：</label><span>{$orderinfo['fmsnum']}</span></li>    
        </ul>
      </div>
      <div class="Price clearfix">
      
      <div class="right_Price">
-      <p><span class="Price_name">总价：</span><b class="font_size_das color_mu">{$sorder['unit_price']}</b>x{$sorder['order_cont']}</p>
+      <p><span class="Price_name">总价：</span><b class="font_size_das color_mu">{$orderinfo['total_price']}</b></p>
 
       </div>
      </div>
     </div>
   </div>
 </div>
- <a href="/admin/order/logicis?fmsnum={$sorder['fmsnum']}" class="btn button_btn bg-deep-blue margin-top" >物流信息</a>
+ <a href="/admin/order/logicis?fmsnum={$orderinfo['fmsnum']}" class="btn button_btn bg-deep-blue margin-top" >物流信息</a>
 </body>
 </html>
 <script>

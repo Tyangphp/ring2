@@ -16,7 +16,7 @@ class OrderM extends Model
 	{
 		$data = Db::name('goods')
 				->alias('g') //命名别名
-				->join('order o','g.gid=o.gid')
+				->join('order_goods o','g.gid=o.gid')
 				->where('oid',$oid)
 				->select();
 		return $data;
@@ -31,21 +31,28 @@ class OrderM extends Model
 	//待发货订单
 	public function wtorderInfo()
 	{
-		$data = Db::name('goods')
-				->alias('g') //命名别名
-				->join('order o','g.gid=o.gid')
-				->where('order_state',1)
-				->paginate(2);
-		return $data;
+		$data = Db::name('order,wedring_order_goods,wedring_goods')
+				->where('wedring_order.oid = wedring_order_goods.oid and wedring_goods.gid = wedring_order_goods.gid and wedring_order.order_state = 1')
+				->select();
+
+		$newdata = [];
+		    foreach ($data as $ki => $val) {
+		     	$newdata[$val["oid"]][] = $val;
+		     } 
+
+		return $newdata;
 	}
 	//模糊搜索未发货
 	public function sswtorderInfo($ss)
 	{
-		$data = Db::name('goods')
-				->alias('g') //命名别名
-				->join('order o','g.gid=o.gid')
-				->where("order_state = 1 and oid like '%$ss%'")
-				->paginate(2);
+		$data = Db::name('order,wedring_order_goods,wedring_goods')
+				->where("wedring_order.oid = wedring_order_goods.oid and wedring_goods.gid = wedring_order_goods.gid and wedring_order.order_state = 1 and wedring_order.oid = '$ss'")
+				->select();
+
+		$newdata = [];
+	    foreach ($data as $ki => $val) {
+	     	$newdata[$val["oid"]][] = $val;
+	     } 
 		return $data;
 	}
 	//短信信息

@@ -194,71 +194,19 @@
    <table  class="table table_list ranking_list">
     <thead>
      <th width="50">排名</th>
-     <th>商品编号</th>
+     <th>商品价格</th>
      <th>商品名称</th>
      <th width="80">销售数量</th>
     </thead>
     <tbody>
+    {foreach $uorder as $oval}
      <tr>
-      <td ><em>1</em></td>
-      <td>2345776</td>
-      <td><a href="#">联想（ThinkPad ）轻薄系列</a></td>
-      <td>23</td>
+      <td ><em>{$oval['ph']}</em></td>
+      <td>{$oval['price_sale']}</td>
+      <td><font color="blue">{$oval['gname']}</font></td>
+      <td>{$oval['sales']}</td>
      </tr>
-      <tr>
-      <td ><em>2</em></td>
-      <td>2345776</td>
-      <td><a href="#">施巴（sebamed）婴儿泡泡沐浴露200ml家庭装</a></td>
-      <td>23</td>
-     </tr>
-      <tr>
-      <td ><em>3</em></td>
-      <td>2345776</td>
-      <td><a href="#">七匹狼纯棉时尚休闲条纹翻领POLO衫T恤</a></td>
-      <td>23</td>
-     </tr>
-      <tr>
-      <td ><em>4</em></td>
-      <td>2345776</td>
-      <td><a href="#">桂格即食燕麦片超值装1478g</a></td>
-      <td>23</td>
-     </tr>
-      <tr>
-      <td ><em>5</em></td>
-      <td>2345776</td>
-      <td><a href="#">韩国爱敬挚爱香氛花香洗护套装（洗发水600ml+护发素</a></td>
-      <td>23</td>
-     </tr>
-      <tr>
-      <td ><em>6</em></td>
-      <td>2345776</td>
-      <td><a href="#">韩国爱敬挚爱香氛花香洗护套装（洗发水600ml+护发素</a></td>
-      <td>23</td>
-     </tr>
-      <tr>
-      <td ><em>7</em></td>
-      <td>2345776</td>
-      <td><a href="#">韩国爱敬挚爱香氛花香洗护套装（洗发水600ml+护发素</a></td>
-      <td>23</td>
-     </tr>
-      <tr>
-      <td ><em>8</em></td>
-      <td>2345776</td>
-      <td><a href="#">韩国爱敬挚爱香氛花香洗护套装（洗发水600ml+护发素</a></td>
-      <td>23</td>
-     </tr>
-      <tr>
-      <td ><em>9</em></td>
-      <td>2345776</td>
-      <td><a href="#">韩国爱敬挚爱香氛花香洗护套装（洗发水600ml+护发素</a></td>
-      <td>23</td>
-     </tr>
-      <tr>
-      <td ><em>10</em></td>
-      <td>2345776</td>
-      <td><a href="#">韩国爱敬挚爱香氛花香洗护套装（洗发水600ml+护发素</a></td>
-      <td>23</td>
-     </tr>
+     {/foreach}
     </tbody>
    </table>
   </div>

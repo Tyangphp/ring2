@@ -73,6 +73,28 @@ class Login extends Controller
 	    dump($newbl);
 	}
 
+	public function test2()
+	{
+		// $data = Db::query('select * from wedring_order r,wedring_goods g,wedring_order_goods rg where r.oid = rg.oid and g.gid = rg.gid');
+		// 	{
+		// 	$res = Db::name('order,wed_image,wed_goods')
+		// 			// ->field("wed_image.src")
+		// 			->where("wed_order.gid = wed_image.gid and wed_image.gid = wed_goods.gid  and wed_order.state = 0")
+		// 			->paginate(4);
+		// 	return $res;
+		// }
+		$data = Db::name('order,wedring_order_goods,wedring_goods')
+				->where('wedring_order.oid = wedring_order_goods.oid and wedring_goods.gid = wedring_order_goods.gid and wedring_order.order_state = 1')
+				->paginate(1);
 
+
+
+		$newdata = [];
+		    foreach ($data as $ki => $val) {
+		     	$newdata[$val["oid"]][] = $val;
+		     } 
+	     dump($newdata);
+//-------------------------
+	}
 
 }

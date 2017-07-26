@@ -58,10 +58,10 @@
    <th width="50">用户id</th>
    <th width="200">订单编号</th>   
    <th width="150">下单时间</th>
-   <th width="80">单价</th>
-   <th width="50">数量</th>
+   <th width="80">总价</th>
+   <th width="50">用户id</th>
    <th width="100">状态</th>
-   <th width="150">发货时间</th>
+   <th width="150">更新时间</th>
    <th width="">备注</th>
    <th width="150">操作</th>
    </tr>   
@@ -79,7 +79,7 @@
 <script>
 var dataSet=[
  {foreach $orders as $oval}
- ['<label><input type="checkbox" class="ace"><span class="lbl"></span></label>','{$oval['uid']}','{$oval['oid']}','{$oval['create_time']}','{$oval['unit_price']}','{$oval['order_cont']}','{if 0 == $oval['order_state']}待付款{elseif 1 == $oval['order_state']}待发货{elseif 2 == $oval['order_state']}已发货{else}已收货{/if}','{$oval['update_time']}','{$oval['text']}',' <a href="javascript:void()" onclick="picture_del({$oval['oid']})" class="btn btn-danger operation_btn">删除</a> <a href="/admin/order/Order_detailed?oid={$oval['oid']}" onclick="picture_img()" class="btn bg-deep-blue operation_btn">查看</a>'],
+ ['<label><input type="checkbox" class="ace"><span class="lbl"></span></label>','{$oval['uid']}','{$oval['oid']}','{$oval['create_time']}','{$oval['total_price']}','{$oval['uid']}','{if 0 == $oval['order_state']}待付款{elseif 1 == $oval['order_state']}待发货{elseif 2 == $oval['order_state']}已发货{else}已收货{/if}','{$oval['update_time']}','{$oval['text']}',' <a href="javascript:void()" onclick="picture_del({$oval['oid']})" class="btn btn-danger operation_btn">删除</a> <a href="/admin/order/Order_detailed?oid={$oval['oid']}" onclick="picture_img()" class="btn bg-deep-blue operation_btn">查看</a>'],
  {/foreach}
  
     

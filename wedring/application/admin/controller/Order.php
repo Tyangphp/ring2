@@ -33,7 +33,13 @@ class Order extends Base
 	public function Order_detailed()
 	{
 		$oid = input('oid');
-	    $sorder = model('OrderM')->sorderInfo($oid)[0];
+		$orderinfo = model('OrderM')->msginfo($oid);
+		$sorder = model('OrderM')->sorderInfo($oid);
+	    // dump($orderinfo);
+	    // echo "<hr/>";
+	    // dump($sorder);
+	    $this->assign('orderinfo',$orderinfo);
+
 	    $this->assign('sorder',$sorder);
 	    
 		return $this->fetch();
@@ -54,15 +60,20 @@ class Order extends Base
 	{
 		$scode = input('get.ss');
     	if (!$scode) {
+    		$code = 1;
     		$wtorder = model('OrderM')->wtorderInfo();
-    		$page = $wtorder->render();
-			$this->assign('wtorder',$wtorder);
-		    $this->assign('page',$page);
+			$page = '------';
+
+		 	$this->assign('page',$page);
+		 	$this->assign('code',$code);
+		 	$this->assign('wtorder',$wtorder);
 			return $this->fetch();
     	}else{
-    		$wtorder = model('OrderM')->sswtorderInfo($scode);
+    		$code = 2;
+    		$ssorder = model('OrderM')->sswtorderInfo($scode);
     		$page = '以上为搜索结果';
-			$this->assign('wtorder',$wtorder);
+		 	$this->assign('code',$code);
+			$this->assign('ssorder',$ssorder);
 		    $this->assign('page',$page);
 			return $this->fetch();
     	}

@@ -24,17 +24,17 @@
 <body>
 <div class="margin Competence_style" id="page_style">
     <div class="operation clearfix">
-<button class="btn button_btn btn-danger" type="button" onclick=""><i class="fa fa-trash-o"></i>&nbsp;删除</button>
+
 <a href="add_administrator.html"  class="btn button_btn bg-deep-blue" title="添加管理员"><i class="fa  fa-edit"></i>&nbsp;添加管理员</a>
   <select class="select Competence_sort" name="admin-role" size="1" id="Competence_sort">
 					<option value="0">--选择分类--</option>
-					<option value="1">超级管理员</option>
-					<option value="2">普通管理员</option>
-					<option value="3">栏目编辑</option>
+					<option value="1">店长</option>
+					<option value="2">管理员</option>
+					<option value="3">员工</option>
 				</select>
    <div class="search  clearfix">
 
-   <input name="" type="text"  class="form-control col-xs-8"/><button class="btn button_btn bg-deep-blue " onclick=""  type="button"><i class="fa  fa-search"></i>&nbsp;搜索</button>
+  
 </div>
 </div>
 <div class="compete_list">
@@ -52,51 +52,25 @@
              </tr>
 		    </thead>
              <tbody>
+				{foreach $all as $aval}
 			  <tr>
 				<td class="center"><label><input type="checkbox" class="ace"><span class="lbl"></span></label></td>
-				<td>admin123456</td>
-				<td>13567878908</td>
-				<td >3456778@qq.com</td>
-				<td>超级管理员</td>
-                <td>2016-9-20 10:23:23</td>
-                <td class="td-status"><span class="label label-success label-sm">已启用</span></td>
+				<td>{$aval['username']}</td>
+				<td>{$aval['tel']}</td>
+				<td >{$aval['email']}</td>
+				<td>{if 3 == $aval['role_id']}店长{elseif 2 == $aval['role_id']}普通管理员{else}员工{/if}</td>
+                <td>{$aval['create_time']}</td>
+                <td class="td-status">{if 0 == $aval['is_stop']}<span class="label label-success label-sm">已启用</span>{else}
+                <span class="label label-success label-sm">已停用</span>{/if}</td>
 				<td class="td-manage">
-                 <a title="停用" onclick="Competence_close(this,'12')" href="javascript:;" class="btn button_btn btn-Dark-success">停用</a> 
-                 <a title="编辑" onclick="Competence_modify('560')" href="javascript:;" class="btn button_btn bg-deep-blue">编辑</a>        
-                 <a title="删除" href="javascript:;" onclick="Competence_del(this,'1')" class="btn button_btn btn-danger">删除</a>
-                 <a title="查看" href="javascript:;" onclick="Competence_View(this,'1')" class="btn button_btn btn-green">查看</a>
+				{if 1 == $aval['is_stop']}
+				<a style="text-decoration:none" class="btn button_btn btn-gray" onClick="Competence_start({$aval['id']})" href="javascript:;" title="启用">启用</a>{else}
+                 <a title="停用" onclick="Competence_close({$aval['id']})" href="javascript:;" class="btn button_btn btn-Dark-success">停用</a> {/if}
+                <a title="删除" href="javascript:;" onclick="Competence_del({$aval['id']})" class="btn button_btn btn-danger">删除</a>
+               
 				</td>
 			   </tr>
-               <tr>
-				<td class="center"><label><input type="checkbox" class="ace"><span class="lbl"></span></label></td>
-				<td>化海天堂</td>
-				<td>13567878908</td>
-				<td >3456778@qq.com</td>
-				<td>普通管理员</td>
-                <td>2016-9-20 10:23:23</td>
-                <td class="td-status"><span class="label label-success label-sm">已启用</span></td>
-				<td class="td-manage">
-                  <a title="停用" onclick="Competence_close(this,'12')" href="javascript:;" class="btn button_btn btn-Dark-success">停用</a> 
-                 <a title="编辑" onclick="Competence_modify('560')" href="javascript:;" class="btn button_btn bg-deep-blue">编辑</a>        
-                 <a title="删除" href="javascript:;" onclick="Competence_del(this,'1')" class="btn button_btn btn-danger">删除</a>
-                 <a title="查看" href="javascript:;" onclick="Competence_View(this,'1')" class="btn button_btn btn-green">查看</a>
-				</td>
-			   </tr>
-               <tr>
-				<td class="center"><label><input type="checkbox" class="ace"><span class="lbl"></span></label></td>
-				<td>admin</td>
-				<td>13567878908</td>
-				<td >3456778@qq.com</td>
-				<td>普通管理员</td>
-                <td>2016-9-10 10:23:23</td>
-                <td class="td-status"><span class="label label-success label-sm">已启用</span></td>
-				<td class="td-manage">
-                   <a title="停用" onclick="Competence_close(this,'12')" href="javascript:;" class="btn button_btn btn-Dark-success">停用</a> 
-                 <a title="编辑" onclick="Competence_modify('560')" href="javascript:;" class="btn button_btn bg-deep-blue">编辑</a>        
-                 <a title="删除" href="javascript:;" onclick="Competence_del(this,'1')" class="btn button_btn btn-danger">删除</a>
-                 <a title="查看" href="javascript:;" onclick="Competence_View(this,'1')" class="btn button_btn btn-green">查看</a>
-				</td>
-			   </tr>												
+               {/foreach}								
 		      </tbody>
 	        </table>
      </div>
@@ -128,22 +102,34 @@ $("body").niceScroll({
 	cursorborderradius:"5px"  
 });
 /*管理员-停用*/
-function Competence_close(obj,id){
+function Competence_close(id){
 	layer.confirm('确认要停用吗？',function(index){
-		$(obj).parents("tr").find(".td-manage").prepend('<a style="text-decoration:none" class="btn button_btn btn-gray" onClick="Competence_start(this,id)" href="javascript:;" title="启用">启用</a>');
-		$(obj).parents("tr").find(".td-status").html('<span class="label label-success label-sm">已停用</span>');
-		$(obj).remove();
-		layer.msg('已停用!',{icon: 5,time:1000});
+		$.get('/admin/admin/stpadm',{id:id},function(data){
+	 	if(data){
+	 		window.location.reload();
+	 	}	
+	 },'json');
 	});
 }
 
 /*管理员-启用*/
-function Competence_start(obj,id){
+function Competence_start(id){
 	layer.confirm('确认要启用吗？',function(index){
-		$(obj).parents("tr").find(".td-manage").prepend('<a style="text-decoration:none" class="btn button_btn  btn-Dark-success" onClick="Competence_close(this,id)" href="javascript:;" title="停用">停用</a>');
-		$(obj).parents("tr").find(".td-status").html('<span class="label label-success label-sm">已启用</span>');
-		$(obj).remove();
-		layer.msg('已启用!',{icon: 6,time:1000});
+		$.get('/admin/admin/stadm',{id:id},function(data){
+	 	if(data){
+	 		window.location.reload();
+	 	}	
+	 },'json');
+	});
+}
+/*管理员-删除*/
+function Competence_del(id){
+	layer.confirm('确认要删除吗？',function(index){
+		$.get('/admin/admin/stadm',{id:id},function(data){
+	 	if(data){
+	 		window.location.reload();
+	 	}	
+	 },'json');
 	});
 }
 /****复选框选中******/
