@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2017-07-24 21:35:43
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-25 14:21:58
+ * @Last Modified time: 2017-07-26 20:44:49
  */
 namespace app\index\model;
 use think\Model;
@@ -15,6 +15,13 @@ class Cart extends Model
     public function insertCart($data)
     {
         return Db::name('cart')->insert($data);
+    }
+
+    //查看购物车中是否有gid=$gid的商品
+    public function seeCart($gid,$uid)
+    {
+        $data = Db::name('cart')->where('gid',$gid)->where('uid',$uid)->select();
+        return $data;
     }
 
     //查看购物车中对应uid下的商品

@@ -429,7 +429,14 @@
                             <!--第二行-->
                             <div class="thr_secound">
                                 <span>数量：</span>
-                                <select> <option>1</option> </select>
+                                <input type="text" name="" value="1" disabled style="width:53px;">
+                                <!-- <select>
+                                <option>1</option>
+                                </select> -->
+                            </div>
+                            <div class="thr_secound">
+                                <span>说明：</span>
+                                <input type="text" name="" value="本商品每次仅限订购一个" disabled style='width:155px;'>
                             </div>
                         </div>
                         <!--选择材质刻字等end-->
@@ -465,6 +472,12 @@
                         };
 
                         if (data == 2) {
+                            if (confirm('您的购物车中已有该商品,是否前往查看？')) {
+                                window.location.href = "/index/cart/cart";
+                            };
+                        };
+
+                        if (data == 3) {
                             if (confirm('添加成功,前往查看！')) {
                                 window.location.href = "/index/cart/cart";
                             };
