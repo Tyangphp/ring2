@@ -126,7 +126,7 @@ class Order extends Base
 		$curl = MyCurl::get($url);
 		$arr = json_decode($curl,true);
 		//分配变量
-		$title = "快递公司：".$arr['result']['company']."快递单号：".$arr['result']['no']; 
+		$title = "快递公司：".$arr['result']['company']."----"."快递单号：".$arr['result']['no']; 
 		$content = $arr['result']['list'];
 		
 		$this->assign('title',$title);

@@ -266,4 +266,9 @@ class Index extends Controller
         }
         return $this->fetch();
     }
+    //阳哥地图
+    public function yanggeditu()
+    {
+        return $this->fetch();
+    }
 }
