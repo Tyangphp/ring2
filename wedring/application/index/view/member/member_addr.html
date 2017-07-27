@@ -10,38 +10,8 @@
   <link href="/index/css/member.css?v=1.3.6.0" type="text/css" rel="stylesheet" />
   <script src="/index/js/member.js" type="text/javascript"></script>
   <script>
-        //市数据加载事件
-        var CityDataLoadEvent = function () { };
-        var DistrictDataLoadEvent = function () { };
         $(function () {
-            //省下拉框ID
-            var province = "#province";
-            var city = "#city";
-            var district = "#district";
-            //加载省信息
-            //省下拉框onchange事件
-            $(province).change(function () {
-                var dataLoad = function (data) {
-                    $(city + " option:not(:first)").remove();
-                    $(data).each(function () {
-                        bindDdlData(city, this);
-                    });
-                    CityDataLoadEvent();
-                };
-
-
-            });
-            //市下拉框onchange事件
-            $(city).change(function () {
-                var dataLoad = function (data) {
-                    $(district + " option:not(:first)").remove();
-                    $(data).each(function () {
-                        bindDdlData(district, this);
-                    });
-                    DistrictDataLoadEvent();
-                };
-
-            });
+            //姓名
             $("#addressName").blur(function () {
                 var name = $("#addressName").val();
                 if (name == "") {
@@ -51,9 +21,10 @@
                 } else {
                     $("#shry").show();
                     $("#shrid").hide();
-
                 }
             });
+
+            //详细地址
             $("#street").blur(function () {
                 var street = $("#street").val();
                 if (street == "") {
@@ -62,35 +33,41 @@
                     $("#streey").hide();
                     return false;
                 }
+
                 if (street.length>500) {
                     $("#strwrong").text("输入内容过长！");
                     $("#streeid").show();
                     $("#streey").hide();
                     return false;
-                }
-                 else {
+                } else {
                     $("#streeid").hide();
                     $("#streey").show();
 
                 }
             });
+
+            //邮编
             $("#postcode").blur(function () {
                 var post = $("#postcode").val();
                 if (post == "") {
-                    $("#postwrong").text("请输入详细地址！");
+                    $("#postwrong").text("请输入正确的邮编！");
                     $("#postid").show();
                     return false;
                 } else {
-                    $("#postid").hide();
-                    $("#posty").show();
-
+                    if (!checkcode(post)) {
+                        $("#postwrong").text("邮编格式不正确！");
+                        $("#postid").show();
+                        $("#posty").hide();
+                        return false;
+                    }else {
+                        $("#posty").show();
+                        $("#postid").hide();
+                    }
                 }
             });
-            $("#postcode").blur(function () {
 
-            });
+            // 手机号
             $("#telephone").blur(function () {
-
                 var tel = $("#telephone").val();
                 if (tel == "") {
                     $("#telwrong").text("请输入手机号或者固定电话！");
@@ -101,40 +78,29 @@
                     if (!checkphone(tel)) {
                         $("#telwrong").text("座机号格式不正确！");
                         $("#telid").show();
-
                         return false;
                     } else {
                         $("#telid").hide();
                         $("#tely").show();
                     }
-
                 }
             });
-            $("#mobile").blur(function () { });
+
             //保存地址按钮事件
             $(".add_adress-save").click(function () {
 
                 var name = $("#addressName").val();
-                var pro = $("#province option:selected").text();
-                var city = $("#city option:selected").text();
-                var dis = $("#district option:selected").text();
                 var street = $("#street").val();
                 var post = $("#postcode").val();
                 var mobile = $("#mobile").val();
                 var tel = $("#telephone").val();
-                if (dis == "请选择区县") {
-                    $("#addwrong").text("请选择区县！");
-                    $("#addy").hide();
-                    $("#addid").show();
-                    return false;
-                }
+
                 if (name == "") {
                     $("#shrwrong").text("请输入姓名！");
                     $("#shrid").show();
                     return false;
                 } else {
                     $("#shry").show();
-
                 }
                 if (street == "") {
                     $("#strwrong").text("请输入详细地址！");
@@ -142,23 +108,33 @@
                     return false;
                 } else {
                     $("#streey").show();
-
                 }
+
                 if (post == "") {
-                    $("#postwrong").text("请输入邮编！");
+                    $("#postwrong").text("请输入正确的邮编！");
                     $("#postid").show();
                     return false;
                 } else {
-                    $("#posty").show();
-
+                    if (!checkcode(post)) {
+                        $("#postwrong").text("邮编格式不正确！");
+                        $("#postid").show();
+                        $("#posty").hide();
+                        return false;
+                    }else {
+                        $("#posty").show();
+                        $("#postid").hide();
+                    }
                 }
+
+
                 if (mobile == "" || tel == "") {
-                    $("#telwrong").text("请输入手机号或者固定电话！");
+                    $("#telwrong").text("请输入手机号！");
                     $("#telid").show();
                     return false;
                 } else {
                     $("#tely").show();
                 }
+
                 if (mobile != "") {
                     if (!checkTel(mobile)) {
                         $("#telwrong").text("手机号格式不正确！");
@@ -172,22 +148,22 @@
                 }
 
 
-                var data = getData();
-                var action = "save";
-                if (isNaN(data.ID)) {
-                    action = "add";
-                }
+                $.post('/index/member/adres', {'realname':name,'tel':mobile,'postcode':post,'address':street}, function(data) {
+                    if (data == 1) {
+                        console.log(data);
+                        alert('地址添加成功！');
+                        window.location.reload();
+                    };
+                });
             });
         });
+
         function getData() {
             var id = $(".shop_adress-add").attr("id");
             id = id ? id.replace("address_", "") : undefined;
             return {
                 "ID": id,
                 "name": $("#addressName").val(),
-                "province": $("#province option:selected").text(),
-                "city": $("#city option:selected").text(),
-                "district": $("#district option:selected").text(),
                 "street": $("#street").val(),
                 "postcode": $("#postcode").val(),
                 "mobile": $("#mobile").val(),
@@ -195,6 +171,7 @@
                 "IsDefault": $("#cbDefaultAddress").attr("checked")
             };
         }
+
         function showAddress(id) {
             //地址标题，新增还是修改
             $(".member_adress-addtop span").text("修改地址");
@@ -238,21 +215,7 @@
         function bindDdlData(cid, data) {
             $(cid).append($("<option value=\"" + data.code + "\">" + data.name + "</option>"));
         }
-        CityDataLoadEvent = function () {
-            $("#city option").each(function () {
-                if (data.city.indexOf($(this).text()) != -1) {
-                    $("#city").val($(this).val());
-                    $("#city").change();
-                }
-            });
-        };
-        DistrictDataLoadEvent = function () {
-            $("#district option").each(function () {
-                if (data.city.indexOf($(this).text()) != -1) {
-                    $("#district").val($(this).val());
-                }
-            });
-        };
+
         //
         function checkTel(tel) {
             var mobile = /^1[3-8]+\d{9}$/;
@@ -262,12 +225,11 @@
         function checkcode(zipcode) {
             var MyNumber = /^[0-9]{1}[0-9]{5}$/;
             return MyNumber.test(zipcode);
-
         }
-        function checkphone(tel) {
-            var mobile = /^0\d{2,3}-?\d{7,8}$/;
-            return mobile.test(tel);
-        }
+        // function checkphone(tel) {
+        //     var mobile = /^0\d{2,3}-?\d{7,8}$/;
+        //     return mobile.test(tel);
+        // }
 
     </script>
 </head>
@@ -473,97 +435,95 @@
                             </ul>
                         </div>
 
-        <!--右边的主要内容-->
-        <div class="member_cort-right fr">
-         <!--收货地址-->
-         <div class="member_adress">
-          <div class="myorder-xq-news_top">
-           <p> 收货地址</p>
-          </div>
-          <!--收货地址选择-->
-          <table cellspacing="0" cellpadding="0" border="0" class="member_adress-top">
-           <tbody>
-            <tr class="member_adress-trfirst">
-             <td class="member_adress-td1"> 收件人姓名 </td>
-             <td class="member_adress-td2"> 详细地址 </td>
-             <td class="member_adress-td3"> 联系方式 </td>
-             <td class="member_adress-td4"> 邮政编码 </td>
-             <td class="member_adress-td5"> 操作 </td>
-            </tr>
-            <tr class="member_adress-trsec">
-             <td class="member_adress-td1"> <label for="61921"> 张合</label> </td>
-             <td class="member_adress-td2"> <label> 福建省龙岩市长汀县娃娃亲到青岛</label> </td>
-             <td class="member_adress-td3"> <p> 13851435593</p> <p> </p> </td>
-             <td class="member_adress-td4"> 223311 </td>
-             <td class="member_adress-td5"> <input type="radio" checked="checked" name="adress" id="61921" value="61921" onClick="szdefault(61921);" /> <label for="61921"> 设为常用地址 </label> <a href="javascript:showAddress(61921);">修改</a><i>|</i><a href="javascript:deleteAddress(61921);">删除</a> </td>
-            </tr>
-           </tbody>
-          </table>
-          <!--收货地址选择end-->
-          <div class="member_adress-addtop">
-           <span>添加新地址</span>
-           <i></i>
-          </div>
-          <!--新加地址-->
-          <div class="shop_adress-add">
-           <div id="addresses" class="shop_adress-Toadd">
-            <label> <em>*</em>地&nbsp;&nbsp;&nbsp;&nbsp;区：</label>
-            <select id="province"> <option value="-1">请选择省份</option> <option value="340000">安徽省</option><option value="110000">北京市</option><option value="350000">福建省</option><option value="620000">甘肃省</option><option value="440000">广东省</option><option value="450000">广西壮族自治区</option><option value="520000">贵州省</option><option value="460000">海南省</option><option value="130000">河北省</option><option value="410000">河南省</option><option value="230000">黑龙江省</option><option value="420000">湖北省</option><option value="430000">湖南省</option><option value="220000">吉林省</option><option value="320000">江苏省</option><option value="360000">江西省</option><option value="210000">辽宁省</option><option value="150000">内蒙古自治区</option><option value="640000">宁夏回族自治区</option><option value="630000">青海省</option><option value="370000">山东省</option><option value="140000">山西省</option><option value="610000">陕西省</option><option value="310000">上海市</option><option value="510000">四川省</option><option value="120000">天津市</option><option value="540000">西藏自治区</option><option value="650000">新疆维吾尔自治区</option><option value="530000">云南省</option><option value="330000">浙江省</option><option value="500000">重庆市</option></select>
-            <span>市：</span>
-            <select id="city"> <option value="-1">请选择城市</option> </select>
-            <span>县：</span>
-            <select id="district"> <option value="-1">请选择区县</option> </select>
-            <span id="addid" style="display: none"><i class="writer_wrong"></i><em id="addwrong" class="writer_word">信息报错样式显示！</em></span>
-            <span id="addy" style="display: none"><i class="writer_right"> </i></span>
-           </div>
-           <div id="detailadd" class="shop_adress-Toadd">
-            <label class="adress-Toadd_label"> <em>*</em>详细地址：</label>
-            <textarea id="street"></textarea>
-            <span id="streeid" style="display: none"><i class="writer_wrong"></i><em id="strwrong" class="writer_word">信息报错样式显示！</em></span>
-            <span id="streey" style="display: none"><i class="writer_right"> </i></span>
-           </div>
-           <div id="pname" class="shop_adress-Toadd">
-            <label> <em>*</em>收货人：</label>
-            <input type="text" class="true_name" id="addressName" />
-            <span id="shrid" style="display: none"><i class="writer_wrong"></i><em id="shrwrong" class="writer_word"></em></span>
-            <span id="shry" style="display: none"><i class="writer_right"> </i></span>
-           </div>
-           <div id="post" class="shop_adress-Toadd">
-            <label> <em>*</em>邮政编码：</label>
-            <input type="text" class="true_number" id="postcode" />
-            <span id="postid" style="display: none"><i class="writer_wrong"></i><em id="postwrong" class="writer_word">信息报错样式显示！</em></span>
-            <span id="posty" style="display: none"><i class="writer_right"> </i></span>
-           </div>
-           <div id="lx" class="shop_adress-Toadd">
-            <label> <em>*</em>手机号码：</label>
-            <input type="text" id="mobile" />
-            <span class="oth_color">或</span>
-            <span>固定电话：</span>
-            <input type="text" />
-            <span id="telid" style="display: none"><i class="writer_wrong"></i><em id="telwrong" class="writer_word">信息报错样式显示！</em></span>
-            <span id="tely" style="display: none"><i class="writer_right"> </i></span>
-           </div>
-           <div class="shop_adress-sp">
-            <input type="checkbox" id="cbDefaultAddress" />
-            <label for="cbDefaultAddress" class="add_adress-splabel"> 设为默认地址</label>
-           </div>
-           <div class="add_adress-save">
-            <div class="bt1">
-             <span>保存此地址</span>
+                        <!--右边的主要内容-->
+                        <div class="member_cort-right fr">
+                            <!--收货地址-->
+                            <div class="member_adress">
+                                <div class="myorder-xq-news_top">
+                                    <p> 收货地址</p>
+                                </div>
+                                <!--收货地址选择-->
+                                <table cellspacing="0" cellpadding="0" border="0" class="member_adress-top">
+                                    <tbody>
+                                        <tr class="member_adress-trfirst">
+                                            <td class="member_adress-td1"> 收件人姓名 </td>
+                                            <td class="member_adress-td2"> 详细地址 </td>
+                                            <td class="member_adress-td3"> 联系方式 </td>
+                                            <td class="member_adress-td4"> 邮政编码 </td>
+                                            <td class="member_adress-td5"> 操作 </td>
+                                        </tr>
+                                        {foreach $address as $value}
+                                        <tr class="member_adress-trsec">
+                                            <td class="member_adress-td1"> <label for="61921"> {$value['realname']}</label> </td>
+                                            <td class="member_adress-td2"> <label> {$value['address']}</label> </td>
+                                            <td class="member_adress-td3"> <p> {$value['tel']}</p> <p> </p> </td>
+                                            <td class="member_adress-td4"> {$value['postcode']} </td>
+                                            <td class="member_adress-td5"> <input type="radio" checked="checked" name="adress" id="61921" value="61921" onClick="szdefault(61921);" /> <label for="61921"> 设为常用地址 </label> <a href="javascript:showAddress(61921);">修改</a><i>|</i><a href="javascript:deleteAddress(61921);">删除</a> </td>
+                                        </tr>
+                                        {/foreach}
+                                    </tbody>
+                                </table>
+                                <!--收货地址选择end-->
+
+                                <div class="member_adress-addtop">
+                                    <span>添加新地址</span>
+                                    <i></i>
+                                </div>
+
+                                <!--新加地址-->
+                                <div class="shop_adress-add">
+                                    <div id="detailadd" class="shop_adress-Toadd">
+                                        <label class="adress-Toadd_label"> <em>*</em>详细地址：</label>
+                                        <textarea id="street"></textarea>
+                                        <span id="streeid" style="display: none"><i class="writer_wrong"></i><em id="strwrong" class="writer_word">信息报错样式显示！</em></span>
+                                        <span id="streey" style="display: none"><i class="writer_right"> </i></span>
+                                    </div>
+
+                                    <div id="pname" class="shop_adress-Toadd">
+                                        <label> <em>*</em>收货人：</label>
+                                        <input type="text" class="true_name" id="addressName" />
+                                        <span id="shrid" style="display: none"><i class="writer_wrong"></i><em id="shrwrong" class="writer_word"></em></span>
+                                        <span id="shry" style="display: none"><i class="writer_right"> </i></span>
+                                    </div>
+
+                                    <div id="post" class="shop_adress-Toadd">
+                                        <label> <em>*</em>邮政编码：</label>
+                                        <input type="text" class="true_number" id="postcode" />
+                                        <span id="postid" style="display: none"><i class="writer_wrong"></i><em id="postwrong" class="writer_word">信息报错样式显示！</em></span>
+                                        <span id="posty" style="display: none"><i class="writer_right"> </i></span>
+                                    </div>
+
+                                    <div id="lx" class="shop_adress-Toadd">
+                                        <label> <em>*</em>手机号码：</label>
+                                        <input type="text" id="mobile" />
+                                        <span id="telid" style="display: none"><i class="writer_wrong"></i><em id="telwrong" class="writer_word">信息报错样式显示！</em></span>
+                                        <span id="tely" style="display: none"><i class="writer_right"> </i></span>
+                                    </div>
+
+                                    <div class="shop_adress-sp">
+                                        <input type="checkbox" id="cbDefaultAddress" />
+                                        <label for="cbDefaultAddress" class="add_adress-splabel"> 设为默认地址</label>
+                                    </div>
+
+                                    <div class="add_adress-save">
+                                        <div class="bt1">
+                                            <span>保存此地址</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--新加地址end-->
+                            </div>
+                            <!--收货地址end-->
+                        </div>
+                        <!--右边的主要内容end-->
+                    </div>
+                    <!--中间内容end-->
+                </div>
+                <!--内容end-->
             </div>
-           </div>
-          </div>
-          <!--新加地址end-->
-         </div>
-         <!--收货地址end-->
+            <!--中间end-->
         </div>
-        <!--右边的主要内容end-->
-       </div>
-       <!--中间内容end-->
-      </div>
-      <!--内容end-->
-     </div>
-     <!--中间end-->
+    </div>
      <script>
       function szdefault(id) {
           $.get("/API/MemberAPI.ashx", { action:'default',id: id }, function(data) {

@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2017-05-11 09:42:46
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-26 20:45:50
+ * @Last Modified time: 2017-07-27 09:40:12
  */
 namespace app\index\controller;
 use extend\open_example_php\open51094_class;
@@ -151,13 +151,14 @@ class Index extends Controller
         } elseif (!empty(session('nid'))) {
             $nid = session('nid');
             $goodsnavs = $this->index->kind($gid);
+            $id = $goodsnavs[0]['sid'];
             $goodsnav = $this->index->series($id);
         } elseif (!empty(session('sid'))) {
             $id = session('sid');
             $goodsnavs = $this->index->kind($gid);
             $goodsnav = $this->index->series($id);
         }
-        // dump($id);
+        // dump($goodsnavs);
 
         //获取系列信息
         $navs = $this->index->selectNavs();

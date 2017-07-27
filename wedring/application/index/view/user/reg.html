@@ -407,7 +407,7 @@
 
         //发送短信验证码
         var InterValObj; //timer变量，控制时间
-        var count = 120; //间隔函数，1秒执行
+        var count = 60; //间隔函数，1秒执行
         var curCount;//当前剩余秒数
         $('.mobile_action').click(function(){
             $('.ts_wrong').remove();
@@ -440,23 +440,23 @@
                             $('input[name="mobile"]').addClass('error');
                             is_used = true;
                     }else{
-                            //设置button效果，开始计时
-                            curCount = count;
-                            //设置button效果，开始计时
-                            $(".mobile_action").attr("disabled", "true");
-                            $(".mobile_action").val(curCount + "秒后可重新获取验证码");
-                            InterValObj = window.setInterval(SetRemainTime, 1000); //启动计时器，1秒执行一次
+                        //设置button效果，开始计时
+                        curCount = count;
+                        //设置button效果，开始计时
+                        $(".mobile_action").attr("disabled", "true");
+                        $(".mobile_action").val(curCount + "秒后可重新获取验证码");
+                        InterValObj = window.setInterval(SetRemainTime, 1000); //启动计时器，1秒执行一次
 
-                            var skey = $('input[name="skey"]').val();
-                            //向后台发送处理数据
-                            $.ajax({
-                                type: "POST", //用POST方式传输
-                                url: '/sign/sendSms', //目标地址
-                                data: "mobile=" + mobile +"&skey=" + skey,
-                                success: function (msg){
+                        var skey = $('input[name="skey"]').val();
+                        //向后台发送处理数据
+                        $.ajax({
+                            type: "POST", //用POST方式传输
+                            url: '/sign/sendSms', //目标地址
+                            data: "mobile=" + mobile +"&skey=" + skey,
+                            success: function (msg){
 
-                                }
-                            });
+                            }
+                        });
                     }
                 }
             });

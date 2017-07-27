@@ -247,7 +247,23 @@
                                         <script type="text/javascript" language="javascript">
                                             function deleteOrder(orderid) {
                                                 if (confirm("确定要取消订单吗?")) {
-                                                    window.location.href = "/member/myorder.aspx?action=delete&orderid=" + orderid;
+                                                    var order_state = 0;
+                                                    $.post('/index/member/cancel', {'oid':orderid,'order_state':order_state}, function(data) {
+                                                        if (data == 1) {
+                                                            window.location.reload();
+                                                        };
+                                                    });
+                                                }
+                                            }
+
+                                            function back(orderid) {
+                                                if (confirm("确定要退货吗?")) {
+                                                    var order_state = 4;
+                                                    $.post('/index/member/cancel', {'oid':orderid,'order_state':order_state}, function(data) {
+                                                        if (data == 2) {
+                                                            window.location.reload();
+                                                        };
+                                                    });
                                                 }
                                             }
                                         </script>
@@ -255,9 +271,9 @@
                                             <tbody>
                                                 <tr class="member_myorder-table-first">
                                                     <td class="myorder-table_td1">订单商品</td>
+                                                    <td class="myorder-table_td4">商品单价</td>
                                                     <td class="myorder-table_td2">订单金额</td>
                                                     <td class="myorder-table_td2">已付金额</td>
-                                                    <td class="myorder-table_td4">预计到货日期</td>
                                                     <td class="myorder-table_td5">订单状态</td>
                                                     <td class="myorder-table_td6">操作</td>
                                                 </tr>
@@ -267,47 +283,66 @@
                                         <table cellspacing="0" cellpadding="0" border="0" class="member_myorder-table">
                                             <tbody>
                                             {foreach $news as $value}
-
                                                 <tr class="member_myorder-table-sec">
                                                     <td class="myorder-table-sec_td1" colspan="4">订单号：{$value[0]['oid']}</td>
                                                     <td class="myorder-table-sec_td2" colspan="2">下单时间：{$value[0]['create_time']}</td>
                                                 </tr>
-
-
                                                 <tr class="member_myorder-table-third">
                                                     <td class="myorder-table_td1">
+                                                    {foreach $value as $val}
                                                         <div class="myorder-table-third-cp">
-                                                            {foreach $value as $val}
                                                             <div class="img_left fl">
-                                                                <a href="/darry_ring/87.html">
+                                                                <a href="/index/index/detail?gid={$val['gid']}">
                                                                 <img width="55" height="55" src="{$val['images']}">
                                                                 </a>
                                                             </div>
                                                             <div class="img_right fr">
-                                                                <a href="/index/index/detail?{$val['gid']}">
+                                                                <a href="/index/index/detail?gid={$val['gid']}">
                                                                 <p>{$val['gname']}</p>
                                                                 </a>
                                                             </div>
-                                                            {/foreach}
                                                         </div>
+                                                    {/foreach}
+                                                    </td>
+
+                                                    <td class="myorder-table_td4">
+                                                    {foreach $value as $val}
+                                                        <div class="myorder-table-third-cp">
+                                                            <div class="img_left fl" style="height:55px;line-height:55px;font-family:微软雅黑;">
+                                                                ￥{$val['unit_price']}
+                                                            </div>
+                                                            <!-- <div class="img_right fr">
+                                                                <a href="/index/index/detail?gid=">
+                                                                <p></p>
+                                                                </a>
+                                                            </div>  -->
+                                                        </div>
+                                                    {/foreach}
                                                     </td>
 
                                                     <td class="myorder-table_td3">
                                                         <div style="height:55px;line-height:55px;font-family:微软雅黑;" class="myorder-table-third-cp">￥{$value[0]['total_price']}</div>
                                                     </td>
 
-                                                    <td style="font-family:微软雅黑;" class="myorder-table_td2">￥0</td>
-                                                    <td class="myorder-table_td4"></td>
+                                                    {if $value[0]['pay_state'] == 1}
+                                                        <td style="font-family:微软雅黑;" class="myorder-table_td2">￥{$value[0]['total_price']}</td>
+                                                    {else}
+                                                        <td style="font-family:微软雅黑;" class="myorder-table_td2">￥0</td>
+                                                    {/if}
+
                                                     <td class="myorder-table_td5">{$value[0]['order_state']}</td>
 
                                                     <td class="myorder-table_td6">
+                                                    {if $value[0]['order_state'] == '未付款' }
                                                         <a class="myorder-table_pay" href="/nCart/ConfirmOrder.aspx?orderid=20150707888887&process=other">支 付</a>
-                                                        <p><a href="/index/member/member_order_detail">查看</a></p>
-                                                        <p style="cursor:pointer"><a onClick="deleteOrder(20150707888887)">取消订单</a></p>
+                                                        <p style="cursor:pointer"><a onClick="deleteOrder({$value[0]['oid']})">取消订单</a></p>
+                                                    {/if}
+                                                    {if $value[0]['order_state'] == '未发货' || $value[0]['order_state'] == '已发货'}
+                                                        <p style="cursor:pointer"><a onClick="back({$value[0]['oid']})">我要退货</a></p>
+                                                    {/if}
+                                                        <p><a href="/index/member/member_order_detail?oid={$value[0]['oid']}">查看</a></p>
                                                     </td>
-
                                                 </tr>
-
                                             {/foreach}
                                             </tbody>
                                         </table>
@@ -315,27 +350,75 @@
                                     <div style="display:none" class="member_news-it">
                                         <script src="/index/js/orderlist.js" type="text/javascript"></script>
                                         <script type="text/javascript" language="javascript">
-                                            function deleteOrder(orderid) {
-                                                if (confirm("确定要取消订单吗?")) {
-                                                    window.location.href = "/index/member/myorder.aspx?action=delete&orderid=" + orderid;
-                                                }
+                                            function goOut(orderid) {
+
+                                                var order_state = 5;
+                                                $.post('/index/member/cancel', {'oid':orderid,'order_state':order_state}, function(data) {
+                                                    if (data == 3) {
+                                                        window.location.reload();
+                                                    };
+                                                });
                                             }
                                         </script>
+
+                                        <!-- 取消订单 -->
                                         <table cellspacing="0" cellpadding="0" border="0" class="member_title-table">
                                             <tbody>
                                                 <tr class="member_myorder-table-first">
                                                     <td class="myorder-table_td1">订单商品</td>
+                                                    <td class="myorder-table_td4">商品单价</td>
                                                     <td class="myorder-table_td2">订单金额</td>
                                                     <td class="myorder-table_td2">已付金额</td>
-                                                    <td class="myorder-table_td4">预计到货日期</td>
                                                     <td class="myorder-table_td5">订单状态</td>
                                                     <td class="myorder-table_td6">操作</td>
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <table cellspacing="0" cellpadding="0" border="0" class="member_myorder-table">
 
+                                        <table cellspacing="0" cellpadding="0" border="0" class="member_myorder-table">
+                                            <tbody>
+                                            {foreach $qnews as $qv}
+
+                                                <tr class="member_myorder-table-sec">
+                                                    <td class="myorder-table-sec_td1" colspan="4">订单号：{$qv[0]['oid']}</td>
+                                                    <td class="myorder-table-sec_td2" colspan="2">下单时间：{$qv[0]['create_time']}</td>
+                                                </tr>
+
+                                                <tr class="member_myorder-table-third">
+                                                    <td class="myorder-table_td1">
+                                                    {foreach $qv as $qval}
+                                                        <div class="myorder-table-third-cp">
+                                                            <div class="img_left fl">
+                                                                <a href="/index/index/detail?gid={$qval['gid']}">
+                                                                <img width="55" height="55" src="{$qval['images']}">
+                                                                </a>
+                                                            </div>
+                                                            <div class="img_right fr">
+                                                                <a href="/index/index/detail?gid={$qval['gid']}">
+                                                                <p>{$qval['gname']}</p>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    {/foreach}
+                                                    </td>
+
+                                                    <td class="myorder-table_td3">
+                                                        <div style="height:55px;line-height:55px;font-family:微软雅黑;" class="myorder-table-third-cp">￥{$qv[0]['total_price']}</div>
+                                                    </td>
+
+                                                    <td style="font-family:微软雅黑;" class="myorder-table_td2">￥0</td>
+                                                    <td class="myorder-table_td4"></td>
+                                                    <td class="myorder-table_td5">{$qv[0]['order_state']}</td>
+
+                                                    <td class="myorder-table_td6">
+                                                        <p style="cursor:pointer"><a onClick="goOut({$qv[0]['oid']})">删除订单</a></p>
+                                                    </td>
+                                                </tr>
+                                            {/foreach}
+                                            </tbody>
                                         </table>
+                                        <!-- 取消订单 end-->
+
                                     </div>
                                 </div>
                             </div>

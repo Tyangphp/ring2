@@ -77,12 +77,21 @@
                     alert("手机号/固定电话必填一个。");
                     return;
                 }
-                var action = "save";
-                if (isNaN(data.ID)) {
-                  // console.log(111111);
-                    action = "add";
-                    console.log(action);
-                }
+                // var action = "save";
+                // if (isNaN(data.ID)) {
+                //   // console.log(111111);
+                //     action = "add";
+                //     console.log(action);
+
+                // }
+
+                $.post('/index/member/adres', {'realname':name,'tel':mobile,'postcode':post,'address':street}, function(data) {
+                    if (data == 1) {
+                        console.log(data);
+                        alert('地址添加成功！');
+                        window.location.reload();
+                    };
+                });
             });
         });
 
@@ -177,20 +186,24 @@
       <!--填写地址信息-->
       <div class="shop_cort-adress">
         <!--地址-->
+        {if !empty($address)}
+        {foreach $address as $value}
         <div class="shop_adress-top">
-          <input type="radio" checked="checked" name="adress" value="61921"/>
-          <label id="dz">福建省龙岩市长汀县长春路美丽家园1001 </label>
-          <label id="xm">张合</label>
+          <input type="radio" name="adress" value="61921"/>
+          <label id="dz">{$value['address']} </label>
+          <label id="xm">{$value['realname']}</label>
           <label id="xm">(收) </label>
           <label>邮编：</label>
-          <label id="yb">051530</label>
+          <label id="yb">{$value['postcode']}</label>
           <label>&nbsp;联系电话：</label>
-          <label id="dh">13851435593</label>
+          <label id="dh">{$value['tel']}</label>
           <span>默认地址</span>
           <a href="javascript:showAddress(61921);">修改</a>
           <i>|</i>
           <a href="javascript:deleteAddress(61921);">删除</a>
         </div>
+        {/foreach}
+        {/if}
         <div class="shop_adress-top">
           <input type="radio" id="addressNew" name="adress" />
           <label class="adress_color" for="addressNew">添加新地址</label>

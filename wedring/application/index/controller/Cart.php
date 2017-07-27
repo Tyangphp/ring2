@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2017-07-24 21:34:21
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-26 22:26:26
+ * @Last Modified time: 2017-07-27 19:30:38
  */
 namespace app\index\controller;
 use app\index\model\Cart as CartModel;
@@ -89,12 +89,15 @@ class Cart extends Controller
             $price = $price + $value['price_sale'];
         }
         // dump(input());
+        $address = $this->order->takeAddress($uid);
+        dump($address);
 
         //分配变量
         $this->assign('username',$username);
         $this->assign('goods',$goods);
         $this->assign('count',$count);
         $this->assign('price',$price);
+        $this->assign('address',$address);
         return $this->fetch();
     }
 

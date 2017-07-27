@@ -3,11 +3,14 @@
  * @Author: Marte
  * @Date:   2017-05-16 19:37:35
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-24 20:47:50
+ * @Last Modified time: 2017-07-27 21:41:07
  */
 namespace app\index\controller;
 use think\Controller;
 use app\index\model\User as UserModel;
+use extend\alidayu\TopClient;
+use extend\alidayu\AlibabaAliqinFcSmsNumSendRequest;
+
 use think\Db;
 
 class User extends Controller
@@ -141,7 +144,6 @@ class User extends Controller
         // file_put_contents('input.txt',$password);
 
         //判断用户是否已存在
-        // $data = Db::name('user')->where('tel',$mobile)->select();
         $data = $this->user->selectMobile($mobile);
         if (!empty($data)) {
             echo 0;
@@ -154,41 +156,32 @@ class User extends Controller
         //     }
         // }
 
-        /***********************手机短信验证************************/
-        // if ($_POST['phone']) {
-        // //11111手机号
-        // $phone = $_POST['phone'];
-        // $name = "晶晶";
-        // $kdnumb = "阳哥正在反省的第一天";
-        // //发送短信
-        //  $c = new TopClient;
-        //  //222222APPKEY
-        // $c->appkey = "24537892";
-        // $c->secretKey = "6365ca1a286cc633b11d31708c368b3d";
-        // //请求对象，需要配置请求的参数
-        // $req = new AlibabaAliqinFcSmsNumSendRequest;
-        // $req->setExtend("123456");
-        // $req->setSmsType("normal");
-        // //个人签名
-        // $req->setSmsFreeSignName("刘春阳");
-        // //短信模板变量
-        // $req->setSmsParam("{\"name\":\"$name\",\"kdnumb\":\"$kdnumb\"}");
-        // //手机号
-        // $req->setRecNum($phone);
-        // $req->setSmsTemplateCode("SMS_76435050");
-        // $resp = $c->execute($req);
 
-        // //发送短信结束
-        //     die;
-        // }else {
-        //     echo "没有值";
-        // }
 
         //把数据插入到的数据库
         $data = ['tel' => $mobile,'password' => md5($password)];
         $this->user->insertInto($data);
         echo 2;
         return;
+    }
+
+    public function telyzm()
+    {
+        /***********************手机短信验证************************/
+        //5ede03f3eb536afe91972c8a189ca97b
+        $yzm = "123";
+        $c = new TopClient;
+        $c ->appkey = '24563092' ;
+        $c ->secretKey = '5ede03f3eb536afe91972c8a189ca97b' ;
+        $req = new AlibabaAliqinFcSmsNumSendRequest;
+        $req ->setExtend( "" );
+        $req ->setSmsType( "normal" );
+        $req ->setSmsFreeSignName( "何旭峰" );
+        $req ->setSmsParam( "{name:'用户',yzm:$yzm}" );
+        $req ->setRecNum( "15131983986" );
+        $req ->setSmsTemplateCode( "SMS_79585004" );
+        $resp = $c ->execute( $req );
+        // echo $resp;
     }
 
     //邮箱注册处理

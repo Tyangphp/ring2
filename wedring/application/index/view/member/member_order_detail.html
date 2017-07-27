@@ -226,17 +226,18 @@
                         <!--右边的主要内容-->
                         <div class="member_cort-right fr">
                             <!--我的订单详情-->
+                            {foreach $news as $value}
                             <div class="member_myorder-xq">
                                 <!--详情顶部-->
                                 <ul class="member_myorder-xq-tittle">
-                                    <li><i>您的订单号：20150707888887</i></li>
+                                    <li><i>您的订单号：{$value[0]['oid']}</i></li>
                                     <li>
                                         <i>订单状态： </i>
-                                        <a href="#">未处理</a>
+                                        <a>{$value[0]['order_state']}</a>
                                     </li>
                                     <li>
                                         <i>下单时间：</i>
-                                        <span>2015/7/7 22:04:56</span>
+                                        <span>{$value[0]['create_time']}</span>
                                     </li>
                                 </ul>
                                 <!--详情顶部-->
@@ -271,11 +272,11 @@
                                         <!--上end-->
 
                                         <!--中-->
-                                        <div class="myorder-xq-ul-cort xqul-cort2 "></div>
+                                        <div class="myorder-xq-ul-cort xqul-cort2 xqul-cort2-cilck"></div>
                                         <!--中end-->
 
                                         <!--下-->
-                                        <div style="display:none" class="myorder-xq-ul-bottom">
+                                        <div style="display:block" class="myorder-xq-ul-bottom">
                                             <img width="21" height="18" src="/index/images/ok.png">
                                             <p></p>
                                             <p></p>
@@ -284,9 +285,31 @@
                                     </li>
                                     <!--提交订单end-->
                                     <li style="display:block">
-                                        <div class="myorder-xq-ul-line "></div>
+                                        <div class="myorder-xq-ul-line myorder-xq-ul-line-click"></div>
                                     </li>
+                                    {if $value[0]['pay_state'] == 1}
+                                    <li>
+                                        <!--上-->
+                                        <div class="myorder-xq-ul-top">商品定制</div>
+                                        <!--上end-->
 
+                                        <!--中-->
+                                        <div class="myorder-xq-ul-cort xqul-cort3 xqul-cort3-cilck"></div>
+                                        <!--中end-->
+
+                                        <!--下-->
+                                        <div style="display:block" class="myorder-xq-ul-bottom">
+                                            <img width="21" height="18" src="/index/images/ok.png">
+                                            <p></p>
+                                            <p></p>
+                                        </div>
+                                        <!--下end-->
+                                    </li>
+                                    <!--提交订单end-->
+                                    <li style="display:block">
+                                        <div class="myorder-xq-ul-line myorder-xq-ul-line-click"></div>
+                                    </li>
+                                    {else}
                                     <li>
                                         <!--上-->
                                         <div class="myorder-xq-ul-top">商品定制</div>
@@ -308,7 +331,30 @@
                                     <li style="display:block">
                                         <div class="myorder-xq-ul-line "></div>
                                     </li>
+                                    {/if}
+                                    {if $value[0]['order_state'] == '已发货'}
+                                    <li>
+                                        <!--上-->
+                                        <div class="myorder-xq-ul-top">检测出库</div>
+                                        <!--上end-->
 
+                                        <!--中-->
+                                        <div class="myorder-xq-ul-cort xqul-cort4 xqul-cort4-cilck"></div>
+                                        <!--中end-->
+
+                                        <!--下-->
+                                        <div style="display:block" class="myorder-xq-ul-bottom">
+                                            <img width="21" height="18" src="/index/images/ok.png">
+                                            <p></p>
+                                            <p></p>
+                                        </div>
+                                        <!--下end-->
+                                    </li>
+                                    <!--提交订单end-->
+                                    <li style="display:block">
+                                        <div class="myorder-xq-ul-line myorder-xq-ul-line-click"></div>
+                                    </li>
+                                    {else}
                                     <li>
                                         <!--上-->
                                         <div class="myorder-xq-ul-top">检测出库</div>
@@ -330,7 +376,7 @@
                                     <li style="display:block">
                                         <div class="myorder-xq-ul-line "></div>
                                     </li>
-
+                                    {/if}
                                     <li>
                                         <!--上-->
                                         <div class="myorder-xq-ul-top">等待收货</div>
@@ -388,35 +434,30 @@
                                     <table cellspacing="0" cellpadding="0" border="0" class="myorder-xq-news_table" style="font-family:微软雅黑">
                                         <tbody>
                                             <tr>
-                                                <td class="news_table-td1">订单状态</td>
-                                                <td class="news_table-td2">未处理</td>
+                                                <td class="news_table-td1">{订单状态}</td>
+                                                <td class="news_table-td2">{$value[0]['order_state']}</td>
                                                 <td class="news_table-td1">预计到货日期</td>
-                                                <td class="news_table-td3"></td>
+                                                <td class="news_table-td3">已有商品，付款后一周内; 定制商品，付款后三周内</td>
                                             </tr>
                                             <tr>
                                                 <td class="news_table-td1">订单总金额</td>
-                                                <td class="news_table-td2">￥10,800</td>
+                                                <td class="news_table-td2">￥{$value[0]['total_price']}</td>
                                                 <td class="news_table-td1">物流方式</td>
-                                                <td class="news_table-td3"></td>
+                                                <td class="news_table-td3">{$value[0]['fms']}</td>
                                             </tr>
                                             <tr>
                                                 <td class="news_table-td1">收货人</td>
-                                                <td class="news_table-td2">张合</td>
+                                                <td class="news_table-td2">{$value[0]['realname']}</td>
                                                 <td class="news_table-td1">邮政编码</td>
-                                                <td class="news_table-td3">223311</td>
+                                                <td class="news_table-td3">{$value[0]['postcode']}</td>
                                             </tr>
                                             <tr>
-                                                <td class="news_table-td1">移动电话</td>
-                                                <td class="news_table-td2">13851435593</td>
                                                 <td class="news_table-td1">联系电话</td>
-                                                <td class="news_table-td3"></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="news_table-td1">E-Mail</td>
-                                                <td class="news_table-td2"></td>
+                                                <td class="news_table-td2">{$value[0]['tel']}</td>
                                                 <td class="news_table-td1">收货人地址</td>
-                                                <td class="news_table-td3">福建省龙岩市长汀县娃娃亲到青岛</td>
+                                                <td class="news_table-td3">{$value[0]['address']}</td>
                                             </tr>
+
                                             <tr>
                                                 <td class="news_table-td1">备注</td>
                                                 <td colspan="3" class="news_table-td4">纯手工</td>
@@ -444,22 +485,23 @@
                                                 <td class="xq-shop_table-td5">刻 字</td>
                                                 <td class="xq-shop_table-td6">价 格</td>
                                             </tr>
-
+                                            {foreach $value as $val}
                                             <tr class="xq-shop_table-trsec">
                                                 <td class="xq-shop_table-td1">
                                                     <a href="/darry_ring/87.html">
-                                                        <img width="55" height="55" class="fl" src="/index/images/201409011932585de1c2f2a9.jpg">
-                                                        <span class="fl">Forever系列 经典款</span>
+                                                        <img width="55" height="55" class="fl" src="{$val['images']}">
+                                                        <span class="fl">{$val['gname']}</span>
                                                     </a>
                                                 </td>
                                                 <td class="xq-shop_table-td2">
-                                                    <p>30分 G色</p><p>VS2 EX</p><p></p>
+                                                    <p>{$val['color']}</p><p>{$val['weight']}</p><p></p>
                                                 </td>
-                                                <td class="xq-shop_table-td3">18K白金</td>
-                                                <td class="xq-shop_table-td4"><p>7</p></td>
-                                                <td class="xq-shop_table-td5">素材火♥</td>
-                                                <td style="font-family:微软雅黑" class="xq-shop_table-td6">￥10,800</td>
+                                                <td class="xq-shop_table-td3">{$val['quality']}</td>
+                                                <td class="xq-shop_table-td4"><p>{$val['size']}</p></td>
+                                                <td class="xq-shop_table-td5">{$val['text']}</td>
+                                                <td style="font-family:微软雅黑" class="xq-shop_table-td6">￥{$val['unit_price']}</td>
                                             </tr>
+                                            {/foreach}
                                         </tbody>
                                     </table>
                                     <!--商品明细end-->
@@ -467,10 +509,11 @@
                                 <!--订单信息end-->
                                 <!--返回订单-->
                                 <div class="member_myorder-xq-retrun">
-                                    <a class="fr" href="myorder.aspx">> 返回订单列表</a>
+                                    <a class="fr" href="/index/member/member_order">> 返回订单列表</a>
                                 </div>
                                 <!--返回订单end-->
                             </div>
+                            {/foreach}
                             <!--我的订单详情end-->
                         </div>
                         <!--右边的主要内容end-->

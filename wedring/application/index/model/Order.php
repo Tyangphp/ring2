@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2017-07-26 09:58:08
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-26 22:28:39
+ * @Last Modified time: 2017-07-27 19:21:07
  */
 namespace app\index\model;
 use think\Model;
@@ -30,6 +30,13 @@ class Order extends Model
         return $data;
     }
 
+    //从收货地址表该该用户的地址
+    public function takeAddress($uid)
+    {
+        $data = Db::name('order_address')->where('uid',$uid)->field('uid,tel,postcode,realname,address')->select();
+        return $data;
+    }
+
     //商品信息插入订单表
     public function insertOrder($system)
     {
@@ -42,9 +49,10 @@ class Order extends Model
         $data = Db::name('order')->where('oid',$ordernumb)->field('total_price')->select();
         return $data;
     }
+
     //更新订单状态
     public function updateState($uid,$ordernumb)
     {
-        return $this->name('order')->where('uid',$uid)->where('oid',$ordernumb)->update(['order_state'=>2]);
+        return $this->name('order')->where('uid',$uid)->where('oid',$ordernumb)->update(['order_state'=>2,'pay_state'=>1]);
     }
 }
