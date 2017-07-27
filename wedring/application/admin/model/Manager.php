@@ -52,14 +52,41 @@ class Manager extends Model
 	//所有管理员信息
 	public function allmaInfo()
 	{
-		$data = Db::name('manage')
-				->alias('m') //命名别名
-				->join('role_user r','m.id=r.user_id')
+		$data = Db::name('role,wedring_role_user,wedring_manage')
+				->where("wedring_role.id = wedring_role_user.role_id and wedring_role_user.user_id = wedring_manage.id")
 				->select();
 		return $data;
 	}
 
+	//所有角色信息查询
+	public function powerinfo()
+	{
+		$res = Db::name('role,wedring_role_user,wedring_manage')
+				->where("wedring_role.id = wedring_role_user.role_id and wedring_role_user.user_id = wedring_manage.id")
+				->select();
+		$newbl = [];
+	    foreach ($res as $ri => $ral) {
+	     	$newbl[$ral["name"]][] = $ral;
+	     } 
+	     return $newbl;
+	}
+	//所有权限
+	public function allnodeInfo()
+	{
+		 $res = Db::name('node')
+				->where("pid <> 0")
+				->select();
 
-
-
+		$newres = [];
+	    foreach ($res as $rk => $rv) {
+	     	$newres[$rv["pid"]][] = $rv;
+	     	
+	     } 
+	     foreach ($newres as $nk => $nv) {
+	     	
+	     	$pname = Db::name('node')->where('id',$nv[0]['pid'])->find()['title'];
+	     	$newres[$nk]['pname'] = $pname;
+	     }
+		return $newres;
+	}
 }

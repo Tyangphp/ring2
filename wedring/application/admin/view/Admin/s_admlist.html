@@ -28,9 +28,9 @@
 <a href="add_administrator.html"  class="btn button_btn bg-deep-blue" title="添加管理员"><i class="fa  fa-edit"></i>&nbsp;添加管理员</a>
   <select class="select Competence_sort" name="admin-role" size="1" id="Competence_sort">
 					<option value="0">--选择分类--</option>
-					<option value="1">店长</option>
-					<option value="2">管理员</option>
-					<option value="3">员工</option>
+					{foreach $roleinfo as $value}
+					<option value="{$value['id']}">{$value['name']}</option>
+					{/foreach}
 				</select>
    <div class="search  clearfix">
 
@@ -58,8 +58,7 @@
 				<td>{$aval['username']}</td>
 				<td>{$aval['tel']}</td>
 				<td >{$aval['email']}</td>
-				<td>{if 3 == $aval['role_id']}店长{elseif 2 == $aval['role_id']}普通管理员{else}员工{/if}</td>
-                <td>{$aval['create_time']}</td>
+				<td>{$aval['name']}</td>
                 <td class="td-status">{if 0 == $aval['is_stop']}<span class="label label-success label-sm">已启用</span>{else}
                 <span class="label label-success label-sm">已停用</span>{/if}</td>
 				<td class="td-manage">

@@ -65,9 +65,9 @@
       <label class="label_name col-xs-2 col-lg-2"><i class="c-red">*</i>角&nbsp;色：</label>
       <div class="formControls col-xs-6"> <span class="select-box" style="width:150px;">
 				<select class="select" name="admin-role" size="1">
-					<option value="3">店长</option>
-					<option value="2">管理员</option>
-					<option value="1">员工</option>
+					{foreach $roleinfo as $value}
+					<option value="{$value['id']}">{$value['name']}</option>
+					{/foreach}
 				</select>
 				</span>
          </div>

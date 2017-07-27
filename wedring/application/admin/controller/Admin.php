@@ -6,34 +6,44 @@ use think\Db;
 
 class Admin extends Base
 {
-	//会员展示	
+	//权限页面	
     public function s_adm()
     {
+    	$powerinfo = model('Manager')->powerinfo();
+		$this->assign('powerinfo',$powerinfo);
 		return $this->fetch();
 	}
 	
-	//权限页面
+	//添加权限页面
 	public function s_addpwr()
 	{
+		$allnode = model('Manager')->allnodeInfo();
+		$this->assign('allnode',$allnode);
+
 		return $this->fetch();
 	}
 	//添加管理员
 	public function add_administrator()
 	{
+		$roleinfo = Db::name('role')->select();
+		$this->assign('roleinfo',$roleinfo);
 		return $this->fetch();
 	}
 	//管理员列表
 	public function s_admlist()
 	{
 		$all = model('Manager')->allmaInfo();
+		$roleinfo = Db::name('role')->select();
+
+		$this->assign('roleinfo',$roleinfo);
 		$this->assign('all',$all);
 		return $this->fetch();
 	}
+
 	//管理员信息
 	public function s_adminfo()
 	{
 		$suname = session('mangerName'); 
-    	
     	$mname = model('Manager')->manageInfo($suname);
 
     	$this->assign('mname',$mname);
@@ -65,6 +75,7 @@ class Admin extends Base
 			die;
 		}
 	}
+
 	//启用管理员
 	public function stadm()
 	{
@@ -102,5 +113,43 @@ class Admin extends Base
              $this->error('添加失败', '/admin/admin/s_admlist');
 
          }
+	}
+	//删除权限
+	public function delpwr()
+	{
+		//22,43
+		$pid = input('id');
+		$dlp = Db::name('role')->where('id',$pid)->delete(); 
+		$dlr = Db::name('access')->where('role_id',$pid)->delete();
+		if ($dlp && $dlr) {
+			echo 1;
+			die;
+		}
+	}
+
+	//添加权限
+	public function addpwr()
+	{
+		//保存变量
+		$name = input('name');
+		$remark = input('remark');
+		$node_id = implode(",", $_POST['node_id']);
+
+		//插入数据库
+		$dlp = Db::name('role')->insert(['name'=>$name,
+                'remark'=>$remark
+            ]);
+
+		$pid = Db::name('role')->where('name',$name)->find()['id'];
+
+		$dlr = Db::name('access')->insert(['role_id'=>$pid,
+                'node_id'=>$node_id 
+            ]);
+		if ($dlp && $dlr) {
+			$this->success('添加成功','admin/admin/s_adm');
+		}else{
+			$this->error('请核实您的表单','admin/admin/s_adm');
+
+		}
 	}
 }

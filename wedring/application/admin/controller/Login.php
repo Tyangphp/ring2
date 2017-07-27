@@ -83,17 +83,47 @@ class Login extends Controller
 		// 			->paginate(4);
 		// 	return $res;
 		// }
-		$data = Db::name('order,wedring_order_goods,wedring_goods')
-				->where('wedring_order.oid = wedring_order_goods.oid and wedring_goods.gid = wedring_order_goods.gid and wedring_order.order_state = 1')
-				->paginate(1);
+		//---测试2
+		// $data = Db::name('order,wedring_order_goods,wedring_goods')
+		// 		->where('wedring_order.oid = wedring_order_goods.oid and wedring_goods.gid = wedring_order_goods.gid and wedring_order.order_state = 1')
+		// 		->paginate(1);
 
 
 
-		$newdata = [];
-		    foreach ($data as $ki => $val) {
-		     	$newdata[$val["oid"]][] = $val;
-		     } 
-	     dump($newdata);
+		// $newdata = [];
+		//     foreach ($data as $ki => $val) {
+		//      	$newdata[$val["oid"]][] = $val;
+		//      } 
+	 //     dump($newdata);
+	 //     
+	 //ceshi3
+	 $res = Db::name('node')
+				->where("pid <> 0")
+				->select();
+
+		$newres = [];
+	    foreach ($res as $rk => $rv) {
+	     	$newres[$rv["pid"]][] = $rv;
+	     	
+	     } 
+	     foreach ($newres as $nk => $nv) {
+	     	
+	     	$pname = Db::name('node')->where('id',$nv[0]['pid'])->find()['title'];
+	     	$newres[$nk]['pname'] = $pname;
+	     }
+
+	     foreach ($newres as $tsk => $tsv) {
+	     	foreach ($tsv as $tsk2 => $tsv2) {
+	     		dump($tsv2);
+	     		echo "-----";
+	     	}
+	     }
+		echo "<hr/>";
+		echo "<hr/>";
+		echo "<hr/>";
+		echo "<hr/>";
+
+		 dump($newres);
 //-------------------------
 	}
 
