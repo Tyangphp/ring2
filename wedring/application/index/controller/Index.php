@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2017-05-11 09:42:46
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-28 10:49:42
+ * @Last Modified time: 2017-07-28 13:55:40
  */
 namespace app\index\controller;
 use extend\open_example_php\open51094_class;
@@ -135,6 +135,7 @@ class Index extends Controller
             //将商品插入浏览记录
             $data = ['uid'=>$uid,'gid'=>$gid];
             Db::name('liulan')->insert($data);
+
             //我的购物车中商品数量
             $counts = $this->cart->countCart($uid);
             $this->assign('username',$username);
