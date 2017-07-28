@@ -72,28 +72,58 @@
                 if (data.postcode == "") {
                     alert("邮编不能为空。");
                     return;
+                } else {
+                    if (!checkcode(data.postcode)) {
+                        alert('邮编格式不正确！');
+                        return;
+                    };
                 }
                 if (data.mobile == "" && data.telephone == "") {
                     alert("手机号/固定电话必填一个。");
                     return;
                 }
-                // var action = "save";
-                // if (isNaN(data.ID)) {
-                //   // console.log(111111);
-                //     action = "add";
-                //     console.log(action);
+                if (data.mobile != ""){
+                    if (!checkTel(data.mobile)) {
+                        alert('手机号格式不正确！');
+                        return;
+                    }
+                }
+                if (data.telephone != "") {
+                    if (!checkphone(data.telephone)) {
+                        alert('手机号格式不正确！');
+                        return;
+                    }
+                }
 
-                // }
+                var name = $('#addressName').val();
+                var mobile = $('#mobile').val();
+                var post = $('#postcode').val();
+                var street = $('#street').val();
 
-                $.post('/index/member/adres', {'realname':name,'tel':mobile,'postcode':post,'address':street}, function(data) {
+                $.post('/index/cart/newAdres', {'realname':name,'tel':mobile,'postcode':post,'address':street}, function(data) {
                     if (data == 1) {
-                        console.log(data);
                         alert('地址添加成功！');
                         window.location.reload();
                     };
+
                 });
             });
         });
+
+        //
+        function checkTel(tel) {
+            var mobile = /^1[3-8]+\d{9}$/;
+            return mobile.test(tel);
+        }
+        //
+        function checkcode(zipcode) {
+            var MyNumber = /^[0-9]{1}[0-9]{5}$/;
+            return MyNumber.test(zipcode);
+        }
+        function checkphone(tel) {
+            var mobile = /^0\d{2,3}-?\d{7,8}$/;
+            return mobile.test(tel);
+        }
 
         function bindDdlData(cid,data) {
             $(cid).append($("<option value=\"" + data.code + "\">" + data.name + "</option>"));
@@ -126,7 +156,9 @@
 
         function getData() {
             var id = $(".shop_adress-add").attr("id");
+
             id = id ? id.replace("address_", "") : undefined;
+            console.log(id);
             return {
             "ID":id,
             "name":$("#addressName").val(),
@@ -160,13 +192,15 @@
                 return;
             }
 
+            var data = getData();
+
             var address = $('#dz').html();
             var realname = $('#xm').html();
             var tel = $('#dh').html();
             var postcode = $('#yb').html();
             var text = $('.shop_adress-text').val();
             $.post('/index/cart/insertAddress', {'address':address,'realname':realname,'tel':tel,'postcode':postcode,'text':text},function(data){
-              console.log(data);
+
                 if (data !== "") {
                   window.location.href = '/index/cart/cart_order_success?ordernumb='+data;
                 };

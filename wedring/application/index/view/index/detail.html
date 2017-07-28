@@ -445,12 +445,12 @@
 
                         <!--购买选项-->
                         <div id="addCa" class="button buy_button">
-                            <div title="购买darry ring钻戒" class="bt1">
+                            <div title="把darry ring加入购物车" class="bt1">
                                 <span id="car">加入购物车</span>
                             </div>
-                            <div title="把darry ring加入购物车" class="bt2">
+                            <!-- <div title="购买darry ring钻戒" class="bt2">
                                 <span id="buy">立即购买</span>
-                            </div>
+                            </div> -->
                         </div>
                         <!--购买选项end-->
                     </div>
@@ -465,6 +465,7 @@
                 $('#car').click(function(){
                     var msg = document.getElementsByClassName('byright_top');
                     $.post("/index/index/intoCart", {msg: "msg"}, function(data) {
+                        console.log(msg);
                         if (data == 1) {
                             if (confirm('您还没有登录，请登录！')) {
                                 window.location.href = "/index/user/login";
@@ -484,6 +485,29 @@
                         };
                     });
                 });
+
+                // $('#buy').click(function(){
+                //     var msg = document.getElementsByClassName('byright_top');
+                //     $.post("/index/index/cart_order", {msg: "msg"}, function(data) {
+                //         if (data == 1) {
+                //             if (confirm('您还没有登录，请登录！')) {
+                //                 window.location.href = "/index/user/login";
+                //             };
+                //         };
+
+                //         if (data == 2) {
+                //             if (confirm('您的购物车中已有该商品,是否前往查看？')) {
+                //                 window.location.href = "/index/cart/cart";
+                //             };
+                //         };
+
+                //         if (data == 3) {
+                //             if (confirm('添加成功,前往查看！')) {
+                //                 window.location.href = "/index/cart/cart";
+                //             };
+                //         };
+                //     });
+                // });
 
             </script>
             <script type="text/javascript" language="javascript">

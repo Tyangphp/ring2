@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2017-07-26 09:58:08
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-27 19:21:07
+ * @Last Modified time: 2017-07-28 09:18:32
  */
 namespace app\index\model;
 use think\Model;
@@ -15,6 +15,12 @@ class Order extends Model
     public function insertOrderGoods($data)
     {
         return Db::name('order_goods')->insert($data);
+    }
+
+    //先将新增地址插入数据库
+    public function newAdres($data)
+    {
+        return $this->name('order_address')->insert($data);
     }
 
     //收货人信息插入收货地址表

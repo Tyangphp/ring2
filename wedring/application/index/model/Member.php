@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2017-07-24 21:59:20
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-27 17:53:28
+ * @Last Modified time: 2017-07-28 11:13:18
  */
 namespace app\index\model;
 use think\Model;
@@ -11,6 +11,12 @@ use think\Db;
 
 class Member extends Model
 {
+    //查看待处理订单
+    public function order($uid)
+    {
+        $data = $this->name('order')->where('uid',$uid)->count();
+        return $data;
+    }
     //订单信息及对应的商品信息
     public function goodsOrder($uid)
     {
@@ -55,5 +61,12 @@ class Member extends Model
     public function insertAdd($data)
     {
         return $this->name('order_address')->insert($data);
+    }
+
+    //查看浏览记录
+    public function liuLan($uid)
+    {
+        $data = $this->name('liulan')->alias('l')->where('uid',$uid)->join('goods g','g.gid=l.gid')->field('g.gid,images,gname,weight,color,price_sale')->select();
+        return $data;
     }
 }

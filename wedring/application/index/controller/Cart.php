@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2017-07-24 21:34:21
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-27 19:30:38
+ * @Last Modified time: 2017-07-28 10:38:46
  */
 namespace app\index\controller;
 use app\index\model\Cart as CartModel;
@@ -90,7 +90,7 @@ class Cart extends Controller
         }
         // dump(input());
         $address = $this->order->takeAddress($uid);
-        dump($address);
+        // dump($address);
 
         //分配变量
         $this->assign('username',$username);
@@ -99,6 +99,26 @@ class Cart extends Controller
         $this->assign('price',$price);
         $this->assign('address',$address);
         return $this->fetch();
+    }
+
+    //先将新增地址插入数据库
+    public function newAdres()
+    {
+        $username = session('username');
+        $uid = session('uid');
+
+        if (!empty(input())) {
+            $address = input('address');
+            $realname = input('realname');
+            $tel = input('tel');
+            $postcode = input('postcode');
+
+            //收货人新增地址插入收货地址表
+            $data = ['uid'=>$uid,'realname'=>$realname,'tel'=>$tel,'postcode'=>$postcode,'address'=>$address];
+            $this->order->newAdres($data);
+            echo 1;
+            return;
+        }
     }
 
     //订单信息插入数据库

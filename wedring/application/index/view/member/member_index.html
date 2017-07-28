@@ -237,7 +237,7 @@
                                             <div class="mb_theright-sec fl">
                                                 <p>
                                                     <span>订单提醒：</span>
-                                                    <a href="member_order.html"><span class="vtop">待处理订单</span>（1）</a>
+                                                    <a href="member_order.html"><span class="vtop">待处理订单</span>（{$orderCount}）</a>
                                                     <a href="/member/myevaluate.html"><span class="vtop">待评价</span>（0）</a>
                                                 </p>
                                             </div>
@@ -331,18 +331,14 @@
                                             <li onClick="getPro(2)">热销产品</li>
                                         </ul>
                                         <ul id="u_history" class="read_ul">
+                                            {foreach $seeGoods as $value}
                                             <li>
                                                 <div class="read_top">
-                                                    <a target="_blank" href="/darry_ring/87.html" rel="nofollow"> <img src="/index/images/201409011932585de1c2f2a9.jpg" alt="Forever系列 经典款 40分D色" /> </a>
+                                                    <a href="/index/index/detail?gid={$value['gid']}" rel="nofollow"> <img src="{$value['images']}" alt="Forever系列 经典款 40分D色" /> </a>
                                                 </div>
-                                                <p><a target="_blank" href="/darry_ring/87.html"> Forever系列 经典款 40分D色 </a></p> <p><span>￥15,800</span></p>
+                                                <p><a target="_blank" href="/darry_ring/87.html"> {$value['gname']} {$value['weight']}{$value['color']} </a></p> <p><span>￥{$value['price_sale']}</span></p>
                                             </li>
-                                            <li>
-                                                <div class="read_top">
-                                                    <a target="_blank" href="/jewelry/404.html" rel="nofollow"> <img src="/index/images/2015012110590914b2fee4b2.jpg" alt="锁住一生 LOCK套链 0.6分G-I色" /> </a>
-                                                </div>
-                                                <p><a target="_blank" href="/jewelry/404.html"> 锁住一生 LOCK套链 0.6分G-I色 </a></p> <p><span>￥5,920</span></p>
-                                            </li>
+                                            {/foreach}
                                         </ul>
                                     </div>
                                     <!--向左-->

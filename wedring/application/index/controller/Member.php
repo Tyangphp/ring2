@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2017-07-24 22:00:08
  * @Last Modified by:   Marte
- * @Last Modified time: 2017-07-27 17:53:17
+ * @Last Modified time: 2017-07-28 11:14:59
  */
 namespace app\index\controller;
 use app\index\model\Member as MemberModel;
@@ -36,6 +36,9 @@ class Member extends Controller
         //我的购物车中商品数量
         $counts = $this->cart->countCart($uid);
 
+        //查看待处理订单
+        $orderCount = $this->me->order($uid);
+
         // 获取goods信息
         $goods = $this->member->selectGoods();
         $sid = $goods[0]['sid'];
@@ -48,13 +51,18 @@ class Member extends Controller
          //获取种类信息
         $kind = $this->member->selectKind();
 
+        //浏览过的商品
+        $seeGoods = $this->me->liuLan($uid);
+
         //分配变量
         $this->assign('username',$username);
         $this->assign('counts',$counts);
+        $this->assign('orderCount',$orderCount);
         $this->assign('goods',$goods);
         $this->assign('navs',$navs);
         $this->assign('nav',$nav);
         $this->assign('kind',$kind);
+        $this->assign('seeGoods',$seeGoods);
 
         return $this->fetch();
     }
