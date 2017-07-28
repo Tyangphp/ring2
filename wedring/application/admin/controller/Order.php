@@ -133,4 +133,19 @@ class Order extends Base
 		$this->assign('content',$content);
 		return $this->fetch();
 	}
+
+	//查询邮编
+	public function postcode(){
+		
+		$postcode = $_GET['pid'];
+		$url = "http://api.avatardata.cn/PostNumber/QueryPostnumber?key=aebdb54ff0304c85aa4b531e72fb977c&postnumber=%s&page=1&rows=15";
+		$curl = MyCurl::get(sprintf($url,$postcode));
+		$arr = json_decode($curl,true);
+		$adres = "所在地区：".$arr['result'][0]['jd'];
+		if ($adres) {
+			echo json_encode($adres);
+		}else{
+			echo 2;
+		}
+	}
 }

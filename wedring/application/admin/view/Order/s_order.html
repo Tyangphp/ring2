@@ -34,9 +34,9 @@
  </ul>
 </div>
 <div class="status_order margin-bottom">
-  <a href="javascrpit:void" class="btn button_btn btn-info status_btn">手机归属地查询</a>号码前7位
-  <a href="javascrpit:void" class="btn button_btn btn-info status_btn">邮编查询</a>
-
+  
+  <a href="javascrpit:void" onclick="pscd()"  class="btn button_btn btn-info status_btn">邮编查询</a>
+	<span id='yb'></span>
  </div>
 <div class="operation clearfix">
 
@@ -134,6 +134,25 @@ $("body").niceScroll({
  function ss(){
   sg = $('#ssgname').val();
   location.href="/admin/order/s_order?ss="+sg;
+
+}
+ function pscd(){
+ 	var postcode = '';
+ 	postcode = prompt("请输入邮编号");
+ 	if (postcode) {
+			$.ajax({
+            type:'get',
+            url:'/admin/order/postcode',
+            async:true,
+            dataType:'json',
+            data:{'pid':postcode},
+            success: py
+        });
+		 function py (data)
+      	{
+      		alert(data);
+        }
+	}
 
 }
 </script>
