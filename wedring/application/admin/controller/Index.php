@@ -10,6 +10,15 @@ class Index extends Base
     public function index()
     {
 		//查询用户信息
+		// $uname = input('username');
+	 //    $upass = input('userpwd');
+		
+		// // dump(input());
+		// // die;
+
+		//  session('mangerName',$uname);
+		//  $logsign = Db::name('manage_sign')->insert(['mname'=>$uname]);
+		
     	$manager = model('Manager');
     	$suname = session('mangerName'); 
     	$mname = $manager->manageInfo($suname)['username'];

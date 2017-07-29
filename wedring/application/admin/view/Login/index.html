@@ -28,23 +28,25 @@
       <div class="clearfix">
        <div class="login_icon"><img src="/admin/images/login_bg.png" /></div>
        <div class="add_login_cont Reg_log_style ">
-        <form class="" id="">
+        <form >
          <ul class="r_f">
           <li class="frame_style form_error"><label class="user_icon"></label><input name="username" data-name="用户名" type="text" id="username"><i>用户名</i></li>
           <li class="frame_style form_error"><label class="password_icon"></label><input name="userpwd" data-name="密码" type="password" id="userpwd"><i>密码</i></li>
-          <li class="frame_style form_error">
+          <!-- <li class="frame_style form_error">
           <label class="Codes_icon"></label><input name="Codes_text" type="text"  data-name="验证码" id="Codes_text" class="Codes_text"><i>验证码</i>
           <div class="Codes_region"><img src="{:captcha_src()}" alt="captcha" onclick="this.src='{:captcha_src()}'"  /></div>
-          </li> 
+          </li>  -->
          
          </ul>       
         </form>
        </div>
        <div class="login_Click_Actions">          
           <button type="button" class="button_width  btn btn-sm btn-primary" id="login_btn"><i class="fa fa-key"></i>&nbsp;&nbsp;登录</button>
-          <p><label class="inline"><span class="lbl">点击图片刷新</span></label></p>
+          <!-- <p><label class="inline"><span class="lbl">点击图片刷新</span></label></p> -->
        </div>
       </div>
+      
+
       <div class="social-or-login center"><span class="">通知</span></div>
       <div class="margin-top color center">本网站系统不再对IE8以下浏览器提供支持，请见谅。</div>
       </div>
@@ -58,50 +60,50 @@
   
 //提交按钮
 $('#login_btn').on('click', function(){
-	   var dcode = 0;
+	   var dcode = 1;
 		 var str="";
      
-     $("input[type$='text'],input[type$='password']").each(function(n){
-          if($(this).val()=="")
-          {
+   //   $("input[type$='text'],input[type$='password']").each(function(n){
+   //        if($(this).val()=="")
+   //        {
                
-			   layer.alert(str+=""+$(this).attr("data-name")+"不能为空！\r\n",{
-                title: '提示框',				
-				icon:0,								
-          }); 
+			//    layer.alert(str+=""+$(this).attr("data-name")+"不能为空！\r\n",{
+   //              title: '提示框',				
+			// 	icon:0,								
+   //        }); 
 		     
-            return false;            
-          } 
-		 });
+   //          return false;            
+   //        } 
+		 // });
      
- //验证码验证
-      $.ajax({
-            type:'post',
-            url:'/admin/login/checkmager',
-            async:false,
-            dataType:'json',
-            data:{'code':$('#Codes_text').val()
-                 },
-            success: ccode
-        });
+ // //验证码验证
+ //      $.ajax({
+ //            type:'post',
+ //            url:'/admin/login/checkmager',
+ //            async:false,
+ //            dataType:'json',
+ //            data:{'code':$('#Codes_text').val()
+ //                 },
+ //            success: ccode
+ //        });
 
      
-      //验证码回调
-      function ccode (cdata)
-      {
+ //      //验证码回调
+ //      function ccode (cdata)
+ //      {
         
-           if (cdata == 1) {
-              dcode = 1;
-            } else {
-                alert('验证码错误！');
+ //           if (cdata == 1) {
+ //              dcode = 1;
+ //            } else {
+ //                alert('验证码错误！');
                 
-                dcode = 0;
-               // return false;
-            }
-           return dcode;
-      }
+ //                dcode = 0;
+ //               // return false;
+ //            }
+ //           return dcode;
+ //      }
      
-     if (dcode == 1) {
+     
          
          //阿贾克斯核对用户密码及验证码
           $.ajax({
@@ -120,7 +122,7 @@ $('#login_btn').on('click', function(){
                    alert('用户名或密码错误！');
                     }
               }
- 			}
+ 			
 	});
 
 //-----------------

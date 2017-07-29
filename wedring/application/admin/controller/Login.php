@@ -15,19 +15,21 @@ class Login extends Controller
 	public function checkmager(Mlogin $Mlogin)
 	{
 
-		//验证验证码
-		if (input('code')) {
-			$code = input('code');
-			$captcha = new \think\captcha\Captcha();
-                if (!$captcha->check($code)) {
-	                echo 0;
-	                die;
-                } else {
-                	echo 1;
-                	die;
-                }
-		}
-		//验证管理员信息
+		
+		// 	//验证验证码
+		// if (input('code')) {
+		// 	$code = input('code');
+		// 	$captcha = new \think\captcha\Captcha();
+  //               if (!$captcha->check($code)) {
+	 //                echo 0;
+	 //                die;
+  //               } else {
+  //               	echo 1;
+  //               	die;
+  //               }
+		// }
+		
+		// //验证管理员信息
 		if (input('uname')) {
 				$uname = input('uname');
 	       		$upass = input('upass');

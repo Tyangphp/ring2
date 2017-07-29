@@ -253,6 +253,20 @@ class Index extends Controller
             $this->assign('username',$username);
             $this->assign('counts',$counts);
         }
+
+        //获取系列信息
+        $navs = $this->index->selectNavs();
+        $nav = $this->index->selectNav();
+
+         //获取种类信息
+        $kind = $this->index->selectKind();
+
+        //分配变量
+        // $this->assign('goods',$goods);
+        $this->assign('navs',$navs);
+        $this->assign('nav',$nav);
+        $this->assign('kind',$kind);
+
         return $this->fetch();
     }
 
@@ -268,6 +282,20 @@ class Index extends Controller
             $this->assign('username',$username);
             $this->assign('counts',$counts);
         }
+
+        //获取系列信息
+        $navs = $this->index->selectNavs();
+        $nav = $this->index->selectNav();
+
+         //获取种类信息
+        $kind = $this->index->selectKind();
+
+        //分配变量
+        // $this->assign('goods',$goods);
+        $this->assign('navs',$navs);
+        $this->assign('nav',$nav);
+        $this->assign('kind',$kind);
+        
         return $this->fetch();
     }
     //阳哥地图

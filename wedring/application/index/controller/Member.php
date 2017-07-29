@@ -219,7 +219,7 @@ class Member extends Controller
                 }
             }
         }
-        // dump($news);
+       
 
         //分配变量
         $this->assign('username',$username);

@@ -24,7 +24,7 @@ class Member extends Model
         return $data;
     }
 
-     //某一个订单信息及对应的商品信息
+    //某一个订单信息及对应的商品信息
     public function oneGoodsOrder($uid,$oid)
     {
         $data = Db::name('order')->alias('o')->where('o.uid',$uid)->where('o.oid',$oid)->join('order_goods d','d.oid=o.oid')->join('goods g','g.gid=d.gid')->join('order_address a','a.uid=o.uid')->field('o.oid,o.order_state,o.pay_state,o.text,o.total_price,o.fms,o.create_time,d.gid,d.unit_price,g.gname,g.color,g.weight,g.quality,g.size,g.images,a.realname,a.tel,a.postcode,a.address')->select();
